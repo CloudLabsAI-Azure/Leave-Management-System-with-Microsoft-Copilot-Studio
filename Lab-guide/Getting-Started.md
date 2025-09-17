@@ -47,31 +47,31 @@ Welcome to your Leave Management System with Microsoft Copilot Studio Workshop! 
 
 Once you're ready to dive in, your virtual machine and Lab guide will be right at your fingertips within your web browser.
 
-![](./media/gs1.png)
+![](../media/gs1.png)
 
 ### Exploring Your Lab Resources
 
 To get a better understanding of your Lab resources and credentials, navigate to the Environment tab.
 
-![](./media/gs2.png)
+![](../media/gs2.png)
 
 ### Utilizing the Split Window Feature
 
 For convenience, you can open the Lab guide in a separate window by selecting the Split Window button from the Top right corner
 
-![](./media/gs3.png)
+![](../media/gs3.png)
 
 ### Managing Your Virtual Machine
 
 Feel free to start, stop, or restart your virtual machine as needed from the Resources tab. Your experience is in your hands!
 
-![](./media/gs4.png)
+![](../media/gs4.png)
 
 ## Let's Get Started with Power Apps Portal
 
 1. In the JumpVM, click on **Microsoft Edge** shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![](./media/gs-1.png)
+   ![](../media/gs-1.png)
 
 1. Open a new browser tab and navigate to [Power Apps](https://make.powerapps.com/) portal.
 
@@ -79,23 +79,23 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
    - Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-     ![](./media/gs-2.png)
+     ![](../media/gs-2.png)
 
 1. Now, enter the following password and click on **Sign in**.
 
    - Password: <inject key="AzureAdUserPassword"></inject>
 
-     ![](./media/gs-3.png)
+     ![](../media/gs-3.png)
 
      >**Note:** If you see the Action Required dialog box, then select Ask Later option.
      
 1. If you see the pop-up **Stay Signed in?**, click No.
 
-   ![](./media/gs-4.png)
+   ![](../media/gs-4.png)
 
 1. You have now successfully logged in to the Power Apps portal. Keep the portal open, as you will be using it later in the lab.
 
-   ![](./media/gs-5.png)
+   ![](../media/gs-5.png)
 
 ## Support Contact
 
