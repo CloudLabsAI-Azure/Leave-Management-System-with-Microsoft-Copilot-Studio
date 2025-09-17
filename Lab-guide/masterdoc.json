@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "Leave-Management-System-with-Microsoft-Copilot-Studio",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Threat-Protection-with-Microsoft-Defender-XDR/refs/heads/main/Project-Ready/readme.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Threat-Protection-with-Microsoft-Defender-XDR/refs/heads/main/Project-Ready/overview-day1.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Threat-Protection-with-Microsoft-Defender-XDR/refs/heads/main/Project-Ready/Lab-01.md",
+        "Order": 3
+      },
+    ]
+  }
+]
