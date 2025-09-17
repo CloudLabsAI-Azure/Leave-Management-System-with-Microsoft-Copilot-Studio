@@ -1,54 +1,47 @@
-# Cloud Native Application Architecture
+# Leave Management System with Microsoft Copilot Studio
 
-### Overall Estimated Duration: 4 Hours
+### Overall Estimated Duration: 3 Hours
 
 ## Overview
 
-Contoso Traders (ContosoTraders) provides online retail website services tailored to the electronics community. They are refactoring their application to run as a Docker application. They want to implement a proof of concept that will help them get familiar with the development process, lifecycle of deployment, and critical aspects of the hosting environment.
-
-In this hands-on lab, you will assist in containerizing their application by building Docker images and pushing them to Azure Container Registry (ACR) for secure access. You will also migrate an on-premises MongoDB database from an Azure Linux VM to Azure Cosmos DB using Azure Database Migration Service. Finally, you will deploy the application to Azure Kubernetes Service (AKS), integrating Key Vault Secrets and exploring different deployment strategies. By the end of this lab, you will gain practical experience in containerization, database migration, and Kubernetes-based deployment.
+In this hands-on lab, you will configure and explore a Leave Management Agent that automates employee leave applications, approvals, and balance tracking. The agent enforces strict security and business rules to ensure that requests are handled fairly, securely, and consistently. Employees can apply for leave, check their balance, and track past requests — all through a controlled Dataverse integration that respects row-level security and manager approval flows.
 
 ## Objectives
 
 By the end of this lab, you will be able to:
 
-- **Build Docker Images for the Application:** This hands-on exercise aims to create Docker images to containerize your application for consistent and portable deployments. Participants will successfully containerize the application, enabling consistent deployment across various environments.
-
-- **Migrate MongoDB to Cosmos DB using Azure Database Migration:** This hands-on exercise aims to transfer your MongoDB data to Azure Cosmos DB to leverage its scalable and managed database services. Participants will seamlessly migrate MongoDB data to Azure Cosmos DB, ensuring data availability and compatibility with Azure services.
-
-- **Deploy the application to the Azure Kubernetes Service:** This hands-on exercise aims to deploy and manage your containerized application using Azure Kubernetes Service for orchestration and scalability. Participants will deploy the containerized application to Azure Kubernetes Service, providing a scalable and managed environment for operation.
+-  Understand the policies and business rules that govern leave applications.
+-  Configure the agent to read and write leave data from Dataverse tables.
+-  Apply validation logic to prevent overlapping or invalid leave requests.
+-  Implement balance checks and auto-approval rules based on request duration.
+-  Route longer leave requests to managers for approval and update balances accordingly.
+-  Track and query your own leave history securely, without exposing other employees’ data.
 
 ## Prerequisites
 
 Participants should have:
 
-- Understanding Docker concepts such as containers, images, and Dockerfiles.
-- Knowledge of MongoDB data structures and Azure Cosmos DB capabilities for effective migration.
-- Basic understanding of Kubernetes concepts, including pods, deployments, and services, as well as Azure Kubernetes Service (AKS).
-- General understanding of cloud services, container orchestration, and scaling strategies.
-- Proficiency in using command-line tools and interfaces, such as Azure CLI and Docker CLI.
+- An active Microsoft Power Platform environment with Dataverse enabled.
+- Access to Dataverse tables **LeaveRequest** and **LeaveBalance** with appropriate permissions.
+- Basic familiarity with Microsoft Power Automate and Power Apps (for flows and agent integration).
+- A test user account with leave balances seeded in Dataverse for validation.
+- Manager accounts are configured in the system for approval routing.
 
 ## Architecture
 
-The lab utilize several Azure services to build, deploy, and manage applications effectively. Azure Container Registry (ACR) is used for storing and managing Docker container images, while Azure Cosmos DB provides a scalable, multi-model database solution for data migration. Azure Kubernetes Service (AKS) enables the deployment and management of containerized applications within a managed Kubernetes environment
+The lab utilizes several Azure services to build, deploy, and manage applications effectively. Azure Container Registry (ACR) is used for storing and managing Docker container images, while Azure Cosmos DB provides a scalable, multi-model database solution for data migration. Azure Kubernetes Service (AKS) enables the deployment and management of containerized applications within a managed Kubernetes environment
 
 ## Architecture Diagram
-
-![Selecting Add to create a deployment.](media/arc.png "Selecting + Add to create a deployment")
 
 ## Explanation of Components
 
 The architecture for this lab involves several key components:
 
 - **Azure Container Registry (ACR):** A managed Docker container registry for storing and managing Docker container images.
-- **Azure Cosmos DB:** A globally distributed, multi-model database service for managing and scaling NoSQL data.
-- **Azure Kubernetes Service (AKS):** A managed Kubernetes container orchestration service for deploying, scaling, and managing containerized applications.
-- **Azure Database Migration Service (DMS):** A fully managed service designed to streamline and automate the migration of databases to Azure with minimal downtime. It supports migrations from various database sources, including SQL Server, MySQL, PostgreSQL, MongoDB, and Oracle, to Azure SQL Database, Azure Cosmos DB, and other Azure data platforms.
-- **Azure Key Vault:** A cloud service that securely stores and manages sensitive information like secrets, encryption keys, and certificates used by applications and services
 
 ## Getting Started with the Lab
 
-Welcome to your Cloud Native Application Architecture Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your Leave Management System with Microsoft Copilot Studio Workshop! We've prepared a seamless environment for you to explore and learn how to build, configure, and test an intelligent leave management agent. This lab will guide you through applying business rules, handling approvals, and integrating with Dataverse to deliver a secure and efficient experience. Let's begin by making the most of this workshop!
 
 ## Accessing Your Lab Environment
  
@@ -106,7 +99,7 @@ If you need any assistance, please contact us at cloudlabs-support@spektrasystem
 
    ![](media/cng12.png "Lab Environment")
    
-1. On the **Sign into Microsoft Azure** tab, you will see the login screen, in that enter the following email/username and then click on **Next**. 
+1. On the **Sign into Microsoft Azure** tab, you will see the login screen. In that enter the following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    
      ![](media/cng6.png "Enter Email")
