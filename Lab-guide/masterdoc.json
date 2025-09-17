@@ -8,6 +8,10 @@
         "Order": 1
       },
       {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/blob/main/Lab-guide/Getting-Started.md",
+        "Order": 1
+      },
+      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Threat-Protection-with-Microsoft-Defender-XDR/refs/heads/main/Project-Ready/overview-day1.md",
         "Order": 2
       },
