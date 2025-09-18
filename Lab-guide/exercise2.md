@@ -292,27 +292,11 @@ In this task, you will connect knowledge sources such as the product catalog, po
       outputs('Compose_2')
       ```
 
-   ![](../media/leav-man-e2-g-34.png)
+   ![](../media/leav-man-e2-g-63.png)
 
-1. In the **Compose** action, click inside the **Inputs (1)** field, then select **Insert expression (2)**. 
+1. On the **Designer** page, review the complete flow to ensure all steps are connected as shown. Once confirmed, click **Publish** to save and activate the flow.
 
-   ![](../media/leav-man-e2-g-34.png)
-
-1. In the **Compose** action, click inside the **Inputs (1)** field, then select **Insert expression (2)**. 
-
-   ![](../media/leav-man-e2-g-34.png)
-
-1. In the **Compose** action, click inside the **Inputs (1)** field, then select **Insert expression (2)**. 
-
-   ![](../media/leav-man-e2-g-34.png)
-
-1. In the **Compose** action, click inside the **Inputs (1)** field, then select **Insert expression (2)**. 
-
-   ![](../media/leav-man-e2-g-34.png)
-
-1. In the **Compose** action, click inside the **Inputs (1)** field, then select **Insert expression (2)**. 
-
-   ![](../media/leav-man-e2-g-34.png)
+   ![](../media/leav-man-e2-g-64.png)
 
 ## Summary
 
