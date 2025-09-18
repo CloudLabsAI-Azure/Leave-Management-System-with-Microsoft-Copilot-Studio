@@ -310,6 +310,270 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](../media/leav-man-e2-g-68.png)
 
+
+## Task 2
+
+1. On the **Agent flows** page, select **Flows (1)** from the left navigation pane and click **New agent flow (2)** to create a new flow.
+
+   ![](../media/leav-man-e2-g-69.png)
+
+1. On the **flow designer** canvas, click **Add a trigger (1)**. In the **Add a trigger** dialog, type **When an agent calls the flow (2)** in the search box and select **When an agent calls the flow (3)** from the list.
+
+   ![](../media/lleav-man-e2-g-71.png)
+
+1. IOn the **Designer** tab of the flow, under **Parameters**, click **Add an input** to define a parameter for the trigger.
+
+   ![](../media/leav-man-e2-g-72.png)
+
+1. In the **Parameters** section, under **Choose the type of user input**, select **Text** to add a text input parameter.
+
+   ![](../media/leav-man-e2-g-73.png)
+
+1. In the **Parameters** section, enter **employeeEmail (1)** as the name of the input parameter. Click **Add an input (2)** to define an additional parameter.
+
+   ![](../media/leav-man-e2-g-74.png)
+
+1. In the **Parameters** section, follow the same steps used for **employeeEmail** to add the following input parameters:  
+   - **employeeName (1)**  
+   - **leaveType (2)**  
+   - **reason (3)**  
+   - **durationDays (4)**  
+   - **Balance (5)**  
+   - **Add an input (6)**
+
+      ![](../media/leav-man-e2-g-75.png)
+
+1. In the **Choose the type of user input** dialog, select **Date** to add a date input parameter.
+
+   ![](../media/leav-man-e2-g-76.png)
+
+1. In the **Parameters** section, add two date input parameters:  
+- **StartDate (1)**  
+- **endDate (2)**  
+
+   ![](../media/leav-man-e2-g-77.png)
+
+1. On the **Designer** canvas, click the **plus (+) icon (1)** to add an action. In the **Add an action** dialog, type **Add a new row (2)** in the search bar. Under **Microsoft Dataverse (3)**, select **Add a new row (4)**.
+
+   ![](../media/leav-man-e2-g-78.png)
+
+1. In the **Add a new row** action, select **Leave Request (1)** from the **Table name** drop-down. Expand the **Advanced parameters (2)** section to map the input fields with the parameters created earlier.
+
+   ![](../media/leav-man-e2-g-84.png)
+
+1. In the **Add a new row** action, under **Advanced parameters**, select the following fields to map with the input parameters:  
+
+   - **balance_days**  
+   - **duration_days**  
+   - **employee_email**  
+   - **employee_name**  
+   - **end_date**  
+   - **leave_type**  
+   - **reason**  
+   - **start_date**  
+   - **status**  
+
+   ![](../media/leav-man-e2-g-85.png)
+
+1. In the **Add a new row** action, under **Balance_days**, type **/** (1) and then click **Insert expression (2)** to add an expression.
+
+   ![](../media/leav-man-e2-g-86.png)
+
+1. In the **expression editor**, paste the required expression (1) and click **Add (2)** to insert it into the parameter field.
+
+   ```
+   triggerBody()?['text_5']
+   ``` 
+
+   ![](../media/leav-man-e2-g-73.png)
+
+1. In the **Add a new row** action, map the parameters to the Dataverse fields as shown in the table below.
+
+   | Field Name      | Value / Expression                        |
+   |-----------------|--------------------------------------------|
+   | Balance_days    | Paste the expression for **Balance**       |
+   | Duration_days   | Paste the expression for **durationDays**  |
+   | Employee_email  | Paste the expression for **employeeEmail** |
+   | Employee_name   | Paste the expression for **employeeName**  |
+   | End_date        | Paste the expression for **endDate**       |
+   | Leave_type      | Enter **Casual** as a static value         |
+   | Reason          | Paste the expression for **reason**        |
+   | Start_date      | Paste the expression for **StartDate**     |
+   | Status          | Enter **Pending** as a static value        |
+
+In the **Add a new row** | action, map the parameters to their corresponding fields:  
+   - **Duration_days (1)** | Paste the expression for **durationDays.**
+
+      ```
+      triggerBody()?['text_4']
+      ``` 
+
+   - **Employee_email (2)** | Paste the expression for **employeeEmail.**
+
+      ```
+      triggerBody()?['text']
+      ``` 
+
+   - **Employee_name (3)** | Paste the expression for **employeeName.** 
+
+      ```
+      triggerBody()?['text_1']
+      ``` 
+
+   - **End_date (4)** → Paste the expression for **endDate.** 
+
+      ```
+      triggerBody()?['date_1']
+      ``` 
+
+   - **Leave_type (5)** → Enter **Casual.** as a static value.     
+
+   - **Reason (6)** → Paste the expression for **reason.** 
+
+      ```
+      triggerBody()?['text_3']
+      ``` 
+
+   - **Start_date (7)** → Paste the expression for **StartDate.**   
+
+      ```
+      triggerBody()?['date']
+      ``` 
+
+   - **Status (8)** → Enter **Pending** as a static value.  
+
+      - **Note:** For fields marked **Paste the expression**, click inside the input box, choose **Insert expression**, and paste the expression provided in the lab guide. 
+
+      - **Note:** For fields marked **static value**, type the value directly.  
+
+         ![](../media/leav-man-e2-g-88.png)
+
+1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section.
+
+   ![](../media/leav-man-e2-g-89.png)
+
+1. In the **Condition** action, paste the required expression (1) into the first box. From the operator drop-down (2), select **is equal to**, and in the value field (3), enter the comparison value.
+
+   ```
+   int(triggerBody()?['text_4'])
+   ``` 
+
+   ![](../media/leav-man-e2-g-90.png)
+
+1. In the **Condition** action, under the **False** branch, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Start and wait for an approval (2)** in the search bar and select **Start and wait for an approval (3)** under **Standard approvals**.
+
+   ![](../media/leav-man-e2-g-91.png)
+
+1. In the **Start and wait for an approval** action, configure the parameters:  
+   - From the **Approval type** drop-down, select **Approve/Reject - Everyone must approve (1)**.  
+   - In the **Title** field, enter **Leave Approval (2)**.  
+   - In the **Assigned to** field, type the user’s email address **(3)** and select the matching account from the suggestions **(4)**. 
+
+      ![](../media/leav-man-e2-g-92.png)
+
+1. In the **False** branch of the approval, click the **plus (+) icon (1)** to add a new action.  
+   - In the **Add an action** dialog, type **Condition (2)** in the search bar.  
+   - Under the **Control** section, select **Condition (3)**.  
+
+      ![](../media/leav-man-e2-g-93.png)
+
+1. In the **Condition 1** action, configure the condition as follows:  
+   - Select **Outcome (1)** from the dynamic content.  
+   - From the operator drop-down, select **is equal to (2)**.  
+   - In the value field, enter **Approve (3)**. 
+
+      ```
+      outputs('Start_and_wait_for_an_approval')?['body/outcome']
+      ``` 
+
+      ![](../media/leav-man-e2-g-94.png)
+
+1. In the **False** branch of **Condition 1**, click the **plus (+) icon (1)** to add a new action.  
+   - In the **Add an action** dialog, type **Respond to the agent (2)** in the search bar.  
+   - Under **Skills**, select **Respond to the agent (3)**.  
+
+   ![](../media/leav-man-e2-g-95.png)
+
+1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **the request is rejected (2)** as the response message.
+
+   ![](../media/leav-man-e2-g-96.png)
+
+1. In the **False** branch, after the **Respond to the agent** action, click the **plus (+) icon (1)** to add a new action.  
+   - In the **Add an action** dialog, type **Terminate (2)** in the search bar.  
+   - Under the **Control** section, select **Terminate (3)**. 
+
+      ![](../media/leav-man-e2-g-97.png)
+
+1. In the **Terminate** action, set the **Status** field to **Succeeded** to complete the workflow after rejection.
+
+   ![](../media/leav-man-e2-g-98.png)
+
+1. In the **True** branch of **Condition 1**, click the **plus (+) icon (1)** to add a new action.  
+   - In the **Add an action** dialog, type **Update a row (2)** in the search bar.  
+   - Under **Microsoft Dataverse**, select **Update a row (3)**.  
+
+      ![](../media/leav-man-e2-g-99.png)
+
+1. On the **Update a row** action:  
+   - Select **Leave Request (1)** as the table name.  
+   - In the **Row ID (2)** field, paste the expression (3) to reference the row created earlier.  
+   - Click **Add (4)** to confirm the expression.  
+   - In the **Status (5)** field, type **Approved**.  
+
+      ```
+      outputs('Add_a_new_row')?['body/crf88_leaverequestid']
+      ``` 
+
+      ![](../media/leav-man-e2-g-100.png)
+
+1. On the **Update a row** action, click the **plus (+) button (1)** to add a new action.  
+   - In the search box, type **Respond to the agent (2)**.  
+   - From the **Skills** section, select **Respond to the agent (3)**. 
+
+      ![](../media/leav-man-e2-g-101.png)
+
+1. On the **Respond to the agent 1** action, in the **reply (1)** field, enter the message **You leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
+
+   ```
+   outputs('Add_a_new_row')?['body/crf88_startdate']
+   ``` 
+
+   ```
+   outputs('Add_a_new_row')?['body/crf88_enddate']
+   ``` 
+
+   ![](../media/leav-man-e2-g-102.png)
+
+The completed flow should now look like the following:
+
+- The flow starts with **When an agent calls the flow**.  
+- A new record is created in the **Leave Request** table using **Add a new row**.  
+- A **Condition** checks the leave duration.  
+  - If **True**, the process continues.  
+  - If **False**, the flow triggers **Start and wait for an approval**.  
+    - Inside this branch, another **Condition** validates the approval outcome.  
+      - If **Approved**, the flow updates the leave record with status **Approved** and sends a response back to the agent.  
+      - If **Rejected**, the flow responds to the agent that the request is rejected and then terminates successfully.  
+- The final steps include **Update a row** to mark approval in Dataverse, followed by a confirmation response through **Respond to the agent 1**. 
+
+   ![](../media/leav-man-e2-g-103.png)
+
+1. At the top-right corner of the flow designer, click **Publish** to save and activate your flow.
+
+   ![](../media/leav-man-e2-g-104.png)
+
+1. On the top menu, click **Overview** to return to the flow overview page after publishing.
+
+   ![](../media/leav-man-e2-g-105.png)
+
+1. On the **Overview** page, under the **Details** section, click **Edit** to update the flow details such as the name and description.
+
+   ![](../media/leav-man-e2-g-106.png)
+
+1. In the **Details** pane, enter **Leave Management Workflow (1)** in the **Flow name** field. Then, click **Save (2)** to apply the changes.  
+
+   ![](../media/leav-man-e2-g-107.png)
+
 ## Summary
 
 In this exercise, you created a Copilot Studio agent that served as the foundation for your store operations assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
