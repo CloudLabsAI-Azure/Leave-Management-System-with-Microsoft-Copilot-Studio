@@ -32,7 +32,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
     | Description | Handles leave requests, approvals, and balance updates using Dataverse and Power Automate. Helps employees apply for leave, check status, and get real-time updates via Teams. |
     | Instruction | Assist with leave applications, validate balances, and route approvals. Respond clearly and guide users through each step. Always ensure requests meet policy and ask for missing details. |
 
-    ![](../media/ex2img12.png)
+    ![](../media/leav-man-e2-g-2.png)
 
     >**Note:** Sometimes you may see a diffrent UI, if you are seeing a UI diffrent than this, then follow this below steps:
 
