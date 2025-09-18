@@ -298,6 +298,18 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](../media/leav-man-e2-g-64.png)
 
+1. On the top menu bar, click **Overview** to navigate to the flow details page.
+
+   ![](../media/leav-man-e2-g-66.png)
+
+1. On the **Overview** page, click **Edit** to update the flow details such as the name.
+
+   ![](../media/leav-man-e2-g-67.png)
+
+1. In the **Details** pane, enter **Leave Validation Flow (1)** as the flow name and click **Save (2)**.
+
+   ![](../media/leav-man-e2-g-68.png)
+
 ## Summary
 
 In this exercise, you created a Copilot Studio agent that served as the foundation for your store operations assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
