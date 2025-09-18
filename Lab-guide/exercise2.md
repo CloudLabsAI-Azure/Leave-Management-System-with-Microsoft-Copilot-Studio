@@ -22,15 +22,15 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 1. From the home page, select **Create (1)** from left menu and click on **+ New agent (2)** to create an agent.
 
-   ![](../media/ex2img1.png)
+   ![](../media/leav-man-e2-g-1.png)
 
 1. In the next pane, select **configure (1)** and provide the following details.
 
     | Key                     | Value                               |
     |-------------------------------|--------------------------------------------|
-    | Name | `StoreOps Assistant` |
-    | Description | StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets—all through conversational AI. Integrated with Dataverse, Freshworks, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy. |
-    | Instruction | You are an AI-powered assistant designed to support store operations staff. Your tasks include: <br> - Helping users search for products from the catalog using natural language. <br> - Providing accurate answers using connected knowledge sources like store policies and website content. <br> - Assisting in placing orders and logging them in Dataverse. <br> - Creating and tracking support tickets in Freshworks when issues arise. <br> Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If you’re unsure about a request, ask clarifying questions before proceeding. |
+    | Name | `Leave Management Agent` |
+    | Description | Handles leave requests, approvals, and balance updates using Dataverse and Power Automate. Helps employees apply for leave, check status, and get real-time updates via Teams. |
+    | Instruction | Assist with leave applications, validate balances, and route approvals. Respond clearly and guide users through each step. Always ensure requests meet policy and ask for missing details. |
 
     ![](../media/ex2img12.png)
 
@@ -40,86 +40,89 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
       ![](../media/ex5img34.png)
    
-    - In the next pane, provide the same details given above and click on **Create**.
+1. In the next pane, provide the same details given above and click on **Create**.
 
-      ![](../media/ex5img33.png)
+   ![](../media/leav-man-e2-g-3.png)
 
 1. Once after adding the details, click on **Continue** to create the agent.
 
-1. You have successfully created the StoreOps Assistant. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
+1. You have successfully created the Leave Management Agent. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
-   ![](../media/ex2img25.png)
+   ![](../media/leav-man-e2-g-4.png)
 
 ## Task 2: Adding knowledge sources to the agent
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
-1. Navigate to Copilot Studio tab, and select **Knowledge (1)** tab from top menu and click on **+ Add knowledge (2)**.
+1. If you are not already on the **Agents** page, select **Agents (1)** from the left navigation menu. Then, click **Leave Management Agent (2)**.
 
-   ![](../media/ex2img4.png)
+   ![](../media/leav-man-e2-g-5.png)
 
-1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
+1. On the **Leave Management Agent** page, select the **Knowledge (1)** tab from the top menu and click **+ Add knowledge (2)**.  
 
-   ![](../media/ex2img5.png)
+   ![](../media/leav-man-e2-g-6.png)
 
-1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and click on **Add (2)**.
+1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Leave-management` file.
 
-   ![](../media/ex2img6up.png)
+   ![](../media/leav-man-e2-g-7.png)
+
+1. On the **Upload files** pane, verify that the file **Leave-management.docx (1)** is listed and then click **Add to agent (2)**.
+
+   ![](../media/leav-man-e2-g-8.png)
 
 1. Once done, again click on **+ Add knowledge**.
 
-   ![](../media/ex2img8new.png)
+   ![](../media/leav-man-e2-g-9.png)
 
 1. In the next pane, select **Dataverse** as knowledge source.
 
-   ![](../media/ex2img14.png)
+   ![](../media/leav-man-e2-g-10.png)
 
-1. From the list, search and select **Order Record** and **Product** tables. Click on **Next**.
+1. From the list, search and select **Leave Request** table. Click on **Add to agent**.
 
-   ![](../media/ex2img21.png)
+   ![](../media/leav-man-e2-g-11.png)
 
-   >**Note:** If you are seeing **Product** table, instead of **Product Record**, please proceed with the **Product** Table.
+1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu and click **New agent flow (2)** to create a new flow.
 
-1. Once done, again click on **+ Add knowledge**.
+   ![](../media/leav-man-e2-g-22.png)
 
-   ![](../media/ex2img8new.png)
+1. On the **Agent flows – Designer** page, click **Add a trigger** to begin configuring the flow.  
 
-1. In the next pane, select **Public Websites** as knowledge source.
+   ![](../media/leav-man-e2-g-23.png)
 
-   ![](../media/ex2img17.png)
+1. In the next pane, select **Dataverse** as knowledge source.
 
-1. For **Public website link** add `https://prod.fabrikam.com` and click on **Add**.
+   ![](../media/leav-man-e2-g-10.png)
 
-   ![](../media/ex2img24.png)
+1. On the **Leave Management Agent** page, select the **Topics (1)** tab. Click **Add a topic (2)** and then choose **From blank (3)**.  
 
-   >Note: This is a sample E-Commerce website from Microsoft.
+   ![](../media/leav-man-e2-g-13.png)
 
-1. Once done, click on **Add** in the next pane.
+1. On the **Topic editor** page, click the **plus (+)** icon to add a new node to the flow. 
 
-   ![](../media/ex2img18.png)
+   ![](../media/leav-man-e2-g-14.png)
+
+1. In the **Topic editor**, from the options displayed, select **Ask a question** to add a question node to the flow.
+
+   ![](../media/leav-man-e2-g-15.png)
+
+1. In the **Question** node, enter **Please choose the Leave type from the list (1)** as the question text. Under **Identify**, select **Multiple choice options (2)**, and then click **+ New option (3)** to start adding choices.
+
+   ![](../media/leav-man-e2-g-16.png)
+
+1. In the **Options for user** section, type **Casual (1)** as the first leave type. Then click **+ New option (2)** to add another choice.  
+
+   ![](../media/leav-man-e2-g-17.png)
+
+1. Click on **+ New option** again as in the previous step, and add the leave types **Emergency** and **Unpaid**.   
+
+   ![](../media/leav-man-e2-g-18.png)
+
+1. In the **Save user response as** field, enter **leave_type (1)** as the variable name. On the right-side **Variable properties** pane, confirm that the **Variable name** is also set to **leave_type (2)**.
+
+   ![](../media/leav-man-e2-g-19.png)
 
 1. You have now successfully added all the necessary data as a knowledge source for this agent.
-
-1. Select **Overview (1)** tab from top menu, scroll down to **Knowledge** and make **Allow the AI to use its own general knowledge** option as **Disabled (2)**.
-
-   ![](../media/ex2img26.png)
-
-1. To test if the agent is ingested with knowledge or not, use the right message box to test the agent with some sample prompts given below:
-
-   - `what all products are available in inventory?`
-   - `What will the refund policy?`
-   - `List out all the previous orders with the product name?`
-
-     ![](../media/ex2img22.png)
-
-     ![](../media/ex2img23.png)
-
-<validation step="a705bde5-f070-4276-959d-11df80a6d264" />
- 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 ## Summary
 
