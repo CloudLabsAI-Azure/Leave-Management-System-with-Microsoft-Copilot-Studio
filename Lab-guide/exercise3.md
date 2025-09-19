@@ -1,134 +1,156 @@
-1. On the **Leave Management Agent** page, select the **Topics (1)** tab. Click **Add a topic (2)** and then choose **From blank (3)**.  
+# Exercise 3: Power Automate Approval Workflow 
 
-   ![](../media/leav-man-e2-g-13.png)
+### Estimated Duration: 60 Minutes
 
-1. On the **Test your agent** pane, click the **Close (X)** button to close the testing window and make the canvas larger for easier workflow design.
+## Overview
+In this exercise, you will continue building the leave management agent by adding more advanced capabilities. You will implement approval logic based on company policy: if the leave duration is two days or less, it will be automatically approved. otherwise, it will go through an approval process. Once approved, the leave request will be finalized and recorded.
 
-   ![](../media/leav-man-e3-g-1.png)
+## Objectives
 
-1. In the **Trigger** node, enter a description for the topic (1), for example: *This topic is used by employees to apply leaves*. Then click the **plus (+) icon (2)** to add the next step in the topic flow.
+You will be able to complete the following tasks:
 
-   ![](../media/leav-man-e3-g-2.png)
+- Task 1: Create Approval Flow
 
-1. In the **Topic editor**, from the options displayed, select **Ask a question** to add a question node to the flow.
+- Task 2: Create flow to update leave request in Dataverse
 
-   ![](../media/leav-man-e3-g-3.png)
+- Task 3: Create topic for leave application
 
-1. In the **Question** node, enter **`Please choose the Leave type from the list` (1)** as the question text. Under **Identify**, select **Multiple choice options (2)**, and then click **+ New option (3)** to start adding choices.
+### Task 1: Create Approval Flow
 
-   ![](../media/leav-man-e2-g-16.png)
+1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section.
 
-1. In the **Options for user** section, type **Casual (1)** as the first leave type. Then click **+ New option (2)** to add another choice.  
+   ![](../media/leav-man-e2-g-89.png)
 
-   ![](../media/leav-man-e2-g-17.png)
+1. In the **Condition** action, paste the required expression (1) into the first box. From the operator drop-down (2), select **is equal to**, and in the value field (3), enter the comparison value.
 
-1. Click on **+ New option** again as in the previous step, and add the leave types **Emergency** and **Unpaid**.   
+   ```
+   int(triggerBody()?['text_4'])
+   ``` 
 
-   ![](../media/leav-man-e2-g-18.png)
+   ![](../media/leav-man-e2-g-90.png)
 
-1. In the **Save user response as** field, enter **leave_type (1)** as the variable name. On the right-side **Variable properties** pane, confirm that the **Variable name** is also set to **leave_type (2)**.
+1. In the **Condition** action, under the **False** branch, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Start and wait for an approval (2)** in the search bar and select **Start and wait for an approval (3)** under **Standard approvals**.
 
-   ![](../media/leav-man-e2-g-19.png)
+   ![](../media/leav-man-e2-g-91.png)
 
-1. In the **Topics** designer, under **All other conditions**, click the **plus (+) icon** to add the next step in the flow. 
+1. In the **Start and wait for an approval** action, configure the parameters:  
+   - From the **Approval type** drop-down, select **Approve/Reject - Everyone must approve (1)**.  
+   - In the **Title** field, enter **Leave Approval (2)**.  
+   - In the **Assigned to** field, type the user’s email address **(3)** and select the matching account from the suggestions **(4)**. 
 
-   ![](../media/leav-man-e3-g-4.png)
+      ![](../media/leav-man-e2-g-92.png)
 
-1. Under **All other conditions**, select **Send a message** from the action menu to add a response step.  
+1. In the **False** branch of the approval, click the **plus (+) icon (1)** to add a new action.  
+   - In the **Add an action** dialog, type **Condition (2)** in the search bar.  
+   - Under the **Control** section, select **Condition (3)**.  
 
-   ![](../media/leav-man-e2-g-18.png)
+      ![](../media/leav-man-e2-g-93.png)
 
-1. In the **Message** node, enter the text **`Please choose an option from the list` (1)**. Then click the **plus (+) icon (2)** to add the next step in the flow. 
+1. In the **Condition 1** action, configure the condition as follows:  
+   - Select **Outcome (1)** from the dynamic content.  
+   - From the operator drop-down, select **is equal to (2)**.  
+   - In the value field, enter **Approve (3)**. 
 
-   ![](../media/leav-man-e3-g-6.png)
+      ```
+      outputs('Start_and_wait_for_an_approval')?['body/outcome']
+      ``` 
 
-1. From the **Message** node, open the action menu. Select **Topic management (1)** and then choose **Go to step (2)** to redirect the conversation flow.
+      ![](../media/leav-man-e2-g-94.png)
 
-   ![](../media/leav-man-e3-g-7.png)
+      > This condition evaluates whether the leave request has been approved by retrieving the response from the previous approval step.
 
-1. After selecting **Go to step**, choose the **Question** node **(where the leave type options are defined)** to **loop the flow back to the beginning** in case users select any other option.
+1. In the **False** branch of **Condition 1**, click the **plus (+) icon (1)** to add a new action.  
+   - In the **Add an action** dialog, type **Respond to the agent (2)** in the search bar.  
+   - Under **Skills**, select **Respond to the agent (3)**.  
 
-   ![](../media/leav-man-e3-g-8.png)
+   ![](../media/leav-man-e2-g-95.png)
 
-1. In the **Topics** designer, click the **plus (+) icon** below the condition branches to continue building the flow for each leave type path.
+1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **the request is rejected (2)** as the response message.
 
-   ![](../media/leav-man-e3-g-9.png)
+   ![](../media/leav-man-e2-g-96.png)
 
-1. From the action menu, select **Ask a question** to prompt the user for additional information in the flow.
+1. In the **False** branch, after the **Respond to the agent** action, click the **plus (+) icon (1)** to add a new action.  
+   - In the **Add an action** dialog, type **Terminate (2)** in the search bar.  
+   - Under the **Control** section, select **Terminate (3)**. 
 
-   ![](../media/leav-man-e3-g-10.png)
+      ![](../media/leav-man-e2-g-97.png)
 
-1. In the **Question** node, enter the prompt **Please provide your leave Start Date (Please make sure to provide in yyyy-mm-dd format) (1)** to capture the start date from the user.
+1. In the **Terminate** action, set the **Status** field to **Succeeded** to complete the workflow after rejection.
 
-   ![](../media/leav-man-e3-g-11.png)
+   ![](../media/leav-man-e2-g-98.png)
 
-1. In the **Question** node, under **Identify**, click **Multiple choice options (2)** and select **User's entire response (3)** so that the agent saves the response exactly as the user enters it.
+1. In the **True** branch of **Condition 1**, click the **plus (+) icon (1)** to add a new action.  
+   - In the **Add an action** dialog, type **Update a row (2)** in the search bar.  
+   - Under **Microsoft Dataverse**, select **Update a row (3)**.  
 
-   ![](../media/leav-man-e3-g-12.png)
+      ![](../media/leav-man-e2-g-99.png)
 
-1. In the **Save user response as** field, enter **StartDate (1)** as the variable name. On the **Variable properties** pane, confirm the **Variable name (2)** is set to **StartDate**.
+1. On the **Update a row** action:  
+   - Select **Leave Request (1)** as the table name.  
+   - In the **Row ID (2)** field, paste the expression (3) to reference the row created earlier.  
+   - Click **Add (4)** to confirm the expression.  
+   - In the **Status (5)** field, type **Approved**.  
 
-   ![](../media/leav-man-e3-g-13.png)
+      ```
+      outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
+      ``` 
 
-1. Below the **Question** node, click the **plus (+) icon** to add the next step in the flow. 
+      ![](../media/leav-man-e2-g-100.png)
 
-   ![](../media/leav-man-e3-g-14.png)
+      > **Note:** The <Logical_ID> here refers to the ID that you have copied in the first exercise from power apps portal.
 
-1. From the menu, select **Ask a question** to prompt the user for additional input.   
+1. On the **Update a row** action, click the **plus (+) button (1)** to add a new action.  
+   - In the search box, type **Respond to the agent (2)**.  
+   - From the **Skills** section, select **Respond to the agent (3)**. 
 
-   ![](../media/leav-man-e3-g-15.png)
+      ![](../media/leav-man-e2-g-101.png)
 
-1. On the **Question** node, configure it to capture the end date of the leave:  
-- Enter the message **Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)** in the text box **(1)**.  
-   - Under **Identify**, select **User's entire response (2)**.  
-   - In **Save user response as**, enter **EndDate (3)**.  
-   - In the **Variable properties** pane, confirm the variable name is set as **EndDate (4)**. 
+1. On the **Respond to the agent 1** action, in the **reply (1)** field, enter the message **You leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
 
-      ![](../media/leav-man-e3-g-16.png)
+   ```
+   outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
+   ``` 
 
-1. Below the **EndDate** question node, click the **plus (+) icon** to add the next step in the flow.
+   ```
+   outputs('Add_a_new_row')?['body/<Logical_ID>_enddate']
+   ``` 
 
-   ![](../media/leav-man-e3-g-17.png)
+   ![](../media/leav-man-e2-g-102.png)
 
-1. Below the **EndDate** question node, click the **plus (+) icon** and select **Ask a question** to add the next prompt in the flow. 
+   The completed flow should now look like the following:
 
-   ![](../media/leav-man-e3-g-18.png)
+   - The flow starts with **When an agent calls the flow**.  
+   - A new record is created in the **Leave Request** table using **Add a new row**.  
+   - A **Condition** checks the leave duration.  
+   - If **True**, the process continues.  
+   - If **False**, the flow triggers **Start and wait for an approval**.  
+      - Inside this branch, another **Condition** validates the approval outcome.  
+         - If **Approved**, the flow updates the leave record with status **Approved** and sends a response back to the agent.  
+         - If **Rejected**, the flow responds to the agent that the request is rejected and then terminates successfully.  
+   - The final steps include **Update a row** to mark approval in Dataverse, followed by a confirmation response through **Respond to the agent 1**. 
 
-1. On the **Question** node:  
-   - Enter the prompt **May I please know the reason for your leave? (1)**.  
-   - Under **Identify**, select **User's entire response (2)**.  
-   - In **Save user response as**, set the variable name to **reason (3)**.  
-   - Verify in the **Variable properties** pane that the variable name is correctly set as **reason (4)**, then close the properties pane **(5)**.  
+     ![](../media/leav-man-e2-g-103.png)
 
-      ![](../media/leav-man-e3-g-19.png)
+1. At the top-right corner of the flow designer, click **Publish** to save and activate your flow.
 
-1. Below the **reason** question node, click the **plus (+) icon** to add the next step in the flow.  
+   ![](../media/leav-man-e2-g-104.png)
 
-   ![](../media/leav-man-e3-g-20.png)
+1. On the top menu, click **Overview** to return to the flow overview page after publishing.
 
-1. In the **Question** node after capturing the reason, click **Add a tool (1)**. From the list of available tools, select **Leave Validation Flow (2)** to connect the flow with the validation process. 
+   ![](../media/leav-man-e2-g-105.png)
 
-   ![](../media/leav-man-e3-g-21.png)
+1. On the **Overview** page, under the **Details** section, click **Edit** to update the flow details such as the name and description.
 
-1. On the **Variables (1)** pane, under **Topic (7) (2)**, enable all the checkboxes (3) to make sure each variable is included in the flow.  
+   ![](../media/leav-man-e2-g-106.png)
 
-   ![](../media/leav-man-e3-g-22.png)
+1. In the **Details** pane, enter **Leave Management Workflow (1)** in the **Flow name** field. Then, click **Save (2)** to apply the changes.  
 
-1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **StartDate (2)** to map the variable.
+   ![](../media/leav-man-e2-g-107.png)
 
-   ![](../media/leav-man-e3-g-23.png)
 
-1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **endDate** field. From the **Select a variable** pane, choose **EndDate (2)** to map the variable. 
 
-   ![](../media/leav-man-e3-g-24.png)
 
-1. On the **Power Automate inputs** card:  
-   - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
-   - In the **Select a variable** pane, switch to the **System (2)** tab.  
-   - Search for **User.Email (3)**.  
-   - Select **User.Email (4)**.  
 
-      ![](../media/leav-man-e3-g-25.png)
 
 1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
 
