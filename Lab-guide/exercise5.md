@@ -1,16 +1,18 @@
-# Exercise 5: Deploy & Publish Your Agent to Microsoft Teams
+# Exercise 5: Publishing & Sharing
 
 ### Estimated Duration: 30 Minutes
 
 ## Overview
 
+In this exercise, you will publish the agent to Microsoft Teams, enabling users to interact with it directly within the Teams environment. You will also verify that the agent is accessible and responds correctly to basic prompts.
+
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1: Publish the agent to a Microsoft Teams channel
+- Task 1: Deploy & Publish Your Agent to Microsoft Teams
 
-## Task 1: Publish the agent to a Microsoft Teams channel
+## Task 1: Deploy & Publish Your Agent to Microsoft Teams
 
 1. Now that you've configured the agent, it's time to publish it so it can be used across different platforms.
 
@@ -50,21 +52,9 @@ You will be able to complete the following tasks:
 
    ![](../media/leav-man-e4-g-13.png)
 
-1. Back on the **Leave Management Agent** page in Copilot Studio, select the **Channels (1)** tab and click **Teams and Microsoft 365 Copilot (2)** under Microsoft channels.
-
-   ![](../media/leav-man-e4-g-14.png)
-
-1. On the **Teams and Microsoft 365 Copilot** page, under **Agent preview**, click **See agent in Microsoft 365** to validate the agent in Microsoft 365 apps. 
-
-   ![](../media/leav-man-e4-g-15.png)
-
-1. On the **Leave Management Agent** page in Microsoft 365, click **Add** to enable the agent. 
-
-   ![](../media/leav-man-e4-g-16.png)
-
-   >**Note:** If you are not navigated to copilot chat, please wait for sometime and publish the agent again from copilot studio and try accessing it again.
 
 ## Summary
 
+In this exercise, the agent was published to Microsoft Teams, allowing users to interact with it directly within the Teams environment. The agent was also verified to ensure it was accessible and responded correctly to basic prompts.
 
 ### You have successfully completed the Lab!

@@ -1,18 +1,24 @@
-# Exercise 4: Testing
+# Exercise 4: End-to-End Testing
 
-### Estimated Duration: 00 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
+
+In this exercise, you will test the agent end-to-end by executing various prompts and scenarios. After completing the tests, you will verify that the leave request data has been correctly updated in the Dataverse table.
 
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1: Publish the agent to a Microsoft Teams channel
+- Task 1: Test Approval Scenarios
 
-## Task 1: 
+- Task 2: Validate Data in Dataverse
 
-1. Now that you've configured the agent, it's time to test..
+## Task 1: Test Approval Scenarios
+
+In this task, you will run the agent end-to-end using the provided prompts and verify its responses for accuracy.
+
+1. Now that you've configured the agent, it's time to test.
 
 1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu and click **Leave Management Agent (2)**.
 
@@ -104,9 +110,12 @@ You will be able to complete the following tasks:
 
    ![](../media/leav-man-e4-g-39.png)
 
+## Task 2: Validate Data in Dataverse
+
+In this task, you will navigate the Dataverse and validate the data updated by the agent.
 
 
 ## Summary
 
+In this exercise, the agent was tested end-to-end by executing various prompts and scenarios. After completing the tests, the leave request data was verified to ensure it had been correctly updated in the Dataverse table.
 
-### You have successfully completed the Lab!
