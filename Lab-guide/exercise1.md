@@ -148,18 +148,6 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](../media/leav-man-e2-g-6.png)
 
-1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Leave-management` file.
-
-   ![](../media/leav-man-e2-g-7.png)
-
-1. On the **Upload files** pane, verify that the file **Leave-management.docx (1)** is listed and then click **Add to agent (2)**.
-
-   ![](../media/leav-man-e2-g-8.png)
-
-1. Once done, again click on **+ Add knowledge**.
-
-   ![](../media/leav-man-e2-g-9.png)
-
 1. In the next pane, select **Dataverse** as knowledge source.
 
    ![](../media/leav-man-e2-g-10.png)
