@@ -52,6 +52,37 @@ You will be able to complete the following tasks:
 
    ![](../media/leav-man-e4-g-13.png)
 
+1. In the **Leave Management Agent** chat window, type **Hello (1)** in the message box and click the **Send (2)** button to initiate the conversation.
+
+   ![](../media/cor-mn-e4-g-19.png)
+
+1. In the **Leave Management Agent** chat window, type **I want to apply for leave (1)** in the message box and click the **Send (2)** button to continue the conversation.
+
+   ![](../media/cor-mn-e4-g-12.png)
+
+1. In the **Leave Management Agent** chat window, when prompted to select a leave type, choose one of the option.
+
+   ![](../media/cor-mn-e4-g-13.png)
+
+1. In the **Leave Management Agent** chat, enter your leave start date in the required format **yyyy-mm-dd**, for example **2025-09-20 (1)**, and click the **Send (2)** button to proceed. 
+
+   ![](../media/cor-mn-e4-g-14.png)
+
+1. In the **Leave Management Agent** chat, enter your leave end date in the required format **yyyy-mm-dd**, for example **2025-09-27 (1)**, and click the **Send (2)** button to submit. This makes the total leave period greater than 2 days.
+
+   ![](../media/cor-mn-e4-g-15.png)
+
+1. In the **Leave Management Agent** chat, type the reason for your leave, for example **Need a break to play video games (1)**, and click the **Send (2)** button to continue.
+
+   ![](../media/cor-mn-e4-g-16.png)
+
+1. In the **Leave Approval** email from **Microsoft Power Automate (1)**, click **Reject (2)**, type the reason for rejection in the **Comments (3)** field, and click **Submit (4)** to confirm. 
+
+   ![](../media/cor-mn-e4-g-20.png)
+
+1. In Microsoft Teams, go to the **Activity (1)** section and review the **Leave Approval (2)** notification to see the final status of the request. 
+
+   ![](../media/cor-mn-e4-g-21.png)
 
 ## Summary
 
