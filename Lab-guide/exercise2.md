@@ -254,7 +254,7 @@ In this task, you will create a Power Automate flow that validates leave request
    - In the **Balance (3)** field, paste the expression **(4)** for balance. 
       
       ```
-      outputs('Compose_2')
+      outputs('Compose_1')
       ```
 
       ![](../media/leav-man-e2-g-63.png)
