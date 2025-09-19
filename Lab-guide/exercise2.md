@@ -396,6 +396,8 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 1. Once done, click on **Save Draft** option from top to save the flow in current state, you will updating this flow in coming excerises to add approval flow.
 
+   ![](../media/cor-mn-e4-g-6.png)
+
 ## Task 3: Create topic for leave application
 
 1. On the **Leave Management Agent** page, select the **Topics (1)** tab. Click **Add a topic (2)** and then choose **From blank (3)**.  
