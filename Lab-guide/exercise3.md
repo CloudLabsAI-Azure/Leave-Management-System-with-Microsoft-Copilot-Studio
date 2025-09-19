@@ -1,8 +1,9 @@
 # Exercise 3: Power Automate Approval Workflow 
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
+
 In this exercise, you will continue building the leave management agent by adding more advanced capabilities. You will implement approval logic based on company policy: if the leave duration is two days or less, it will be automatically approved. otherwise, it will go through an approval process. Once approved, the leave request will be finalized and recorded.
 
 ## Objectives
@@ -17,7 +18,11 @@ You will be able to complete the following tasks:
 
 ### Task 1: Create Approval Flow
 
-In this task, you will update the 
+In this task, you will enhance the Leave Management Workflow by incorporating approval logic and advanced management features to handle leave requests more efficiently.
+
+1. Navigate to **flows (1)** from the side menu and select **Leave Management Workflow**.
+
+1. Once in the **Leave Management Workflow** overview pane, navigate to **Designer** pane to edit the flow.
 
 1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section.
 
@@ -80,6 +85,10 @@ In this task, you will update the
 1. In the **Terminate** action, set the **Status** field to **Succeeded** to complete the workflow after rejection.
 
    ![](../media/leav-man-e2-g-98.png)
+
+### Task 2: Update Dataverse
+
+In this task, you will update the flow to modify the Dataverse table, changing the leave request status from 'Pending' to 'Approved' based on the defined conditions.
 
 1. In the **True** branch of **Condition 1**, click the **plus (+) icon (1)** to add a new action.  
    - In the **Add an action** dialog, type **Update a row (2)** in the search bar.  
@@ -149,10 +158,9 @@ In this task, you will update the
 
    ![](../media/leav-man-e2-g-107.png)
 
+### Task 3: Complete leave request topic
 
-
-
-
+In this task, you will complete the leave request topic by implementing the logic to add new leave requests and update existing records in Dataverse with the request details.
 
 1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
 
@@ -245,11 +253,15 @@ In this task, you will update the
 
    ![](../media/leav-man-e3-g-41.png)
 
-In the **Save your topic** dialog:  
-   - Enter the topic name as **leave_request (1)**.  
-   - Click **Save (2)** to confirm and store the topic.  
+1. You have successfully completed the creation of the agent. It is now fully equipped with all intended capabilities and will be ready for testing in the next task.
 
-      ![](../media/leav-man-e3-g-42.png)
+## Summary
+
+In this exercise, you continued building the leave management agent by adding advanced capabilities. You implemented approval logic based on company policy: leaves of two days or less were automatically approved, while longer leaves went through an approval process. Once approved, the leave requests were finalized and recorded.
+
+
+
+
 
 
 

@@ -547,7 +547,15 @@ In the **Add a new row** | action, map the parameters to their corresponding fie
 
       ![](../media/leav-man-e3-g-25.png)
 
-1. Once done, click on **Save** option from the top menu and provide name as **leave request** to save the topic at current state.
+1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
+
+   ![](../media/leav-man-e3-g-41.png)
+
+1. In the **Save your topic** dialog:  
+   - Enter the topic name as **leave_request (1)**.  
+   - Click **Save (2)** to confirm and store the topic.  
+
+      ![](../media/leav-man-e3-g-42.png)
 
 1. You have successfully created a basic agent that collects details and validates leave requests. In the upcoming exercises, we will enhance the agent by adding approval logic and conditional workflows to make it more advanced and capable.
 
