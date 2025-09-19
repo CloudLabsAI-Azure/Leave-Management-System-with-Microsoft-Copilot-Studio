@@ -4,15 +4,18 @@
 
 ## Overview
 
-In this exercise, you will publish the agent to Microsoft Teams, enabling users to interact with it directly within the Teams environment. You will also verify that the agent is accessible and responds correctly to basic prompts.
+In this exercise, you will learn how to publish the **Leave Management Agent** to Microsoft Teams and validate its functionality. You will begin by enabling the Teams channel in Copilot Studio and completing the publishing process. After deployment, you will interact with the agent in Microsoft Teams by submitting a leave request, confirming that it responds correctly, and verifying the approval workflow.  
 
 ## Objectives
 
 You will be able to complete the following tasks:
 
 - Task 1: Deploy & Publish Your Agent to Microsoft Teams
+- Task 2: Test the Deployed Agent in Microsoft Teams
 
 ## Task 1: Deploy & Publish Your Agent to Microsoft Teams
+
+In this task, you will publish the **Leave Management Agent** to Microsoft Teams by enabling the Teams channel in Copilot Studio. You will configure the publishing settings, make the agent available, and verify that it is successfully installed and accessible within the Teams environment.
 
 1. Now that you've configured the agent, it's time to publish it so it can be used across different platforms.
 
@@ -56,6 +59,10 @@ You will be able to complete the following tasks:
 
    ![](../media/cor-mn-e4-g-19.png)
 
+## Task 2: Test the Deployed Agent in Microsoft Teams
+
+In this task, you will test the deployed **Leave Management Agent** in Microsoft Teams by submitting a leave request, providing the required details, and reviewing the approval outcome.
+
 1. In the **Leave Management Agent** chat window, type **I want to apply for leave (1)** in the message box and click the **Send (2)** button to continue the conversation.
 
    ![](../media/cor-mn-e4-g-12.png)
@@ -86,6 +93,6 @@ You will be able to complete the following tasks:
 
 ## Summary
 
-In this exercise, the agent was published to Microsoft Teams, allowing users to interact with it directly within the Teams environment. The agent was also verified to ensure it was accessible and responded correctly to basic prompts.
+In this exercise, you successfully published the **Leave Management Agent** to Microsoft Teams and confirmed that it could be accessed and used within the Teams environment. You tested the agent by submitting a leave request, providing required details, and observing the automated approval process through Power Automate. This validated both the deployment and the functional behavior of the agent in a real user scenario.
 
 ### You have successfully completed the Lab!
