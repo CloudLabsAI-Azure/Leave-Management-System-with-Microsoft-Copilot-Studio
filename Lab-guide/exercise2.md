@@ -151,9 +151,9 @@ In this task, you will create a Power Automate flow that validates leave request
    - Select the operator **is greater than (5)**.  
    - Enter **0 (6)** as the comparison value.  
 
-   ```
-   length(outputs('List_rows')?['body/value'])
-   ```
+      ```
+      length(outputs('List_rows')?['body/value'])
+      ```
 
       ![](../media/leav-man-e2-g-50.png)
 
@@ -183,13 +183,13 @@ In this task, you will create a Power Automate flow that validates leave request
    - Paste the expression **(3)**.  
    - Click **Add (4)** to insert it.  
 
-   ```
-   sub(24, outputs('Compose'))
-   ```
+      ```
+      sub(24, outputs('Compose'))
+      ```
 
-   ![](../media/leav-man-e2-g-57.png)
+      ![](../media/leav-man-e2-g-57.png)
 
-   > Since each employee is allotted 24 leaves annually, if a user is applying for the first time, they start with 24 available leaves. This expression subtracts the current leave duration from 24 to calculate the remaining balance.
+      > Since each employee is allotted 24 leaves annually, if a user is applying for the first time, they start with 24 available leaves. This expression subtracts the current leave duration from 24 to calculate the remaining balance.
 
 1. Under the **True** branch of the **Condition**, click the **plus (+) (1)** button to add a new action, type **Compose (2)** in the search box, and from the **Data Operation** section select **Compose (3)**.
 
@@ -201,11 +201,11 @@ In this task, you will create a Power Automate flow that validates leave request
    - Paste the expression **(3)**.  
    - Click **Add (4)** to insert it.  
 
-   ```
-   sub(first(outputs('List_rows')?['body/value'])?['crf88_balancedays'], outputs('Compose'))
-   ```
+      ```
+      sub(first(outputs('List_rows')?['body/value'])?['crf88_balancedays'], outputs('Compose'))
+      ```
 
-   ![](../media/leav-man-e2-g-54.png)
+      ![](../media/leav-man-e2-g-54.png)
 
    > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
 
@@ -213,7 +213,7 @@ In this task, you will create a Power Automate flow that validates leave request
    - In the search bar, type **Respond to the agent (2)**.  
    - From the **Skills** section, select **Respond to the agent (3)**.  
 
-   ![](../media/leav-man-e2-g-59.png)
+      ![](../media/leav-man-e2-g-59.png)
 
 1. In the **Respond to the agent** action: 
    - Enter **Duration (1)** as the output name.  
@@ -222,11 +222,11 @@ In this task, you will create a Power Automate flow that validates leave request
    - Click **Add (4)** to insert it. 
    - Click **Add an output (5)** and select **Text**.
 
-   ```
-   outputs('Compose')
-   ``` 
+      ```
+      outputs('Compose')
+      ``` 
 
-   ![](../media/leav-man-e2-g-60.png) 
+      ![](../media/leav-man-e2-g-60.png) 
 
 1. In the **Respond to the agent** action, click **Add an output** and select **Text**.  
    - Enter **Balance (1)** as the output name.  
@@ -234,11 +234,11 @@ In this task, you will create a Power Automate flow that validates leave request
    - Paste the expression **(2)**.  
    - Click **Add (3)** to insert it. 
 
-   ```
-   outputs('Compose_2')
-   ```
+      ```
+      outputs('Compose_2')
+      ```
 
-   ![](../media/leav-man-e2-g-61.png)
+      ![](../media/leav-man-e2-g-61.png)
 
 1. In the **False** branch of the Condition, click the **plus (+) icon (1)**, search for **Respond to the agent (2)**, and select **Respond to the agent (3)** from the Skills section. 
 
@@ -319,10 +319,10 @@ In this task, you will design a Power Automate flow that collects all the necess
    ![](../media/leav-man-e2-g-76.png)
 
 1. In the **Parameters** section, add two date input parameters:  
-- **StartDate (1)**  
-- **endDate (2)**  
+   - **StartDate (1)**  
+   - **endDate (2)**  
 
-   ![](../media/leav-man-e2-g-77.png)
+      ![](../media/leav-man-e2-g-77.png)
 
 1. After adding the required inputs, the **Parameters** section should look as shown below, with the following fields: 
 
