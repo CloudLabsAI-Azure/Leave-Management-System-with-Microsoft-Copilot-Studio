@@ -1,4 +1,4 @@
-# Exercise 4: Deploy & Publish Your Agent to Microsoft Teams
+# Exercise 5: Deploy & Publish Your Agent to Microsoft Teams
 
 ### Estimated Duration: 30 Minutes
 
