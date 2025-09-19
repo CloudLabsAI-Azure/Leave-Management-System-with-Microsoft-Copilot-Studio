@@ -114,6 +114,26 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
 In this task, you will navigate the Dataverse and validate the data updated by the agent.
 
+1. On the **Copilot Studio** page, click on the **More options (1)** menu from the left navigation panel and select **Power Apps (2)** under the **Power Platform** section to navigate there, **or** open a new browser window and go to [https://make.powerapps.com](https://make.powerapps.com).
+
+   ![](../media/cor-mn-e4-g-10.png)
+
+1. On the **Power Apps** portal, ensure the environment is set to **ODL_User (1)**. From the left navigation menu, select **Tables (2)** and then choose **Leave Request (3)** from the list.
+
+   ![](../media/cor-mn-e4-g-7.png)
+
+1. On the **Leave Request columns and data** page, review the newly added records. Verify the following fields:  
+      - **Employee Email** and **Employee Name** are automatically populated with your user details.  
+      - **Leave Type** reflects the type of leave selected.  
+      - **Start Date** and **End Date** match the values entered during testing.  
+      - **Duration** displays the calculated number of leave days.  
+      - **Status** shows the current approval status. 
+
+      ![](../media/cor-mn-e4-g-11.png)  
+
+      ![](../media/cor-mn-e4-g-9.png)
+
+      > **Note:** The **Employee Email/User ID** field is automatically fetched by the system from your login context. You do not need to enter it manually.
 
 ## Summary
 
