@@ -1,0 +1,4 @@
+requestid,employee_email,employee_name,leave_type,start_date,end_date,duration_days,reason,status,manager_email,manager_comments,approval_requested_on,approval_completed_on,balance_days
+REQ-0001,alice@example.com,Alice Johnson,Casual,2025-01-15,2025-01-16,2,Family event,Approved,manager1@example.com,Approved,2025-01-10T09:00:00Z,2025-01-11T12:00:00Z,22
+REQ-0002,bob@example.com,Bob Kumar,Emergency,2025-02-05,2025-02-05,1,Medical appointment,Approved,manager2@example.com,Approved quickly,2025-02-03T10:30:00Z,2025-02-04T15:45:00Z,23
+REQ-0003,alice@example.com,Alice Johnson,Unpaid,2025-03-12,2025-03-13,2,Personal work,Pending,manager1@example.com,,2025-03-10T08:45:00Z,,22
