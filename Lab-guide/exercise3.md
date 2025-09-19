@@ -28,13 +28,19 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
    ![](../media/leav-man-e2-g-89.png)
 
-1. In the **Condition** action, paste the required expression (1) into the first box. From the operator drop-down (2), select **is equal to**, and in the value field (3), enter the comparison value.
+1. In the **Condition** pane, type **/** in the field (1) and select **Insert expression (2)** from the dropdown list.
 
-   ```
-   int(triggerBody()?['text_4'])
-   ``` 
+   ![](../media/cor-mn-e4-g-22.png)
 
-   ![](../media/leav-man-e2-g-90.png)
+1. In the **Expression** editor, type **int() (1)** and keep the cursor inside the parentheses. Click **Dynamic content (2)** and select **durationDays (3)** to insert it into the expression. 
+
+   ![](../media/cor-mn-e4-g-25.png)
+
+1. In the **Expression** editor, verify that the expression is set **(1)**. Once done, click **Add (2)** to insert it into the condition. 
+
+   ![](../media/cor-mn-e4-g-24.png)
+
+   > **Note:** The expression reference (for example, `triggerBody()?['text_4']`) may vary depending on the order in which inputs are added in the **When an agent calls the flow** step. The number (`text_4`, `text_5`, etc.) is auto-generated
 
 1. In the **Condition** action, under the **False** branch, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Start and wait for an approval (2)** in the search bar and select **Start and wait for an approval (3)** under **Standard approvals**.
 
