@@ -324,6 +324,10 @@ In this task, you will design a Power Automate flow that collects all the necess
 
    ![](../media/leav-man-e2-g-77.png)
 
+1. After adding the required inputs, the **Parameters** section should look as shown below, with the following fields: 
+
+   ![](../media/cor-mn-e4-g-1.png)
+
 1. On the **Designer** canvas, click the **plus (+) icon (1)** to add an action. In the **Add an action** dialog, type **Add a new row (2)** in the search bar. Under **Microsoft Dataverse (3)**, select **Add a new row (4)**.
 
    ![](../media/leav-man-e2-g-78.png)
@@ -344,72 +348,51 @@ In this task, you will design a Power Automate flow that collects all the necess
    - **start_date**  
    - **status**  
 
-   ![](../media/leav-man-e2-g-85.png)
+      ![](../media/leav-man-e2-g-85.png)
 
 1. In the **Add a new row** action, under **Balance_days**, type **/** (1) and then click **Insert expression (2)** to add an expression.
 
    ![](../media/leav-man-e2-g-86.png)
 
-1. In the **Add a new row** action, map the parameters to the Dataverse fields as shown in the table below.
+1. On the **Add a row** page, in the **Balance_days** field:  
+   - Select the **Dynamic content (1)** tab.  
+   - In the search bar, type **balance (2)**.  
+   - From the results, select **Balance (3)**.  
+   - Click **Add (4)** to confirm.  
 
-   | Field Name      | Value / Expression                        |
+      ![](../media/cor-mn-e4-g-2.png)
+
+1. On the **Add a row** page, in the **Duration_days** field:  
+   - Type **/** (1).  
+   - Select **Insert expression (2)** from the menu.  
+
+      ![](../media/cor-mn-e4-g-3.png)
+
+1. In the expression editor:  
+   - Select **Dynamic content (1)**.  
+   - Type **duration (2)** in the search bar.  
+   - Choose **durationDays (3)** under *When an agent calls the flow*.  
+   - Click **Add (4)** to insert it.  
+
+      ![](../media/cor-mn-e4-g-4.png)
+
+1. Now map the remaining parameters to the Dataverse fields as shown in the table below.
+
+   | Field Name      |   Choose                                   |
    |-----------------|--------------------------------------------|
-   | Balance_days    | Paste the expression for **Balance**       |
-   | Duration_days   | Paste the expression for **durationDays**  |
-   | Employee_email  | Paste the expression for **employeeEmail** |
-   | Employee_name   | Paste the expression for **employeeName**  |
-   | End_date        | Paste the expression for **endDate**       |
-   | Leave_type      | Enter **Casual** as a static value         |
-   | Reason          | Paste the expression for **reason**        |
-   | Start_date      | Paste the expression for **StartDate**     |
-   | Status          | Enter **Pending** as a static value        |
+   | Employee_email  | Select **employeeEmail** |
+   | Employee_name   | Select **employeeName**  |
+   | End_date        | Select **endDate**       |
+   | Leave_type      | Select **Casual** as a static value         |
+   | Reason          | Select **reason**        |
+   | Start_date      | Select **StartDate**     |
+   | Status          | Select **Pending** as a static value        |
 
-In the **Add a new row** | action, map the parameters to their corresponding fields:  
-   - **Duration_days (1)** | Paste the expression for **durationDays.**
+   - **Note:** For fields with dynamic values, select them from the **Dynamic content** panel.  
 
-      ```
-      triggerBody()?['text_4']
-      ``` 
+   - **Note:** For fields marked **static value**, select the value directly.  
 
-   - **Employee_email (2)** | Paste the expression for **employeeEmail.**
-
-      ```
-      triggerBody()?['text']
-      ``` 
-
-   - **Employee_name (3)** | Paste the expression for **employeeName.** 
-
-      ```
-      triggerBody()?['text_1']
-      ``` 
-
-   - **End_date (4)** → Paste the expression for **endDate.** 
-
-      ```
-      triggerBody()?['date_1']
-      ``` 
-
-   - **Leave_type (5)** → Enter **Casual.** as a static value.     
-
-   - **Reason (6)** → Paste the expression for **reason.** 
-
-      ```
-      triggerBody()?['text_3']
-      ``` 
-
-   - **Start_date (7)** → Paste the expression for **StartDate.**   
-
-      ```
-      triggerBody()?['date']
-      ``` 
-
-   - **Status (8)** → Enter **Pending** as a static value.  
-
-      - **Note:** For fields marked **Paste the expression**, click inside the input box, choose **Insert expression**, and paste the expression provided in the lab guide. 
-
-      - **Note:** For fields marked **static value**, type the value directly.  
-
-         ![](../media/leav-man-e2-g-88.png)
+      ![](../media/cor-mn-e4-g-5.png)
 
 1. Once done, click on **Save Draft** option from top to save the flow in current state, you will updating this flow in coming excerises to add approval flow.
 
