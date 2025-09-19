@@ -411,6 +411,8 @@ In the **Add a new row** | action, map the parameters to their corresponding fie
 
          ![](../media/leav-man-e2-g-88.png)
 
+1. Once done, click on **Save Draft** option from top to save the flow in current state, you will updating this flow in coming excerises to add approval flow.
+
 ## Task 3: Create topic for leave application
 
 1. On the **Leave Management Agent** page, select the **Topics (1)** tab. Click **Add a topic (2)** and then choose **From blank (3)**.  
@@ -545,7 +547,7 @@ In the **Add a new row** | action, map the parameters to their corresponding fie
 
       ![](../media/leav-man-e3-g-25.png)
 
-1. Once done, click on **Save** option from the top menu to save the topic at current state.
+1. Once done, click on **Save** option from the top menu and provide name as **leave request** to save the topic at current state.
 
 1. You have successfully created a basic agent that collects details and validates leave requests. In the upcoming exercises, we will enhance the agent by adding approval logic and conditional workflows to make it more advanced and capable.
 

@@ -11,11 +11,13 @@ You will be able to complete the following tasks:
 
 - Task 1: Create Approval Flow
 
-- Task 2: Create flow to update leave request in Dataverse
+- Task 2: Update Dataverse
 
-- Task 3: Create topic for leave application
+- Task 3: Complete leave request topic 
 
 ### Task 1: Create Approval Flow
+
+In this task, you will update the 
 
 1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section.
 
