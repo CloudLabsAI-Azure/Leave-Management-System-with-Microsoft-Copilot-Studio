@@ -4,8 +4,6 @@
 
 ## Overview
 
-In this exercise, you will deploy your completed StoreOps Assistant to Microsoft Teams. This step allows users to interact with the assistant directly within a Teams channel, making it easily accessible for daily operations. You will also validate its end-to-end functionality by testing core features such as product lookup, order placement, and support ticket creation within the Teams environment.
-
 ## Objectives
 
 You will be able to complete the following tasks:
@@ -14,62 +12,59 @@ You will be able to complete the following tasks:
 
 ## Task 1: Publish the agent to a Microsoft Teams channel
 
-In this task, you will configure and publish your StoreOps Assistant to Microsoft Teams. You will complete the necessary steps to make the agent available within a Teams channel, ensuring that team members can access and use it as part of their daily workflow.
-
 1. Now that you've configured the agent, it's time to publish it so it can be used across different platforms.
 
-1. From the top menu, click on **Channels (2)** option, if you can't see it directly click on **+1 (1)** so that you can see it.
+1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation and click on **Leave Management Agent (2)**.
 
-   ![](../media/ex3imgup9.png)
+   ![](../media/leav-man-e4-g-1.png)
 
-1. From the list of channels, select **Teams and Microsoft 365 Copilot**. Configuring this channel will publish the agent to both Teams and Microsoft 365 Copilot.
+1. On the **Leave Management Agent** page, select the **Channels (1)** tab and click **Teams and Microsoft 365 Copilot (2)** under Microsoft channels.
 
-   ![](../media/ex3imgup10.png)
+   ![](../media/leav-man-e4-g-2.png)
 
-1. In the next pane, click on **Add channel**.
+1. On the **Teams and Microsoft 365 Copilot** page, select **Make agent available in Microsoft 365 Copilot (1)** and then click **Add channel (2)**. 
 
-   ![](../media/ex3imgup11.png)
+   ![](../media/leav-man-e4-g-3.png)
 
-1. Click on **Publish** in the pop up window to publlish your agent to the selected channel.
+1. On the **Ready to publish?** dialog box, click **Publish** to make the agent available. 
 
-   ![](../media/ex3imgup12.png)
+   ![](../media/leav-man-e4-g-4.png)
 
-1. Once published, in the same pane, click on **See agent in Teams**.
+1. Once the channel is added, on the **Teams and Microsoft 365 Copilot** page, click **See agent in Teams** to open the agent in Microsoft Teams. 
 
-   ![](../media/ex3imgup13.png)
+   ![](../media/leav-man-e4-g-5.png)
 
-1. Now, you will be navigated to a new browser tab, Click on **Use the web app instead**.
+1. If the **Open Microsoft Teams?** pop-up appears, click **Cancel** to stay on the browser. 
 
-   ![](../media/ex3imgup14.png)
+   ![](../media/leav-man-e4-g-6.png)
 
-1. Once you are in Teams web app, click on add to add the agent to the chat.
+1. On the **Stay better connected with the Teams desktop app** page, click **Use the web app instead** to continue in the browser.
 
-   ![](../media/ex5img32.png)
+   ![](../media/leav-man-e4-g-7.png)
 
-1. In the next pane, Click on **Open** to open the **StoreOps Assistant** in Teams.
+1. On the **Leave Management Agent** page in Microsoft Teams, click **Add** to install the agent. 
 
-   ![](../media/ex3imgup15.png)
+   ![](../media/leav-man-e4-g-12.png)
 
-1. Now the **StoreOps Assistant** will be opened in teams, you can tryout some prompts for `Placing Orders`, `Creating Tickets` and validate it.
+1. Once the agent is added successfully, click **Open** to launch the **Leave Management Agent** in Teams. 
 
-   ![](../media/ex3imgup16.png)
+   ![](../media/leav-man-e4-g-13.png)
 
-1. Once done, navigate back to Copilot Studio and select **See agent in Microsoft 365**.
+1. Back on the **Leave Management Agent** page in Copilot Studio, select the **Channels (1)** tab and click **Teams and Microsoft 365 Copilot (2)** under Microsoft channels.
 
-   ![](../media/ex3imgup17.png)
+   ![](../media/leav-man-e4-g-14.png)
 
-1. In the next pane, Click on **Add** to add the StoreOps Assistant to Microsoft 365 copilot.
+1. On the **Teams and Microsoft 365 Copilot** page, under **Agent preview**, click **See agent in Microsoft 365** to validate the agent in Microsoft 365 apps. 
 
-   ![](../media/ex3imgup18.png)
+   ![](../media/leav-man-e4-g-15.png)
+
+1. On the **Leave Management Agent** page in Microsoft 365, click **Add** to enable the agent. 
+
+   ![](../media/leav-man-e4-g-16.png)
 
    >**Note:** If you are not navigated to copilot chat, please wait for sometime and publish the agent again from copilot studio and try accessing it again.
 
-1. Once added, you will be navigated to **Copilot Chat** pane, where the **StoreOps Assistant** is opened. You can tryout some prompts for `Placing Orders`, `Creating Tickets` and validate it.
-
-   ![](../media/ex5img31.png)
-
 ## Summary
 
-In this exercise, you deployed your completed StoreOps Assistant to Microsoft Teams. This step enabled users to interact with the assistant directly within a Teams channel, making it easily accessible for daily operations. You also validated its end-to-end functionality by testing core features such as product lookup, order placement, and support ticket creation within the Teams environment.
 
 ### You have successfully completed the Lab!
