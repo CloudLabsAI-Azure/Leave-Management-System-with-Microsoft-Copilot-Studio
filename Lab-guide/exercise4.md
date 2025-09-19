@@ -129,11 +129,11 @@ In this task, you will navigate the Dataverse and validate the data updated by t
       - **Duration** displays the calculated number of leave days.  
       - **Status** shows the current approval status. 
 
-      ![](../media/cor-mn-e4-g-11.png)  
+         ![](../media/cor-mn-e4-g-11.png)  
 
-      ![](../media/cor-mn-e4-g-9.png)
+         ![](../media/cor-mn-e4-g-9.png)
 
-      > **Note:** The **Employee Email/User ID** field is automatically fetched by the system from your login context. You do not need to enter it manually.
+         > **Note:** The **Employee Email/User ID** field is automatically fetched by the system from your login context. You do not need to enter it manually.
 
 ## Summary
 

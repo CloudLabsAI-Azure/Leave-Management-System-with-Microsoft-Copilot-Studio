@@ -76,7 +76,7 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
    - In the **Add an action** dialog, type **Respond to the agent (2)** in the search bar.  
    - Under **Skills**, select **Respond to the agent (3)**.  
 
-   ![](../media/leav-man-e2-g-95.png)
+      ![](../media/leav-man-e2-g-95.png)
 
 1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **the request is rejected (2)** as the response message.
 
