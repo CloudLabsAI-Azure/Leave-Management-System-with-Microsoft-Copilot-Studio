@@ -55,33 +55,33 @@ Welcome to your Leave Management System with Microsoft Copilot Studio lab! We've
 
 Once you're ready to dive in, your virtual machine and Lab guide will be right at your fingertips within your web browser.
 
-![](../media/gs1.png)
+![](../media/gs-leave-1.png)
 
 ### Exploring Your Lab Resources
 
 To get a better understanding of your Lab resources and credentials, navigate to the Environment tab.
 
-![](../media/gs2.png)
+![](../media/gs-leave-2.png)
 
 ### Utilizing the Split Window Feature
 
 For convenience, you can open the Lab guide in a separate window by selecting the Split Window button from the Top right corner
 
-![](../media/gs3.png)
+![](../media/gs-leave-3.png)
 
 ### Managing Your Virtual Machine
 
-Feel free to start, stop, or restart your virtual machine as needed from the Resources tab. Your experience is in your hands!
+From the **Resources (1)** tab, you can easily **start, stop, restart, or connect (2)** to your virtual machine—your experience is in your hands!
 
-![](../media/gs4.png)
+![](../media/gs-leave-4.png)
 
 ## Let's Get Started with Power Apps Portal
 
 1. In the JumpVM, click on **Microsoft Edge** shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![](../media/gs-1.png)
+   ![](../media/gs-leave-5.png)
 
-1. Open a new browser tab and navigate to [Power Apps](https://make.powerapps.com/) portal.
+1. Open a new browser tab and navigate to [https://make.powerapps.com/](https://make.powerapps.com/) (Power Apps portal).
 
 1. On the **Sign into Microsoft** tab, you will see the login screen. Enter the provided email or username, and click **Next** to proceed.
 
@@ -97,7 +97,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
      >**Note:** If you see the Action Required dialog box, then select Ask Later option.
      
-1. If you see the pop-up **Stay Signed in?**, click No.
+1. If you see the pop-up **Stay Signed in?**, click **No**.
 
    ![](../media/gs-4.png)
 
