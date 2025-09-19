@@ -50,7 +50,7 @@ You will be able to complete the following tasks:
 
    ![](../media/ex2img11.png)
 
-On the **Import an Excel or .CSV file** pane, verify that the file **Leave Request.xlsx** is listed. Ensure that the table **LeaveRequests** is included by keeping the toggle enabled. Click **Import** to proceed.
+1. On the **Import an Excel or .CSV file** pane, verify that the file **Leave Request.xlsx** is listed. Ensure that the table **LeaveRequests** is included by keeping the toggle enabled. Click **Import** to proceed.
 
    ![](../media/leav-man-e1-g-10.png)
 
