@@ -161,17 +161,17 @@ In this task, you will create a Power Automate flow that validates leave request
 
       ![](../media/leav-man-e2-g-52.png)
 
-   > the above expression outputs('List_rows') → gets the result from the List rows action in Power Automate.
+      > the above expression outputs('List_rows') → gets the result from the List rows action in Power Automate.
 
-   > - ['body/value'] → accesses the list of rows (records) returned.
+      > - ['body/value'] → accesses the list of rows (records) returned.
 
-   > - length(...) → counts how many rows were returned.
+      > - length(...) → counts how many rows were returned.
 
-   > 👉 So this expression returns the number of records found in Dataverse.
-    
-   > - If the length is 0 → no record exists → this is the user’s first leave application.
+      > - **So this expression returns the number of records found in Dataverse**.
+      
+      > - If the length is 0 → no record exists → this is the user’s first leave application.
 
-   > - If the length is greater than 0 → a record exists → the user already has leave data in the database.
+      > - If the length is greater than 0 → a record exists → the user already has leave data in the database.
 
 1. Under the **False** branch of the **Condition**, click the **plus (+) (1)** button to add a new action, type **Compose (2)** in the search box, and from the **Data Operation** section select **Compose (3)**.
 
@@ -207,7 +207,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
       ![](../media/leav-man-e2-g-54.png)
 
-   > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
+      > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
 
 1. Under the **True** branch of the condition, click the **plus (+) icon (1)**.  
    - In the search bar, type **Respond to the agent (2)**.  
@@ -257,7 +257,7 @@ In this task, you will create a Power Automate flow that validates leave request
       outputs('Compose_2')
       ```
 
-   ![](../media/leav-man-e2-g-63.png)
+      ![](../media/leav-man-e2-g-63.png)
 
 1. On the **Designer** page, review the complete flow to ensure all steps are connected as shown. Once confirmed, click **Publish** to save and activate the flow.
 
