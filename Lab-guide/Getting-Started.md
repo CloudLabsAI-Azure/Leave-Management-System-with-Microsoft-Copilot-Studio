@@ -10,38 +10,46 @@ In this hands-on lab, you will configure and explore a Leave Management Agent th
 
 By the end of this lab, you will be able to:
 
--  Understand the policies and business rules that govern leave applications.
--  Configure the agent to read and write leave data from Dataverse tables.
--  Apply validation logic to prevent overlapping or invalid leave requests.
--  Implement balance checks and auto-approval rules based on request duration.
--  Route longer leave requests to managers for approval and update balances accordingly.
--  Track and query your own leave history securely, without exposing other employees’ data.
+- **Setting up Pre-Requisites for Leave Management Agent:** Provision a Power Platform environment, sign into Copilot Studio, and configure a new agent’s basic settings.
+
+- **Designing Advanced Topics:** Define the agent’s purpose, connect knowledge sources, and enable AI-powered responses for leave management.
+
+- **Power Automate Approval Workflow:** Implement leave approval logic based on company policy and record finalized requests.
+
+- **End-to-End Testing:** Execute prompts and scenarios to verify the agent updates leave request data correctly in Dataverse.
+
+- **Publishing & Sharing:** Publish the agent to Microsoft Teams and ensure it is accessible and responsive to basic prompts.
 
 ## Prerequisites
 
 Participants should have:
 
-- An active Microsoft Power Platform environment with Dataverse enabled.
-- Access to Dataverse tables **LeaveRequest** and **LeaveBalance** with appropriate permissions.
-- Basic familiarity with Microsoft Power Automate and Power Apps (for flows and agent integration).
-- A test user account with leave balances seeded in Dataverse for validation.
-- Manager accounts are configured in the system for approval routing.
+- Basic Understanding of Agentic AI Concepts
+- Working knowledge on Microsoft Copilot Studio
 
 ## Architecture
 
-The lab utilizes several Azure services to build, deploy, and manage applications effectively. Azure Container Registry (ACR) is used for storing and managing Docker container images, while Azure Cosmos DB provides a scalable, multi-model database solution for data migration. Azure Kubernetes Service (AKS) enables the deployment and management of containerized applications within a managed Kubernetes environment
+The Leave Management Agent is built on Microsoft Copilot Studio, integrated with Dataverse for storing leave requests and user data. Power Automate connects business logic by enabling automated approval workflows based on company policies. The agent is then published to Microsoft Teams, allowing employees to interact seamlessly within their work environment. This architecture ensures an end-to-end AI-driven solution that streamlines leave management.
 
 ## Architecture Diagram
 
+![](../media/architecture.jpg)
+
 ## Explanation of Components
 
-The architecture for this lab involves several key components:
+- **Microsoft Copilot Studio:** Platform to build, configure, and manage the leave management agent.
 
-- **Azure Container Registry (ACR):** A managed Docker container registry for storing and managing Docker container images.
+- **Dataverse:** Central data store for leave requests, user details, and policy records.
+
+- **Power Platform Environment:** Secure workspace hosting the agent, data, and workflows.
+
+- **Outlook:** Communication channel for sending leave notifications and approvals.
+
+- **Microsoft Teams:** Collaboration hub where users interact directly with the agent.
 
 ## Getting Started with the Lab
 
-Welcome to your Leave Management System with Microsoft Copilot Studio Workshop! We've prepared a seamless environment for you to explore and learn how to build, configure, and test an intelligent leave management agent. This lab will guide you through applying business rules, handling approvals, and integrating with Dataverse to deliver a secure and efficient experience. Let's begin by making the most of this workshop!
+Welcome to your Leave Management System with Microsoft Copilot Studio lab! We've prepared a seamless environment for you to explore and learn how to build, configure, and test an intelligent leave management agent. This lab will guide you through applying business rules, handling approvals, and integrating with Dataverse to deliver a secure and efficient experience. Let's begin by making the most of this workshop!
 
 ### Accessing Your Lab Environment
 
