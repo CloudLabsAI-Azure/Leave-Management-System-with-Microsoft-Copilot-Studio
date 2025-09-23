@@ -549,3 +549,5 @@ In this task, you will design a Power Automate flow that collects all the necess
 In this exercise, you created a Copilot Studio agent that served as the foundation for your store operations assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
 
 ### You have successfully completed this exercise, please continue to next one >>
+
+   ![](../media/a-gs-g3.png)

@@ -265,9 +265,6 @@ In this task, you will complete the leave request topic by implementing the logi
 
 In this exercise, you continued building the leave management agent by adding advanced capabilities. You implemented approval logic based on company policy: leaves of two days or less were automatically approved, while longer leaves went through an approval process. Once approved, the leave requests were finalized and recorded.
 
+### You have successfully completed this exercise, please continue to next one >>
 
-
-
-
-
-
+   ![](../media/a-gs-g4.png)

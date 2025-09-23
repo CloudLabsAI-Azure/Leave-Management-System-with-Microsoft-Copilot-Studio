@@ -139,3 +139,6 @@ In this task, you will navigate the Dataverse and validate the data updated by t
 
 In this exercise, the agent was tested end-to-end by executing various prompts and scenarios. After completing the tests, the leave request data was verified to ensure it had been correctly updated in the Dataverse table.
 
+### You have successfully completed this exercise, please continue to next one >>
+
+   ![](../media/a-gs-g5.png)

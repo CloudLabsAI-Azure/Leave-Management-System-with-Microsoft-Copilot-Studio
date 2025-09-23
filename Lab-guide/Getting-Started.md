@@ -101,6 +101,10 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
    ![](../media/gs-4.png)
 
+1. If the **Welcome to Power Apps** pop-up appears, leave the default country/region selection and click **Get started**.
+
+   ![](../media/cor-mn-e5-g-6.png)
+
 1. You have now successfully logged in to the Power Apps portal. Keep the portal open, as you will be using it later in the lab.
 
    ![](../media/gs-5.png)
@@ -113,5 +117,7 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on the **Next** from lower right corner to move on next page.
+
+   ![](../media/a-gs-g1.png)
 
 ## Happy Learning!!

@@ -46,17 +46,21 @@ You will be able to complete the following tasks:
 
    ![](../media/leav-man-e1-g-2.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\leave-management-with-Copilot-Studio-lab-datasets`, select **LeaveRequest.csv**.
+1. In the next pane, click on **Select from device** and in the pop-up window to select files.
 
    ![](../media/ex2img11.png)
 
-1. On the **Import an Excel or .CSV file** pane, verify that the file **Leave Request.xlsx** is listed. Ensure that the table **LeaveRequests** is included by keeping the toggle enabled. Click **Import** to proceed.
+1. On the **Open** dialog box, navigate to the folder path `C:\datasets\Leave-Management-System-with-Microsoft-Copilot-Studio-datasets-main` **(1)**, select the file **LeaveRequests_Schema.csv (2)**, and then click **Open (3)**.
 
-   ![](../media/leav-man-e1-g-10.png)
+   ![](../media/cor-mn-e5-g-11.png)
+
+1. On the **Import an Excel or .CSV file** pane, verify that the file **LeaveRequests_Schema.csv** is listed. Ensure that the table **LeaveRequests** is included by keeping the toggle enabled. Click **Import** to proceed.
+
+   ![](../media/cor-mn-e5-g-12.png)
 
 1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
 
-   ![](../media/leav-man-e1-g-8.png)
+   ![](../media/cor-mn-e5-g-13.png)
 
    ![](../media/leav-man-e1-g-9.png)
 
@@ -76,7 +80,7 @@ You will be able to complete the following tasks:
    
 1. In the pop-up window that appears click on **Get Started**
 
-   ![](../media/leav-man-e1-g-1.png)
+   ![](../media/cor-mn-e5-g-10.png)
 
    >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If still the issue persists,followthe below instructions to resolve this:
 
@@ -89,6 +93,8 @@ You will be able to complete the following tasks:
    ![](../media/cpnew3.png)
 
 1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
+
+   ![](../media/cor-mn-e5-g-14png)
 
 1. Once you are inside **Copilot Studio** you will be in the home page. 
 
@@ -152,9 +158,9 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](../media/leav-man-e2-g-10.png)
 
-1. From the list, search and select **Leave Request** table. Click on **Add to agent**.
+1. From the list, search **Leave Request (1)** and select **Leave Request (2)** table. Click on **Add to agent (3)**.
 
-   ![](../media/leav-man-e2-g-11.png)
+   ![](../media/cor-mn-e5-g-15.png)
 
 1. With the basic setup and configurations complete, the next exercises will focus on building the core logic for leave management.
 
@@ -163,3 +169,5 @@ In this task, you will connect knowledge sources such as the product catalog, po
 In this exercise, you provisioned a Power Platform environment, signed into Microsoft Copilot Studio, created a new agent, and configured its basic settings. These steps laid the groundwork for building an Agentic AI–driven leave management solution.
 
 ### You have successfully completed this exercise, please continue to next one >>
+
+   ![](../media/a-gs-g2.png)
