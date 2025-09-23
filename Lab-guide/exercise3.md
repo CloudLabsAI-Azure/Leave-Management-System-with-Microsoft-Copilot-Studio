@@ -178,6 +178,14 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
 In this task, you will complete the leave request topic by implementing the logic to add new leave requests and update existing records in Dataverse with the request details.
 
+1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu and click **Leave Management Agent (2)**.
+
+   ![](../media/leav-man-e4-g-1.png)
+
+1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu, click the **Topics (2)** tab, and then select the **leave_request (3)** topic to continue editing it.
+
+   ![](../media/cor-mn-e5-g-69.png)
+
 1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
 
    ![](../media/leav-man-e3-g-26.png)

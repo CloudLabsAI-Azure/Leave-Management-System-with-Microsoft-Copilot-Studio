@@ -24,6 +24,14 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/leav-man-e4-g-1.png)
 
+1. On the top menu bar, click **Publish** to save and apply your changes to the agent.
+
+   ![](../media/cor-mn-e5-g-70.png)
+
+1. On the **Publish this agent** dialog box, review the details and click **Publish** to confirm and complete the publishing process.
+
+   ![](../media/cor-mn-e5-g-71.png)
+
 1. On the **Leave Management Agent** page, click **Test** in the top-right corner to open the testing panel for the agent.
 
    ![](../media/leav-man-e4-g-22.png)
