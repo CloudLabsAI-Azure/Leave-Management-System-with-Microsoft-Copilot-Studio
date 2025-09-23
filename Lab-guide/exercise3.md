@@ -20,9 +20,13 @@ You will be able to complete the following tasks:
 
 In this task, you will enhance the Leave Management Workflow by incorporating approval logic and advanced management features to handle leave requests more efficiently.
 
-1. Navigate to **flows (1)** from the side menu and select **Leave Management Workflow**.
+1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu, and then click on the **Untitled (2)** flow to open and edit it.
 
-1. Once in the **Leave Management Workflow** overview pane, navigate to **Designer** pane to edit the flow.
+   ![](../media/cor-mn-e5-g-62.png)
+
+1. On the **Untitled** flow page, click the **Designer** tab to begin editing the flow.
+
+   ![](../media/cor-mn-e5-g-63.png)
 
 1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section.
 
@@ -42,6 +46,10 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
    > **Note:** The expression reference (for example, `triggerBody()?['text_4']`) may vary depending on the order in which inputs are added in the **When an agent calls the flow** step. The number (`text_4`, `text_5`, etc.) is auto-generated
 
+1. In the **Condition** action, set the operator to **is less than (1)** and enter the value **2 (2)** to check if the input is less than 2.
+
+   ![](../media/cor-mn-e5-g-64.png)
+
 1. In the **Condition** action, under the **False** branch, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Start and wait for an approval (2)** in the search bar and select **Start and wait for an approval (3)** under **Standard approvals**.
 
    ![](../media/leav-man-e2-g-91.png)
@@ -49,7 +57,7 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 1. In the **Start and wait for an approval** action, configure the parameters:  
    - From the **Approval type** drop-down, select **Approve/Reject - Everyone must approve (1)**.  
    - In the **Title** field, enter **Leave Approval (2)**.  
-   - In the **Assigned to** field, type the user’s email address **(3)** and select the matching account from the suggestions **(4)**. 
+   - In the **Assigned to** field, type the email address <inject key="AzureAdUserEmail"></inject> **(3)** and select the matching account from the suggestions **(4)**. 
 
       ![](../media/leav-man-e2-g-92.png)
 
@@ -134,7 +142,9 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
    ![](../media/leav-man-e2-g-102.png)
 
-   The completed flow should now look like the following:
+   > **Note**: The <Logical_ID> here refers to the ID that you have copied in the first exercise from power apps portal.
+
+1. The completed flow should now look like the following:
 
    - The flow starts with **When an agent calls the flow**.  
    - A new record is created in the **Leave Request** table using **Add a new row**.  

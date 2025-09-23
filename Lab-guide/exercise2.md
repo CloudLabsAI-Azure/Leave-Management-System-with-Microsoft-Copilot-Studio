@@ -104,11 +104,11 @@ In this task, you will create a Power Automate flow that validates leave request
 
    ![](../media/leav-man-e2-g-38.png)
 
-1. On the **Sign in** page, enter the provided **ODL user account (1)** and click **Next (2)** to continue. 
+1. On the **Sign in** page, enter **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click **Next (2)** to continue. 
 
    ![](../media/leav-man-e2-g-39.png)
 
-1. On the **Enter password** page, type the provided **password (1)** and click **Sign in (2)** to proceed.  
+1. On the **Enter password** page, enter **password** <inject key="AzureAdUserPassword"></inject> **(1)** and click **Sign in (2)** to proceed.  
 
    ![](../media/leav-man-e2-g-40.png)
 
@@ -124,18 +124,27 @@ In this task, you will create a Power Automate flow that validates leave request
 
    - Select **Leave Request (1)** in the **Table name** field.  
    - Enter **<Logical_ID>_balancedays (2)** in the **Select columns** field to fetch leave balance days.  
-   - In the **Filter rows** field, type **<Logical_ID>_employeeemail eq (3)** to filter by employee email.  
-   - Click the **thunderbolt (4)** icon to insert the **employeeEmail (5)** parameter dynamically.
-   - In the **Sort By** field, enter **createdon desc (6)** to sort by latest record.  
-   - In the **Row count** field, type **1 (7)** to return only the most recent record.  
+   - In the **Filter rows** field, type **<Logical_ID>_employeeemail eq '' (3)** to filter records by employee email.
 
-      ![](../media/leav-man-e2-g-46.png)
-
-      ![](../media/leav-man-e2-g-47.png)
-
-      ![](../media/leav-man-e2-g-48.png)
+      ![](../media/cor-mn-e5-g-73.png)
 
       > **Note**: The <Logical_ID> here refers to the ID that you have copied in the first exercise from power apps portal.
+
+1. In the **List rows** action, under the **Filter rows** field, type **<Logical_ID>_employeeemail eq '' (1)** and place the cursor inside the single quotes. Then click the **Expression (fx) (2)** icon to add a dynamic value.
+
+   ![](../media/cor-mn-e5-g-74.png)
+
+1. In the expression editor, click **Dynamic content (1)**, type **employeeEmail (2)** in the search box, and select **employeeEmail (3)** from the list. Then click **Add (4)** to insert it into the expression.
+
+   ![](../media/cor-mn-e5-g-75.png)
+
+1. In the **List rows** action:
+
+   - In the **Filter rows** field, ensure it looks like this: **<Logical_ID>_employeeemail eq 'employeeEmail' (1)**.  
+   - In the **Sort By** field, enter **createdon desc (2)** to sort by the most recent record.  
+   - In the **Row count** field, type **1 (3)** to return only the latest record.
+
+      ![](../media/cor-mn-e5-g-76.png)
 
 1. On the **List rows** action, click the **plus (+) (1)** icon to add a new action.  
    - In the **search bar (2)**, type **Condition**.  
@@ -202,10 +211,12 @@ In this task, you will create a Power Automate flow that validates leave request
    - Click **Add (4)** to insert it.  
 
       ```
-      sub(first(outputs('List_rows')?['body/value'])?['crf88_balancedays'], outputs('Compose'))
+      sub(first(outputs('List_rows')?['body/value'])?['<Logical_ID>_balancedays'], outputs('Compose'))
       ```
 
       ![](../media/leav-man-e2-g-54.png)
+
+      > **Note**: The <Logical_ID> here refers to the ID that you have copied in the first exercise from power apps portal.
 
       > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
 

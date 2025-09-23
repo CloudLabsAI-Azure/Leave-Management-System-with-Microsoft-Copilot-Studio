@@ -162,6 +162,10 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](../media/cor-mn-e5-g-15.png)
 
+1. Once the agent is provisioned, a confirmation message **Your agent is provisioned!** will appear at the top of the page.
+
+   ![](../media/cor-mn-e5-g-16.png)
+
 1. With the basic setup and configurations complete, the next exercises will focus on building the core logic for leave management.
 
 ## Summary
