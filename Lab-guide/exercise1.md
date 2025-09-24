@@ -77,6 +77,8 @@ You will be able to complete the following tasks:
 ## Task 2 : Sign into Microsoft Copilot Studio
 
 1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
+
+   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
    
 1. In the pop-up window that appears click on **Get Started**
 
