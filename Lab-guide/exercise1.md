@@ -94,7 +94,7 @@ You will be able to complete the following tasks:
 
 1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
 
-   ![](../media/cor-mn-e5-g-14png)
+   ![](../media/cor-mn-e5-g-14.png)
 
 1. Once you are inside **Copilot Studio** you will be in the home page. 
 
