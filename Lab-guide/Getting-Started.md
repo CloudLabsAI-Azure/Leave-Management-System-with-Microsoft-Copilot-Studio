@@ -83,6 +83,8 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
 1. Open a new browser tab and navigate to [https://make.powerapps.com/](https://make.powerapps.com/) (Power Apps portal).
 
+   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
+
 1. On the **Sign into Microsoft** tab, you will see the login screen. Enter the provided email or username, and click **Next** to proceed.
 
    - Email/Username: <inject key="AzureAdUserEmail"></inject>
