@@ -315,13 +315,12 @@ In this task, you will design a Power Automate flow that collects all the necess
 
    ![](../media/leav-man-e2-g-74.png)
 
-1. In the **Parameters** section, follow the same steps used for **employeeEmail** to add the following input parameters:
+1. In the **Parameters** section, follow the same steps used for **employeeEmail** to add the following input parameters and click **Add an input (6)**:
    - **employeeName (1)**  
    - **leaveType (2)**  
    - **reason (3)**  
    - **durationDays (4)**  
    - **Balance (5)**  
-   - **Add an input (6)**
 
       ![](../media/leav-man-e2-g-75.png)
 
@@ -411,9 +410,9 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 ## Task 3: Create topic for leave application
 
-1. On the **Leave Management Agent** page, select the **Topics (1)** tab. Click **Add a topic (2)** and then choose **From blank (3)**.  
+1. On the **Leave Management Agent** page, select the **Topics (1)** tab. Click **Add a topic (2)** and then choose **From blank**.  
 
-   ![](../media/leav-man-e2-g-13.png)
+   ![](../media/cor-mn-e5-g-25.png)
 
 1. On the **Test your agent** pane, click the **Close (X)** button to close the testing window and make the canvas larger for easier workflow design.
 
@@ -427,7 +426,7 @@ In this task, you will design a Power Automate flow that collects all the necess
 
    ![](../media/leav-man-e3-g-3.png)
 
-1. In the **Question** node, enter **`Please choose the Leave type from the list` (1)** as the question text. Under **Identify**, select **Multiple choice options (2)**, and then click **+ New option (3)** to start adding choices.
+1. In the **Question** node, enter `Please choose the Leave type from the list` **(1)** as the question text. Under **Identify**, select **Multiple choice options (2)**, and then click **+ New option (3)** to start adding choices.
 
    ![](../media/leav-man-e2-g-16.png)
 
@@ -447,11 +446,11 @@ In this task, you will design a Power Automate flow that collects all the necess
 
    ![](../media/leav-man-e3-g-4.png)
 
-1. Under **All other conditions**, select **Send a message** from the action menu to add a response step.  
+1. Click the **plus icon (1)** and select **Send a message (2)** from the menu.
 
-   ![](../media/leav-man-e2-g-18.png)
+   ![](../media/leav-man-e3-g-5.png)
 
-1. In the **Message** node, enter the text **`Please choose an option from the list` (1)**. Then click the **plus (+) icon (2)** to add the next step in the flow. 
+1. In the **Message** action, type `Please choose an option from the list` **(1)** in the text box. Then click the **plus icon (2)** below to add the next step.  
 
    ![](../media/leav-man-e3-g-6.png)
 
@@ -471,7 +470,7 @@ In this task, you will design a Power Automate flow that collects all the necess
 
    ![](../media/leav-man-e3-g-10.png)
 
-1. In the **Question** node, enter the prompt **Please provide your leave Start Date (Please make sure to provide in yyyy-mm-dd format) (1)** to capture the start date from the user.
+1. In the **Question** node, enter the prompt `Please provide your leave Start Date (Please make sure to provide in yyyy-mm-dd format)` **(1)** to capture the start date from the user.
 
    ![](../media/leav-man-e3-g-11.png)
 
@@ -492,7 +491,7 @@ In this task, you will design a Power Automate flow that collects all the necess
    ![](../media/leav-man-e3-g-15.png)
 
 1. On the **Question** node, configure it to capture the end date of the leave:  
-- Enter the message **Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)** in the text box **(1)**.  
+- Enter the message `Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)` in the text box **(1)**.  
    - Under **Identify**, select **User's entire response (2)**.  
    - In **Save user response as**, enter **EndDate (3)**.  
    - In the **Variable properties** pane, confirm the variable name is set as **EndDate (4)**. 
@@ -508,7 +507,7 @@ In this task, you will design a Power Automate flow that collects all the necess
    ![](../media/leav-man-e3-g-18.png)
 
 1. On the **Question** node:  
-   - Enter the prompt **May I please know the reason for your leave? (1)**.  
+   - Enter the prompt `May I please know the reason for your leave?` **(1)**.  
    - Under **Identify**, select **User's entire response (2)**.  
    - In **Save user response as**, set the variable name to **reason (3)**.  
    - Verify in the **Variable properties** pane that the variable name is correctly set as **reason (4)**, then close the properties pane **(5)**.  
@@ -521,11 +520,11 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 1. In the **Question** node after capturing the reason, click **Add a tool (1)**. From the list of available tools, select **Leave Validation Flow (2)** to connect the flow with the validation process. 
 
-   ![](../media/leav-man-e3-g-21.png)
+   ![](../media/cor-mn-e5-g-77.png)
 
-1. On the **Variables (1)** pane, under **Topic (7) (2)**, enable all the checkboxes (3) to make sure each variable is included in the flow.  
+1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (3)** section and select all the listed variables by checking the boxes **(4)**.   
 
-   ![](../media/leav-man-e3-g-22.png)
+   ![](../media/cor-mn-e5-g-78.png)
 
 1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **StartDate (2)** to map the variable.
 

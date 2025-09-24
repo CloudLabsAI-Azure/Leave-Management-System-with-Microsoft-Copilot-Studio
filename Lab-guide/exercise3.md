@@ -46,9 +46,9 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
    > **Note:** The expression reference (for example, `triggerBody()?['text_4']`) may vary depending on the order in which inputs are added in the **When an agent calls the flow** step. The number (`text_4`, `text_5`, etc.) is auto-generated
 
-1. In the **Condition** action, set the operator to **is less than (1)** and enter the value **2 (2)** to check if the input is less than 2.
+1. In the **Condition** action, set the operator to **is less or equal to (1)** and enter the value **2 (2)** to check if the input is less than 2.
 
-   ![](../media/cor-mn-e5-g-64.png)
+   ![](../media/cor-mn-e5-g-80.png)
 
 1. In the **Condition** action, under the **False** branch, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Start and wait for an approval (2)** in the search bar and select **Start and wait for an approval (3)** under **Standard approvals**.
 
@@ -193,6 +193,10 @@ In this task, you will complete the leave request topic by implementing the logi
 1. On the **Outputs (2)** section, click **Add a tool (1)** and select **Leave Management Workflow (2)** from the list of tools. 
 
    ![](../media/leav-man-e3-g-27.png)
+
+1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (7) (3)** section and select the **reply (4)** variable by checking the box.   
+
+   ![](../media/cor-mn-e5-g-79.png)
 
 1. On the **Action** card, set the value for **employeeEmail (String)**:  
    - Click the **ellipsis (…) (1)**.  
