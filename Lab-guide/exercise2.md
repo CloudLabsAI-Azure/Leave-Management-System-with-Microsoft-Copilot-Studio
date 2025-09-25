@@ -437,6 +437,14 @@ In this task, you will design a Power Automate flow that collects all the necess
 
    ![](../media/leav-man-e2-g-18.png)
 
+1. In the **Save user response as** field, ensure that a variable such as **Var1 (1)** is automatically populated. On the right-side **Variable properties** pane  
+
+   ![](../media/cor-mn-e5-g-83.png)
+
+   **Note:** If no variable is automatically populated (for example, **Var1** is missing), try refreshing the page or opening the flow in a new incognito window and perform the step again. Once successful, it should appear as shown in the image above.
+
+      ![](../media/cor-mn-e5-g-82.png)
+
 1. In the **Save user response as** field, enter **leave_type (1)** as the variable name. On the right-side **Variable properties** pane, confirm that the **Variable name** is also set to **leave_type (2)**.
 
    ![](../media/leav-man-e2-g-19.png)
