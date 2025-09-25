@@ -122,7 +122,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
       ![](../media/leav-man-e2-g-100.png)
 
-      > **Note:** The <Logical_ID> here refers to the ID that you have copied in the first exercise from power apps portal.
+      > **Note:** The **<Logical_ID>** here refers to the ID that you have copied in the first exercise from power apps portal.
 
 1. On the **Update a row** action, click the **plus (+) button (1)** to add a new action.  
    - In the search box, type **Respond to the agent (2)**.  
@@ -142,7 +142,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
    ![](../media/leav-man-e2-g-102.png)
 
-   > **Note**: The <Logical_ID> here refers to the ID that you have copied in the first exercise from power apps portal.
+   > **Note**: The **<Logical_ID>** here refers to the ID that you have copied in the first exercise from power apps portal.
 
 1. The completed flow should now look like the following:
 

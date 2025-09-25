@@ -128,7 +128,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
       ![](../media/cor-mn-e5-g-73.png)
 
-      > **Note**: The <Logical_ID> here refers to the ID that you have copied in the first exercise from power apps portal.
+      > **Note**: The **<Logical_ID>** here refers to the ID that you have copied in the first exercise from power apps portal.
 
 1. In the **List rows** action, under the **Filter rows** field, type **<Logical_ID>_employeeemail eq '' (1)** and place the cursor inside the single quotes. Then click the **Expression (fx) (2)** icon to add a dynamic value.
 
@@ -216,7 +216,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
       ![](../media/leav-man-e2-g-54.png)
 
-      > **Note**: The <Logical_ID> here refers to the ID that you have copied in the first exercise from power apps portal.
+      > **Note**: The **<Logical_ID>** here refers to the ID that you have copied in the first exercise from power apps portal.
 
       > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
 
