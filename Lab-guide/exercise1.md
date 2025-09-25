@@ -44,7 +44,7 @@ You will be able to complete the following tasks:
 
 1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
-     ![](../media/leav-man-e1-g-2.png)
+   ![](../media/leav-man-e1-g-2.png)
 
 1. In the next pane, click on **Select from device** and in the pop-up window to select files.
 
@@ -185,4 +185,4 @@ In this exercise, you provisioned a Power Platform environment, signed into Micr
 
 ### You have successfully completed this exercise, please continue to next one >>
 
-     ![](../media/a-gs-g2.png)
+   ![](../media/a-gs-g2.png)
