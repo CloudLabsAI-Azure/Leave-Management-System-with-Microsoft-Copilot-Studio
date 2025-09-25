@@ -40,11 +40,11 @@ You will be able to complete the following tasks:
 
    >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
 
-        ![](../media/leav-man-e1-g-4.png)
+      ![](../media/leav-man-e1-g-4.png)
 
 1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
-   ![](../media/leav-man-e1-g-2.png)
+     ![](../media/leav-man-e1-g-2.png)
 
 1. In the next pane, click on **Select from device** and in the pop-up window to select files.
 
@@ -144,7 +144,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
      ![](../media/leav-man-e2-g-4.png)
 
-1. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features. test
+1. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
 <validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
 
