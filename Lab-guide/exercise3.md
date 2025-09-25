@@ -104,7 +104,7 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
 In this task, you will update the flow to modify the Dataverse table, changing the leave request status from 'Pending' to 'Approved' based on the defined conditions.
 
-1. In the **True** branch of **Condition 1**, click the **plus (+) icon (1)** to add a new action.  
+1. Now click the **plus (+) icon (1)** to add a new action.  
    - In the **Add an action** dialog, type **Update a row (2)** in the search bar.  
    - Under **Microsoft Dataverse**, select **Update a row (3)**.  
 
