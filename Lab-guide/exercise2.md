@@ -449,7 +449,7 @@ In this task, you will design a Power Automate flow that collects all the necess
 
    **Note:** If no variable is automatically populated (for example, **Var1** is missing), try refreshing the page or opening the flow in a new incognito window and perform the step again. Once successful, it should appear as shown in the image above.
 
-      ![](../media/cor-mn-e5-g-82.png)
+    ![](../media/cor-mn-e5-g-82.png)
 
 1. In the **Save user response as** field, enter **leave_type (1)** as the variable name. On the right-side **Variable properties** pane, confirm that the **Variable name** is also set to **leave_type (2)**.
 
@@ -580,4 +580,4 @@ In this exercise, you created a Copilot Studio agent that served as the foundati
 
 ### You have successfully completed this exercise, please continue to next one >>
 
-     ![](../media/a-gs-g3.png)
+   ![](../media/a-gs-g3.png)
