@@ -170,6 +170,13 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 1. With the basic setup and configurations complete, the next exercises will focus on building the core logic for leave management.
 
+<validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
+ 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
 ## Summary
 
 In this exercise, you provisioned a Power Platform environment, signed into Microsoft Copilot Studio, created a new agent, and configured its basic settings. These steps laid the groundwork for building an Agentic AI–driven leave management solution.

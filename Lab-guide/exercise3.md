@@ -174,6 +174,13 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
    ![](../media/leav-man-e2-g-107.png)
 
+<validation step="786e3497-70e3-44d4-997f-45095642a4af" />
+ 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
 ### Task 3: Complete leave request topic
 
 In this task, you will complete the leave request topic by implementing the logic to add new leave requests and update existing records in Dataverse with the request details.

@@ -285,6 +285,13 @@ In this task, you will create a Power Automate flow that validates leave request
 
    ![](../media/leav-man-e2-g-68.png)
 
+<validation step="03eaa8c6-82f1-486a-a16f-282662884018" />
+ 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
 
 ## Task 2: Create flow to update leave request in Dataverse
 
@@ -560,6 +567,13 @@ In this task, you will design a Power Automate flow that collects all the necess
       ![](../media/leav-man-e3-g-42.png)
 
 1. You have successfully created a basic agent that collects details and validates leave requests. In the upcoming exercises, we will enhance the agent by adding approval logic and conditional workflows to make it more advanced and capable.
+
+<validation step="bc8e443a-14ef-4307-8619-3092a324799b" />
+ 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 ## Summary
 
