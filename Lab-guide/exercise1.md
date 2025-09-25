@@ -144,6 +144,13 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
    ![](../media/leav-man-e2-g-4.png)
 
+<validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
+ 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
 ## Task 4: Configure Agent Basics
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
@@ -169,13 +176,6 @@ In this task, you will connect knowledge sources such as the product catalog, po
    ![](../media/cor-mn-e5-g-16.png)
 
 1. With the basic setup and configurations complete, the next exercises will focus on building the core logic for leave management.
-
-<validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
- 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 ## Summary
 
