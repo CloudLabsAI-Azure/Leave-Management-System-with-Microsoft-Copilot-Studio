@@ -112,7 +112,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
 1. On the **Update a row** action:  
    - Select **Leave Request (1)** as the table name.  
-   - In the **Row ID (2)** field, paste the expression (3) to reference the row created earlier.  
+   - In the **Row ID (2)** field, insert the expression (3) to reference the row created earlier.  
    - Click **Add (4)** to confirm the expression.  
    - In the **Status (5)** field, type **Approved**.  
 
