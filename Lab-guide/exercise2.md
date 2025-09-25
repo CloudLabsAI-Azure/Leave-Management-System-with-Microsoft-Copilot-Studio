@@ -226,8 +226,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
       ![](../media/leav-man-e2-g-59.png)
 
-1. In the **Respond to the agent** action: 
-   - Enter **Duration (1)** as the output name.  
+1. In the **Respond to the agent** action, click **Add an output** and select **Text**.   
    - Type **/** (2) to open the expression editor.  
    - Paste the expression **(3)**.  
    - Click **Add (4)** to insert it. 
