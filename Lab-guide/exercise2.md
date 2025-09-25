@@ -292,7 +292,6 @@ In this task, you will create a Power Automate flow that validates leave request
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-
 ## Task 2: Create flow to update leave request in Dataverse
 
 In this task, you will design a Power Automate flow that collects all the necessary leave request details from the agent. The flow will then update these details in the Dataverse database, ensuring that every leave application is properly recorded and managed.
