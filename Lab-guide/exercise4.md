@@ -66,7 +66,7 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
 1. In the **Test your agent** panel, enter the reason for your leave (for example, **I will be attending a family function (1)**) and click the **Send (2)** button.
 
-   ![](../media/lleav-man-e4-g-30.png)
+   ![](../media/leav-man-e4-g-30.png)
 
 1. In the **Test your agent** panel, verify that the agent responds with a confirmation message showing the approved leave dates. 
 
