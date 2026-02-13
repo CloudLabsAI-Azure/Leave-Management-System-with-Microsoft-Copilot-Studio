@@ -1,6 +1,6 @@
 # Leave Management System with Microsoft Copilot Studio
 
-### Overall Estimated Duration: 3 Hours
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
 
