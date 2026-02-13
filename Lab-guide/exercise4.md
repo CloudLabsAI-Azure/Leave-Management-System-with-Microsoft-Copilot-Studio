@@ -1,6 +1,6 @@
 # Exercise 4: End-to-End Testing
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 40 Minutes
 
 ## Overview
 

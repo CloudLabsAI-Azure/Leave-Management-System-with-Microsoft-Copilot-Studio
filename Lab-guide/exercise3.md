@@ -1,6 +1,6 @@
 # Exercise 3: Power Automate Approval Workflow 
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 40 Minutes
 
 ## Overview
 

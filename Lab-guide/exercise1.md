@@ -1,6 +1,6 @@
 # Exercise 1: Setting up Pre-Requisites for Leave Management Agent
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Overview
 

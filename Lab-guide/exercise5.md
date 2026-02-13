@@ -1,6 +1,6 @@
 # Exercise 5: Publishing & Sharing
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 40 Minutes
 
 ## Overview
 
