@@ -20,6 +20,12 @@ You will be able to complete the following tasks:
 
 ## Task 1 : Provisioning power platform environment
 
+In this task, you will ingest the datasets to dataverse, which will be created in new power platform environment.
+
+1. Navigate back to Power Apps portal, please switch to the environment to the environmnet that you created earlier.
+
+    ![](../media/papps1.png)
+
 1. Inside power apps portal, select **Tables (1)** from the left menu and click on **Create a database (2)**.
 
      ![](../media/ex3img71.png)
