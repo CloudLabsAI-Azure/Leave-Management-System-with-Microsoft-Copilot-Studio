@@ -199,7 +199,7 @@ In this task, you will complete the leave request topic by implementing the logi
 
 1. Please click on **+** as shown below to expand the menu and then select **Topics** from the list.
 
-      ![](../media/lvimg55.png)
+     ![](../media/lvimg55.png)
 
 1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
 
@@ -218,61 +218,61 @@ In this task, you will complete the leave request topic by implementing the logi
       ![](../media/lvimg56.png)
 
 1. On the **Action** card, set the value for **employeeEmail (String)**:  
-   - Click the **ellipsis (…) (1)**.  
-   - In the **Select a variable** panel, go to the **System (2)** tab.  
-   - Search for **User.Email (3)**.  
-   - Select **User.Email (4)** from the results.  
+    - Click the **ellipsis (…) (1)**.  
+    - In the **Select a variable** panel, go to the **System (2)** tab.  
+    - Search for **User.Email (3)**.  
+    - Select **User.Email (4)** from the results.  
 
         ![](../media/leav-man-e3-g-28.png)
 
 1. On the **Action** card, set the value for **employeeName (String)**:  
-   - Click the **ellipsis (…) (1)**.  
-   - In the **Select a variable** panel, go to the **System (2)** tab.  
-   - Search for **User.FirstName (3)**.  
-   - Select **User.FirstName (4)** from the results. 
+    - Click the **ellipsis (…) (1)**.  
+    - In the **Select a variable** panel, go to the **System (2)** tab.  
+    - Search for **User.FirstName (3)**.  
+    - Select **User.FirstName (4)** from the results. 
 
         ![](../media/leav-man-e3-g-29.png)
 
 1. On the **Action** card, set the value for **leaveType (String)**:  
-   - Click the **ellipsis (…) (1)**.  
-   - In the **Select a variable** panel, switch to the **Formula (2)** tab.  
-   - Enter the formula **Text(Topic.leave_type) (3)**.  
-   - Click **Insert (4)** to apply the formula.  
+    - Click the **ellipsis (…) (1)**.  
+    - In the **Select a variable** panel, switch to the **Formula (2)** tab.  
+    - Enter the formula **Text(Topic.leave_type) (3)**.  
+    - Click **Insert (4)** to apply the formula.  
 
         ![](../media/leav-man-e3-g-30.png)
 
 1. On the **Action** card, set the value for **reason (String)**:  
-   - Click the **ellipsis (…) (1)**.  
-   - In the **Select a variable** panel, choose the **Custom (2)** tab.  
-   - Select **reason (Topic.reason) (3)** from the list.  
+    - Click the **ellipsis (…) (1)**.  
+    - In the **Select a variable** panel, choose the **Custom (2)** tab.  
+    - Select **reason (Topic.reason) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-31.png)
 
 1. On the **Action** card, set the value for **durationDays (String)**:  
-   - Click the **ellipsis (…) (1)**.  
-   - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-   - Select **Duration (Topic.Duration) (3)** from the list.  
+    - Click the **ellipsis (…) (1)**.  
+    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+    - Select **Duration (Topic.Duration) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-32.png)
 
 1. On the **Action** card, set the value for **Balance (String)**:  
-   - Click the **ellipsis (…) (1)**.  
-   - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-   - Select **Balance (Topic.Balance) (3)** from the list.  
+    - Click the **ellipsis (…) (1)**.  
+    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+    - Select **Balance (Topic.Balance) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-33.png)
 
 1. On the **Action** card, set the value for **StartDate (String)**:  
-   - Click the **ellipsis (…) (1)**.  
-   - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-   - Select **StartDate (Topic.StartDate) (3)** from the list.  
+    - Click the **ellipsis (…) (1)**.  
+    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+    - Select **StartDate (Topic.StartDate) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-34.png)
 
 1. On the **Action** card, set the value for **endDate (String)**:  
-   - Click the **ellipsis (…) (1)**.  
-   - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-   - Select **EndDate (Topic.EndDate) (3)** from the list.  
+    - Click the **ellipsis (…) (1)**.  
+    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+    - Select **EndDate (Topic.EndDate) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-35.png)
 
@@ -281,10 +281,10 @@ In this task, you will complete the leave request topic by implementing the logi
      ![](../media/leav-man-e3-g-36.png)
 
 1. On the **Message** step:  
-   - Click on the **variable icon (1)**.  
-   - In the **Select a variable** pane, choose the **Custom (2)** tab.  
-   - Type **reply (3)** in the search box.  
-   - Select **reply (4)** from the results. 
+    - Click on the **variable icon (1)**.  
+    - In the **Select a variable** pane, choose the **Custom (2)** tab.  
+    - Type **reply (3)** in the search box.  
+    - Select **reply (4)** from the results. 
 
         ![](../media/leav-man-e3-g-37.png)
 
