@@ -66,25 +66,25 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    > **Note:** If you see the prompt asking you to connect, perform the below steps:  
 
-   1. Click **Open connection manager (1)** to verify your credentials.
+   > Click **Open connection manager (1)** to verify your credentials.
 
-         ![](../media/cor-mn-e5-g-86.png)
+      ![](../media/cor-mn-e5-g-86.png)
       
-   1. On the **Manage your connections** page, the **Leave Management Workflow** may show as **Not Connected (1)**. Click **Connect (2)** to establish the connection.  
+   > On the **Manage your connections** page, the **Leave Management Workflow** may show as **Not Connected (1)**. Click **Connect (2)** to establish the connection.  
 
-         ![](../media/cor-mn-e5-g-43.png)
+      ![](../media/cor-mn-e5-g-43.png)
 
-   1. On the **Create or pick connections** page, select the available connection **Standard approvals (1)** and click **Submit (2)** to complete the connection setup. 
+   > On the **Create or pick connections** page, select the available connection **Standard approvals (1)** and click **Submit (2)** to complete the connection setup. 
 
-         ![](../media/cor-mn-e5-g-44.png)
+      ![](../media/cor-mn-e5-g-44.png)
 
-   1. On the **Manage your connections** page, verify that the **Leave Management Workflow** status shows as **Connected (1)**. Once connected, return to the previous tab where you were testing the agent and continue.  
+   > On the **Manage your connections** page, verify that the **Leave Management Workflow** status shows as **Connected (1)**. Once connected, return to the previous tab where you were testing the agent and continue.  
 
-         ![](../media/cor-mn-e5-g-45.png)
+      ![](../media/cor-mn-e5-g-45.png)
 
-   1. After confirming the connection, return to the **Test your agent** tab. Click the **Refresh (1)** button at the top to reload the session, then retry your request to continue testing.
+   > After confirming the connection, return to the **Test your agent** tab. Click the **Refresh (1)** button at the top to reload the session, then retry your request to continue testing.
 
-         ![](../media/cor-mn-e5-g-87.png)
+      ![](../media/cor-mn-e5-g-87.png)
 
 1. In the **Test your agent** panel, click the **Refresh** icon to restart the conversation and test the agent with new inputs.
 
