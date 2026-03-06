@@ -320,19 +320,19 @@ In this task, you will design a Power Automate flow that collects all the necess
      ![](../media/lvimg13.png)
 
 1. In the **Parameters** section, follow the same steps used for **employeeEmail** to add the following input parameters and click **Add an input (6)**:
-   - **employeeName (1)**  
-   - **leaveType (2)**  
-   - **reason (3)**  
-   - **durationDays (4)**  
-   - **Balance (5)**  
+    - **employeeName (1)**  
+    - **leaveType (2)**  
+    - **reason (3)**  
+    - **durationDays (4)**  
+    - **Balance (5)**  
 
 1. In the **Choose the type of user input** dialog, select **Date** to add a date input parameter.
 
      ![](../media/leav-man-e2-g-76.png)
 
 1. In the **Parameters** section, add two date input parameters:  
-   - **StartDate (1)**  
-   - **endDate (2)**  
+    - **StartDate (1)**  
+    - **endDate (2)**  
 
         ![](../media/leav-man-e2-g-77.png)
 
@@ -352,15 +352,15 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 1. In the **Add a new row** action, under **Advanced parameters**, select the following fields to map with the input parameters:  
 
-   - **balance_days**  
-   - **duration_days**  
-   - **employee_email**  
-   - **employee_name**  
-   - **end_date**  
-   - **leave_type**  
-   - **reason**  
-   - **start_date**  
-   - **status**  
+    - **balance_days**  
+    - **duration_days**  
+    - **employee_email**  
+    - **employee_name**  
+    - **end_date**  
+    - **leave_type**  
+    - **reason**  
+    - **start_date**  
+    - **status**  
 
         ![](../media/leav-man-e2-g-85.png)
 
@@ -369,43 +369,43 @@ In this task, you will design a Power Automate flow that collects all the necess
      ![](../media/lvimg38.png)
 
 1. On the **Add a row** page, in the **Balance_days** field:  
-   - Select the **Dynamic content (1)** tab.  
-   - In the search bar, type **balance (2)**.  
-   - From the results, select **Balance (3)**.
-   - Verify the value added in the **expression area (4)**.
-   - Click **Add (5)** to confirm.  
+    - Select the **Dynamic content (1)** tab.  
+    - In the search bar, type **balance (2)**.  
+    - From the results, select **Balance (3)**.
+    - Verify the value added in the **expression area (4)**.
+    - Click **Add (5)** to confirm.  
 
        ![](../media/lvimg39.png)
 
 1. On the **Add a row** page, in the **Duration_days** field:  
-   - Type **/** (1).  
-   - Select **Insert expression (2)** from the menu.  
+    - Type **/** (1).  
+    - Select **Insert expression (2)** from the menu.  
 
         ![](../media/cor-mn-e4-g-3.png)
 
 1. In the expression editor:  
-   - Select **Dynamic content (1)**.  
-   - Type **duration (2)** in the search bar.  
-   - Choose **durationDays (3)** under *When an agent calls the flow*.  
-   - Click **Add (4)** to insert it.  
+    - Select **Dynamic content (1)**.  
+    - Type **duration (2)** in the search bar.  
+    - Choose **durationDays (3)** under *When an agent calls the flow*.  
+    - Click **Add (4)** to insert it.  
 
         ![](../media/cor-mn-e4-g-4.png)
 
 1. Now map the remaining parameters to the Dataverse fields as shown in the table below.
 
-   | Field Name      |   Choose                                   |
-   |-----------------|--------------------------------------------|
-   | Employee_email  | Select **employeeEmail** |
-   | Employee_name   | Select **employeeName**  |
-   | End_date        | Select **endDate**       |
-   | Leave_type      | Select **Casual** as a static value         |
-   | Reason          | Select **reason**        |
-   | Start_date      | Select **StartDate**     |
-   | Status          | Select **Pending** as a static value        |
+    | Field Name      |   Choose                                   |
+    |-----------------|--------------------------------------------|
+    | Employee_email  | Select **employeeEmail** |
+    | Employee_name   | Select **employeeName**  |
+    | End_date        | Select **endDate**       |
+    | Leave_type      | Select **Casual** as a static value         |
+    | Reason          | Select **reason**        |
+    | Start_date      | Select **StartDate**     |
+    | Status          | Select **Pending** as a static value        |
 
-   - **Note:** For fields with dynamic values, select them from the **Dynamic content** panel.  
+    - **Note:** For fields with dynamic values, select them from the **Dynamic content** panel.  
 
-   - **Note:** For fields marked **static value**, select the value directly.  
+    - **Note:** For fields marked **static value**, select the value directly.  
 
         ![](../media/cor-mn-e4-g-5.png)
 
@@ -505,9 +505,9 @@ In this task, you will create a topic that enables employees to apply for leave 
 
 1. On the **Question** node, configure it to capture the end date of the leave:  
 - Enter the message `Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)` in the text box **(1)**.  
-   - Under **Identify**, select **User's entire response (2)**.  
-   - In **Save user response as**, enter **EndDate (3)**.  
-   - In the **Variable properties** pane, confirm the variable name is set as **EndDate (4)**. 
+    - Under **Identify**, select **User's entire response (2)**.  
+    - In **Save user response as**, enter **EndDate (3)**.  
+    - In the **Variable properties** pane, confirm the variable name is set as  **EndDate (4)**. 
 
         ![](../media/leav-man-e3-g-16.png)
 
@@ -520,10 +520,10 @@ In this task, you will create a topic that enables employees to apply for leave 
      ![](../media/leav-man-e3-g-18.png)
 
 1. On the **Question** node:  
-   - Enter the prompt `May I please know the reason for your leave?` **(1)**.  
-   - Under **Identify**, select **User's entire response (2)**.  
-   - In **Save user response as**, set the variable name to **reason (3)**.  
-   - Verify in the **Variable properties** pane that the variable name is correctly set as **reason (4)**, then close the properties pane **(5)**.  
+    - Enter the prompt `May I please know the reason for your leave?` **(1)**.  
+    - Under **Identify**, select **User's entire response (2)**.  
+    - In **Save user response as**, set the variable name to **reason (3)**.  
+    - Verify in the **Variable properties** pane that the variable name is correctly set as **reason (4)**, then close the properties pane **(5)**.  
 
         ![](../media/leav-man-e3-g-19.png)
 
@@ -548,10 +548,10 @@ In this task, you will create a topic that enables employees to apply for leave 
      ![](../media/leav-man-e3-g-24.png)
 
 1. On the **Power Automate inputs** card:  
-   - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
-   - In the **Select a variable** pane, switch to the **System (2)** tab.  
-   - Search for **User.Email (3)**.  
-   - Select **User.Email (4)**.  
+    - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
+    - In the **Select a variable** pane, switch to the **System (2)** tab.  
+    - Search for **User.Email (3)**.  
+    - Select **User.Email (4)**.  
 
         ![](../media/leav-man-e3-g-25.png)
 
@@ -560,8 +560,8 @@ In this task, you will create a topic that enables employees to apply for leave 
      ![](../media/leav-man-e3-g-41.png)
 
 1. In the **Save your topic** dialog:  
-   - Enter the topic name as **leave_request (1)**.  
-   - Click **Save (2)** to confirm and store the topic.  
+    - Enter the topic name as **leave_request (1)**.  
+    - Click **Save (2)** to confirm and store the topic.  
 
         ![](../media/leav-man-e3-g-42.png)
 
