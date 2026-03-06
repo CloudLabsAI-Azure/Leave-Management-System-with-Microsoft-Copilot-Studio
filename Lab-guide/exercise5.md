@@ -43,7 +43,7 @@ In this task, you will publish the **Leave Management Agent** to Microsoft Teams
 
    ![](../media/leav-man-e4-g-7.png)
 
-1. On the **Leave Management Agent** page in Microsoft Teams, click **Add** to install the agent. 
+1. On the **Leave Management Agent** page in Microsoft Teams, click **Add** to install the agent. If you are not able to see the **Add** option, please navigate to back to Copilot Studio and use **See agent in Teams** again.
 
    ![](../media/leav-man-e4-g-12.png)
 
@@ -63,7 +63,7 @@ In this task, you will test the deployed **Leave Management Agent** in Microsoft
 
    ![](../media/cor-mn-e4-g-12.png)
 
-1. In the **Leave Management Agent** chat window, when prompted to select a leave type, choose one of the option.
+1. In the **Leave Management Agent** chat window, when prompted to select a leave type, choose one of the options.
 
    ![](../media/cor-mn-e4-g-13.png)
 
@@ -71,7 +71,7 @@ In this task, you will test the deployed **Leave Management Agent** in Microsoft
 
    ![](../media/cor-mn-e4-g-14.png)
 
-1. In the **Leave Management Agent** chat, enter your leave end date in the required format **yyyy-mm-dd**, for example **2025-09-27 (1)**, and click the **Send (2)** button to submit. This makes the total leave period greater than 2 days.
+1. In the **Leave Management Agent** chat, enter your leave end date in the required format **yyyy-mm-dd**, for example **2025-09-27 (1)**, and click the **Send (2)** button to submit. This ensures the total leave period greater than 2 days.
 
    ![](../media/cor-mn-e4-g-15.png)
 

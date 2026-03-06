@@ -166,7 +166,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
         ![](../media/lvimg23.png)
 
-      > the above expression outputs('List_rows') → gets the result from the List rows action in Power Automate.
+      > The above expression outputs('List_rows') → gets the result from the List rows action in Power Automate.
 
       > - ['body/value'] → accesses the list of rows (records) returned.
 
@@ -409,11 +409,13 @@ In this task, you will design a Power Automate flow that collects all the necess
 
         ![](../media/cor-mn-e4-g-5.png)
 
-1. Once done, click on **Save Draft** option from top to save the flow in current state, you will updating this flow in coming excerises to add approval flow.
+1. Once done, click on **Save Draft** from the top to save the flow in its current state. You will update this flow in the coming exercises to add the approval flow.
 
      ![](../media/cor-mn-e4-g-6.png)
 
 ## Task 3: Create topic for leave application
+
+In this task, you will create a topic that enables employees to apply for leave by configuring the required inputs and connecting it to the validation flow.
 
 1. On the **Leave Management Agent** page, select the **Topics (1)** tab. Click **Add a topic (2)** and then choose **From blank**.  
 
@@ -563,7 +565,7 @@ In this task, you will design a Power Automate flow that collects all the necess
 
         ![](../media/leav-man-e3-g-42.png)
 
-1. You have successfully created a basic agent that collects details and validates leave requests. In the upcoming exercises, we will enhance the agent by adding approval logic and conditional workflows to make it more advanced and capable.
+1. You have successfully created a basic agent that collects details and validates leave requests. In the upcoming exercises, you will enhance the agent by adding approval logic and conditional workflows to make it more advanced and capable.
 
 <validation step="bc8e443a-14ef-4307-8619-3092a324799b" />
  
@@ -574,7 +576,7 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 ## Summary
 
-In this exercise, you created a Copilot Studio agent that served as the foundation for your store operations assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
+In this exercise, you created a Copilot Studio agent that served as the foundation for your leave management assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the leave request data, employee information stored in Dataverse and leave policy rules. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
 
 ### You have successfully completed this exercise, please continue to next one >>
 

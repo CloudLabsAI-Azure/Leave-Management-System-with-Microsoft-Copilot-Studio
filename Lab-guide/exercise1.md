@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will provision a Microsoft Power Platform environment and sign into Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI–driven leave management solution that streamlines processes and enhances user experience.
+In this exercise, you will provision a Microsoft Power Platform environment and sign into Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI–driven leave management solution that streamlines processes and enhances experience.
 
 ## Objectives
 
@@ -22,7 +22,7 @@ You will be able to complete the following tasks:
 
 In this task, you will ingest the datasets to dataverse, which will be created in new power platform environment.
 
-1. Navigate back to Power Apps portal, please switch to the environment to the environmnet that you created earlier.
+1. Navigate back to Power Apps portal, please switch to the environment that you created earlier.
 
     ![](../media/papps1.png)
 
@@ -52,13 +52,15 @@ In this task, you will ingest the datasets to dataverse, which will be created i
 
    >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
 
-1. Once created locate the Leave Request table from the list and note down the logical id of the table as shown in a notepad safely, as you will be using this value further in the lab.
+1. Once created locate the Leave Request table from the list and note down the logical ID of the table as shown in a notepad safely, as you will be using this value further in the lab.
 
      ![](../media/upimg1.jpg)
 
    >**Note:** You may see a different ID than the one shown in the screenshot, this is expected.
 
 ## Task 2 : Sign into Microsoft Copilot Studio
+
+In this task, you will sign in to Microsoft Copilot Studio and switch the environment to the new developer environment that you created earlier.
 
 1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
 
@@ -70,7 +72,7 @@ In this task, you will ingest the datasets to dataverse, which will be created i
    
    >**[OPTIONAL]**
 
-   >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If still the issue persists,followthe below instructions to resolve this:
+   >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If the issue still persists, follow the instructions below. to resolve this:
 
    > Navigate back to Power Apps Portal, and copy the environment ID as shown.
 
@@ -119,7 +121,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
     ![](../media/lvimg3.png)
 
-1. Scroll down to **Intructions** and click on **edit**. Add the following details for instructions.
+1. Scroll down to **Instructions** and click on **edit**. Add the following details for instructions.
 
    | Key                     | Value                               |
    |-------------------------------|--------------------------------------------|
@@ -133,7 +135,6 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
      ![](../media/leav-man-e2-g-4.png)
 
-1. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
 <validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
 

@@ -10,15 +10,15 @@ In this hands-on lab, you will configure and explore a Leave Management Agent th
 
 By the end of this lab, you will be able to:
 
-- **Setting up Pre-Requisites for Leave Management Agent:** Provision a Power Platform environment, sign into Copilot Studio, and configure a new agent’s basic settings.
+- **Set up Prerequisites for Leave Management Agent:** Provision a Power Platform environment, sign into Copilot Studio, and configure a new agent’s basic settings.
 
-- **Designing Advanced Topics:** Define the agent’s purpose, connect knowledge sources, and enable AI-powered responses for leave management.
+- **Design Advanced Topics:** Define the agent’s purpose, connect knowledge sources, and enable AI-powered responses for leave management.
 
 - **Power Automate Approval Workflow:** Implement leave approval logic based on company policy and record finalized requests.
 
 - **End-to-End Testing:** Execute prompts and scenarios to verify the agent updates leave request data correctly in Dataverse.
 
-- **Publishing & Sharing:** Publish the agent to Microsoft Teams and ensure it is accessible and responsive to basic prompts.
+- **Publish & Share:** Publish the agent to Microsoft Teams and ensure it is accessible and responsive to basic prompts.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ The Leave Management Agent is built on Microsoft Copilot Studio, integrated with
 
 ## Architecture Diagram
 
-![](../media/architecture.jpg)
+![](../media/arch-v2.png)
 
 ## Explanation of Components
 
@@ -49,7 +49,7 @@ The Leave Management Agent is built on Microsoft Copilot Studio, integrated with
 
 ## Getting Started with the Lab
 
-Welcome to your Leave Management System with Microsoft Copilot Studio lab! We've prepared a seamless environment for you to explore and learn how to build, configure, and test an intelligent leave management agent. This lab will guide you through applying business rules, handling approvals, and integrating with Dataverse to deliver a secure and efficient experience. Let's begin by making the most of this workshop!
+Welcome to your Leave Management System with Microsoft Copilot Studio lab! We've prepared a seamless environment for you to explore and learn how to build, configure, and test an intelligent leave management agent. This lab will guide you through applying business rules, handling approvals, and integrating with Dataverse to deliver a secure and efficient experience.
 
 ### Accessing Your Lab Environment
 
@@ -71,7 +71,7 @@ For convenience, you can open the Lab guide in a separate window by selecting th
 
 ### Managing Your Virtual Machine
 
-From the **Resources (1)** tab, you can easily **start, stop, restart, or connect (2)** to your virtual machine your experience is in your hands!
+From the **Resources (1)** tab, you can easily **start, stop, restart, or connect (2)** to your virtual machine. Your experience is in your hands!
 
 ![](../media/gs-leave-4.png)
 
@@ -190,7 +190,9 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
 ## Support Contact
 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.Learner Support Contacts:
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+
+Learner Support Contacts:
 
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support

@@ -32,7 +32,7 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/leav-man-e4-g-22.png)
 
-1. In the **Test your agent** panel, you will be testing the **Leave Management Agent**
+1. In the **Test your agent** panel, you will be testing the **Leave Management Agent**.
 
    ![](../media/lvimg57.png)
 
@@ -50,7 +50,7 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/leav-man-e4-g-27.png)
 
-1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format ( example, **2025-09-20 (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2025-09-20 (1)**) and click the **Send (2)** button.
 
    ![](../media/leav-man-e4-g-28.png)
 
@@ -68,23 +68,23 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    1. Click **Open connection manager (1)** to verify your credentials.
 
-      ![](../media/cor-mn-e5-g-86.png)
-   
+         ![](../media/cor-mn-e5-g-86.png)
+      
    1. On the **Manage your connections** page, the **Leave Management Workflow** may show as **Not Connected (1)**. Click **Connect (2)** to establish the connection.  
 
-      ![](../media/cor-mn-e5-g-43.png)
+         ![](../media/cor-mn-e5-g-43.png)
 
    1. On the **Create or pick connections** page, select the available connection **Standard approvals (1)** and click **Submit (2)** to complete the connection setup. 
 
-      ![](../media/cor-mn-e5-g-44.png)
+         ![](../media/cor-mn-e5-g-44.png)
 
    1. On the **Manage your connections** page, verify that the **Leave Management Workflow** status shows as **Connected (1)**. Once connected, return to the previous tab where you were testing the agent and continue.  
 
-      ![](../media/cor-mn-e5-g-45.png)
+         ![](../media/cor-mn-e5-g-45.png)
 
    1. After confirming the connection, return to the **Test your agent** tab. Click the **Refresh (1)** button at the top to reload the session, then retry your request to continue testing.
 
-      ![](../media/cor-mn-e5-g-87.png)
+         ![](../media/cor-mn-e5-g-87.png)
 
 1. In the **Test your agent** panel, click the **Refresh** icon to restart the conversation and test the agent with new inputs.
 
@@ -102,7 +102,7 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/leav-man-e4-g-27.png)
 
-1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format ( example, **2025-09-20 (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2025-09-20 (1)**) and click the **Send (2)** button.
 
    ![](../media/leav-man-e4-g-28.png)
 
@@ -110,7 +110,7 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/leav-man-e4-g-36.png)
 
-1. In the **Test your agent** panel, enter the reason for applying leave (for example, *I need a short break for personal reasons* (1)) and click the **Send (2)** button to continue.
+1. In the **Test your agent** panel, enter the reason for applying for leave (for example, *I need a short break for personal reasons* (1)) and click the **Send (2)** button to continue.
 
    ![](../media/leav-man-e4-g-37.png)
 
@@ -159,7 +159,7 @@ In this task, you will navigate the Dataverse and validate the data updated by t
 
 ## Summary
 
-In this exercise, the agent was tested end-to-end by executing various prompts and scenarios. After completing the tests, the leave request data was verified to ensure it had been correctly updated in the Dataverse table.
+In this exercise, you tested the agent end-to-end by executing various prompts and scenarios. After completing the tests, the leave request data was verified to ensure it had been correctly updated in the Dataverse table.
 
 ### You have successfully completed this exercise, please continue to next one >>
 

@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will continue building the leave management agent by adding more advanced capabilities. You will implement approval logic based on company policy: if the leave duration is two days or less, it will be automatically approved. otherwise, it will go through an approval process. Once approved, the leave request will be finalized and recorded.
+In this exercise, you will continue building the leave management agent by adding more advanced capabilities. You will implement approval logic based on company policy: if the leave duration is two days or less, it will be automatically approved. Otherwise, it will go through an approval process. Once approved, the leave request will be finalized and recorded.
 
 ## Objectives
 
@@ -141,7 +141,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
         ![](../media/leav-man-e2-g-101.png)
 
-1. On the **Respond to the agent 1** action, in the **reply (1)** field, enter the message **You leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
+1. On the **Respond to the agent 1** action, in the **reply (1)** field, enter the message **Your leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
 
    ```
    outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
@@ -198,11 +198,7 @@ In this task, you will complete the leave request topic by implementing the logi
 
      ![](../media/leav-man-e4-g-1.png)
 
-1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu, click the **Topics (2)** tab, and then select the **leave_request (3)** topic to continue editing it.
-
-     ![](../media/cor-mn-e5-g-69.png)
-
-     > If you are not able to see the **Topics** option from top menu, this may be due to the screensize, please click on **+** as shown below to expand the menu and then select **Topics** from the list.
+1. Please click on **+** as shown below to expand the menu and then select **Topics** from the list.
 
       ![](../media/lvimg55.png)
 
