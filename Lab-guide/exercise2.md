@@ -504,7 +504,7 @@ In this task, you will create a topic that enables employees to apply for leave 
      ![](../media/leav-man-e3-g-15.png)
 
 1. On the **Question** node, configure it to capture the end date of the leave:  
-- Enter the message `Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)` in the text box **(1)**.  
+    - Enter the message `Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)` in the text box **(1)**.  
     - Under **Identify**, select **User's entire response (2)**.  
     - In **Save user response as**, enter **EndDate (3)**.  
     - In the **Variable properties** pane, confirm the variable name is set as  **EndDate (4)**. 
