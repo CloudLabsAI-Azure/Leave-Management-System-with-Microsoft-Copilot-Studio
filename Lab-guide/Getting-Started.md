@@ -71,7 +71,7 @@ For convenience, you can open the Lab guide in a separate window by selecting th
 
 ### Managing Your Virtual Machine
 
-From the **Resources (1)** tab, you can easily **start, stop, restart, or connect (2)** to your virtual machine—your experience is in your hands!
+From the **Resources (1)** tab, you can easily **start, stop, restart, or connect (2)** to your virtual machine your experience is in your hands!
 
 ![](../media/gs-leave-4.png)
 

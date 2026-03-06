@@ -26,28 +26,6 @@ In this task, you will ingest the datasets to dataverse, which will be created i
 
     ![](../media/papps1.png)
 
-1. Inside power apps portal, select **Tables (1)** from the left menu and click on **Create a database (2)**.
-
-     ![](../media/ex3img71.png)
-
-   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 3**.
-
-1. In the new pane for creating New Database, click on **Create my Database**.
-
-     ![](../media/ex3img72up.png)
-
-1. Once done, click on **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
-
-     ![](../media/leav-man-e1-g-2.png)
-
-1. In the pop up window to create a environment, Click on **Create**. This will create a new power platform developer environment.
-
-     ![](../media/leav-man-e1-g-3.png)
-
-   >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
-
-      ![](../media/leav-man-e1-g-4.png)
-
 1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
      ![](../media/leav-man-e1-g-2.png)
@@ -89,6 +67,8 @@ In this task, you will ingest the datasets to dataverse, which will be created i
 1. In the pop-up window that appears click on **Get Started**
 
      ![](../media/cor-mn-e5-g-10.png)
+   
+   >**[OPTIONAL]**
 
    >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If still the issue persists,followthe below instructions to resolve this:
 
@@ -122,29 +102,32 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 1. Navigate back to Copilot Studio page from the browser.
 
-1. From the home page, select **Create (1)** from left menu and click on **+ New agent (2)** to create an agent.
+1. From the home page, select **Agents (1)** from left menu and click on **+ Create blank agent (2)** to create an agent.
 
-     ![](../media/leav-man-e2-g-1.png)
+     ![](../media/lvimg1.png)
 
-1. In the next pane, select **configure (1)** and provide the following details.
+1. In the next pane, select **edit (1)** and provide the following details.
 
     | Key                     | Value                               |
     |-------------------------------|--------------------------------------------|
     | Name | `Leave Management Agent` |
     | Description | Handles leave requests, approvals, and balance updates using Dataverse and Power Automate. Helps employees apply for leave, check status, and get real-time updates via Teams. |
-    | Instruction | Assist with leave applications, validate balances, and route approvals. Respond clearly and guide users through each step. Always ensure requests meet policy and ask for missing details. |
 
-      ![](../media/leav-man-e2-g-2.png)
+    ![](../media/lvimg2.png)
 
-    >**Note:** Sometimes you may see a diffrent UI, if you are seeing a UI diffrent than this, then follow this below steps:
+1. Once updated, ensure the **Name (1)** and **Description (2)** are added and click on **save (3)** to save the details.
 
-    - Click on **Skip to configure**, to get the configuration pane.
+    ![](../media/lvimg3.png)
 
-        ![](../media/ex5img34.png)
-   
-1. In the next pane, provide the same details given above and click on **Create**.
+1. Scroll down to **Intructions** and click on **edit**. Add the following details for instructions.
 
-     ![](../media/leav-man-e2-g-3.png)
+   | Key                     | Value                               |
+   |-------------------------------|--------------------------------------------|
+   | Instruction | Assist with leave applications, validate balances, and route approvals. Respond clearly and guide users through each step. Always ensure requests meet policy and ask for missing details. |
+
+    ![](../media/lvimg4.png)
+
+1. Once configured, please click on save to save the instructions.
 
 1. You have successfully created the Leave Management Agent. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
@@ -163,13 +146,9 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
-1. If you are not already on the **Agents** page, select **Agents (1)** from the left navigation menu. Then, click **Leave Management Agent (2)**.
-
-     ![](../media/leav-man-e2-g-5.png)
-
 1. On the **Leave Management Agent** page, select the **Knowledge (1)** tab from the top menu and click **+ Add knowledge (2)**.  
 
-     ![](../media/leav-man-e2-g-6.png)
+     ![](../media/lvimg5.png)
 
 1. In the next pane, select **Dataverse** as knowledge source.
 
@@ -178,10 +157,6 @@ In this task, you will connect knowledge sources such as the product catalog, po
 1. From the list, search **Leave Request (1)** and select **Leave Request (2)** table. Click on **Add to agent (3)**.
 
      ![](../media/cor-mn-e5-g-15.png)
-
-1. Once the agent is provisioned, a confirmation message **Your agent is provisioned!** will appear at the top of the page.
-
-     ![](../media/cor-mn-e5-g-16.png)
 
 1. With the basic setup and configurations complete, the next exercises will focus on building the core logic for leave management.
 
