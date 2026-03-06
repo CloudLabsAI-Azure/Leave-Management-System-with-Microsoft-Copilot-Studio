@@ -20,10 +20,6 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
 1. Now that you've configured the agent, it's time to test.
 
-1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu and click **Leave Management Agent (2)**.
-
-   ![](../media/leav-man-e4-g-1.png)
-
 1. On the top menu bar, click **Publish** to save and apply your changes to the agent.
 
    ![](../media/cor-mn-e5-g-70.png)
@@ -38,11 +34,9 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
 1. In the **Test your agent** panel, you will be testing the **Leave Management Agent**
 
-   ![](../media/leav-man-e4-g-21.png)
+   ![](../media/lvimg57.png)
 
 1. In the **Test your agent** panel, type a greeting such as **Hello (1)** (or any similar message) in the chat box and click the **Send (2)** button to interact with the agent.
-
-   ![](../media/leav-man-e4-g-25.png)
 
 1. On the **Activity map** page, verify that the **Greeting** topic is triggered, showing phrases such as *Good afternoon*, *Good morning*, *Hello*, *Hey*, and *Hi*.  
 

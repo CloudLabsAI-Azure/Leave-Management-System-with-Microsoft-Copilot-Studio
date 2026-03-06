@@ -20,57 +20,53 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Power Automate flow that validates leave requests by calculating the duration, checking the leave balance, and updating it accordingly.
 
-1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu and click **New agent flow (2)** to create a new flow.
+1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu and click **+ New agent flow (2)** to create a new flow.
 
-     ![](../media/leav-man-e2-g-22.png)
-
-1. On the **Agent flows Designer** page, click **Add a trigger** to begin configuring the flow.  
-
-     ![](../media/leav-man-e2-g-23.png)
+     ![](../media/lvimg6.png)
 
 1. In the **Add a trigger** pane, search for **When an agent calls the flow (1)** and select **When an agent calls the flow (2)** from the list.
 
-     ![](../media/leav-man-e2-g-24.png)
+     ![](../media/LVIMG7.png)
 
 1. On the **Agent flows Designer** page, under the **Parameters** tab, click **+ Add an input**.  
 
-     ![](../media/leav-man-e2-g-25.png)
+     ![](../media/lvimg8.png)
 
 1. In the **Choose the type of user input** section, select **Date** to capture date values in the flow.  
 
-     ![](../media/leav-man-e2-g-26.png)
+     ![](../media/lvimg9.png)
 
 1. In the **Parameters** tab, set the first input as **startDate (1)**. Then click **+ Add an input (2)** to add another parameter.   
 
-     ![](../media/leav-man-e2-g-27.png)
+     ![](../media/lvimg10.png)
 
 1. In the **Choose the type of user input** section, select **Date** again to add another date parameter for the flow.  
 
-     ![](../media/leav-man-e2-g-28.png)
+     ![](../media/lvimg9.png)
 
 1. In the **Parameters** tab, add another date input and set its name as **endDate**. Then click **+ Add an input** to create an additional parameter. 
 
-     ![](../media/leav-man-e2-g-29.png)
+     ![](../media/lvimg11.png)
 
 1. In the **Choose the type of user input** section, select **Text** to add a text-based parameter. 
 
-     ![](../media/leav-man-e2-g-30.png)
+     ![](../media/lvimg12.png)
 
 1. In the **Parameters** tab, add a text input and set its name as **employeeEmail**.   
 
-     ![](../media/leav-man-e2-g-31.png)
+     ![](../media/lvimg13.png)
 
 1. On the **Designer** canvas, click the **plus (+)** icon below **When an agent calls the flow** to add the next action.  
 
-     ![](../media/leav-man-e2-g-32.png)
+     ![](../media/lvimg14.png)
 
 1. In the **Add an action** pane, search for **Compose (1)** and select **Compose (2)** from the **Data Operation** category.  
 
-     ![](../media/leav-man-e2-g-33.png)
+     ![](../media/lvimg15.png)
 
 1. In the **Compose** action, click inside the **Inputs** field, type **/** **(1)**, and then select **Insert expression (2)**.
 
-     ![](../media/leav-man-e2-g-34.png)
+     ![](../media/lvimg16.png)
 
 1. In the **Compose** action, paste the expression into the editor box **(1)** and then click **Add (2)** to insert it.
 
@@ -90,21 +86,19 @@ In this task, you will create a Power Automate flow that validates leave request
 
    > - **add(..., 1)** → adds 1 so that both the start and end dates are counted.
 
-1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown.
+1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown. On the **Designer** page, below the **Compose** action, click the **plus (+) icon** to add a new action **(1)**.
 
-     ![](../media/leav-man-e2-g-36.png)
+     ![](../media/lvimg18.png)
 
-1. On the **Designer** page, below the **Compose** action, click the **plus (+) icon** to add a new action **(1)**.  
-   - In the search box, type **List rows (2)**.  
-   - Under **Microsoft Dataverse (3)**, select **List rows (4)**.  
+1. In the search box, type **List rows (2)** Under **Microsoft Dataverse (3)**, select **List rows (4)**.  
 
-        ![](../media/leav-man-e2-g-37.png)
+     ![](../media/lvimg19.png)
 
 1. On the **Create connection** pane, enter **Microsoft Dataverse (1)** as the connection name, select **Oauth (2)** as the authentication type, and click **Sign in (3)** to establish the connection.   
 
      ![](../media/leav-man-e2-g-38.png)
 
-1. On the **Sign in** page, enter **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click **Next (2)** to continue. 
+1. On the **Sign in** page, enter **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click **Next (2)** to continue. If you directly get a **Pick an Account** pane, you can select the account and skip the login process. 
 
      ![](../media/leav-man-e2-g-39.png)
 
@@ -150,7 +144,9 @@ In this task, you will create a Power Automate flow that validates leave request
    - In the **search bar (2)**, type **Condition**.  
    - From the **Control (3)** section, select **Condition**.  
 
-        ![](../media/leav-man-e2-g-49.png)
+     ![](../media/lvimg20.png)
+
+     ![](../media/lvimg21.png)
 
 1. On the **Condition expression** field:  
    - Type **/** (1).  
@@ -164,11 +160,11 @@ In this task, you will create a Power Automate flow that validates leave request
       length(outputs('List_rows')?['body/value'])
       ```
 
-        ![](../media/leav-man-e2-g-50.png)
+        ![](../media/lvimg22.png)
 
         ![](../media/leav-man-e2-g-51.png)
 
-        ![](../media/leav-man-e2-g-52.png)
+        ![](../media/lvimg23.png)
 
       > the above expression outputs('List_rows') → gets the result from the List rows action in Power Automate.
 
@@ -184,7 +180,9 @@ In this task, you will create a Power Automate flow that validates leave request
 
 1. Under the **False** branch of the **Condition**, click the **plus (+) (1)** button to add a new action, type **Compose (2)** in the search box, and from the **Data Operation** section select **Compose (3)**.
 
-     ![](../media/leav-man-e2-g-56.png)
+     ![](../media/lvimg24.png)
+
+     ![](../media/lvimg25.png)
 
 1. On the **Condition expression** field:  
    - Type **/** (1).  
@@ -196,13 +194,15 @@ In this task, you will create a Power Automate flow that validates leave request
       sub(24, outputs('Compose'))
       ```
 
-        ![](../media/leav-man-e2-g-57.png)
+        ![](../media/lvimg26.png)
 
       > Since each employee is allotted 24 leaves annually, if a user is applying for the first time, they start with 24 available leaves. This expression subtracts the current leave duration from 24 to calculate the remaining balance.
 
 1. Under the **True** branch of the **Condition**, click the **plus (+) (1)** button to add a new action, type **Compose (2)** in the search box, and from the **Data Operation** section select **Compose (3)**.
 
-     ![](../media/leav-man-e2-g-58.png)
+     ![](../media/lvimg27.png)
+
+     ![](../media/lvimg25.png)
 
 1. On the **Condition expression** field:  
    - Type **/** **(1).**  
@@ -220,13 +220,16 @@ In this task, you will create a Power Automate flow that validates leave request
 
       > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
 
-1. Under the **True** branch of the condition, click the **plus (+) icon (1)**.  
+1. Under the **True** branch's compose node, click the **plus (+) icon (1)**.  
    - In the search bar, type **Respond to the agent (2)**.  
    - From the **Skills** section, select **Respond to the agent (3)**.  
 
-        ![](../media/leav-man-e2-g-59.png)
+       ![](../media/lvimg28.png)
 
-1. In the **Respond to the agent** action, click **Add an output** and select **Text**.   
+       ![](../media/lvimg29.png)
+
+1. In the **Respond to the agent** action, click **Add an output** and select **Text**.
+   - Enter **Duration (1)** as the output name.    
    - Type **/** (2) to open the expression editor.  
    - Paste the expression **(3)**.  
    - Click **Add (4)** to insert it. 
@@ -236,7 +239,9 @@ In this task, you will create a Power Automate flow that validates leave request
       outputs('Compose')
       ``` 
 
-        ![](../media/leav-man-e2-g-60.png) 
+        ![](../media/lvimg30.png)
+        
+        ![](../media/lvimg31.png)
 
 1. In the **Respond to the agent** action, click **Add an output** and select **Text**.  
    - Enter **Balance (1)** as the output name.  
@@ -269,9 +274,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
         ![](../media/leav-man-e2-g-63.png)
 
-1. On the **Designer** page, review the complete flow to ensure all steps are connected as shown. Once confirmed, click **Publish** to save and activate the flow.
-
-     ![](../media/leav-man-e2-g-64.png)
+1. On the **Designer** page, review the complete flow to ensure all steps are connected. Once confirmed, click **Publish** to save and activate the flow.
 
 1. On the top menu bar, click **Overview** to navigate to the flow details page.
 
@@ -298,27 +301,23 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 1. On the **Agent flows** page, select **Flows (1)** from the left navigation pane and click **New agent flow (2)** to create a new flow.
 
-     ![](../media/leav-man-e2-g-69.png)
-
-1. On the **Agent flows Designer** page, click **Add a trigger** to begin configuring the flow.  
-
-     ![](../media/leav-man-e2-g-23.png)
+     ![](../media/lvimg32.png)
 
 1. In the **Add a trigger** pane, search for **When an agent calls the flow (1)** and select **When an agent calls the flow (2)** from the list.
 
-     ![](../media/leav-man-e2-g-24.png)
+     ![](../media/LVIMG7.png)
 
-1. IOn the **Designer** tab of the flow, under **Parameters**, click **Add an input** to define a parameter for the trigger.
+1. On the **Designer** tab of the flow, click **Add an input**.
 
-     ![](../media/leav-man-e2-g-72.png)
+     ![](../media/lvimg8.png)
 
-1. In the **Parameters** section, under **Choose the type of user input**, select **Text** to add a text input parameter.
+1. In the **Choose the type of user input**, select **Text** to add a text input parameter.
 
-     ![](../media/leav-man-e2-g-73.png)
+     ![](../media/lvimg12.png)
 
 1. In the **Parameters** section, enter **employeeEmail (1)** as the name of the input parameter. Click **Add an input (2)** to define an additional parameter.
 
-     ![](../media/leav-man-e2-g-74.png)
+     ![](../media/lvimg13.png)
 
 1. In the **Parameters** section, follow the same steps used for **employeeEmail** to add the following input parameters and click **Add an input (6)**:
    - **employeeName (1)**  
@@ -326,8 +325,6 @@ In this task, you will design a Power Automate flow that collects all the necess
    - **reason (3)**  
    - **durationDays (4)**  
    - **Balance (5)**  
-
-        ![](../media/leav-man-e2-g-75.png)
 
 1. In the **Choose the type of user input** dialog, select **Date** to add a date input parameter.
 
@@ -345,11 +342,13 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 1. On the **Designer** canvas, click the **plus (+) icon (1)** to add an action. In the **Add an action** dialog, type **Add a new row (2)** in the search bar. Under **Microsoft Dataverse (3)**, select **Add a new row (4)**.
 
-     ![](../media/leav-man-e2-g-78.png)
+     ![](../media/lvimg34.png)
+
+     ![](../media/lvimg35.png)
 
 1. In the **Add a new row** action, select **Leave Request (1)** from the **Table name** drop-down. Expand the **Advanced parameters (2)** section to map the input fields with the parameters created earlier.
 
-     ![](../media/leav-man-e2-g-84.png)
+     ![](../media/lvimg36.png)
 
 1. In the **Add a new row** action, under **Advanced parameters**, select the following fields to map with the input parameters:  
 
@@ -367,15 +366,16 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 1. In the **Add a new row** action, under **Balance_days**, type **/** (1) and then click **Insert expression (2)** to add an expression.
 
-     ![](../media/leav-man-e2-g-86.png)
+     ![](../media/lvimg38.png)
 
 1. On the **Add a row** page, in the **Balance_days** field:  
    - Select the **Dynamic content (1)** tab.  
    - In the search bar, type **balance (2)**.  
-   - From the results, select **Balance (3)**.  
-   - Click **Add (4)** to confirm.  
+   - From the results, select **Balance (3)**.
+   - Verify the value added in the **expression area (4)**.
+   - Click **Add (5)** to confirm.  
 
-        ![](../media/cor-mn-e4-g-2.png)
+       ![](../media/lvimg39.png)
 
 1. On the **Add a row** page, in the **Duration_days** field:  
    - Type **/** (1).  
@@ -420,8 +420,6 @@ In this task, you will design a Power Automate flow that collects all the necess
      ![](../media/cor-mn-e5-g-25.png)
 
 1. On the **Test your agent** pane, click the **Close (X)** button to close the testing window and make the canvas larger for easier workflow design.
-
-     ![](../media/leav-man-e3-g-1.png)
 
 1. In the **Trigger** node, enter a description for the topic (1), for example: *This topic is used by employees to apply leaves*. Then click the **plus (+) icon (2)** to add the next step in the topic flow.
 

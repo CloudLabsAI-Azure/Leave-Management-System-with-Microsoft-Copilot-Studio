@@ -19,10 +19,6 @@ In this task, you will publish the **Leave Management Agent** to Microsoft Teams
 
 1. Now that you've configured the agent, it's time to publish it so it can be used across different platforms.
 
-1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation and click on **Leave Management Agent (2)**.
-
-   ![](../media/leav-man-e4-g-1.png)
-
 1. On the **Leave Management Agent** page, select the **Channels (1)** tab and click **Teams and Microsoft 365 Copilot (2)** under Microsoft channels.
 
    ![](../media/leav-man-e4-g-2.png)

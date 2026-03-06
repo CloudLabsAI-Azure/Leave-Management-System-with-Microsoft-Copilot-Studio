@@ -30,7 +30,7 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
 1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section.
 
-     ![](../media/leav-man-e2-g-89.png)
+     ![](../media/lvimg40.png)
 
 1. In the **Condition** pane, type **/** in the field (1) and select **Insert expression (2)** from the dropdown list.
 
@@ -52,7 +52,13 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
 1. In the **Condition** action, under the **False** branch, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Start and wait for an approval (2)** in the search bar and select **Start and wait for an approval (3)** under **Standard approvals**.
 
-     ![](../media/leav-man-e2-g-91.png)
+     ![](../media/lvimg43.png)
+
+     ![](../media/lvimg44.png)
+
+1. In the next pane, click on **Create new**.
+
+     ![](../media/lvimg45.png)
 
 1. In the **Start and wait for an approval** action, configure the parameters:  
    - From the **Approval type** drop-down, select **Approve/Reject - Everyone must approve (1)**.  
@@ -61,11 +67,13 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
         ![](../media/leav-man-e2-g-92.png)
 
-1. In the **False** branch of the approval, click the **plus (+) icon (1)** to add a new action.  
+1. In the **False** branch after the approval node, click the **plus (+) icon (1)** to add a new action.  
    - In the **Add an action** dialog, type **Condition (2)** in the search bar.  
    - Under the **Control** section, select **Condition (3)**.  
 
-        ![](../media/leav-man-e2-g-93.png)
+     ![](../media/lvimg46.png)
+
+     ![](../media/lvimg47.png)
 
 1. In the **Condition 1** action, configure the condition as follows:  
    - Select **Outcome (1)** from the dynamic content.  
@@ -82,19 +90,18 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
 1. In the **False** branch of **Condition 1**, click the **plus (+) icon (1)** to add a new action.  
    - In the **Add an action** dialog, type **Respond to the agent (2)** in the search bar.  
-   - Under **Skills**, select **Respond to the agent (3)**.  
+   - Under **Skills**, select **Respond to the agent (3)**.
 
-        ![](../media/leav-man-e2-g-95.png)
 
 1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **the request is rejected (2)** as the response message.
 
-     ![](../media/leav-man-e2-g-96.png)
+     ![](../media/lvimg48.png)
 
 1. In the **False** branch, after the **Respond to the agent** action, click the **plus (+) icon (1)** to add a new action.  
    - In the **Add an action** dialog, type **Terminate (2)** in the search bar.  
    - Under the **Control** section, select **Terminate (3)**. 
 
-        ![](../media/leav-man-e2-g-97.png)
+     ![](../media/lvimg49.png)
 
 1. In the **Terminate** action, set the **Status** field to **Succeeded** to complete the workflow after rejection.
 
@@ -104,11 +111,13 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
 In this task, you will update the flow to modify the Dataverse table, changing the leave request status from 'Pending' to 'Approved' based on the defined conditions.
 
-1. Now click the **plus (+) icon (1)** to add a new action.  
+1. Now click the **plus (+) icon (1)** to add a new action for the root node.  
    - In the **Add an action** dialog, type **Update a row (2)** in the search bar.  
    - Under **Microsoft Dataverse**, select **Update a row (3)**.  
 
-        ![](../media/leav-man-e2-g-99.png)
+        ![](../media/lvimg50.png)
+
+        ![](../media/lvimg51.png)
 
 1. On the **Update a row** action:  
    - Select **Leave Request (1)** as the table name.  
@@ -120,7 +129,9 @@ In this task, you will update the flow to modify the Dataverse table, changing t
       outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
       ``` 
 
-        ![](../media/leav-man-e2-g-100.png)
+        ![](../media/lvimg52.png)
+
+        ![](../media/lvimg53.png)
 
       > **Note:** The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
 
@@ -155,8 +166,6 @@ In this task, you will update the flow to modify the Dataverse table, changing t
          - If **Approved**, the flow updates the leave record with status **Approved** and sends a response back to the agent.  
          - If **Rejected**, the flow responds to the agent that the request is rejected and then terminates successfully.  
    - The final steps include **Update a row** to mark approval in Dataverse, followed by a confirmation response through **Respond to the agent 1**. 
-
-       ![](../media/leav-man-e2-g-103.png)
 
 1. At the top-right corner of the flow designer, click **Publish** to save and activate your flow.
 
@@ -193,6 +202,10 @@ In this task, you will complete the leave request topic by implementing the logi
 
      ![](../media/cor-mn-e5-g-69.png)
 
+     > If you are not able to see the **Topics** option from top menu, this may be due to the screensize, please click on **+** as shown below to expand the menu and then select **Topics** from the list.
+
+      ![](../media/lvimg55.png)
+
 1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
 
      ![](../media/leav-man-e3-g-26.png)
@@ -204,6 +217,10 @@ In this task, you will complete the leave request topic by implementing the logi
 1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (7) (3)** section and select the **reply (4)** variable by checking the box.   
 
      ![](../media/cor-mn-e5-g-79.png)
+
+     > If you are not able to see the variables option, please click on **...** menu and select **Variables**
+
+      ![](../media/lvimg56.png)
 
 1. On the **Action** card, set the value for **employeeEmail (String)**:  
    - Click the **ellipsis (…) (1)**.  
