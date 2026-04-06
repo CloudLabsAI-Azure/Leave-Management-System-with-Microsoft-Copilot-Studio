@@ -229,7 +229,7 @@ In this task, you will create a Power Automate flow that validates leave request
        ![](../media/lvimg29.png)
 
 1. In the **Respond to the agent** action, click **Add an output** and select **Text**.
-   - Enter **Duration (1)** as the output name.    
+   - Enter **duration (1)** as the output name.    
    - Type **/** (2) to open the expression editor.  
    - Paste the expression **(3)**.  
    - Click **Add (4)** to insert it. 
@@ -244,7 +244,7 @@ In this task, you will create a Power Automate flow that validates leave request
         ![](../media/lvimg31.png)
 
 1. In the **Respond to the agent** action, click **Add an output** and select **Text**.  
-   - Enter **Balance (1)** as the output name.  
+   - Enter **balance (1)** as the output name.  
    - Type **/** and open the expression editor.  
    - Paste the expression **(2)**.  
    - Click **Add (3)** to insert it. 
@@ -260,13 +260,13 @@ In this task, you will create a Power Automate flow that validates leave request
      ![](../media/leav-man-e2-g-62.png)
 
 1. On the **Respond to the agent** pane:  
-   - In the **Duration (1)** field, paste the expression **(2)** for duration.  
+   - In the **duration (1)** field, paste the expression **(2)** for duration.  
    
       ```
       outputs('Compose')
       ```
 
-   - In the **Balance (3)** field, paste the expression **(4)** for balance. 
+   - In the **balance (3)** field, paste the expression **(4)** for balance. 
       
       ```
       outputs('Compose_1')
@@ -324,14 +324,14 @@ In this task, you will design a Power Automate flow that collects all the necess
     - **leaveType (2)**  
     - **reason (3)**  
     - **durationDays (4)**  
-    - **Balance (5)**  
+    - **balance (5)**  
 
 1. In the **Choose the type of user input** dialog, select **Date** to add a date input parameter.
 
      ![](../media/leav-man-e2-g-76.png)
 
 1. In the **Parameters** section, add two date input parameters:  
-    - **StartDate (1)**  
+    - **startDate (1)**  
     - **endDate (2)**  
 
         ![](../media/leav-man-e2-g-77.png)
@@ -371,7 +371,7 @@ In this task, you will design a Power Automate flow that collects all the necess
 1. On the **Add a row** page, in the **Balance_days** field:  
     - Select the **Dynamic content (1)** tab.  
     - In the search bar, type **balance (2)**.  
-    - From the results, select **Balance (3)**.
+    - From the results, select **balance (3)**.
     - Verify the value added in the **expression area (4)**.
     - Click **Add (5)** to confirm.  
 
@@ -400,7 +400,7 @@ In this task, you will design a Power Automate flow that collects all the necess
     | End_date        | Select **endDate**       |
     | Leave_type      | Select **Casual** as a static value         |
     | Reason          | Select **reason**        |
-    | Start_date      | Select **StartDate**     |
+    | Start_date      | Select **startDate**     |
     | Status          | Select **Pending** as a static value        |
 
     - **Note:** For fields with dynamic values, select them from the **Dynamic content** panel.  
@@ -491,7 +491,7 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/leav-man-e3-g-12.png)
 
-1. In the **Save user response as** field, enter **StartDate (1)** as the variable name. On the **Variable properties** pane, confirm the **Variable name (2)** is set to **StartDate**.
+1. In the **Save user response as** field, enter **startDate (1)** as the variable name. On the **Variable properties** pane, confirm the **Variable name (2)** is set to **startDate**.
 
      ![](../media/leav-man-e3-g-13.png)
 
@@ -506,16 +506,16 @@ In this task, you will create a topic that enables employees to apply for leave 
 1. On the **Question** node, configure it to capture the end date of the leave:  
     - Enter the message `Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)` in the text box **(1)**.  
     - Under **Identify**, select **User's entire response (2)**.  
-    - In **Save user response as**, enter **EndDate (3)**.  
-    - In the **Variable properties** pane, confirm the variable name is set as  **EndDate (4)**. 
+    - In **Save user response as**, enter **endDate (3)**.  
+    - In the **Variable properties** pane, confirm the variable name is set as  **endDate (4)**. 
 
         ![](../media/leav-man-e3-g-16.png)
 
-1. Below the **EndDate** question node, click the **plus (+) icon** to add the next step in the flow.
+1. Below the **endDate** question node, click the **plus (+) icon** to add the next step in the flow.
 
      ![](../media/leav-man-e3-g-17.png)
 
-1. Below the **EndDate** question node, click the **plus (+) icon** and select **Ask a question** to add the next prompt in the flow. 
+1. Below the **endDate** question node, click the **plus (+) icon** and select **Ask a question** to add the next prompt in the flow. 
 
      ![](../media/leav-man-e3-g-18.png)
 
@@ -539,11 +539,11 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/cor-mn-e5-g-78.png)
 
-1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **StartDate (2)** to map the variable.
+1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **startDate (2)** to map the variable.
 
      ![](../media/leav-man-e3-g-23.png)
 
-1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **endDate** field. From the **Select a variable** pane, choose **EndDate (2)** to map the variable. 
+1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **endDate** field. From the **Select a variable** pane, choose **endDate (2)** to map the variable. 
 
      ![](../media/leav-man-e3-g-24.png)
 

@@ -251,28 +251,28 @@ In this task, you will complete the leave request topic by implementing the logi
 1. On the **Action** card, set the value for **durationDays (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **Duration (Topic.Duration) (3)** from the list.  
+    - Select **duration (Topic.duration) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-32.png)
 
-1. On the **Action** card, set the value for **Balance (String)**:  
+1. On the **Action** card, set the value for **balance (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **Balance (Topic.Balance) (3)** from the list.  
+    - Select **balance (Topic.balance) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-33.png)
 
-1. On the **Action** card, set the value for **StartDate (String)**:  
+1. On the **Action** card, set the value for **startDate (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **StartDate (Topic.StartDate) (3)** from the list.  
+    - Select **startDate (Topic.startDate) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-34.png)
 
 1. On the **Action** card, set the value for **endDate (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **EndDate (Topic.EndDate) (3)** from the list.  
+    - Select **endDate (Topic.endDate) (3)** from the list.  
 
         ![](../media/leav-man-e3-g-35.png)
 
