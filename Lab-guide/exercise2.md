@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will build a Copilot Studio agent to form the foundation of your leave management assistant. You will define its purpose by assigning a clear, descriptive name and a detailed description, and connect it to critical knowledge sources, such as the leave policy and a database containing user details. These steps will enable your agent to deliver precise, AI-powered responses by leveraging indexed information.
+In this exercise, you will build a Copilot Studio agent to form the foundation of your leave management assistant. You will define its purpose by assigning a clear, descriptive name and a detailed description, and connecting it to critical knowledge sources, such as the leave policy and a database containing user details. These steps will enable your agent to deliver precise, AI-powered responses by leveraging indexed information.
 
 ## Objectives
 
@@ -12,9 +12,9 @@ You will be able to complete the following tasks:
 
 - Task 1: Build a Power Automate flow to validate leave requests
 
-- Task 2: Create flow to update leave request in Dataverse
+- Task 2: Create a flow to update leave requests in Dataverse
 
-- Task 3: Create topic for leave application
+- Task 3: Create a topic for leave application
 
 ## Task 1: Build a Power Automate flow to validate leave requests
 
@@ -122,7 +122,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
         ![](../media/cor-mn-e5-g-73.png)
 
-      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from the Power Apps portal.
 
 1. In the **List rows** action, under the **Filter rows** field, type **<Logical_ID>_employeeemail eq '' (1)** and place the cursor inside the single quotes. Then click the **Expression (fx) (2)** icon to add a dynamic value.
 
@@ -295,7 +295,7 @@ In this task, you will create a Power Automate flow that validates leave request
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-## Task 2: Create flow to update leave request in Dataverse
+## Task 2: Create a flow to update leave requests in Dataverse
 
 In this task, you will design a Power Automate flow that collects all the necessary leave request details from the agent. The flow will then update these details in the Dataverse database, ensuring that every leave application is properly recorded and managed.
 
