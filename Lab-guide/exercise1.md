@@ -106,28 +106,48 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 1. From the home page, select **Agents (1)** from the left menu and click on **+ Create blank agent (2)** to create an agent.
 
-     ![](../media/lvimg1.png)
+     ![](../media/st-store-ex2-g1.png)
 
-1. In the next pane, select **edit (1)** and provide the following details.
+     > **Note:** Due to recent Copilot Studio UI updates, you may be prompted to enter the agent name before creating the agent. If prompted, provide the name below:
+
+     ```
+     Leave Management Agent
+     ```
+
+1. Wait until the **Getting things ready ...** screen completes and the Copilot Studio home page loads.
+
+     ![](../media/st-store-ex2-g2.png)
+
+1. Verify that the agent provisioning is complete by confirming the **Your agent has been provisioned** message is displayed.
+
+     ![](../media/st-store-ex2-g3.png)
+
+1. In the **Details** section, select **Edit** to modify the **Name** and **Description**.
+
+     ![](../media/st-store-ex2-g4.png)
+
+1. In the next pane, enter the following details in **Name (1)** and **Description (2)** fields, and then select **Save (3)**..
 
     | Key                     | Value                               |
     |-------------------------------|--------------------------------------------|
     | Name | `Leave Management Agent` |
     | Description | Handles leave requests, approvals, and balance updates using Dataverse and Power Automate. Helps employees apply for leave, check status, and get real-time updates via Teams. |
 
-    ![](../media/lvimg2.png)
+    ![](../media/lev-mgmt-sb-ex1-g2.png)
 
-1. Once updated, ensure the **Name (1)** and **Description (2)** are added and click on **save (3)** to save the details.
+    > **Note:** If you have already provided the agent name during creation, you can update only the **Description** and then select **Save**.
 
-    ![](../media/lvimg3.png)
+1. In the **Instructions** section, select **Edit**.
 
-1. Scroll down to **Instructions** and click on **edit**. Add the following details for instructions.
+    ![](../media/lev-mgmt-sb-ex1-g3.png)
+
+1. In the **Instructions** pane, enter the provided details in the **Instruction (1)** field, and then select **Save (2)**.
 
    | Key                     | Value                               |
    |-------------------------------|--------------------------------------------|
    | Instruction | Assist with leave applications, validate balances, and route approvals. Respond clearly and guide users through each step. Always ensure requests meet policy and ask for missing details. |
 
-    ![](../media/lvimg4.png)
+    ![](../media/lev-mgmt-sb-ex1-g4.png)
 
 1. Once configured, please click on **save** to save the instructions.
 
@@ -146,13 +166,13 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
-1. On the **Leave Management Agent** page, select the **Knowledge (1)** tab from the top menu and click **+ Add knowledge (2)**.  
+1. In the **Knowledge** section, select **Add knowledge**.
 
-     ![](../media/lvimg5.png)
+     ![](../media/llev-mgmt-sb-ex1-g5.png)
 
 1. In the next pane, select **Dataverse** as a knowledge source.
 
-     ![](../media/leav-man-e2-g-10.png)
+     ![](../media/lev-mgmt-sb-ex1-g6.png)
 
 1. From the list, search **Leave Request (1)** and select **Leave Request (2)** table. Click on **Add to agent (3)**.
 

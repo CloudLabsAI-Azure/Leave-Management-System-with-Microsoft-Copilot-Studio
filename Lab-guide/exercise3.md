@@ -22,37 +22,47 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
 1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu, and then click on the **Untitled (2)** flow to open and edit it.
 
-     ![](../media/cor-mn-e5-g-62.png)
+     ![](../media/lev-mgmt-sb-ex3-g1.png)
 
 1. On the **Untitled** flow page, click the **Designer** tab to begin editing the flow.
 
      ![](../media/cor-mn-e5-g-63.png)
 
-1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section.
+1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action.
 
      ![](../media/lvimg40.png)
 
+1. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section
+
+     ![](../media/lev-mgmt-sb-ex3-g2.png)
+
 1. In the **Condition** pane, type **/** in the field (1) and select **Insert expression (2)** from the dropdown list.
 
-     ![](../media/cor-mn-e4-g-22.png)
+     ![](../media/lev-mgmt-sb-ex3-g3.png)
 
-1. In the **Expression** editor, type **int() (1)** and keep the cursor inside the parentheses. Click **Dynamic content (2)** and select **durationDays (3)** to insert it into the expression. 
+1. In the **Expression** editor, type **int() (1)** and keep the cursor inside the parentheses, select **Dynamic content (2)**, search for **durationDays (3)**, and then select **durationDays (4)**.
 
-     ![](../media/cor-mn-e4-g-25.png)
+     ![](../media/lev-mgmt-sb-ex3-g4.png)
 
 1. In the **Expression** editor, verify that the expression is set **(1)**. Once done, click **Add (2)** to insert it into the condition. 
 
-     ![](../media/cor-mn-e4-g-24.png)
+     ![](../media/lev-mgmt-sb-ex3-g51.png)
 
    > **Note:** The expression reference (for example, `triggerBody()?['text_4']`) may vary depending on the order in which inputs are added in the **When an agent calls the flow** step. The number (`text_4`, `text_5`, etc.) is auto-generated
 
-1. In the **Condition** action, set the operator to **is less or equal to (1)** and enter the value **2 (2)** to check if the input is less than 2.
+1. In the **Condition** action, select **is less or equal to (1)** from the operator dropdown.
 
-     ![](../media/cor-mn-e5-g-80.png)
+     ![](../media/lev-mgmt-sb-ex3-g52.png)
 
-1. In the **Condition** action, under the **False** branch, click the **plus (+) icon (1)** to add a new action. In the **Add an action** dialog, type **Start and wait for an approval (2)** in the search bar and select **Start and wait for an approval (3)** under **Standard approvals**.
+1. In the **Condition** action, enter **2** in the value field.
 
-     ![](../media/lvimg43.png)
+     ![](../media/lev-mgmt-sb-ex3-g53.png)
+
+1. In the **Condition** action, under the **False** branch, click the **plus (+) icon**.
+
+     ![](../media/lev-mgmt-sb-ex3-g8.png)
+
+1. In the **Add an action** dialog, type **Start and wait for an approval (1)** in the search bar and select **Start and wait for an approval (2)** under **Standard approvals**.
 
      ![](../media/lvimg44.png)
 
@@ -65,15 +75,15 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
    - In the **Title** field, enter **Leave Approval (2)**.  
    - In the **Assigned to** field, type the email address <inject key="AzureAdUserEmail"></inject> **(3)** and select the matching account from the suggestions **(4)**. 
 
-        ![](../media/leav-man-e2-g-92.png)
+        ![](../media/lev-mgmt-sb-ex3-g9.png)
 
-1. In the **False** branch after the approval node, click the **plus (+) icon (1)** to add a new action.  
-   - In the **Add an action** dialog, type **Condition (2)** in the search bar.  
-   - Under the **Control** section, select **Condition (3)**.  
+1. In the **False** branch after the approval node, click the **plus (+) icon**.
 
-     ![](../media/lvimg46.png)
+     ![](../media/lev-mgmt-sb-ex3-g10.png)
 
-     ![](../media/lvimg47.png)
+1. In the **Add an action** pane, search for **Condition (1)**, and then select **Condition (2)**.
+
+     ![](../media/lev-mgmt-sb-ex3-g11.png)
 
 1. In the **Condition 1** action, configure the condition as follows:  
    - Select **Outcome (1)** from the dynamic content.  
@@ -88,59 +98,81 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
       > This condition evaluates whether the leave request has been approved by retrieving the response from the previous approval step.
 
-1. In the **False** branch of **Condition 1**, click the **plus (+) icon (1)** to add a new action.  
-   - In the **Add an action** dialog, type **Respond to the agent (2)** in the search bar.  
-   - Under **Skills**, select **Respond to the agent (3)**.
+1. In the **False** branch, select the **+** icon.
+
+     ![](../media/lev-mgmt-sb-ex3-g16.png)
+
+1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**.
+
+     ![](../media/lev-mgmt-sb-ex3-g17.png)
+
+1. In the **Respond to the agent** action, select **Add an output**.
+
+     ![](../media/lev-mgmt-sb-ex3-g18.png)
+
+1. In the **Respond to the agent** action, select **Text** as the output type.
+
+     ![](../media/lev-mgmt-sb-ex3-g19.png)
 
 1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **the request is rejected (2)** as the response message.
 
-     ![](../media/lvimg48.png)
+     ![](../media/lev-mgmt-sb-ex3-g20.png)
 
 1. In the **False** branch, after the **Respond to the agent** action, click the **plus (+) icon (1)** to add a new action.  
-   - In the **Add an action** dialog, type **Terminate (2)** in the search bar.  
-   - Under the **Control** section, select **Terminate (3)**. 
 
-     ![](../media/lvimg49.png)
+     ![](../media/lev-mgmt-sb-ex3-g21.png)
+
+1. In the **Add an action** pane, search for **Terminate (1)**, and then select **Terminate (2)**.
+
+     ![](../media/lev-mgmt-sb-ex3-g22.png)
 
 1. In the **Terminate** action, set the **Status** field to **Succeeded** to complete the workflow after rejection.
 
-     ![](../media/leav-man-e2-g-98.png)
+     ![](../media/lev-mgmt-sb-ex3-g23.png)
 
 ### Task 2: Update Dataverse
 
 In this task, you will update the flow to modify the Dataverse table, changing the leave request status from 'Pending' to 'Approved' based on the defined conditions.
 
-1. Now click the **plus (+) icon (1)** to add a new action for the root node.  
-   - In the **Add an action** dialog, type **Update a row (2)** in the search bar.  
-   - Under **Microsoft Dataverse**, select **Update a row (3)**.  
+1. Now click the **plus (+) icon (1)** to add a new action for the root node.   
 
-        ![](../media/lvimg50.png)
+     ![](../media/lev-mgmt-sb-ex3-g24.png)
 
-        ![](../media/lvimg51.png)
+1. In the **Add an action** pane, search for **Update a row (1)**, and then select **Update a row (2)**.  
 
-1. On the **Update a row** action:  
-   - Select **Leave Request (1)** as the table name.  
-   - In the **Row ID (2)** field, insert the expression (3) to reference the row created earlier.  
-   - Click **Add (4)** to confirm the expression.  
-   - In the **Status (5)** field, type **Approved**.  
+     ![](../media/lev-mgmt-sb-ex3-g25.png)
 
-      ```
-      outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
-      ``` 
+1. In the **Update a row** action, select **Leave Request (1)** for **Table name**, enter **/** in the **Row ID (2)** field, and then select **Insert expression (3)**.
 
-        ![](../media/lvimg52.png)
+     ![](../media/lev-mgmt-sb-ex3-g26.png)
 
-        ![](../media/lvimg53.png)
+1. In the **Expression** editor, enter the following expression in **(1)**, and then select **Update (2)**:
 
-      > **Note:** The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+     ```
+     outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
+     ``` 
 
-1. On the **Update a row** action, click the **plus (+) button (1)** to add a new action.  
-   - In the search box, type **Respond to the agent (2)**.  
-   - From the **Skills** section, select **Respond to the agent (3)**. 
+     ![](../media/lev-mgmt-sb-ex3-g27.png)
 
-        ![](../media/leav-man-e2-g-101.png)
+     > **Note:** The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
 
-1. On the **Respond to the agent 1** action, in the **reply (1)** field, enter the message **Your leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
+1. In the **Update a row** action, select the **+** icon. 
+
+     ![](../media/lev-mgmt-sb-ex3-g28.png)
+
+1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**. 
+
+     ![](../media/lev-mgmt-sb-ex3-g29.png)
+
+1. In the **Respond to the agent 1** action, select **Add an output**.
+
+     ![](../media/lev-mgmt-sb-ex3-g30.png)
+
+1. In the **Respond to the agent 1** action, select **Text** as the output type.
+
+     ![](../media/lev-mgmt-sb-ex3-g31.png)
+
+1. Enter the message **Your leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
 
    ```
    outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
@@ -306,6 +338,6 @@ In this task, you will complete the leave request topic by implementing the logi
 
 In this exercise, you continued building the leave management agent by adding advanced capabilities. You implemented approval logic based on company policy: leaves of two days or less were automatically approved, while longer leaves went through an approval process. Once approved, the leave requests were finalized and recorded.
 
-### You have successfully completed this exercise, please continue to next one >>
+### You have successfully completed this exercise. Please continue to the next one >>
 
    ![](../media/a-gs-g4.png)

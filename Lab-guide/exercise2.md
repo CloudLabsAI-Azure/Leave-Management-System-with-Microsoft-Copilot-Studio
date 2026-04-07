@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will build a Copilot Studio agent to form the foundation of your leave management assistant. You will define its purpose by assigning a clear, descriptive name and a detailed description, and connect it to critical knowledge sources, such as the leave policy and a database containing user details. These steps will enable your agent to deliver precise, AI-powered responses by leveraging indexed information.
+In this exercise, you will build a Copilot Studio agent to form the foundation of your leave management assistant. You will define its purpose by assigning a clear, descriptive name and a detailed description, and connecting it to critical knowledge sources, such as the leave policy and a database containing user details. These steps will enable your agent to deliver precise, AI-powered responses by leveraging indexed information.
 
 ## Objectives
 
@@ -12,21 +12,21 @@ You will be able to complete the following tasks:
 
 - Task 1: Build a Power Automate flow to validate leave requests
 
-- Task 2: Create flow to update leave request in Dataverse
+- Task 2: Create a flow to update leave requests in Dataverse
 
-- Task 3: Create topic for leave application
+- Task 3: Create a topic for leave application
 
 ## Task 1: Build a Power Automate flow to validate leave requests
 
 In this task, you will create a Power Automate flow that validates leave requests by calculating the duration, checking the leave balance, and updating it accordingly.
 
-1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu and click **+ New agent flow (2)** to create a new flow.
+1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu, and then select **+ New agent flow (2)**.
 
-     ![](../media/lvimg6.png)
+     ![](../media/lev-mgmt-sb-ex2-g1.png)
 
-1. In the **Add a trigger** pane, search for **When an agent calls the flow (1)** and select **When an agent calls the flow (2)** from the list.
+1. In the **Add a trigger** pane, search for **Skills (1)**, and then select **When an agent calls the flow (2)**.
 
-     ![](../media/LVIMG7.png)
+     ![](../media/lev-mgmt-sb-ex2-g5.png)
 
 1. On the **Agent flows Designer** page, under the **Parameters** tab, click **+ Add an input**.  
 
@@ -86,17 +86,17 @@ In this task, you will create a Power Automate flow that validates leave request
 
    > - **add(..., 1)** → adds 1 so that both the start and end dates are counted.
 
-1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown. On the **Designer** page, below the **Compose** action, click the **plus (+) icon** to add a new action **(1)**.
+1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown. On the **Designer** page, below the **Compose** action, click the **plus (+) icon** to add a new action
 
      ![](../media/lvimg18.png)
 
-1. In the search box, type **List rows (2)** Under **Microsoft Dataverse (3)**, select **List rows (4)**.  
+1. In the search box, type **List rows (1)** Under **Microsoft Dataverse**, select **List rows (2)**.  
 
-     ![](../media/lvimg19.png)
+     ![](../media/lev-mgmt-sb-ex2-g3.png)
 
-1. On the **Create connection** pane, enter **Microsoft Dataverse (1)** as the connection name, select **Oauth (2)** as the authentication type, and click **Sign in (3)** to establish the connection.   
+1. On the **Create connection** pane, enter **Microsoft Dataverse (1)** as the connection name and click **Sign in (2)** to establish the connection.   
 
-     ![](../media/leav-man-e2-g-38.png)
+     ![](../media/lev-mgmt-sb-ex2-g4.png)
 
 1. On the **Sign in** page, enter **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click **Next (2)** to continue. If you directly get a **Pick an Account** pane, you can select the account and skip the login process. 
 
@@ -122,7 +122,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
         ![](../media/cor-mn-e5-g-73.png)
 
-      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from the Power Apps portal.
 
 1. In the **List rows** action, under the **Filter rows** field, type **<Logical_ID>_employeeemail eq '' (1)** and place the cursor inside the single quotes. Then click the **Expression (fx) (2)** icon to add a dynamic value.
 
@@ -194,7 +194,7 @@ In this task, you will create a Power Automate flow that validates leave request
       sub(24, outputs('Compose'))
       ```
 
-        ![](../media/lvimg26.png)
+        ![](../media/lev-mgmt-sb-ex2-g6.png)
 
       > Since each employee is allotted 24 leaves annually, if a user is applying for the first time, they start with 24 available leaves. This expression subtracts the current leave duration from 24 to calculate the remaining balance.
 
@@ -220,13 +220,13 @@ In this task, you will create a Power Automate flow that validates leave request
 
       > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
 
-1. Under the **True** branch's compose node, click the **plus (+) icon (1)**.  
-   - In the search bar, type **Respond to the agent (2)**.  
-   - From the **Skills** section, select **Respond to the agent (3)**.  
+1. Under the **True** branch's compose node, click the **plus (+) icon**.  
 
-       ![](../media/lvimg28.png)
+     ![](../media/lev-mgmt-sb-ex2-g9.png)
 
-       ![](../media/lvimg29.png)
+1. In the search bar, type **Respond to the agent (1)**. and from the **Skills** section, select **Respond to the agent (2)**.  
+
+     ![](../media/lev-mgmt-sb-ex2-g10.png)
 
 1. In the **Respond to the agent** action, click **Add an output** and select **Text**.
    - Enter **duration (1)** as the output name.    
@@ -295,7 +295,7 @@ In this task, you will create a Power Automate flow that validates leave request
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-## Task 2: Create flow to update leave request in Dataverse
+## Task 2: Create a flow to update leave requests in Dataverse
 
 In this task, you will design a Power Automate flow that collects all the necessary leave request details from the agent. The flow will then update these details in the Dataverse database, ensuring that every leave application is properly recorded and managed.
 
