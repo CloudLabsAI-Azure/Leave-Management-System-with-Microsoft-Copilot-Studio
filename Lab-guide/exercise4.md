@@ -22,15 +22,15 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
 1. On the top menu bar, click **Publish** to save and apply your changes to the agent.
 
-   ![](../media/cor-mn-e5-g-70.png)
+   ![](../media/lev-mgmt-sb-ex4-g1.png)
 
 1. On the **Publish this agent** dialog box, review the details and click **Publish** to confirm and complete the publishing process.
 
-   ![](../media/cor-mn-e5-g-71.png)
+   ![](../media/lev-mgmt-sb-ex4-g2.png)
 
 1. On the **Leave Management Agent** page, click **Test** in the top-right corner to open the testing panel for the agent.
 
-   ![](../media/leav-man-e4-g-22.png)
+   ![](../media/lev-mgmt-sb-ex4-g11.png)
 
 1. In the **Test your agent** panel, you will be testing the **Leave Management Agent**.
 
@@ -44,21 +44,21 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
 1. In the **Test your agent** panel, type a request such as **I want to apply for leave (1)** and click the **Send (2)** button to test the agent’s ability to process leave-related queries.
 
-   ![](../media/leav-man-e4-g-26.png)
+   ![](../media/lev-mgmt-sb-ex4-g5.png)
 
 1. In the **Test your agent** panel, when prompted to choose a leave type, select from the available options such as **Casual**, **Emergency**, or **Unpaid**.
 
-   ![](../media/leav-man-e4-g-27.png)
+   ![](../media/lev-mgmt-sb-ex4-g6.png)
 
-1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2025-09-20 (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2026-04-06 (1)**) and click the **Send (2)** button.
 
-   ![](../media/leav-man-e4-g-28.png)
+   ![](../media/llev-mgmt-sb-ex4-g7.png)
 
-1. In the **Test your agent** panel, enter the leave end date in the required **yyyy-mm-dd** format (for example, **2025-09-20 (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave end date in the required **yyyy-mm-dd** format (for example, **2026-04-07 (1)**) and click the **Send (2)** button.
 
 1. In the **Test your agent** panel, enter the reason for your leave (for example, **I will be attending a family function (1)**) and click the **Send (2)** button.
 
-   ![](../media/leav-man-e4-g-30.png)
+   ![](../media/lev-mgmt-sb-ex4-g9.png)
 
 1. In the **Test your agent** panel, verify that the agent responds with a confirmation message showing the approved leave dates. 
 
