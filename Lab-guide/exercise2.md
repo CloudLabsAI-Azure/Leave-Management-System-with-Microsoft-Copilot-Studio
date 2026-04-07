@@ -20,13 +20,13 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Power Automate flow that validates leave requests by calculating the duration, checking the leave balance, and updating it accordingly.
 
-1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu and click **+ New agent flow (2)** to create a new flow.
+1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu, and then select **+ New agent flow (2)**.
 
-     ![](../media/lvimg6.png)
+     ![](../media/lev-mgmt-sb-ex2-g1.png)
 
-1. In the **Add a trigger** pane, search for **When an agent calls the flow (1)** and select **When an agent calls the flow (2)** from the list.
+1. In the **Add a trigger** pane, search for **Skills (1)**, and then select **When an agent calls the flow (2)**.
 
-     ![](../media/LVIMG7.png)
+     ![](../media/lev-mgmt-sb-ex2-g5.png)
 
 1. On the **Agent flows Designer** page, under the **Parameters** tab, click **+ Add an input**.  
 
@@ -86,17 +86,17 @@ In this task, you will create a Power Automate flow that validates leave request
 
    > - **add(..., 1)** → adds 1 so that both the start and end dates are counted.
 
-1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown. On the **Designer** page, below the **Compose** action, click the **plus (+) icon** to add a new action **(1)**.
+1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown. On the **Designer** page, below the **Compose** action, click the **plus (+) icon** to add a new action
 
      ![](../media/lvimg18.png)
 
-1. In the search box, type **List rows (2)** Under **Microsoft Dataverse (3)**, select **List rows (4)**.  
+1. In the search box, type **List rows (1)** Under **Microsoft Dataverse**, select **List rows (2)**.  
 
-     ![](../media/lvimg19.png)
+     ![](../media/lev-mgmt-sb-ex2-g3.png)
 
-1. On the **Create connection** pane, enter **Microsoft Dataverse (1)** as the connection name, select **Oauth (2)** as the authentication type, and click **Sign in (3)** to establish the connection.   
+1. On the **Create connection** pane, enter **Microsoft Dataverse (1)** as the connection name and click **Sign in (2)** to establish the connection.   
 
-     ![](../media/leav-man-e2-g-38.png)
+     ![](../media/lev-mgmt-sb-ex2-g4.png)
 
 1. On the **Sign in** page, enter **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click **Next (2)** to continue. If you directly get a **Pick an Account** pane, you can select the account and skip the login process. 
 
@@ -194,7 +194,7 @@ In this task, you will create a Power Automate flow that validates leave request
       sub(24, outputs('Compose'))
       ```
 
-        ![](../media/lvimg26.png)
+        ![](../media/lev-mgmt-sb-ex2-g6.png)
 
       > Since each employee is allotted 24 leaves annually, if a user is applying for the first time, they start with 24 available leaves. This expression subtracts the current leave duration from 24 to calculate the remaining balance.
 
@@ -220,13 +220,13 @@ In this task, you will create a Power Automate flow that validates leave request
 
       > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
 
-1. Under the **True** branch's compose node, click the **plus (+) icon (1)**.  
-   - In the search bar, type **Respond to the agent (2)**.  
-   - From the **Skills** section, select **Respond to the agent (3)**.  
+1. Under the **True** branch's compose node, click the **plus (+) icon**.  
 
-       ![](../media/lvimg28.png)
+     ![](../media/lev-mgmt-sb-ex2-g9.png)
 
-       ![](../media/lvimg29.png)
+1. In the search bar, type **Respond to the agent (1)**. and from the **Skills** section, select **Respond to the agent (2)**.  
+
+     ![](../media/lev-mgmt-sb-ex2-g10.png)
 
 1. In the **Respond to the agent** action, click **Add an output** and select **Text**.
    - Enter **duration (1)** as the output name.    
