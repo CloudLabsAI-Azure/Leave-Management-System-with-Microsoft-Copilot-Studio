@@ -48,15 +48,15 @@ In this task, you will ingest the datasets into Dataverse, which will be created
 
      ![](../media/leav-man-e1-g-9.png)
 
-   >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
+     >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
 
-   >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
+     >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
 
 1. Once created, locate the Leave Request table from the list and note down the logical ID of the table as shown in a notepad safely, as you will be using this value further in the lab.
 
      ![](../media/upimg1.jpg)
 
-   >**Note:** You may see a different ID than the one shown in the screenshot; this is expected.
+     >**Note:** You may see a different ID than the one shown in the screenshot; this is expected.
 
 ## Task 2: Sign into Microsoft Copilot Studio
 
@@ -64,21 +64,21 @@ In this task, you will sign in to Microsoft Copilot Studio and switch the enviro
 
 1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
 
-   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
+     >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
    
 1. In the pop-up window that appears, click on **Get Started**
 
      ![](../media/cor-mn-e5-g-10.png)
    
-   >**[OPTIONAL]**
+     >**[OPTIONAL]**
 
-   >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If the issue still persists, follow the instructions below. to resolve this:
+     >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If the issue still persists, follow the instructions below. to resolve this:
 
-   > Navigate back to Power Apps Portal, and copy the environment ID as shown.
+     > Navigate back to Power Apps Portal, and copy the environment ID as shown.
 
      ![](../media/cpnew2.png)
 
-   > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID with the ID that you copied.
+     > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID with the ID that you copied.
 
      ![](../media/cpnew3.png)
 
@@ -155,13 +155,6 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
      ![](../media/leav-man-e2-g-4.png)
 
-<validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
-
 ## Task 4: Configure Agent Basics
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
@@ -179,6 +172,13 @@ In this task, you will connect knowledge sources such as the product catalog, po
      ![](../media/cor-mn-e5-g-15.png)
 
 1. With the basic setup and configurations complete, the next exercises will focus on building the core logic for leave management.
+
+<validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 ## Summary
 
