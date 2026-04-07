@@ -198,23 +198,25 @@ In this task, you will create a Power Automate flow that validates leave request
 
       > Since each employee is allotted 24 leaves annually, if a user is applying for the first time, they start with 24 available leaves. This expression subtracts the current leave duration from 24 to calculate the remaining balance.
 
-1. Under the **True** branch of the **Condition**, click the **plus (+) (1)** button to add a new action, type **Compose (2)** in the search box, and from the **Data Operation** section select **Compose (3)**.
+1. Under the **True** branch of the **Condition**, click the **plus (+)**.
 
      ![](../media/lvimg27.png)
 
+1. To add a new action, type **Compose (1)** in the search box, and from the **Data Operation** section select **Compose (2)**.
+
      ![](../media/lvimg25.png)
 
-1. On the **Condition expression** field:  
-   - Type **/** **(1).**  
-   - Click **Insert expression (2)**.  
-   - Paste the expression **(3)**.  
-   - Click **Add (4)** to insert it.  
+1. In the **Compose** action, enter **/** in the **Inputs (1)** field, and then select **Insert expression (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g7.png)
+
+1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**. 
 
       ```
       sub(first(outputs('List_rows')?['body/value'])?['<Logical_ID>_balancedays'], outputs('Compose'))
       ```
 
-        ![](../media/leav-man-e2-g-54.png)
+     ![](../media/lev-mgmt-sb-ex2-g8.png)
 
       > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
 
@@ -228,53 +230,97 @@ In this task, you will create a Power Automate flow that validates leave request
 
      ![](../media/lev-mgmt-sb-ex2-g10.png)
 
-1. In the **Respond to the agent** action, click **Add an output** and select **Text**.
-   - Enter **duration (1)** as the output name.    
-   - Type **/** (2) to open the expression editor.  
-   - Paste the expression **(3)**.  
-   - Click **Add (4)** to insert it. 
-   - Click **Add an output (5)** and select **Text**.
+1. In the **Respond to the agent** action, select **Add an output**.
+
+     ![](../media/lev-mgmt-sb-ex2-g11.png)
+
+1. In the **Respond to the agent** action, select **Text** under **Choose the type of output**.
+
+     ![](../media/lev-mgmt-sb-ex2-g12.png)
+
+1. In the **Respond to the agent** action, enter **duration (1)** as the output name, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g13.png)
+
+1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**.
 
       ```
       outputs('Compose')
       ``` 
 
-        ![](../media/lvimg30.png)
-        
-        ![](../media/lvimg31.png)
+     ![](../media/lev-mgmt-sb-ex2-g14.png)
 
-1. In the **Respond to the agent** action, click **Add an output** and select **Text**.  
-   - Enter **balance (1)** as the output name.  
-   - Type **/** and open the expression editor.  
-   - Paste the expression **(2)**.  
-   - Click **Add (3)** to insert it. 
+1. In the **Respond to the agent** action, select **Add an output**.
 
-      ```
-      outputs('Compose_2')
-      ```
+     ![](../media/lev-mgmt-sb-ex2-g15.png)
 
-        ![](../media/leav-man-e2-g-61.png)
+1. In the **Respond to the agent** action, select **Text** under **Choose the type of output**.
 
-1. In the **False** branch of the Condition, click the **plus (+) icon (1)**, search for **Respond to the agent (2)**, and select **Respond to the agent (3)** from the Skills section. 
+     ![](../media/lev-mgmt-sb-ex2-g16.png)
 
-     ![](../media/leav-man-e2-g-62.png)
+1. In the **Respond to the agent** action, enter **balance (1)** as the output name, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
 
-1. On the **Respond to the agent** pane:  
-   - In the **duration (1)** field, paste the expression **(2)** for duration.  
+     ![](../media/lev-mgmt-sb-ex2-g17.png)
+
+1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**.
+
+     ```
+     outputs('Compose_2')
+     ```
+
+     ![](../media/lev-mgmt-sb-ex2-g18.png)
+
+1. In the **False** branch of the **Condition**, select the **plus (+)** icon.
+
+     ![](../media/lev-mgmt-sb-ex2-g19.png)
+
+1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g20.png)
+
+1. In the **Respond to the agent 1** action, select **Add an output**.
+
+     ![](../media/lev-mgmt-sb-ex2-g21.png)
+
+1. In the **Respond to the agent 1** action, select **Text** under **Choose the type of output**.
+
+     ![](../media/lev-mgmt-sb-ex2-g22.png)
+
+1. In the **Respond to the agent 1** action, enter **duration (1)** as the output name, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g23.png)
+
+1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**.  
    
-      ```
-      outputs('Compose')
-      ```
+     ```
+     outputs('Compose')
+     ```
 
-   - In the **balance (3)** field, paste the expression **(4)** for balance. 
-      
-      ```
-      outputs('Compose_1')
-      ```
+     ![](../media/lev-mgmt-sb-ex2-g24.png)
 
-        ![](../media/leav-man-e2-g-63.png)
+1. In the **Respond to the agent 1** action, select **Add an output**.
 
-1. On the **Designer** page, review the complete flow to ensure all steps are connected. Once confirmed, click **Publish** to save and activate the flow.
+     ![](../media/lev-mgmt-sb-ex2-g25.png)
+
+1. In the **Respond to the agent 1** action, select **Text** under **Choose the type of output**.
+
+     ![](../media/lev-mgmt-sb-ex2-g26.png)
+
+1. In the **Respond to the agent 1** action, enter **balance (1)** as the output name, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g27.png)
+
+1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**.
+ 
+     ```
+     outputs('Compose_1')
+     ```
+
+     ![](../media/lev-mgmt-sb-ex2-g28.png)
+
+1. On the **Designer** page, review the flow and then select **Publish**.
+
+     ![](../media/lev-mgmt-sb-ex2-g29.png)
 
 1. On the top menu bar, click **Overview** to navigate to the flow details page.
 
@@ -301,11 +347,11 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 1. On the **Agent flows** page, select **Flows (1)** from the left navigation pane and click **New agent flow (2)** to create a new flow.
 
-     ![](../media/lvimg32.png)
+     ![](../media/lev-mgmt-sb-ex2-g30.png)
 
-1. In the **Add a trigger** pane, search for **When an agent calls the flow (1)** and select **When an agent calls the flow (2)** from the list.
+1. In the **Add a trigger** pane, search for **Skills (1)**, and then select **When an agent calls the flow (2)**.
 
-     ![](../media/LVIMG7.png)
+     ![](../media/lev-mgmt-sb-ex2-g31.png)
 
 1. On the **Designer** tab of the flow, click **Add an input**.
 
@@ -315,36 +361,51 @@ In this task, you will design a Power Automate flow that collects all the necess
 
      ![](../media/lvimg12.png)
 
-1. In the **Parameters** section, enter **employeeEmail (1)** as the name of the input parameter. Click **Add an input (2)** to define an additional parameter.
+1. In the **When an agent calls the flow** action, enter **employeeEmail (1)** as the input name, and then select **Add an input (2)**.
 
-     ![](../media/lvimg13.png)
+     ![](../media/lev-mgmt-sb-ex2-g32.png)
 
-1. In the **Parameters** section, follow the same steps used for **employeeEmail** to add the following input parameters and click **Add an input (6)**:
+1. In the **Parameters** section, follow the same steps used for **employeeEmail** to add the following input parameters, selecting **Add an input** after each:
+
     - **employeeName (1)**  
     - **leaveType (2)**  
     - **reason (3)**  
     - **durationDays (4)**  
     - **balance (5)**  
 
-1. In the **Choose the type of user input** dialog, select **Date** to add a date input parameter.
+        ![](../media/lev-mgmt-sb-ex2-g76.png)
 
-     ![](../media/leav-man-e2-g-76.png)
+1. In the **When an agent calls the flow** action, select **Add an input**.
 
-1. In the **Parameters** section, add two date input parameters:  
-    - **startDate (1)**  
-    - **endDate (2)**  
+     ![](../media/lev-mgmt-sb-ex2-g77.png)
 
-        ![](../media/leav-man-e2-g-77.png)
+1. In the **Choose the type of user input** section, select **Date**.
+
+     ![](../media/lev-mgmt-sb-ex2-g40.png)
+
+1. In the **When an agent calls the flow** action, enter **startDate (1)** as the input name, and then select **Add an input (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g41.png)
+
+1. In the **Choose the type of user input** section, select **Date**.
+
+     ![](../media/lev-mgmt-sb-ex2-g42.png)
+
+1. In the **When an agent calls the flow** action, enter **endDate (1)** as the input name, and then select **Add an input (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g43.png)
 
 1. After adding the required inputs, the **Parameters** section should look as shown below, with the following fields: 
 
-     ![](../media/cor-mn-e4-g-1.png)
+     ![](../media/lev-mgmt-sb-ex2-g78.png)
 
-1. On the **Designer** canvas, click the **plus (+) icon (1)** to add an action. In the **Add an action** dialog, type **Add a new row (2)** in the search bar. Under **Microsoft Dataverse (3)**, select **Add a new row (4)**.
+1. On the **Designer** canvas, click the **plus (+) icon** to add an action.
 
      ![](../media/lvimg34.png)
 
-     ![](../media/lvimg35.png)
+1. In the **Add an action** dialog, type **Add a new row (1)** in the search bar. Under **Microsoft Dataverse (3)**, select **Add a new row (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g45.png)
 
 1. In the **Add a new row** action, select **Leave Request (1)** from the **Table name** drop-down. Expand the **Advanced parameters (2)** section to map the input fields with the parameters created earlier.
 
@@ -366,22 +427,22 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 1. In the **Add a new row** action, under **Balance_days**, type **/** (1) and then click **Insert expression (2)** to add an expression.
 
-     ![](../media/lvimg38.png)
+     ![](../media/lev-mgmt-sb-ex2-g46.png)
 
-1. On the **Add a row** page, in the **Balance_days** field:  
-    - Select the **Dynamic content (1)** tab.  
-    - In the search bar, type **balance (2)**.  
-    - From the results, select **balance (3)**.
-    - Verify the value added in the **expression area (4)**.
-    - Click **Add (5)** to confirm.  
+1. In the expression editor:
+    - Select **Dynamic content (1)**.
+    - Search for **balance (2)**.
+    - Choose **balance (3)**.
+    - Verify it appears in the expression area **(4)**.
+    - Select **Add (5)**.
 
-       ![](../media/lvimg39.png)
+       ![](../media/lev-mgmt-sb-ex2-g80.png)
 
 1. On the **Add a row** page, in the **Duration_days** field:  
     - Type **/** (1).  
     - Select **Insert expression (2)** from the menu.  
 
-        ![](../media/cor-mn-e4-g-3.png)
+        ![](../media/lev-mgmt-sb-ex2-g81.png)
 
 1. In the expression editor:  
     - Select **Dynamic content (1)**.  
@@ -389,7 +450,7 @@ In this task, you will design a Power Automate flow that collects all the necess
     - Choose **durationDays (3)** under *When an agent calls the flow*.  
     - Click **Add (4)** to insert it.  
 
-        ![](../media/cor-mn-e4-g-4.png)
+        ![](../media/lev-mgmt-sb-ex2-g82.png)
 
 1. Now map the remaining parameters to the Dataverse fields as shown in the table below.
 
@@ -407,31 +468,43 @@ In this task, you will design a Power Automate flow that collects all the necess
 
     - **Note:** For fields marked **static value**, select the value directly.  
 
-        ![](../media/cor-mn-e4-g-5.png)
+        ![](../media/lev-mgmt-sb-ex2-g83.png)
 
 1. Once done, click on **Save Draft** from the top to save the flow in its current state. You will update this flow in the coming exercises to add the approval flow.
 
-     ![](../media/cor-mn-e4-g-6.png)
+     ![](../media/lev-mgmt-sb-ex2-g51.png)
 
 ## Task 3: Create topic for leave application
 
 In this task, you will create a topic that enables employees to apply for leave by configuring the required inputs and connecting it to the validation flow.
 
-1. On the **Leave Management Agent** page, select the **Topics (1)** tab. Click **Add a topic (2)** and then choose **From blank**.  
+1. In **Copilot Studio**, select **Agents (1)**, and then choose **Leave Management Agent (2)**. 
 
-     ![](../media/cor-mn-e5-g-25.png)
+     ![](../media/lev-mgmt-sb-ex2-g52.png)
+
+1. In the **Topics (1)** tab, select **Add a topic (2)**, and then choose **From blank (3)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g53.png)
 
 1. On the **Test your agent** pane, click the **Close (X)** button to close the testing window and make the canvas larger for easier workflow design.
 
-1. In the **Trigger** node, enter a description for the topic (1), for example: *This topic is used by employees to apply leaves*. Then click the **plus (+) icon (2)** to add the next step in the topic flow.
+1. In the **Trigger** node, enter the following description in **Describe what the topic does (1)**, and then select the **plus (+) icon (2)**.
 
-     ![](../media/leav-man-e3-g-2.png)
+     ```
+     This topic is used by employees to apply leaves
+     ```
+
+     ![](../media/lev-mgmt-sb-ex2-g54.png)
 
 1. In the **Topic editor**, from the options displayed, select **Ask a question** to add a question node to the flow.
 
-     ![](../media/leav-man-e3-g-3.png)
+     ![](../media/lev-mgmt-sb-ex2-g55.png)
 
-1. In the **Question** node, enter `Please choose the Leave type from the list` **(1)** as the question text. Under **Identify**, select **Multiple choice options (2)**, and then click **+ New option (3)** to start adding choices.
+1. In the **Question** node, enter the following in the question text **(1)**, select **Multiple choice options (2)** under **Identify**, and then choose **+ New option (3)**.
+
+     ```
+     Please choose the Leave type from the list
+     ```
 
      ![](../media/leav-man-e2-g-16.png)
 
@@ -443,17 +516,13 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/leav-man-e2-g-18.png)
 
-1. In the **Save user response as** field, ensure that a variable such as **Var1 (1)** is automatically populated. On the right-side **Variable properties** pane  
+1. In the **Save user response as** field, select **Var1**. 
 
-     ![](../media/cor-mn-e5-g-83.png)
+     ![](../media/lev-mgmt-sb-ex2-g56.png)
 
-   **Note:** If no variable is automatically populated (for example, **Var1** is missing), try refreshing the page or opening the flow in a new incognito window and perform the step again. Once successful, it should appear as shown in the image above.
+1. In the **Variable properties** pane, enter **leave_type (1)** in the **Variable name** field, and then select **Close (2)**.
 
-    ![](../media/cor-mn-e5-g-82.png)
-
-1. In the **Save user response as** field, enter **leave_type (1)** as the variable name. On the right-side **Variable properties** pane, confirm that the **Variable name** is also set to **leave_type (2)**.
-
-     ![](../media/leav-man-e2-g-19.png)
+     ![](../media/lev-mgmt-sb-ex2-g57.png)
 
 1. In the **Topics** designer, under **All other conditions**, click the **plus (+) icon** to add the next step in the flow. 
 
@@ -463,7 +532,11 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/leav-man-e3-g-5.png)
 
-1. In the **Message** action, type `Please choose an option from the list` **(1)** in the text box. Then click the **plus icon (2)** below to add the next step.  
+1. In the **Message** action, enter the following text **(1)** in the text box. Then click the **plus icon (2)** below to add the next step.  
+
+     ```
+     Please choose an option from the list
+     ```
 
      ![](../media/leav-man-e3-g-6.png)
 
@@ -483,7 +556,11 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/leav-man-e3-g-10.png)
 
-1. In the **Question** node, enter the prompt `Please provide your leave Start Date (Please make sure to provide in yyyy-mm-dd format)` **(1)** to capture the start date from the user.
+1. In the **Question** node, enter the following prompt **(1)** to capture the start date from the user.
+
+     ```
+     Please provide your leave Start Date (Please make sure to provide in yyyy-mm-dd format)
+     ```
 
      ![](../media/leav-man-e3-g-11.png)
 
@@ -491,9 +568,13 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/leav-man-e3-g-12.png)
 
-1. In the **Save user response as** field, enter **startDate (1)** as the variable name. On the **Variable properties** pane, confirm the **Variable name (2)** is set to **startDate**.
+1. In the **Save user response as** field, select **Var1**.
 
-     ![](../media/leav-man-e3-g-13.png)
+     ![](../media/lev-mgmt-sb-ex2-g58.png)
+
+1. In the **Variable properties** pane, enter **startDate (1)** in the **Variable name** field, and then select **Close (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g59.png)
 
 1. Below the **Question** node, click the **plus (+) icon** to add the next step in the flow. 
 
@@ -503,13 +584,25 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/leav-man-e3-g-15.png)
 
-1. On the **Question** node, configure it to capture the end date of the leave:  
-    - Enter the message `Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)` in the text box **(1)**.  
-    - Under **Identify**, select **User's entire response (2)**.  
-    - In **Save user response as**, enter **endDate (3)**.  
-    - In the **Variable properties** pane, confirm the variable name is set as  **endDate (4)**. 
+1. In the **Question** node, enter the following in the question text.
 
-        ![](../media/leav-man-e3-g-16.png)
+     ```
+     Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)
+     ```
+
+     ![](../media/lev-mgmt-sb-ex2-g60.png)
+
+1. In the **Identify** section, select the option arrow **(1)**, and then choose **User's entire response (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g61.png)
+
+1. In the **Save user response as** field, select **Var1**.
+
+     ![](../media/lev-mgmt-sb-ex2-g62.png)
+
+1. In the **Variable properties** pane, enter **endDate (1)** in the **Variable name** field, and then select **Close (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g63.png)
 
 1. Below the **endDate** question node, click the **plus (+) icon** to add the next step in the flow.
 
@@ -519,13 +612,21 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/leav-man-e3-g-18.png)
 
-1. On the **Question** node:  
-    - Enter the prompt `May I please know the reason for your leave?` **(1)**.  
-    - Under **Identify**, select **User's entire response (2)**.  
-    - In **Save user response as**, set the variable name to **reason (3)**.  
-    - Verify in the **Variable properties** pane that the variable name is correctly set as **reason (4)**, then close the properties pane **(5)**.  
+1. In the **Question** node, enter the following in the question text **(1)**, select the option arrow **(2)** under **Identify**, and then choose **User's entire response (3)**.
 
-        ![](../media/leav-man-e3-g-19.png)
+     ```
+     May I please know the reason for your leave?
+     ```
+
+     ![](../media/lev-mgmt-sb-ex2-g64.png)
+
+1. In the **Save user response as** field, select **Var1**.
+
+     ![](../media/lev-mgmt-sb-ex2-g65.png)
+
+1. In the **Variable properties** pane, enter **reason (1)** in the **Variable name** field, and then select **Close (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g66.png)
 
 1. Below the **reason** question node, click the **plus (+) icon** to add the next step in the flow.  
 
@@ -541,11 +642,11 @@ In this task, you will create a topic that enables employees to apply for leave 
 
 1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **startDate (2)** to map the variable.
 
-     ![](../media/leav-man-e3-g-23.png)
+     ![](../media/lev-mgmt-sb-ex2-g67.png)
 
 1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **endDate** field. From the **Select a variable** pane, choose **endDate (2)** to map the variable. 
 
-     ![](../media/leav-man-e3-g-24.png)
+     ![](../media/lev-mgmt-sb-ex2-g68.png)
 
 1. On the **Power Automate inputs** card:  
     - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
@@ -553,11 +654,11 @@ In this task, you will create a topic that enables employees to apply for leave 
     - Search for **User.Email (3)**.  
     - Select **User.Email (4)**.  
 
-        ![](../media/leav-man-e3-g-25.png)
+        ![](../media/lev-mgmt-sb-ex2-g69.png)
 
 1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
 
-     ![](../media/leav-man-e3-g-41.png)
+     ![](../media/lev-mgmt-sb-ex2-g70.png)
 
 1. In the **Save your topic** dialog:  
     - Enter the topic name as **leave_request (1)**.  
