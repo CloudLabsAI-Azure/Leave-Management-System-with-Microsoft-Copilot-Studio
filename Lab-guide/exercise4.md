@@ -64,7 +64,7 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/leav-man-e4-g-31.png)
 
-   > **Note:** If you see the prompt asking you to connect, perform the below steps:  
+   > **Note:** If you see the prompt asking you to connect, perform the steps below:  
 
    > Click **Open connection manager (1)** to verify your credentials.
 
