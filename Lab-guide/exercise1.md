@@ -4,25 +4,25 @@
 
 ## Overview
 
-In this exercise, you will provision a Microsoft Power Platform environment and sign into Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI–driven leave management solution that streamlines processes and enhances experience.
+In this exercise, you will provision a Microsoft Power Platform environment and sign in to Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI–driven leave management solution that streamlines processes and enhances experience.
 
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1 : Provisioning power platform environment
+- Task 1: Provisioning Power Platform environment
 
-- Task 2 : Sign into Microsoft Copilot Studio
+- Task 2: Sign in to Microsoft Copilot Studio
 
 - Task 3: Create a New Agent
 
 - Task 4: Configure Agent Basics
 
-## Task 1 : Provisioning power platform environment
+## Task 1: Provisioning Power Platform environment
 
-In this task, you will ingest the datasets to dataverse, which will be created in new power platform environment.
+In this task, you will ingest the datasets into Dataverse, which will be created in a new Power Platform environment.
 
-1. Navigate back to Power Apps portal, please switch to the environment that you created earlier.
+1. Navigate back to the Power Apps portal, and please switch to the environment that you created earlier.
 
     ![](../media/papps1.png)
 
@@ -30,7 +30,7 @@ In this task, you will ingest the datasets to dataverse, which will be created i
 
      ![](../media/leav-man-e1-g-2.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files.
+1. In the next pane, click on **Select from device** and in the pop-up window, select files.
 
      ![](../media/ex2img11.png)
 
@@ -52,13 +52,13 @@ In this task, you will ingest the datasets to dataverse, which will be created i
 
    >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
 
-1. Once created locate the Leave Request table from the list and note down the logical ID of the table as shown in a notepad safely, as you will be using this value further in the lab.
+1. Once created, locate the Leave Request table from the list and note down the logical ID of the table as shown in a notepad safely, as you will be using this value further in the lab.
 
      ![](../media/upimg1.jpg)
 
-   >**Note:** You may see a different ID than the one shown in the screenshot, this is expected.
+   >**Note:** You may see a different ID than the one shown in the screenshot; this is expected.
 
-## Task 2 : Sign into Microsoft Copilot Studio
+## Task 2: Sign into Microsoft Copilot Studio
 
 In this task, you will sign in to Microsoft Copilot Studio and switch the environment to the new developer environment that you created earlier.
 
@@ -66,7 +66,7 @@ In this task, you will sign in to Microsoft Copilot Studio and switch the enviro
 
    >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
    
-1. In the pop-up window that appears click on **Get Started**
+1. In the pop-up window that appears, click on **Get Started**
 
      ![](../media/cor-mn-e5-g-10.png)
    
@@ -78,7 +78,7 @@ In this task, you will sign in to Microsoft Copilot Studio and switch the enviro
 
      ![](../media/cpnew2.png)
 
-   > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID to the ID that you copied.
+   > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID with the ID that you copied.
 
      ![](../media/cpnew3.png)
 
@@ -86,7 +86,7 @@ In this task, you will sign in to Microsoft Copilot Studio and switch the enviro
 
      ![](../media/cor-mn-e5-g-14.png)
 
-1. Once you are inside **Copilot Studio** you will be in the home page. 
+1. Once you are inside **Copilot Studio**, you will be on the home page. 
 
      ![](../media/leav-man-e1-g-12.png)
 
@@ -94,7 +94,7 @@ In this task, you will sign in to Microsoft Copilot Studio and switch the enviro
 
      ![](../media/leav-man-e1-g-14.png)
 
-1. Change the environment to the new environment that you have created earlier on **Select environment** pane, expand **Supported environments (1)** and select **ODL_User <your-ID> Environment (2)**.
+1. Change the environment to the new environment that you have created earlier on the **Select environment** pane, expand **Supported environments (1)** and select **ODL_User <your-ID> Environment (2)**.
 
      ![](../media/leav-man-e1-g-15.png)
 
@@ -102,9 +102,9 @@ In this task, you will sign in to Microsoft Copilot Studio and switch the enviro
 
 In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for enabling intelligent leave management operations.
 
-1. Navigate back to Copilot Studio page from the browser.
+1. Navigate back to the Copilot Studio page from the browser.
 
-1. From the home page, select **Agents (1)** from left menu and click on **+ Create blank agent (2)** to create an agent.
+1. From the home page, select **Agents (1)** from the left menu and click on **+ Create blank agent (2)** to create an agent.
 
      ![](../media/st-store-ex2-g1.png)
 
@@ -149,12 +149,11 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
     ![](../media/lev-mgmt-sb-ex1-g4.png)
 
-1. Once configured, please click on save to save the instructions.
+1. Once configured, please click on **save** to save the instructions.
 
 1. You have successfully created the Leave Management Agent. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
      ![](../media/leav-man-e2-g-4.png)
-
 
 <validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
 
@@ -171,7 +170,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
      ![](../media/llev-mgmt-sb-ex1-g5.png)
 
-1. In the next pane, select **Dataverse** as knowledge source.
+1. In the next pane, select **Dataverse** as a knowledge source.
 
      ![](../media/lev-mgmt-sb-ex1-g6.png)
 
@@ -185,6 +184,6 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 In this exercise, you provisioned a Power Platform environment, signed into Microsoft Copilot Studio, created a new agent, and configured its basic settings. These steps laid the groundwork for building an Agentic AI–driven leave management solution.
 
-### You have successfully completed this exercise, please continue to next one >>
+### You have successfully completed this exercise. Please continue to the next one >>
 
    ![](../media/a-gs-g2.png)
