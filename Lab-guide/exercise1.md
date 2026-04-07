@@ -168,7 +168,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 1. In the **Knowledge** section, select **Add knowledge**.
 
-     ![](../media/llev-mgmt-sb-ex1-g5.png)
+     ![](../media/lev-mgmt-sb-ex1-g5.png)
 
 1. In the next pane, select **Dataverse** as a knowledge source.
 
