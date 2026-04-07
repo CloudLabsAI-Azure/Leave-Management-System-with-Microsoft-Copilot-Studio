@@ -48,7 +48,7 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
      ![](../media/lev-mgmt-sb-ex3-g51.png)
 
-   > **Note:** The expression reference (for example, `triggerBody()?['text_4']`) may vary depending on the order in which inputs are added in the **When an agent calls the flow** step. The number (`text_4`, `text_5`, etc.) is auto-generated
+     > **Note:** The expression reference (for example, `triggerBody()?['text_4']`) may vary depending on the order in which inputs are added in the **When an agent calls the flow** step. The number (`text_4`, `text_5`, etc.) is auto-generated
 
 1. In the **Condition** action, select **is less or equal to (1)** from the operator dropdown.
 
@@ -71,11 +71,11 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
      ![](../media/lvimg45.png)
 
 1. In the **Start and wait for an approval** action, configure the parameters:  
-   - From the **Approval type** drop-down, select **Approve/Reject - Everyone must approve (1)**.  
-   - In the **Title** field, enter **Leave Approval (2)**.  
-   - In the **Assigned to** field, type the email address <inject key="AzureAdUserEmail"></inject> **(3)** and select the matching account from the suggestions **(4)**. 
+     - From the **Approval type** drop-down, select **Approve/Reject - Everyone must approve (1)**.  
+     - In the **Title** field, enter **Leave Approval (2)**.  
+     - In the **Assigned to** field, type the email address <inject key="AzureAdUserEmail"></inject> **(3)** and select the matching account from the suggestions **(4)**. 
 
-        ![](../media/lev-mgmt-sb-ex3-g9.png)
+          ![](../media/lev-mgmt-sb-ex3-g9.png)
 
 1. In the **False** branch after the approval node, click the **plus (+) icon**.
 
@@ -85,18 +85,23 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
      ![](../media/lev-mgmt-sb-ex3-g11.png)
 
-1. In the **Condition 1** action, configure the condition as follows:  
-   - Select **Outcome (1)** from the dynamic content.  
-   - From the operator drop-down, select **is equal to (2)**.  
-   - In the value field, enter **Approve (3)**. 
+1. In the **Condition** action, type **/** in the value field **(1)**, and then select **Insert expression (2)**.
 
-      ```
-      outputs('Start_and_wait_for_an_approval')?['body/outcome']
-      ``` 
+     ![](../media/lev-mgmt-sb-ex3-g12.png)
 
-        ![](../media/leav-man-e2-g-94.png)
+1. In the expression editor, paste the expression in the editor box **(1)**, select **Dynamic content (2)** if required, and then choose **Add (3)**.
 
-      > This condition evaluates whether the leave request has been approved by retrieving the response from the previous approval step.
+     ```
+     outputs('Start_and_wait_for_an_approval')?['body/outcome']
+     ``` 
+
+     ![](../media/lev-mgmt-sb-ex3-g13.png)
+
+1. In the **Condition 1** action, set the operator to **is equal to (1)**, and then enter **Approve (2)**.
+
+     ![](../media/lev-mgmt-sb-ex3-g14.png)
+
+     > This condition evaluates whether the leave request has been approved by retrieving the response from the previous approval step.
 
 1. In the **False** branch, select the **+** icon.
 
@@ -172,19 +177,39 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
      ![](../media/lev-mgmt-sb-ex3-g31.png)
 
-1. Enter the message **Your leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
+1. In the **Respond to the agent 1** action, enter **reply (1)** as the output name, and then enter the following message in the value field **(2)**.
 
-   ```
-   outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
-   ``` 
+     ```
+     Your leave is approved from [start_date] to [end_date]
+     ```
 
-   ```
-   outputs('Add_a_new_row')?['body/<Logical_ID>_enddate']
-   ``` 
+     ![](../media/lev-mgmt-sb-ex3-g32.png)
 
-     ![](../media/leav-man-e2-g-102.png)
+1. In the **Respond to the agent 1** action, select the **start_date (1)** placeholder, and then choose the **fx (2)** option.
 
-   > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+     ![](../media/lev-mgmt-sb-ex3-g33.png)
+
+1. In the expression editor, paste the expression in the editor box, and then select **Add**.
+
+     ```
+     outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
+     ``` 
+
+     > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+
+1. In the **Respond to the agent 1** action, select the **end_date (1)** placeholder, and then choose the **fx (2)** option.
+
+     ![](../media/lev-mgmt-sb-ex3-g34.png)
+
+1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**.
+
+     ```
+     outputs('Add_a_new_row')?['body/<Logical_ID>_enddate']
+     ``` 
+
+     ![](../media/lev-mgmt-sb-ex3-g35.png)
+
+     > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
 
 1. The completed flow should now look like the following:
 
@@ -200,15 +225,11 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
 1. At the top-right corner of the flow designer, click **Publish** to save and activate your flow.
 
-     ![](../media/leav-man-e2-g-104.png)
+     ![](../media/lev-mgmt-sb-ex3-g36.png)
 
-1. On the top menu, click **Overview** to return to the flow overview page after publishing.
+1. On the **Overview (1)** page, select **Edit (2)**.
 
-     ![](../media/leav-man-e2-g-105.png)
-
-1. On the **Overview** page, under the **Details** section, click **Edit** to update the flow details such as the name and description.
-
-     ![](../media/leav-man-e2-g-106.png)
+     ![](../media/lev-mgmt-sb-ex3-g37.png)
 
 1. In the **Details** pane, enter **Leave Management Workflow (1)** in the **Flow name** field. Then, click **Save (2)** to apply the changes.  
 
@@ -227,19 +248,23 @@ In this task, you will complete the leave request topic by implementing the logi
 
 1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu and click **Leave Management Agent (2)**.
 
-     ![](../media/leav-man-e4-g-1.png)
+     ![](../media/lev-mgmt-sb-ex3-g39.png)
 
 1. Please click on **+** as shown below to expand the menu and then select **Topics** from the list.
 
      ![](../media/lvimg55.png)
 
+1. In the **Topics (1)** tab, select **leave_request (2)**.
+
+     ![](../media/lev-mgmt-sb-ex3-g39.png)
+
 1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
 
-     ![](../media/leav-man-e3-g-26.png)
+     ![](../media/lev-mgmt-sb-ex3-g40.png)
 
 1. On the **Outputs (2)** section, click **Add a tool (1)** and select **Leave Management Workflow (2)** from the list of tools. 
 
-     ![](../media/leav-man-e3-g-27.png)
+     ![](../media/lev-mgmt-sb-ex3-g41.png)
 
 1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (7) (3)** section and select the **reply (4)** variable by checking the box.   
 
@@ -255,7 +280,7 @@ In this task, you will complete the leave request topic by implementing the logi
     - Search for **User.Email (3)**.  
     - Select **User.Email (4)** from the results.  
 
-        ![](../media/leav-man-e3-g-28.png)
+        ![](../media/lev-mgmt-sb-ex3-g43.png)
 
 1. On the **Action** card, set the value for **employeeName (String)**:  
     - Click the **ellipsis (…) (1)**.  
@@ -263,50 +288,50 @@ In this task, you will complete the leave request topic by implementing the logi
     - Search for **User.FirstName (3)**.  
     - Select **User.FirstName (4)** from the results. 
 
-        ![](../media/leav-man-e3-g-29.png)
+        ![](../media/lev-mgmt-sb-ex3-g44.png)
 
-1. On the **Action** card, set the value for **leaveType (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, switch to the **Formula (2)** tab.  
-    - Enter the formula **Text(Topic.leave_type) (3)**.  
-    - Click **Insert (4)** to apply the formula.  
+1. On the **Action** card, set the value for **leaveType (String)** by selecting the **ellipsis (…) (1)**, choosing the **Formula (2)** tab, entering the formula **(3)**, and then selecting **Insert (4)**.
 
-        ![](../media/leav-man-e3-g-30.png)
+     ```
+     Text(Topic.leave_type)
+     ```
+
+     ![](../media/lev-mgmt-sb-ex3-g45.png)
 
 1. On the **Action** card, set the value for **reason (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, choose the **Custom (2)** tab.  
     - Select **reason (Topic.reason) (3)** from the list.  
 
-        ![](../media/leav-man-e3-g-31.png)
+        ![](../media/lev-mgmt-sb-ex3-g46.png)
 
 1. On the **Action** card, set the value for **durationDays (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
     - Select **duration (Topic.duration) (3)** from the list.  
 
-        ![](../media/leav-man-e3-g-32.png)
+        ![](../media/lev-mgmt-sb-ex3-g47.png)
 
 1. On the **Action** card, set the value for **balance (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
     - Select **balance (Topic.balance) (3)** from the list.  
 
-        ![](../media/leav-man-e3-g-33.png)
+        ![](../media/lev-mgmt-sb-ex3-g48.png)
 
 1. On the **Action** card, set the value for **startDate (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
     - Select **startDate (Topic.startDate) (3)** from the list.  
 
-        ![](../media/leav-man-e3-g-34.png)
+        ![](../media/lev-mgmt-sb-ex3-g49.png)
 
 1. On the **Action** card, set the value for **endDate (String)**:  
     - Click the **ellipsis (…) (1)**.  
     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
     - Select **endDate (Topic.endDate) (3)** from the list.  
 
-        ![](../media/leav-man-e3-g-35.png)
+        ![](../media/lev-mgmt-sb-ex3-g50.png)
 
 1. On the **Outputs (1)** section, click the **plus icon (1)** and select **Send a message (2)**. 
 
