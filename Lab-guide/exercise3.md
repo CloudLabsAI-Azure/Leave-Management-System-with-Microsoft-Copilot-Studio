@@ -134,37 +134,45 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
 In this task, you will update the flow to modify the Dataverse table, changing the leave request status from 'Pending' to 'Approved' based on the defined conditions.
 
-1. Now click the **plus (+) icon (1)** to add a new action for the root node.  
-   - In the **Add an action** dialog, type **Update a row (2)** in the search bar.  
-   - Under **Microsoft Dataverse**, select **Update a row (3)**.  
+1. Now click the **plus (+) icon (1)** to add a new action for the root node.   
 
-        ![](../media/lvimg50.png)
+     ![](../media/lev-mgmt-sb-ex3-g24.png)
 
-        ![](../media/lvimg51.png)
+1. In the **Add an action** pane, search for **Update a row (1)**, and then select **Update a row (2)**.  
 
-1. On the **Update a row** action:  
-   - Select **Leave Request (1)** as the table name.  
-   - In the **Row ID (2)** field, insert the expression (3) to reference the row created earlier.  
-   - Click **Add (4)** to confirm the expression.  
-   - In the **Status (5)** field, type **Approved**.  
+     ![](../media/lev-mgmt-sb-ex3-g25.png)
 
-      ```
-      outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
-      ``` 
+1. In the **Update a row** action, select **Leave Request (1)** for **Table name**, enter **/** in the **Row ID (2)** field, and then select **Insert expression (3)**.
 
-        ![](../media/lvimg52.png)
+     ![](../media/lev-mgmt-sb-ex3-g26.png)
 
-        ![](../media/lvimg53.png)
+1. In the **Expression** editor, enter the following expression in **(1)**, and then select **Update (2)**:
 
-      > **Note:** The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+     ```
+     outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
+     ``` 
 
-1. On the **Update a row** action, click the **plus (+) button (1)** to add a new action.  
-   - In the search box, type **Respond to the agent (2)**.  
-   - From the **Skills** section, select **Respond to the agent (3)**. 
+     ![](../media/lev-mgmt-sb-ex3-g27.png)
 
-        ![](../media/leav-man-e2-g-101.png)
+     > **Note:** The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
 
-1. On the **Respond to the agent 1** action, in the **reply (1)** field, enter the message **Your leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
+1. In the **Update a row** action, select the **+** icon. 
+
+     ![](../media/lev-mgmt-sb-ex3-g28.png)
+
+1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**. 
+
+     ![](../media/lev-mgmt-sb-ex3-g29.png)
+
+1. In the **Respond to the agent 1** action, select **Add an output**.
+
+     ![](../media/lev-mgmt-sb-ex3-g30.png)
+
+1. In the **Respond to the agent 1** action, select **Text** as the output type.
+
+     ![](../media/lev-mgmt-sb-ex3-g31.png)
+
+1. Enter the message **Your leave is approved from [start_date] to [end_date] (2)** and paste the provided expressions for **start_date** and **end_date**.
 
    ```
    outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
