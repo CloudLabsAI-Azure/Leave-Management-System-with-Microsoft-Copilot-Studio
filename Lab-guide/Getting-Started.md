@@ -129,14 +129,14 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
 1. In the **New environment** pane, configure the environment with the following settings, and then select **Next (3)**:
 
-   - Enter **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment** in the **Name (1)** field.
-   - Select **Developer (2)** from the **Type** dropdown.
+   - Select **Developer (1)** from the **Type** dropdown.
+   - Enter **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment** in the **Name (2)** field.
 
-      ![](../media/nimg25.png)
+      ![](../media/lev-mgmt-sb-gs-g1.png)
 
 1. In the **Add Dataverse** pane, leave all settings as default, and then select **Save**.
 
-   ![](../media/d2-coor-gs-g4.png)
+   ![](../media/lev-mgmt-sb-gs-g2.png)
 
    > **Environment Foundation:** This step creates the foundational environment that will support your agents with company-specific data and knowledge sources.
 
