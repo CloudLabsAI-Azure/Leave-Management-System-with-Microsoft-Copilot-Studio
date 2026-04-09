@@ -58,9 +58,9 @@ In this task, you will ingest the datasets into Dataverse, which will be created
 
      ![](../media/leav-man-e1-g-9.png)
 
-     >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
+     > **Note:** Parsing the file and creating columns may take a few minutes; wait until the process completes and the columns are displayed before proceeding. Do not close or navigate away from the page during this time.
 
-     >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
+     >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
 
 1. Once created, locate the Leave Request table from the list and note down the logical ID of the table as shown in a notepad safely, as you will be using this value further in the lab.
 
@@ -132,6 +132,8 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
      ![](../media/st-store-ex2-g3.png)
 
+     > **Note:** Agent provisioning may take a few minutes to complete, and the agent details might not appear immediately. Please wait until the **Your agent has been provisioned** message is displayed before proceeding.
+
 1. In the **Details** section, select **Edit** to modify the **Name** and **Description**.
 
      ![](../media/st-store-ex2-g4.png)
@@ -147,6 +149,10 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
     > **Note:** If you have already provided the agent name during creation, you can update only the **Description** and then select **Save**.
 
+1. In the **Select your agent's model** section, keep the default model selected and do not make any changes.
+
+     > **Note:** The available models may vary, as Copilot Studio updates models frequently.
+
 1. In the **Instructions** section, select **Edit**.
 
     ![](../media/lev-mgmt-sb-ex1-g3.png)
@@ -159,11 +165,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
     ![](../media/lev-mgmt-sb-ex1-g4.png)
 
-1. Once configured, please click on **save** to save the instructions.
-
 1. You have successfully created the Leave Management Agent. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
-
-     ![](../media/leav-man-e2-g-4.png)
 
 ## Task 4: Configure Agent Basics
 
