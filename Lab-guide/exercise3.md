@@ -119,7 +119,7 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
      ![](../media/lev-mgmt-sb-ex3-g19.png)
 
-1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **the request is rejected (2)** as the response message.
+1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **The request is rejected (2)** as the response message.
 
      ![](../media/lev-mgmt-sb-ex3-g20.png)
 
@@ -248,7 +248,7 @@ In this task, you will complete the leave request topic by implementing the logi
 
 1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu and click **Leave Management Agent (2)**.
 
-     ![](../media/lev-mgmt-sb-ex3-g39.png)
+     ![](../media/lev-mgmt-sb-ex2-g52.png)
 
 1. Please click on **+** as shown below to expand the menu and then select **Topics** from the list.
 
