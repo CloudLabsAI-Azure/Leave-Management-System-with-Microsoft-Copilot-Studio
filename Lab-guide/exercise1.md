@@ -26,9 +26,19 @@ In this task, you will ingest the datasets into Dataverse, which will be created
 
     ![](../media/papps1.png)
 
+    > **Note:** If the environment is not visible, refresh the page and try again.
+
 1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
      ![](../media/leav-man-e1-g-2.png)
+
+     > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
+
+     ![](../media/saf-tra-cor-v2-g1.png)
+
+     > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
+
+     ![](../media/saf-tra-cor-v2-g2.png)
 
 1. In the next pane, click on **Select from device** and in the pop-up window, select files.
 
