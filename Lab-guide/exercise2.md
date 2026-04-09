@@ -70,21 +70,18 @@ In this task, you will create a Power Automate flow that validates leave request
 
 1. In the **Compose** action, paste the expression into the editor box **(1)** and then click **Add (2)** to insert it.
 
-   ```
-   add(div(sub(ticks(triggerBody()?['date_1']), ticks(triggerBody()?['date'])), 864000000000), 1)
-   ```
+     ```
+     add(div(sub(ticks(triggerBody()?['date_1']), ticks(triggerBody()?['date'])), 864000000000), 1)
+     ```
 
      ![](../media/leav-man-e2-g-35.png)
 
-   > This formula calculates the number of days between two dates (date and date_1).
-
-   > - **ticks()** → converts a date into "ticks" (very large time units used in Power Automate).
-
-   > - **sub(...)** → subtracts the start date ticks from the end date ticks (gives the difference in ticks).
-
-   > - **864000000000** → number of ticks in one day (so dividing by this gives days).
-
-   > - **add(..., 1)** → adds 1 so that both the start and end dates are counted.
+     > **Note:** After pasting the expression, click outside the **Compose** action to apply the changes; otherwise, an error may still appear even if the expression is correct.
+     > This formula calculates the number of days between two dates (date and date_1).
+     > - **ticks()** → converts a date into "ticks" (very large time units used in Power Automate).
+     > - **sub(...)** → subtracts the start date ticks from the end date ticks (gives the difference in ticks).
+     > - **864000000000** → number of ticks in one day (so dividing by this gives days).
+     > - **add(..., 1)** → adds 1 so that both the start and end dates are counted.
 
 1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown. On the **Designer** page, below the **Compose** action, click the **plus (+) icon** to add a new action
 
