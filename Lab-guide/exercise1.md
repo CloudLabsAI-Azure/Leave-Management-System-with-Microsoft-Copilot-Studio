@@ -33,10 +33,8 @@ In this task, you will ingest the datasets into Dataverse, which will be created
      ![](../media/leav-man-e1-g-2.png)
 
      > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
-
-     ![](../media/saf-tra-cor-v2-g1.png)
-
-     > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
+   
+     >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
 
      ![](../media/saf-tra-cor-v2-g2.png)
 
