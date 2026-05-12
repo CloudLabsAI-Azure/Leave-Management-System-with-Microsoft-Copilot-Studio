@@ -10,13 +10,215 @@ In this exercise, you will build a Copilot Studio agent to form the foundation o
 
 You will be able to complete the following tasks:
 
-- Task 1: Build a Power Automate flow to validate leave requests
+- Task 1: Create a topic for leave application
 
-- Task 2: Create a flow to update leave requests in Dataverse
+- Task 2: Build a Power Automate flow to validate leave requests
 
-- Task 3: Create a topic for leave application
+- Task 3: Create a flow to update leave requests in Dataverse
 
-## Task 1: Build a Power Automate flow to validate leave requests
+## Task 1: Create topic for leave application
+
+In this task, you will create a topic that enables employees to apply for leave by configuring the required inputs and connecting it to the validation flow.
+
+1. In **Copilot Studio**, select **Agents (1)**, and then choose **Leave Management Agent (2)**. 
+
+     ![](../media/lev-mgmt-sb-ex2-g52.png)
+
+1. Select **+7 (1)**, and then choose **Topics (2)**.
+
+     ![](../media/gs-fix-leave-may-g11.png)
+
+   > **Note:** If the **Topics** tab is directly visible on the screen, you can select it without clicking **+7**.
+
+1. In the **Topics** page, select **Add a topic (1)**, and then choose **From blank (2)**.
+
+     ![](../media/gs-fix-leave-may-g12.png)
+
+1. On the **Test your agent** pane, click the **Close (X)** button to close the testing window and make the canvas larger for easier workflow design.
+
+     ![](../media/gs-fix-leave-may-g13.png)
+
+1. In the **Trigger** node, enter the following description in **Describe what the topic does (1)**, and then select the **plus (+) icon (2)**.
+
+     ```
+     This topic is used by employees to apply leaves
+     ```
+
+     ![](../media/lev-mgmt-sb-ex2-g54.png)
+
+1. In the **Topic editor**, from the options displayed, select **Ask a question** to add a question node to the flow.
+
+     ![](../media/lev-mgmt-sb-ex2-g55.png)
+
+1. In the **Question** node, enter the following in the question text **(1)**, select **Multiple choice options (2)** under **Identify**, and then choose **+ New option (3)**.
+
+     ```
+     Please choose the Leave type from the list
+     ```
+
+     ![](../media/leav-man-e2-g-16.png)
+
+1. In the **Options for user** section, type **Casual (1)** as the first leave type. Then click **+ New option (2)** to add another choice.  
+
+     ![](../media/leav-man-e2-g-17.png)
+
+1. Click on **+ New option** again as in the previous step, and add the leave types **Emergency** and **Unpaid**.   
+
+     ![](../media/leav-man-e2-g-18.png)
+
+1. In the **Save user response as** field, select **Var1**. 
+
+     ![](../media/lev-mgmt-sb-ex2-g56.png)
+
+1. In the **Variable properties** pane, enter **leave_type (1)** in the **Variable name** field, and then select **Close (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g57.png)
+
+1. In the **Topics** designer, under **All other conditions**, click the **plus (+) icon** to add the next step in the flow. 
+
+     ![](../media/leav-man-e3-g-4.png)
+
+1. Click the **plus icon (1)** and select **Send a message (2)** from the menu.
+
+     ![](../media/leav-man-e3-g-5.png)
+
+1. In the **Message** action, enter the following text **(1)** in the text box. Then click the **plus icon (2)** below to add the next step.  
+
+     ```
+     Please choose an option from the list
+     ```
+
+     ![](../media/leav-man-e3-g-6.png)
+
+1. From the **Message** node, open the action menu. Select **Topic management (1)** and then choose **Go to step (2)** to redirect the conversation flow.
+
+     ![](../media/leav-man-e3-g-7.png)
+
+1. After selecting **Go to step**, choose the **Question** node **(where the leave type options are defined)** to **loop the flow back to the beginning** in case users select any other option.
+
+     ![](../media/leav-man-e3-g-8.png)
+
+1. In the **Topics** designer, click the **plus (+) icon** below the condition branches to continue building the flow for each leave type path.
+
+     ![](../media/leav-man-e3-g-9.png)
+
+1. From the action menu, select **Ask a question** to prompt the user for additional information in the flow.
+
+     ![](../media/leav-man-e3-g-10.png)
+
+1. In the **Question** node, enter the following prompt **(1)** to capture the start date from the user.
+
+     ```
+     Please provide your leave Start Date (Please make sure to provide in yyyy-mm-dd format)
+     ```
+
+     ![](../media/leav-man-e3-g-11.png)
+
+1. In the **Question** node, under **Identify**, click **Multiple choice options (2)** and select **User's entire response (3)** so that the agent saves the response exactly as the user enters it.
+
+     ![](../media/leav-man-e3-g-12.png)
+
+1. In the **Save user response as** field, select **Var1**.
+
+     ![](../media/lev-mgmt-sb-ex2-g58.png)
+
+1. In the **Variable properties** pane, enter **startDate (1)** in the **Variable name** field, and then select **Close (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g59.png)
+
+1. Below the **Question** node, click the **plus (+) icon** to add the next step in the flow. 
+
+     ![](../media/leav-man-e3-g-14.png)
+
+1. From the menu, select **Ask a question** to prompt the user for additional input.   
+
+     ![](../media/leav-man-e3-g-15.png)
+
+1. In the **Question** node, enter the following in the question text.
+
+     ```
+     Please provide your leave End Date (Please make sure to provide in yyyy-mm-dd format)
+     ```
+
+     ![](../media/lev-mgmt-sb-ex2-g60.png)
+
+1. In the **Identify** section, select the option arrow **(1)**, and then choose **User's entire response (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g61.png)
+
+1. In the **Save user response as** field, select **Var1**.
+
+     ![](../media/lev-mgmt-sb-ex2-g62.png)
+
+1. In the **Variable properties** pane, enter **endDate (1)** in the **Variable name** field, and then select **Close (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g63.png)
+
+1. Below the **endDate** question node, click the **plus (+) icon** to add the next step in the flow.
+
+     ![](../media/leav-man-e3-g-17.png)
+
+1. Below the **endDate** question node, click the **plus (+) icon** and select **Ask a question** to add the next prompt in the flow. 
+
+     ![](../media/leav-man-e3-g-18.png)
+
+1. In the **Question** node, enter the following in the question text **(1)**, select the option arrow **(2)** under **Identify**, and then choose **User's entire response (3)**.
+
+     ```
+     May I please know the reason for your leave?
+     ```
+
+     ![](../media/lev-mgmt-sb-ex2-g64.png)
+
+1. In the **Save user response as** field, select **Var1**.
+
+     ![](../media/lev-mgmt-sb-ex2-g65.png)
+
+1. In the **Variable properties** pane, enter **reason (1)** in the **Variable name** field, and then select **Close (2)**.
+
+     ![](../media/lev-mgmt-sb-ex2-g66.png)
+
+1. Below the **reason** question node, click the **plus (+) icon** to add the next step in the flow.  
+
+     ![](../media/leav-man-e3-g-20.png)
+
+1. In the **Question** node after capturing the reason, click **Add a tool (1)**. From the list of available tools, select **Leave Validation Flow (2)** to connect the flow with the validation process. 
+
+     ![](../media/cor-mn-e5-g-77.png)
+
+1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (3)** section and select all the listed variables by checking the boxes **(4)**.   
+
+     ![](../media/cor-mn-e5-g-78.png)
+
+1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **startDate (2)** to map the variable.
+
+     ![](../media/lev-mgmt-sb-ex2-g67.png)
+
+1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **endDate** field. From the **Select a variable** pane, choose **endDate (2)** to map the variable. 
+
+     ![](../media/lev-mgmt-sb-ex2-g68.png)
+
+1. On the **Power Automate inputs** card:  
+    - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
+    - In the **Select a variable** pane, switch to the **System (2)** tab.  
+    - Search for **User.Email (3)**.  
+    - Select **User.Email (4)**.  
+
+        ![](../media/lev-mgmt-sb-ex2-g69.png)
+
+1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
+
+     ![](../media/lev-mgmt-sb-ex2-g70.png)
+
+1. In the **Save your topic** dialog:  
+    - Enter the topic name as **leave_request (1)**.  
+    - Click **Save (2)** to confirm and store the topic.  
+
+        ![](../media/leav-man-e3-g-42.png)
+
+1. You have successfully created a basic agent that collects details and validates leave requests. In the upcoming exercises, you will enhance the agent by adding approval logic and conditional workflows to make it more advanced and capable.
+
+## Task 2: Build a Power Automate flow to validate leave requests
 
 In this task, you will create a Power Automate flow that validates leave requests by calculating the duration, checking the leave balance, and updating it accordingly.
 
@@ -338,7 +540,7 @@ In this task, you will create a Power Automate flow that validates leave request
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-## Task 2: Create a flow to update leave requests in Dataverse
+## Task 3: Create a flow to update leave requests in Dataverse
 
 In this task, you will design a Power Automate flow that collects all the necessary leave request details from the agent. The flow will then update these details in the Dataverse database, ensuring that every leave application is properly recorded and managed.
 
@@ -471,7 +673,7 @@ In this task, you will design a Power Automate flow that collects all the necess
 
      ![](../media/lev-mgmt-sb-ex2-g51.png)
 
-## Task 3: Create topic for leave application
+## Task 4: Create topic for leave application
 
 In this task, you will create a topic that enables employees to apply for leave by configuring the required inputs and connecting it to the validation flow.
 
