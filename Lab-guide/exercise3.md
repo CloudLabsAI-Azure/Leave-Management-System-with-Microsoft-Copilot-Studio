@@ -154,7 +154,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 1. In the **Expression** editor, enter the following expression in **(1)**, and then select **Update (2)**:
 
      ```
-     outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
+     outputs('Add_a_new_row')?['body/Logical_ID_leaverequestid']
      ``` 
 
      ![](../media/lev-mgmt-sb-ex3-g27.png)
@@ -192,7 +192,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 1. In the expression editor, paste the expression in the editor box, and then select **Add**.
 
      ```
-     outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
+     outputs('Add_a_new_row')?['body/Logical_ID_startdate']
      ``` 
 
      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
@@ -204,7 +204,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**.
 
      ```
-     outputs('Add_a_new_row')?['body/<Logical_ID>_enddate']
+     outputs('Add_a_new_row')?['body/Logical_ID_enddate']
      ``` 
 
      ![](../media/lev-mgmt-sb-ex3-g35.png)

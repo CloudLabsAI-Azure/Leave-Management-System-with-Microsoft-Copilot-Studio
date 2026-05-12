@@ -208,43 +208,59 @@ In this task, you will create a Power Automate flow that validates leave request
 
 1. Now click **+ Add an input**.  
 
-     ![](../media/lvimg8.png)
+     ![](../media/gs-fix-leave-may-g20.png)
 
 1. In the **Choose the type of user input** section, select **Date** to capture date values in the flow.  
 
-     ![](../media/lvimg9.png)
+     ![](../media/gs-fix-leave-may-g21.png)
 
-1. In the **Parameters** tab, set the first input as **startDate (1)**. Then click **+ Add an input (2)** to add another parameter.   
+1. In the **Parameters** tab, enter the below value in the first input field as **startDate (1)**, and then select **+ Add an input (2)** to add another parameter.
 
-     ![](../media/lvimg10.png)
+     ```
+     startDate
+     ```
+
+     ![](../media/gs-fix-leave-may-g22.png)
 
 1. In the **Choose the type of user input** section, select **Date** again to add another date parameter for the flow.  
 
-     ![](../media/lvimg9.png)
+     ![](../media/gs-fix-leave-may-g23.png)
 
-1. In the **Parameters** tab, add another date input and set its name as **endDate**. Then click **+ Add an input** to create an additional parameter. 
+1. In the **Parameters** tab, enter the below value in the new date input field as **endDate (1)**, and then select **+ Add an input (2)** to create an additional parameter.
 
-     ![](../media/lvimg11.png)
+     ```
+     endDate
+     ```
+
+     ![](../media/gs-fix-leave-may-g24.png)
 
 1. In the **Choose the type of user input** section, select **Text** to add a text-based parameter. 
 
-     ![](../media/lvimg12.png)
+     ![](../media/gs-fix-leave-may-g25.png)
 
-1. In the **Parameters** tab, add a text input and set its name as **employeeEmail**.   
+1. In the **Parameters** tab, add a text input and enter the below value as **employeeEmail**.
+
+     ```text
+     employeeEmail
+     ```
 
      ![](../media/lvimg13.png)
 
-1. On the **Designer** canvas, click the **plus (+)** icon below **When an agent calls the flow** to add the next action.  
+1. On the **Designer** canvas, select the **plus (+)** icon between the **When an agent calls the flow** trigger and the **Respond to the agent** action to add the next step.
 
-     ![](../media/lvimg14.png)
+     ![](../media/gs-fix-leave-may-g26.png)
 
 1. In the **Add an action** pane, search for **Compose (1)** and select **Compose (2)** from the **Data Operation** category.  
 
-     ![](../media/lvimg15.png)
+     ![](../media/gs-fix-leave-may-g27.png)
 
-1. In the **Compose** action, click inside the **Inputs** field, type **/** **(1)**, and then select **Insert expression (2)**.
+1. In the **Compose** action, click inside the **Inputs** field, type **/ (1)**, and then select **Insert expression (2)**.
 
-     ![](../media/lvimg16.png)
+     ![](../media/gs-fix-leave-may-g28.png)
+
+     > **Note:** Alternatively, you can click inside the **Inputs** field and use the options available on the right side to insert dynamic content or expressions directly.
+
+     ![](../media/gs-fix-leave-may-g29.png)
 
 1. In the **Compose** action, paste the expression into the editor box **(1)** and then click **Add (2)** to insert it.
 
@@ -252,7 +268,7 @@ In this task, you will create a Power Automate flow that validates leave request
      add(div(sub(ticks(triggerBody()?['date_1']), ticks(triggerBody()?['date'])), 864000000000), 1)
      ```
 
-     ![](../media/leav-man-e2-g-35.png)
+     ![](../media/gs-fix-leave-may-g30.png)
 
      > **Note:** After pasting the expression, click outside the **Compose** action to apply the changes; otherwise, an error may still appear even if the expression is correct.
      > This formula calculates the number of days between two dates (date and date_1).
@@ -261,45 +277,44 @@ In this task, you will create a Power Automate flow that validates leave request
      > - **864000000000** → number of ticks in one day (so dividing by this gives days).
      > - **add(..., 1)** → adds 1 so that both the start and end dates are counted.
 
-1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown. On the **Designer** page, below the **Compose** action, click the **plus (+) icon** to add a new action
+1. On the **Compose action** pane, verify that the entered expression is applied successfully and appears in the **Inputs** field as shown and select the **plus (+)** icon below the **Compose** action to add the next step
 
-     ![](../media/lvimg18.png)
+     ![](../media/gs-fix-leave-may-g31.png)
 
 1. In the search box, type **List rows (1)** Under **Microsoft Dataverse**, select **List rows (2)**.  
 
      ![](../media/lev-mgmt-sb-ex2-g3.png)
 
-1. On the **Create connection** pane, enter **Microsoft Dataverse (1)** as the connection name and click **Sign in (2)** to establish the connection.   
+1. On the **Create connection** pane, enter the below value in the **Connection name (1)** field, and then select **Sign in (2)** to establish the connection.
+
+     ```
+     Microsoft Dataverse
+     ```  
 
      ![](../media/lev-mgmt-sb-ex2-g4.png)
 
-1. On the **Sign in** page, enter **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)** and click **Next (2)** to continue. If you directly get a **Pick an Account** pane, you can select the account and skip the login process. 
+     > **Note:** If the sign-in pop-up is blocked by the browser, select the blocked pop-up icon from the browser address bar, choose **Always allow option**, and then click **Done**.
 
-     ![](../media/leav-man-e2-g-39.png)
+1. On the sign-in page, enter the following credentials in the respective fields, and then complete the sign-in process.
 
-1. On the **Enter password** page, enter **password** <inject key="AzureAdUserPassword"></inject> **(1)** and click **Sign in (2)** to proceed.  
+     - **Email/Username:** `<inject key="AzureAdUserEmail"></inject>`
+     - **Temporary  Access Pass:** `<inject key="AzureAdUserPassword"></inject>`
 
-     ![](../media/leav-man-e2-g-40.png)
+1. On the **Confirmation required** page, select **I have verified this request and trust the source (1)**, and then click **Allow access (2)** to grant permission for Microsoft Dataverse.
 
-1. On the **Stay signed in?** page, click **Yes** to remain signed in. 
-
-     ![](../media/leav-man-e2-g-41.png)
-
-1. On the **Confirmation required** page, click **Allow access** to grant permission for Microsoft Dataverse. 
-
-     ![](../media/leav-man-e2-g-42.png)
+     ![](../media/gs-fix-leave-may-g33.png)
 
 1. In the **List rows** action:
 
    - Select **Leave Request (1)** in the **Table name** field.  
    - Enter **Logical_ID_balancedays (2)** in the **Select columns** field to fetch leave balance days.  
-   - In the **Filter rows** field, type **<Logical_ID>_employeeemail eq '' (3)** to filter records by employee email.
+   - In the **Filter rows** field, type **Logical_ID_employeeemail eq '' (3)** to filter records by employee email.
 
         ![](../media/cor-mn-e5-g-73.png)
 
       > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from the Power Apps portal.
 
-1. In the **List rows** action, under the **Filter rows** field, type **<Logical_ID>_employeeemail eq '' (1)** and place the cursor inside the single quotes. Then click the **Expression (fx) (2)** icon to add a dynamic value.
+1. In the **List rows** action, under the **Filter rows** field, type **Logical_ID_employeeemail eq '' (1)** and place the cursor inside the single quotes. Then click the **Expression (fx) (2)** icon to add a dynamic value.
 
      ![](../media/cor-mn-e5-g-74.png)
 
@@ -309,7 +324,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
 1. In the **List rows** action:
 
-   - In the **Filter rows** field, ensure it looks like this: **<Logical_ID>_employeeemail eq 'employeeEmail' (1)**.  
+   - In the **Filter rows** field, ensure it looks like this: **Logical_ID_employeeemail eq 'employeeEmail' (1)**.  
    - In the **Sort By** field, enter **createdon desc (2)** to sort by the most recent record.  
    - In the **Row count** field, type **1 (3)** to return only the latest record.
 
@@ -388,7 +403,7 @@ In this task, you will create a Power Automate flow that validates leave request
 1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**. 
 
       ```
-      sub(first(outputs('List_rows')?['body/value'])?['<Logical_ID>_balancedays'], outputs('Compose'))
+      sub(first(outputs('List_rows')?['body/value'])?['Logical_ID_balancedays'], outputs('Compose'))
       ```
 
      ![](../media/lev-mgmt-sb-ex2-g8.png)
