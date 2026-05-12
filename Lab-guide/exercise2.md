@@ -306,17 +306,17 @@ In this task, you will create a Power Automate flow that validates leave request
 
 1. In the **List rows** action:
 
-   - Select **Leave Request (1)** in the **Table name** field.  
-   - Enter **Logical_ID_balancedays (2)** in the **Select columns** field to fetch leave balance days.  
-   - In the **Filter rows** field, type **Logical_ID_employeeemail eq '' (3)** to filter records by employee email.
+     - Select **Leave Request (1)** in the **Table name** field.  
+     - Enter **Logical_ID_balancedays (2)** in the **Select columns** field to fetch leave balance days.  
+     - In the **Filter rows** field, type **Logical_ID_employeeemail eq '' (3)** to filter records by employee email.
 
-        ![](../media/cor-mn-e5-g-73.png)
+          ![](../media/gs-fix-leave-may-g34.png)
 
-      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from the Power Apps portal.
+          > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from the Power Apps portal.
 
-1. In the **List rows** action, under the **Filter rows** field, type **Logical_ID_employeeemail eq '' (1)** and place the cursor inside the single quotes. Then click the **Expression (fx) (2)** icon to add a dynamic value.
+1. In the **List rows** action, under the **Filter rows** field, place the cursor between the single quotes in **Logical_ID_employeeemail eq '' (1)**, and then select the **Expression (fx) (2)** icon to add a dynamic value.
 
-     ![](../media/cor-mn-e5-g-74.png)
+     ![](../media/gs-fix-leave-may-g35.png)
 
 1. In the expression editor, click **Dynamic content (1)**, type **employeeEmail (2)** in the search box, and select **employeeEmail (3)** from the list. Then click **Add (4)** to insert it into the expression.
 
@@ -324,77 +324,77 @@ In this task, you will create a Power Automate flow that validates leave request
 
 1. In the **List rows** action:
 
-   - In the **Filter rows** field, ensure it looks like this: **Logical_ID_employeeemail eq 'employeeEmail' (1)**.  
-   - In the **Sort By** field, enter **createdon desc (2)** to sort by the most recent record.  
-   - In the **Row count** field, type **1 (3)** to return only the latest record.
+     - In the **Filter rows** field, ensure it looks like this: **Logical_ID_employeeemail eq 'employeeEmail' (1)**.  
+     - In the **Sort By** field, enter **createdon desc (2)** to sort by the most recent record.  
+     - In the **Row count** field, type **1 (3)** to return only the latest record.
 
-        ![](../media/cor-mn-e5-g-76.png)
+          ![](../media/gs-fix-leave-may-g36.png)
 
-1. On the **List rows** action, click the **plus (+) (1)** icon to add a new action.  
-   - In the **search bar (2)**, type **Condition**.  
-   - From the **Control (3)** section, select **Condition**.  
+1. On the **Designer** canvas, select the **plus (+)** icon after the **List rows** action to add the next step.
 
-     ![](../media/lvimg20.png)
+     ![](../media/gs-fix-leave-may-g37.png)
 
-     ![](../media/lvimg21.png)
+1. In the **Add an action** pane, enter **Condition (1)** in the search box, and then select **Condition (2)** from the results.
 
-1. On the **Condition expression** field:  
-   - Type **/** (1).  
-   - Click **Insert expression (2)**.
-   - Paste the expression **(3)**.  
-   - Click **Add (4)** to insert it.
-   - Select the operator **is greater than (5)**.  
-   - Enter **0 (6)** as the comparison value.  
-
-      ```
-      length(outputs('List_rows')?['body/value'])
-      ```
-
-        ![](../media/lvimg22.png)
-
-        ![](../media/leav-man-e2-g-51.png)
-
-        ![](../media/lvimg23.png)
-
-      > The above expression outputs('List_rows') → gets the result from the List rows action in Power Automate.
-
-      > - ['body/value'] → accesses the list of rows (records) returned.
-
-      > - length(...) → counts how many rows were returned.
-
-      > - **So this expression returns the number of records found in Dataverse**.
-      
-      > - If the length is 0 → no record exists → this is the user’s first leave application.
-
-      > - If the length is greater than 0 → a record exists → the user already has leave data in the database.
-
-1. Under the **False** branch of the **Condition**, click the **plus (+) (1)** button to add a new action, type **Compose (2)** in the search box, and from the **Data Operation** section select **Compose (3)**.
-
-     ![](../media/lvimg24.png)
-
-     ![](../media/lvimg25.png)
+     ![](../media/gs-fix-leave-may-g38.png)
 
 1. On the **Condition expression** field:  
-   - Type **/** (1).  
-   - Click **Insert expression (2)**.  
-   - Paste the expression **(3)**.  
-   - Click **Add (4)** to insert it.  
 
-      ```
-      sub(24, outputs('Compose'))
-      ```
+     - Type **/** (1).  
+     - Click **Insert expression (2)**.
+     - Paste the expression **(3)**.  
+     - Click **Add (4)** to insert it.
+     - Select the operator **is greater than (5)**.  
+     - Enter **0 (6)** as the comparison value.  
 
-        ![](../media/lev-mgmt-sb-ex2-g6.png)
+          ```
+          length(outputs('List_rows')?['body/value'])
+          ```
 
-      > Since each employee is allotted 24 leaves annually, if a user is applying for the first time, they start with 24 available leaves. This expression subtracts the current leave duration from 24 to calculate the remaining balance.
+          ![](../media/lvimg22.png)
+
+          ![](../media/leav-man-e2-g-51.png)
+
+          ![](../media/lvimg23.png)
+
+1. The above expression outputs('List_rows') → gets the result from the List rows action in Power Automate.
+
+     - ['body/value'] → accesses the list of rows (records) returned.
+     - length(...) → counts how many rows were returned.
+     - **So this expression returns the number of records found in Dataverse**.
+     - If the length is 0 → no record exists → this is the user’s first leave application.
+     - If the length is greater than 0 → a record exists → the user already has leave data in the database.
+
+1. Under the **False** branch of the **Condition**, click the **plus (+)** button to add a new action.
+
+     ![](../media/gs-fix-leave-may-g39.png)
+
+1.  Type **Compose (1)** in the search box, and from the **Data Operation** section select **Compose (2)**.
+
+     ![](../media/gs-fix-leave-may-g40.png)
+
+1. On the **Condition expression** field:
+
+     - Type **/** (1).  
+     - Click **Insert expression (2)**.  
+     - Paste the expression **(3)**.  
+     - Click **Add (4)** to insert it.  
+
+          ```
+          sub(24, outputs('Compose'))
+          ```
+
+          ![](../media/lev-mgmt-sb-ex2-g6.png)
+
+          > Since each employee is allotted 24 leaves annually, if a user is applying for the first time, they start with 24 available leaves. This expression subtracts the current leave duration from 24 to calculate the remaining balance.
 
 1. Under the **True** branch of the **Condition**, click the **plus (+)**.
 
-     ![](../media/lvimg27.png)
+     ![](../media/gs-fix-leave-may-g42.png)
 
 1. To add a new action, type **Compose (1)** in the search box, and from the **Data Operation** section select **Compose (2)**.
 
-     ![](../media/lvimg25.png)
+     ![](../media/gs-fix-leave-may-g43.png)
 
 1. In the **Compose** action, enter **/** in the **Inputs (1)** field, and then select **Insert expression (2)**.
 
@@ -402,15 +402,23 @@ In this task, you will create a Power Automate flow that validates leave request
 
 1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**. 
 
-      ```
-      sub(first(outputs('List_rows')?['body/value'])?['Logical_ID_balancedays'], outputs('Compose'))
-      ```
+     ```
+     sub(first(outputs('List_rows')?['body/value'])?['Logical_ID_balancedays'], outputs('Compose'))
+     ```
 
-     ![](../media/lev-mgmt-sb-ex2-g8.png)
+     ![](../media/gs-fix-leave-may-g44.png)
 
-      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+     > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
 
-      > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
+     > If the user is not applying for leave for the first time, this expression retrieves the remaining balance from their previous request and subtracts the current leave duration to calculate the updated balance.
+
+1. In the **Respond to the agent** action, select the **ellipsis (...) (1)** icon, and then choose **Delete (2)** to remove the action.
+
+     ![](../media/gs-fix-leave-may-g45.png)
+
+1. In the **Delete workflow action** confirmation pop-up, select **OK**.
+
+     ![](../media/gs-fix-leave-may-g46.png)
 
 1. Under the **True** branch's compose node, click the **plus (+) icon**.  
 
@@ -428,7 +436,11 @@ In this task, you will create a Power Automate flow that validates leave request
 
      ![](../media/lev-mgmt-sb-ex2-g12.png)
 
-1. In the **Respond to the agent** action, enter **duration (1)** as the output name, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+1. In the **Respond to the agent** action, enter the below value in the output name field as **duration (1)**, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+
+     ```
+     duration
+     ```
 
      ![](../media/lev-mgmt-sb-ex2-g13.png)
 
@@ -448,7 +460,11 @@ In this task, you will create a Power Automate flow that validates leave request
 
      ![](../media/lev-mgmt-sb-ex2-g16.png)
 
-1. In the **Respond to the agent** action, enter **balance (1)** as the output name, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+1. In the **Respond to the agent** action, enter the below value in the output name field as **balance (1)**, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+
+     ```
+     balance
+     ```
 
      ![](../media/lev-mgmt-sb-ex2-g17.png)
 
@@ -476,7 +492,11 @@ In this task, you will create a Power Automate flow that validates leave request
 
      ![](../media/lev-mgmt-sb-ex2-g22.png)
 
-1. In the **Respond to the agent 1** action, enter **duration (1)** as the output name, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+1. In the **Respond to the agent 1** action, enter the below value in the output name field as **duration (1)**, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+
+     ```
+     duration
+     ```
 
      ![](../media/lev-mgmt-sb-ex2-g23.png)
 
@@ -496,7 +516,11 @@ In this task, you will create a Power Automate flow that validates leave request
 
      ![](../media/lev-mgmt-sb-ex2-g26.png)
 
-1. In the **Respond to the agent 1** action, enter **balance (1)** as the output name, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+1. In the **Respond to the agent 1** action, enter the below value in the output name field as **balance (1)**, type **/** in the value field **(2)**, and then select **Insert expression (3)**.
+
+     ```
+     balance
+     ```
 
      ![](../media/lev-mgmt-sb-ex2-g27.png)
 
@@ -512,6 +536,10 @@ In this task, you will create a Power Automate flow that validates leave request
 
      ![](../media/lev-mgmt-sb-ex2-g29.png)
 
+1. In the **Your agent flow published successfully!** pop-up, select **Stay in Flow**.
+
+     ![](../media/gs-fix-leave-may-g47.png)
+
 1. On the top menu bar, click **Overview** to navigate to the flow details page.
 
      ![](../media/leav-man-e2-g-66.png)
@@ -520,7 +548,11 @@ In this task, you will create a Power Automate flow that validates leave request
 
      ![](../media/leav-man-e2-g-67.png)
 
-1. In the **Details** pane, enter **Leave Validation Flow (1)** as the flow name and click **Save (2)**.
+1. In the **Details** pane, enter the below value in the flow name field as **Leave Validation Flow (1)**, and then select **Save (2)**.
+
+     ```text
+     Leave Validation Flow
+     ```
 
      ![](../media/leav-man-e2-g-68.png)
 
