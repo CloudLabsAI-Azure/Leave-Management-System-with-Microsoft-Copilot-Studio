@@ -128,7 +128,11 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/lev-mgmt-sb-ex2-g58.png)
 
-1. In the **Variable properties** pane, enter **startDate (1)** in the **Variable name** field, and then select **Close (2)**.
+1. In the **Variable properties** pane, enter the below value in the **Variable name (1)** field, and then select **Close (2)**.
+
+     ```
+     startDate
+     ```
 
      ![](../media/lev-mgmt-sb-ex2-g59.png)
 
@@ -156,7 +160,11 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/lev-mgmt-sb-ex2-g62.png)
 
-1. In the **Variable properties** pane, enter **endDate (1)** in the **Variable name** field, and then select **Close (2)**.
+1. In the **Variable properties** pane, enter the below value in the **Variable name (1)** field, and then select **Close (2)**.
+
+     ```
+     endDate
+     ```
 
      ![](../media/lev-mgmt-sb-ex2-g63.png)
 
@@ -180,7 +188,11 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/lev-mgmt-sb-ex2-g65.png)
 
-1. In the **Variable properties** pane, enter **reason (1)** in the **Variable name** field, and then select **Close (2)**.
+1. In the **Variable properties** pane, enter the below value in the **Variable name (1)** field, and then select **Close (2)**.
+
+     ```
+     reason
+     ```
 
      ![](../media/lev-mgmt-sb-ex2-g66.png)
 
@@ -311,8 +323,8 @@ In this task, you will create a Power Automate flow that validates leave request
 
 1. On the sign-in page, enter the following credentials in the respective fields, and then complete the sign-in process.
 
-     - **Email/Username:** `<inject key="AzureAdUserEmail"></inject>`
-     - **Temporary  Access Pass:** `<inject key="AzureAdUserPassword"></inject>`
+     - **Email/Username:** **<inject key="AzureAdUserEmail"></inject>**
+     - **Temporary  Access Pass:** **<inject key="AzureAdUserPassword"></inject>**
 
 1. On the **Confirmation required** page, select **I have verified this request and trust the source (1)**, and then click **Allow access (2)** to grant permission for Microsoft Dataverse.
 
@@ -324,13 +336,13 @@ In this task, you will create a Power Automate flow that validates leave request
      - Enter **Logical_ID_balancedays (2)** in the **Select columns** field to fetch leave balance days.  
      - In the **Filter rows** field, type **Logical_ID_employeeemail eq '' (3)** to filter records by employee email.
 
-          ![](../media/gs-fix-leave-may-g34.png)
+          ![](../media/gs-fix2-leave2-may-g9.png)
 
           > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from the Power Apps portal.
 
 1. In the **List rows** action, under the **Filter rows** field, place the cursor between the single quotes in **Logical_ID_employeeemail eq '' (1)**, and then select the **Expression (fx) (2)** icon to add a dynamic value.
 
-     ![](../media/gs-fix-leave-may-g35.png)
+     ![](../media/gs-fix2-leave2-may-g10.png)
 
 1. In the expression editor, click **Dynamic content (1)**, type **employeeEmail (2)** in the search box, and select **employeeEmail (3)** from the list. Then click **Add (4)** to insert it into the expression.
 
