@@ -72,7 +72,11 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/lev-mgmt-sb-ex2-g56.png)
 
-1. In the **Variable properties** pane, enter **leave_type (1)** in the **Variable name** field, and then select **Close (2)**.
+1. In the **Variable properties** pane, enter the below value in the **Variable name (1)** field, and then select **Close (2)**.
+
+     ```
+     leave_type
+     ```
 
      ![](../media/lev-mgmt-sb-ex2-g57.png)
 
