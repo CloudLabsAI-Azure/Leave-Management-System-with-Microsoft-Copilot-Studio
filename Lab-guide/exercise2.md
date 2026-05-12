@@ -1000,9 +1000,9 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/leav-man-e3-g-20.png)
 
-1. Select **Add a tool (1)**, verify that the **Basic tools (2)** tab is selected, and then choose **New Agent flow (3)**.
+1. In the **Question** node after capturing the reason, click **Add a tool (1)**. From the list of available tools, select **Leave Validation Flow (2)** to connect the flow with the validation process. 
 
-     ![](../media/gs-fix-leave-may-g15.png)
+     ![.](../media/cor-mn-e5-g-77.png)
 
 1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (3)** section and select all the listed variables by checking the boxes **(4)**.   
 
@@ -1017,24 +1017,126 @@ In this task, you will create a topic that enables employees to apply for leave 
      ![](../media/lev-mgmt-sb-ex2-g68.png)
 
 1. On the **Power Automate inputs** card:  
-    - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
-    - In the **Select a variable** pane, switch to the **System (2)** tab.  
-    - Search for **User.Email (3)**.  
-    - Select **User.Email (4)**.  
 
-        ![](../media/lev-mgmt-sb-ex2-g69.png)
+     - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
+     - In the **Select a variable** pane, switch to the **System (2)** tab.  
+     - Search for **User.Email (3)**.  
+     - Select **User.Email (4)**.  
+
+          ![](../media/lev-mgmt-sb-ex2-g69.png)
+
+1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
+
+     ![](../media/lev-mgmt-sb-ex3-g40.png)
+
+1. On the **Outputs (2)** section, click **Add a tool (1)** and select **Leave Management Workflow (2)** from the list of tools. 
+
+     ![](../media/lev-mgmt-sb-ex3-g41.png)
+
+1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (7) (3)** section and select the **reply (4)** variable by checking the box.   
+
+     ![](../media/cor-mn-e5-g-79.png)
+
+     > If you are not able to see the variables option, please click on **...** menu and select **Variables**
+
+      ![](../media/lvimg56.png)
+
+1. On the **Action** card, set the value for **employeeEmail (String)**: 
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **System (2)** tab.  
+     - Search for **User.Email (3)**.  
+     - Select **User.Email (4)** from the results.  
+
+          ![](../media/lev-mgmt-sb-ex3-g43.png)
+
+1. On the **Action** card, set the value for **employeeName (String)**: 
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **System (2)** tab.  
+     - Search for **User.FirstName (3)**.  
+     - Select **User.FirstName (4)** from the results. 
+
+          ![](../media/gs-fix2-leave2-may-g11.png)
+
+1. On the **Action** card, set the value for **leaveType (String)** by selecting the **ellipsis (…) (1)**, choosing the **Formula (2)** tab, entering the formula **(3)**, and then selecting **Insert (4)**.
+
+     ```
+     Text(Topic.leave_type)
+     ```
+
+     ![](../media/lev-mgmt-sb-ex3-g45.png)
+
+1. On the **Action** card, set the value for **reason (String)**: 
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, choose the **Custom (2)** tab.  
+     - Select **reason (Topic.reason) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g46.png)
+
+1. On the **Action** card, set the value for **durationDays (String)**: 
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **duration (Topic.duration) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g47.png)
+
+1. On the **Action** card, set the value for **balance (String)**:
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **balance (Topic.balance) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g48.png)
+
+1. On the **Action** card, set the value for **startDate (String)**:
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **startDate (Topic.startDate) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g49.png)
+
+1. On the **Action** card, set the value for **endDate (String)**:  
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **endDate (Topic.endDate) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g50.png)
+
+1. On the **Outputs (1)** section, click the **plus icon (1)** and select **Send a message (2)**. 
+
+     ![](../media/leav-man-e3-g-36.png)
+
+1. On the **Message** step:  
+
+     - Click on the **variable icon (1)**.  
+     - In the **Select a variable** pane, choose the **Custom (2)** tab.  
+     - Type **reply (3)** in the search box.  
+     - Select **reply (4)** from the results. 
+
+          ![](../media/leav-man-e3-g-37.png)
+
+1. On the **Message** step, click the **plus (+) icon** to add the next action in the flow. 
+
+     ![](../media/leav-man-e3-g-38.png)
+
+1. On the **Message** step, expand the options and select **Topic management (1)**, then click **End conversation (2)** to close the flow. 
+
+     ![](../media/leav-man-e3-g-39.png)
+
+1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
+
+     ![](../media/leav-man-e3-g-41.png)
+
+1. You have successfully completed the creation of the agent. It is now fully equipped with all intended capabilities and will be ready for testing in the next task.
 
 1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
 
      ![](../media/lev-mgmt-sb-ex2-g70.png)
-
-1. In the **Save your topic** dialog:  
-    - Enter the topic name as **leave_request (1)**.  
-    - Click **Save (2)** to confirm and store the topic.  
-
-        ![](../media/leav-man-e3-g-42.png)
-
-1. You have successfully created a basic agent that collects details and validates leave requests. In the upcoming exercises, you will enhance the agent by adding approval logic and conditional workflows to make it more advanced and capable.
 
 <validation step="bc8e443a-14ef-4307-8619-3092a324799b" />
  
