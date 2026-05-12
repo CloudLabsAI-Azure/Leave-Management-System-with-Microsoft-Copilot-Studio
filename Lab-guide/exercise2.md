@@ -64,7 +64,7 @@ In this task, you will create a topic that enables employees to apply for leave 
 
 1. Click on **+ New option** again as in the previous step, and add the leave types **Emergency** and **Unpaid**.   
 
-     ![](../media/leav-man-e2-g-18.png)
+     ![](../media/gs-fix-leave-may-g14.png)
 
 1. In the **Save user response as** field, select **Var1**. 
 
@@ -178,59 +178,35 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/lev-mgmt-sb-ex2-g66.png)
 
-1. Below the **reason** question node, click the **plus (+) icon** to add the next step in the flow.  
+1. Select **Save** to save the topic.
 
-     ![](../media/leav-man-e3-g-20.png)
+     ![](../media/gs-fix-leave-may-g16.png)
 
-1. In the **Question** node after capturing the reason, click **Add a tool (1)**. From the list of available tools, select **Leave Validation Flow (2)** to connect the flow with the validation process. 
+1. In the **Save your topic** pane, enter the below value in the **Name your topic (1)** field, and then select **Save (2)**.
 
-     ![](../media/cor-mn-e5-g-77.png)
+     ```
+     leave_request
+     ```
 
-1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (3)** section and select all the listed variables by checking the boxes **(4)**.   
+     ![](../media/gs-fix-leave-may-g17.png)
 
-     ![](../media/cor-mn-e5-g-78.png)
+1. You will be redirected to the **Agent flows** page, where the **When an agent calls the flow** trigger and **Respond to the agent** action are already added by default.
 
-1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **startDate (2)** to map the variable.
+     ![](../media/gs-fix-leave-may-g18.png)
 
-     ![](../media/lev-mgmt-sb-ex2-g67.png)
-
-1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **endDate** field. From the **Select a variable** pane, choose **endDate (2)** to map the variable. 
-
-     ![](../media/lev-mgmt-sb-ex2-g68.png)
-
-1. On the **Power Automate inputs** card:  
-    - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
-    - In the **Select a variable** pane, switch to the **System (2)** tab.  
-    - Search for **User.Email (3)**.  
-    - Select **User.Email (4)**.  
-
-        ![](../media/lev-mgmt-sb-ex2-g69.png)
-
-1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
-
-     ![](../media/lev-mgmt-sb-ex2-g70.png)
-
-1. In the **Save your topic** dialog:  
-    - Enter the topic name as **leave_request (1)**.  
-    - Click **Save (2)** to confirm and store the topic.  
-
-        ![](../media/leav-man-e3-g-42.png)
-
-1. You have successfully created a basic agent that collects details and validates leave requests. In the upcoming exercises, you will enhance the agent by adding approval logic and conditional workflows to make it more advanced and capable.
+     > **Note:**  
+     > - **When an agent calls the flow:** This trigger starts the flow whenever the Copilot agent invokes it. It is used to receive input or information from the agent and begin the automation process.  
+     > - **Respond to the agent:** This action sends data or responses back to the Copilot agent after the flow execution is completed. It helps return outputs, confirmations, or processed information to the conversation.
 
 ## Task 2: Build a Power Automate flow to validate leave requests
 
 In this task, you will create a Power Automate flow that validates leave requests by calculating the duration, checking the leave balance, and updating it accordingly.
 
-1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu, and then select **+ New agent flow (2)**.
+1. Select the **When an agent calls the flow** trigger to expand it.
 
-     ![](../media/lev-mgmt-sb-ex2-g1.png)
+     ![](../media/gs-fix-leave-may-g19.png)
 
-1. In the **Add a trigger** pane, search for **Skills (1)**, and then select **When an agent calls the flow (2)**.
-
-     ![](../media/lev-mgmt-sb-ex2-g5.png)
-
-1. On the **Agent flows Designer** page, under the **Parameters** tab, click **+ Add an input**.  
+1. Now click **+ Add an input**.  
 
      ![](../media/lvimg8.png)
 
