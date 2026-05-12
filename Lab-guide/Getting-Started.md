@@ -113,6 +113,26 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
    > **Note:** We are signing in to the Power Apps portal because it automatically assigns a Developer license, which is required to create and use a Developer environment in the next steps.
 
+1. In the Power Apps portal, select **Tables (1)** from the left menu and select **Create a database (2)**.
+
+   ![](./media/ex3img71.png)
+
+   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 10**.
+
+1. In the new pane for creating a new database, select **Create my Database**.
+
+   ![](./media/ex3img72up.png)
+
+1. Once done, select **Create with Excel or .CSV file**.
+
+   ![](./media/st-store-ex1-g2.png)
+
+1. In the pop-up window to create an environment, select **Create**. This will create a new Power Platform developer environment.
+
+   > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
+   
+1. If you are directly navigated to the **Upload an Excel or .CSV file pane**, please cancel the process.
+
 1. Open a new browser tab and navigate to the Power Platform admin center by entering the following URL:
 
    ```
