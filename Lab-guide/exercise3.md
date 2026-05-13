@@ -4,138 +4,17 @@
 
 ## Overview
 
-In this exercise, you will continue building the leave management agent by adding more advanced capabilities. You will implement approval logic based on company policy: if the leave duration is two days or less, it will be automatically approved. Otherwise, it will go through an approval process. Once approved, the leave request will be finalized and recorded.
+In this exercise, you will finalize the leave management workflow by adding an Update a row action to modify the leave request status in Dataverse after approval. You will also publish the flow and rename it. Then, you will complete the leave_request topic in Copilot Studio by connecting the Leave Validation Flow and the Leave Management Workflow, mapping all required variables, and adding a message node to display the response to the user.
 
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1: Create Approval Flow
+- Task 1: Update Dataverse
 
-- Task 2: Update Dataverse
+- Task 2: Complete leave request topic 
 
-- Task 3: Complete leave request topic 
-
-### Task 1: Create Approval Flow
-
-In this task, you will enhance the Leave Management Workflow by incorporating approval logic and advanced management features to handle leave requests more efficiently.
-
-1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu, and then click on the **Untitled (2)** flow to open and edit it.
-
-     ![](../media/lev-mgmt-sb-ex3-g1.png)
-
-1. On the **Untitled** flow page, click the **Designer** tab to begin editing the flow.
-
-     ![](../media/cor-mn-e5-g-63.png)
-
-1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action.
-
-     ![](../media/lvimg40.png)
-
-1. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section
-
-     ![](../media/lev-mgmt-sb-ex3-g2.png)
-
-1. In the **Condition** pane, type **/** in the field (1) and select **Insert expression (2)** from the dropdown list.
-
-     ![](../media/lev-mgmt-sb-ex3-g3.png)
-
-1. In the **Expression** editor, type **int() (1)** and keep the cursor inside the parentheses, select **Dynamic content (2)**, search for **durationDays (3)**, and then select **durationDays (4)**.
-
-     ![](../media/lev-mgmt-sb-ex3-g4.png)
-
-1. In the **Expression** editor, verify that the expression is set **(1)**. Once done, click **Add (2)** to insert it into the condition. 
-
-     ![](../media/lev-mgmt-sb-ex3-g51.png)
-
-     > **Note:** The expression reference (for example, `triggerBody()?['text_4']`) may vary depending on the order in which inputs are added in the **When an agent calls the flow** step. The number (`text_4`, `text_5`, etc.) is auto-generated
-
-1. In the **Condition** action, select **is less or equal to (1)** from the operator dropdown.
-
-     ![](../media/lev-mgmt-sb-ex3-g52.png)
-
-1. In the **Condition** action, enter **2** in the value field.
-
-     ![](../media/lev-mgmt-sb-ex3-g53.png)
-
-1. In the **Condition** action, under the **False** branch, click the **plus (+) icon**.
-
-     ![](../media/lev-mgmt-sb-ex3-g8.png)
-
-1. In the **Add an action** dialog, type **Start and wait for an approval (1)** in the search bar and select **Start and wait for an approval (2)** under **Standard approvals**.
-
-     ![](../media/lvimg44.png)
-
-1. In the next pane, click on **Create new**.
-
-     ![](../media/lvimg45.png)
-
-1. In the **Start and wait for an approval** action, configure the parameters:  
-     - From the **Approval type** drop-down, select **Approve/Reject - Everyone must approve (1)**.  
-     - In the **Title** field, enter **Leave Approval (2)**.  
-     - In the **Assigned to** field, type the email address <inject key="AzureAdUserEmail"></inject> **(3)** and select the matching account from the suggestions **(4)**. 
-
-          ![](../media/lev-mgmt-sb-ex3-g9.png)
-
-1. In the **False** branch after the approval node, click the **plus (+) icon**.
-
-     ![](../media/lev-mgmt-sb-ex3-g10.png)
-
-1. In the **Add an action** pane, search for **Condition (1)**, and then select **Condition (2)**.
-
-     ![](../media/lev-mgmt-sb-ex3-g11.png)
-
-1. In the **Condition** action, type **/** in the value field **(1)**, and then select **Insert expression (2)**.
-
-     ![](../media/lev-mgmt-sb-ex3-g12.png)
-
-1. In the expression editor, paste the expression in the editor box **(1)**, select **Dynamic content (2)** if required, and then choose **Add (3)**.
-
-     ```
-     outputs('Start_and_wait_for_an_approval')?['body/outcome']
-     ``` 
-
-     ![](../media/lev-mgmt-sb-ex3-g13.png)
-
-1. In the **Condition 1** action, set the operator to **is equal to (1)**, and then enter **Approve (2)**.
-
-     ![](../media/lev-mgmt-sb-ex3-g14.png)
-
-     > This condition evaluates whether the leave request has been approved by retrieving the response from the previous approval step.
-
-1. In the **False** branch, select the **+** icon.
-
-     ![](../media/lev-mgmt-sb-ex3-g16.png)
-
-1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**.
-
-     ![](../media/lev-mgmt-sb-ex3-g17.png)
-
-1. In the **Respond to the agent** action, select **Add an output**.
-
-     ![](../media/lev-mgmt-sb-ex3-g18.png)
-
-1. In the **Respond to the agent** action, select **Text** as the output type.
-
-     ![](../media/lev-mgmt-sb-ex3-g19.png)
-
-1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **The request is rejected (2)** as the response message.
-
-     ![](../media/lev-mgmt-sb-ex3-g20.png)
-
-1. In the **False** branch, after the **Respond to the agent** action, click the **plus (+) icon (1)** to add a new action.  
-
-     ![](../media/lev-mgmt-sb-ex3-g21.png)
-
-1. In the **Add an action** pane, search for **Terminate (1)**, and then select **Terminate (2)**.
-
-     ![](../media/lev-mgmt-sb-ex3-g22.png)
-
-1. In the **Terminate** action, set the **Status** field to **Succeeded** to complete the workflow after rejection.
-
-     ![](../media/lev-mgmt-sb-ex3-g23.png)
-
-### Task 2: Update Dataverse
+### Task 1: Update Dataverse
 
 In this task, you will update the flow to modify the Dataverse table, changing the leave request status from 'Pending' to 'Approved' based on the defined conditions.
 
@@ -163,7 +42,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
 1. In the **Update a row** action, select the **+** icon. 
 
-     ![](../media/lev-mgmt-sb-ex3-g28.png)
+     ![](../media/gs-fix2-leave2-may-g5.png)
 
 1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**. 
 
@@ -193,7 +72,9 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
      ```
      outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
-     ``` 
+     ```
+
+     ![](../media/gs-fix2-leave2-may-g6.png)
 
      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
 
@@ -211,52 +92,76 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
      > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
 
-1. The completed flow should now look like the following:
+1. On the **Designer** page, review the flow and then select **Publish**.
 
-   - The flow starts with **When an agent calls the flow**.  
-   - A new record is created in the **Leave Request** table using **Add a new row**.  
-   - A **Condition** checks the leave duration.  
-   - If **True**, the process continues.  
-   - If **False**, the flow triggers **Start and wait for an approval**.  
-      - Inside this branch, another **Condition** validates the approval outcome.  
-         - If **Approved**, the flow updates the leave record with status **Approved** and sends a response back to the agent.  
-         - If **Rejected**, the flow responds to the agent that the request is rejected and then terminates successfully.  
-   - The final steps include **Update a row** to mark approval in Dataverse, followed by a confirmation response through **Respond to the agent 1**. 
+     ![](../media/lev-mgmt-sb-ex2-g29.png)
 
-1. At the top-right corner of the flow designer, click **Publish** to save and activate your flow.
+1. In the **Your agent flow published successfully!** pop-up, select **Stay in Flow**.
 
-     ![](../media/lev-mgmt-sb-ex3-g36.png)
+     ![](../media/gs-fix-leave-may-g47.png)
+
+1. On the top menu bar, click **Overview** to navigate to the flow details page.
+
+     ![](../media/leav-man-e2-g-66.png)
 
 1. On the **Overview (1)** page, select **Edit (2)**.
 
      ![](../media/lev-mgmt-sb-ex3-g37.png)
 
-1. In the **Details** pane, enter **Leave Management Workflow (1)** in the **Flow name** field. Then, click **Save (2)** to apply the changes.  
+1. In the **Details** pane, enter the below value in the **Flow name (1)** field, and then select **Save (2)** to apply the changes.
+
+     ```
+     Leave Management Workflow
+     ``` 
 
      ![](../media/leav-man-e2-g-107.png)
 
-<validation step="786e3497-70e3-44d4-997f-45095642a4af" />
- 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+### Task 2: Complete leave request topic
 
-### Task 3: Complete leave request topic
+In this task, you will complete the leave_request topic in Copilot Studio by connecting it to the Leave Validation Flow and the Leave Management Workflow. You will map topic and system variables to each flow's input parameters and add a message node to display the approval response to the user.
 
-In this task, you will complete the leave request topic by implementing the logic to add new leave requests and update existing records in Dataverse with the request details.
-
-1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu and click **Leave Management Agent (2)**.
+1. In **Copilot Studio**, select **Agents (1)**, and then choose **Leave Management Agent (2)**. 
 
      ![](../media/lev-mgmt-sb-ex2-g52.png)
 
-1. Please click on **+** as shown below to expand the menu and then select **Topics** from the list.
+1. Select **+7 (1)**, and then choose **Topics (2)**.
 
-     ![](../media/lvimg55.png)
+     ![](../media/gs-fix-leave-may-g11.png)
 
-1. In the **Topics (1)** tab, select **leave_request (2)**.
+   > **Note:** If the **Topics** tab is directly visible on the screen, you can select it without clicking **+7**.
 
-     ![](../media/lev-mgmt-sb-ex3-g39.png)
+1. On the **Topics** page, select the **leave_request** topic.
+
+     ![](../media/gs-fix2-leave2-may-g1.png)
+
+1. Scroll to the bottom of the topic, and below the **reason** question node, select the **plus (+)** icon to add the next step in the flow. 
+
+     ![](../media/leav-man-e3-g-20.png)
+
+1. In the **Question** node after capturing the reason, click **Add a tool (1)**. From the list of available tools, select **Leave Validation Flow (2)** to connect the flow with the validation process. 
+
+     ![.](../media/cor-mn-e5-g-77.png)
+
+1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (3)** section and select all the listed variables by checking the boxes **(4)**.   
+
+     ![](../media/cor-mn-e5-g-78.png)
+
+1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **startDate (2)** to map the variable.
+
+     ![](../media/lev-mgmt-sb-ex2-g67.png)
+
+1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **endDate** field. From the **Select a variable** pane, choose **endDate (2)** to map the variable. 
+
+     ![](../media/lev-mgmt-sb-ex2-g68.png)
+
+1. On the **Power Automate inputs** card:  
+
+     - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
+     - In the **Select a variable** pane, switch to the **System (2)** tab.  
+     - Search for **User.Email (3)**.  
+     - Select **User.Email (4)**.  
+
+          ![](../media/lev-mgmt-sb-ex2-g69.png)
 
 1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
 
@@ -274,21 +179,23 @@ In this task, you will complete the leave request topic by implementing the logi
 
       ![](../media/lvimg56.png)
 
-1. On the **Action** card, set the value for **employeeEmail (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **System (2)** tab.  
-    - Search for **User.Email (3)**.  
-    - Select **User.Email (4)** from the results.  
+1. On the **Action** card, set the value for **employeeEmail (String)**: 
 
-        ![](../media/lev-mgmt-sb-ex3-g43.png)
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **System (2)** tab.  
+     - Search for **User.Email (3)**.  
+     - Select **User.Email (4)** from the results.  
 
-1. On the **Action** card, set the value for **employeeName (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **System (2)** tab.  
-    - Search for **User.FirstName (3)**.  
-    - Select **User.FirstName (4)** from the results. 
+          ![](../media/lev-mgmt-sb-ex3-g43.png)
 
-        ![](../media/lev-mgmt-sb-ex3-g44.png)
+1. On the **Action** card, set the value for **employeeName (String)**: 
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **System (2)** tab.  
+     - Search for **User.FirstName (3)**.  
+     - Select **User.FirstName (4)** from the results. 
+
+          ![](../media/gs-fix2-leave2-may-g11.png)
 
 1. On the **Action** card, set the value for **leaveType (String)** by selecting the **ellipsis (…) (1)**, choosing the **Formula (2)** tab, entering the formula **(3)**, and then selecting **Insert (4)**.
 
@@ -298,52 +205,58 @@ In this task, you will complete the leave request topic by implementing the logi
 
      ![](../media/lev-mgmt-sb-ex3-g45.png)
 
-1. On the **Action** card, set the value for **reason (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, choose the **Custom (2)** tab.  
-    - Select **reason (Topic.reason) (3)** from the list.  
+1. On the **Action** card, set the value for **reason (String)**: 
 
-        ![](../media/lev-mgmt-sb-ex3-g46.png)
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, choose the **Custom (2)** tab.  
+     - Select **reason (Topic.reason) (3)** from the list.  
 
-1. On the **Action** card, set the value for **durationDays (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **duration (Topic.duration) (3)** from the list.  
+          ![](../media/lev-mgmt-sb-ex3-g46.png)
 
-        ![](../media/lev-mgmt-sb-ex3-g47.png)
+1. On the **Action** card, set the value for **durationDays (String)**: 
 
-1. On the **Action** card, set the value for **balance (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **balance (Topic.balance) (3)** from the list.  
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **duration (Topic.duration) (3)** from the list.  
 
-        ![](../media/lev-mgmt-sb-ex3-g48.png)
+          ![](../media/lev-mgmt-sb-ex3-g47.png)
 
-1. On the **Action** card, set the value for **startDate (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **startDate (Topic.startDate) (3)** from the list.  
+1. On the **Action** card, set the value for **balance (String)**:
 
-        ![](../media/lev-mgmt-sb-ex3-g49.png)
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **balance (Topic.balance) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g48.png)
+
+1. On the **Action** card, set the value for **startDate (String)**:
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **startDate (Topic.startDate) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g49.png)
 
 1. On the **Action** card, set the value for **endDate (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **endDate (Topic.endDate) (3)** from the list.  
 
-        ![](../media/lev-mgmt-sb-ex3-g50.png)
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **endDate (Topic.endDate) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g50.png)
 
 1. On the **Outputs (1)** section, click the **plus icon (1)** and select **Send a message (2)**. 
 
      ![](../media/leav-man-e3-g-36.png)
 
 1. On the **Message** step:  
-    - Click on the **variable icon (1)**.  
-    - In the **Select a variable** pane, choose the **Custom (2)** tab.  
-    - Type **reply (3)** in the search box.  
-    - Select **reply (4)** from the results. 
 
-        ![](../media/leav-man-e3-g-37.png)
+     - Click on the **variable icon (1)**.  
+     - In the **Select a variable** pane, choose the **Custom (2)** tab.  
+     - Type **reply (3)** in the search box.  
+     - Select **reply (4)** from the results. 
+
+          ![](../media/leav-man-e3-g-37.png)
 
 1. On the **Message** step, click the **plus (+) icon** to add the next action in the flow. 
 
@@ -355,13 +268,18 @@ In this task, you will complete the leave request topic by implementing the logi
 
 1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
 
-     ![](../media/leav-man-e3-g-41.png)
+     ![](../media/lev-mgmt-sb-ex2-g70.png)
 
-1. You have successfully completed the creation of the agent. It is now fully equipped with all intended capabilities and will be ready for testing in the next task.
+<validation step="786e3497-70e3-44d4-997f-45095642a4af" />
+ 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 ## Summary
 
-In this exercise, you continued building the leave management agent by adding advanced capabilities. You implemented approval logic based on company policy: leaves of two days or less were automatically approved, while longer leaves went through an approval process. Once approved, the leave requests were finalized and recorded.
+In this exercise, you finalized the leave management workflow by adding an Update a row action to modify the leave request status in Dataverse and configuring a response message with the approved leave dates. You then completed the leave_request topic in Copilot Studio by connecting it to the Leave Validation Flow and the Leave Management Workflow, mapping all required variables, and adding a message node to display the response to the user.
 
 ### You have successfully completed this exercise. Please continue to the next one >>
 

@@ -12,9 +12,9 @@ By the end of this lab, you will be able to:
 
 - **Set up Prerequisites for Leave Management Agent:** Provision a Power Platform environment, sign into Copilot Studio, and configure a new agent’s basic settings.
 
-- **Design Advanced Topics:** Define the agent’s purpose, connect knowledge sources, and enable AI-powered responses for leave management.
+- **Design Advanced Topics:** Create a leave request topic, build Power Automate flows to validate leave requests and check balances, and set up an approval workflow for leave durations.
 
-- **Power Automate Approval Workflow:** Implement leave approval logic based on company policy and record finalized requests.
+- **Power Automate Approval Workflow:** Update the Dataverse table after approval, publish and rename the flow, and complete the leave request topic by connecting flows and mapping variables.
 
 - **End-to-End Testing:** Execute prompts and scenarios to verify the agent updates leave request data correctly in Dataverse.
 
@@ -113,40 +113,41 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
    > **Note:** We are signing in to the Power Apps portal because it automatically assigns a Developer license, which is required to create and use a Developer environment in the next steps.
 
+1. In the Power Apps portal, select **Tables (1)** from the left menu and select **Create a database (2)**.
+
+   ![](../media/ex3img71.png)
+
+   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 10**.
+
+1. In the new pane for creating a new database, select **Create my Database**.
+
+   ![](../media/ex3img72up.png)
+
+1. Once done, select **Create with Excel or .CSV file**.
+
+   ![](../media/st-store-ex1-g2.png)
+
+1. In the pop-up window to create an environment, select **Create**. This will create a new Power Platform developer environment.
+
+   ![](../media/gs-fix-leave-may-g1.png)
+
+   > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
+   
+1. If you are directly navigated to the **Upload an Excel or .CSV file pane**, please cancel the process.
+
+   ![](../media/gs-fix-leave-may-g2.png)
+
 1. Open a new browser tab and navigate to the Power Platform admin center by entering the following URL:
 
    ```
    https://admin.powerplatform.microsoft.com
    ```
 
-1. In the **Power Platform admin center**, select **Manage** from the left navigation pane.
-
-   ![](../media/nd-d2-cor-g-1.png)
-
-1. In the Power Platform admin center, select **Environments (1)** from the left navigation pane, and then choose **New (2)** to create a new environment.
-
-   ![](../media/d2-coor-gs-g2.png)
-
-1. In the **New environment** pane, configure the environment with the following settings, and then select **Next (3)**:
-
-   - Select **Developer (1)** from the **Type** dropdown.
-   - Enter **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment** in the **Name (2)** field.
-
-      ![](../media/lev-mgmt-sb-gs-g1.png)
-
-1. In the **Add Dataverse** pane, leave all settings as default, and then select **Save**.
-
-   ![](../media/lev-mgmt-sb-gs-g2.png)
-
-   > **Environment Foundation:** This step creates the foundational environment that will support your agents with company-specific data and knowledge sources.
-
-   > **Note:** Environment provisioning may take 10-15 minutes to complete. Wait until the status shows as ready before proceeding.
-
-   > **Note:** If you see an error stating that the environment list cannot be displayed, this is expected while the environment is being created in the background. After 10-15 minutes, refresh the browser and the environment should appear.
-
 1. In the **Power Platform admin center**, select **Manage (1)**, choose **Environments (2)**, and then click **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (3)**.
 
    ![](../media/uppowadminimg1.png)
+
+   >Note: If you're unable to see any environments, it may still be getting created in the background. This is expected behavior in Power Platform. Please wait 15-20 minutes and refresh the page to view the environment.
 
 1. In the environment page, click on **See all** under **S2S apps**.
 

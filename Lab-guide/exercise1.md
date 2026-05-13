@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will provision a Microsoft Power Platform environment and sign in to Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI–driven leave management solution that streamlines processes and enhances experience.
+In this exercise, you will provision a Microsoft Power Platform environment and sign in to Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI-driven leave management solution that streamlines processes and enhances experience.
 
 ## Objectives
 
@@ -24,19 +24,17 @@ In this task, you will ingest the datasets into Dataverse, which will be created
 
 1. Navigate back to the Power Apps portal, and please switch to the environment that you created earlier.
 
-    ![](../media/papps1.png)
+    ![](../media/st-store-ex1-g1.png)
 
     > **Note:** If the environment is not visible, refresh the page and try again.
 
-1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
+1. Verify that the current environment displays **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment**.
+
+    ![](../media/gs-fix-leave-may-g4.png)
+
+1. Now select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
      ![](../media/leav-man-e1-g-2.png)
-
-     > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
-   
-     >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
-
-     ![](../media/saf-tra-cor-v2-g2.png)
 
 1. In the next pane, click on **Select from device** and in the pop-up window, select files.
 
@@ -50,13 +48,15 @@ In this task, you will ingest the datasets into Dataverse, which will be created
 
      ![](../media/cor-mn-e5-g-12.png)
 
-1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
+1. Once selected, click on **Save and exit** and in the pop up window.
 
      ![](../media/cor-mn-e5-g-13.png)
 
-     ![](../media/leav-man-e1-g-9.png)
-
      > **Note:** Parsing the file and creating columns may take a few minutes; wait until the process completes and the columns are displayed before proceeding. Do not close or navigate away from the page during this time.
+
+1.  Click on **Save and exit**.
+
+     ![](../media/gs-fix-leave-may-g3.png)
 
      >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
 
@@ -70,41 +70,35 @@ In this task, you will ingest the datasets into Dataverse, which will be created
 
 In this task, you will sign in to Microsoft Copilot Studio and switch the environment to the new developer environment that you created earlier.
 
-1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
+1. Navigate to **Microsoft Copilot Studio** by opening a new browser tab and entering the following URL:
 
-     >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
-   
-1. In the pop-up window that appears, click on **Get Started**
+     ```
+     https://copilotstudio.microsoft.com
+     ```
 
-     ![](../media/cor-mn-e5-g-10.png)
-   
-     >**[OPTIONAL]**
+1. On the **Welcome to Microsoft Copilot Studio** screen, keep the default **country/region** selection and select **Get Started** to continue.
 
-     >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If the issue still persists, follow the instructions below. to resolve this:
+     ![](../media/pro-activ-gg-g11.png)
 
-     > Navigate back to Power Apps Portal, and copy the environment ID as shown.
+1. If the **Welcome to Copilot Studio!** pop-up appears, select **Skip** to continue to the main dashboard.
 
-     ![](../media/cpnew2.png)
+     ![](../media/gs-travel-g3.png)
 
-     > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID with the ID that you copied.
+1. If the **We've updated you to the latest version of Microsoft Copilot Studio** pop-up appears, select **Got it!**.
 
-     ![](../media/cpnew3.png)
+     ![](../media/pro-activ-gg-g12.png)
 
-1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
+1. If the **What's new in Copilot Studio** pop-up appears, select the **Close (X)** icon to dismiss it.
 
-     ![](../media/cor-mn-e5-g-14.png)
+     ![](../media/pro-activ-gg-g13.png)
 
-1. Once you are inside **Copilot Studio**, you will be on the home page. 
+1. In Copilot Studio, open the environment picker **(1)**, expand **Supported environments (2)**, and select **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>'s Environment (3)** to switch.
 
-     ![](../media/leav-man-e1-g-12.png)
+     ![](../media/ex1-travel-g6.png)
 
-1. In the home page, select the environment option as shown.
+1. Once you are in **Copilot Studio**, you will be on the home page.
 
-     ![](../media/leav-man-e1-g-14.png)
-
-1. Change the environment to the new environment that you have created earlier on the **Select environment** pane, expand **Supported environments (1)** and select **ODL_User <your-ID> Environment (2)**.
-
-     ![](../media/leav-man-e1-g-15.png)
+     ![.](../media/st-store-ex1-g10.png)
 
 ## Task 3: Create a New Agent
 
@@ -112,15 +106,23 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 1. Navigate back to the Copilot Studio page from the browser.
 
+1. Before creating the agent, verify that the selected environment is **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment**.
+
+     ![](../media/gs-fix-leave-may-g5.png)
+
+   > **Note:** If a different environment is selected, switch to **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment** before proceeding.
+
 1. From the home page, select **Agents (1)** from the left menu and click on **+ Create blank agent (2)** to create an agent.
 
-     ![](../media/st-store-ex2-g1.png)
+     ![](../media/gs-fix-leave-may-g6.png)
 
-     > **Note:** Due to recent Copilot Studio UI updates, you may be prompted to enter the agent name before creating the agent. If prompted, provide the name below:
+1. In the **Name your agent** pane, enter the below value in the **Name your agent (1)** field, and then select **Create (2)**.
 
      ```
      Leave Management Agent
      ```
+
+     ![](../media/gs-fix-leave-may-g7.png)
 
 1. Wait until the **Getting things ready ...** screen completes and the Copilot Studio home page loads.
 
@@ -130,22 +132,23 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
      ![](../media/st-store-ex2-g3.png)
 
-     > **Note:** Agent provisioning may take a few minutes to complete, and the agent details might not appear immediately. Please wait until the **Your agent has been provisioned** message is displayed before proceeding.
+     > **Note:** Agent provisioning may take a few minutes to complete.
 
-1. In the **Details** section, select **Edit** to modify the **Name** and **Description**.
+     > **Note:** If you see the warning message **A newer version of this agent is available**, select **Refresh**.
 
-     ![](../media/st-store-ex2-g4.png)
+     ![](../media/gs-fix-leave-may-g8.png)
 
-1. In the next pane, enter the following details in **Name (1)** and **Description (2)** fields, and then select **Save (3)**..
+1. In the **Details** section, select **Edit**.
+
+     ![](../media/gs-fix-leave-may-g9.png)
+
+1. In the next pane, enter the following **Description** field, and then select **Save (2)**.
 
     | Key                     | Value                               |
     |-------------------------------|--------------------------------------------|
-    | Name | `Leave Management Agent` |
     | Description | Handles leave requests, approvals, and balance updates using Dataverse and Power Automate. Helps employees apply for leave, check status, and get real-time updates via Teams. |
 
-    ![](../media/lev-mgmt-sb-ex1-g2.png)
-
-    > **Note:** If you have already provided the agent name during creation, you can update only the **Description** and then select **Save**.
+    ![](../media/gs-fix-leave-may-g10.png)
 
 1. In the **Select your agent's model** section, keep the default model selected and do not make any changes.
 
@@ -167,7 +170,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 ## Task 4: Configure Agent Basics
 
-In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
+In this task, you will connect the Leave Request table from Dataverse as a knowledge source for your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
 1. In the **Knowledge** section, select **Add knowledge**.
 
@@ -192,7 +195,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 ## Summary
 
-In this exercise, you provisioned a Power Platform environment, signed into Microsoft Copilot Studio, created a new agent, and configured its basic settings. These steps laid the groundwork for building an Agentic AI–driven leave management solution.
+In this exercise, you provisioned a Power Platform environment, signed into Microsoft Copilot Studio, created a new agent, and configured its basic settings. These steps laid the groundwork for building an Agentic AI-driven leave management solution.
 
 ### You have successfully completed this exercise. Please continue to the next one >>
 

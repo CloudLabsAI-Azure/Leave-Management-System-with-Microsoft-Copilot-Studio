@@ -20,6 +20,10 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
 1. Now that you've configured the agent, it's time to test.
 
+1. In **Copilot Studio**, select **Agents (1)**, and then choose **Leave Management Agent (2)**. 
+
+   ![](../media/lev-mgmt-sb-ex2-g52.png)
+
 1. On the top menu bar, click **Publish** to save and apply your changes to the agent.
 
    ![](../media/lev-mgmt-sb-ex4-g1.png)
@@ -42,23 +46,43 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/leav-man-e4-g-33.png)
 
-1. In the **Test your agent** panel, type a request such as **I want to apply for leave (1)** and click the **Send (2)** button to test the agent’s ability to process leave-related queries.
+1. In the **Test your agent** panel, enter the below request in the message box **(1)**, and then select the **Send (2)** button to test the agent.
 
-   ![](../media/lev-mgmt-sb-ex4-g5.png)
+   ```
+   I want to apply for Leave
+   ```
+
+   ![](../media/gs-fix2-leave2-may-g28.png)
 
 1. In the **Test your agent** panel, when prompted to choose a leave type, select from the available options such as **Casual**, **Emergency**, or **Unpaid**.
 
    ![](../media/lev-mgmt-sb-ex4-g6.png)
 
-1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2026-04-06 (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format using the below example value **(1)**, and then select the **Send (2)** button.
 
-   ![](../media/llev-mgmt-sb-ex4-g7.png)
+   ```
+   2026-05-13
+   ```
 
-1. In the **Test your agent** panel, enter the leave end date in the required **yyyy-mm-dd** format (for example, **2026-04-07 (1)**) and click the **Send (2)** button.
+   ![](../media/gs-fix2-leave2-may-g20.png)
 
-1. In the **Test your agent** panel, enter the reason for your leave (for example, **I will be attending a family function (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave end date in the required **yyyy-mm-dd** format using the below example value **(1)**, and then select the **Send (2)** button.
 
-   ![](../media/lev-mgmt-sb-ex4-g9.png)
+   ```
+   2026-05-14
+   ```
+
+   > **Note:** In this test scenario, we are validating a leave request for 2 days or less.
+
+   ![](../media/gs-fix2-leave2-may-g21.png)
+
+1. In the **Test your agent** panel, enter the reason for your leave using the below example value **(1)**, and then select the **Send (2)** button.
+
+   ```
+   I will be attending a family function
+   ```
+
+   ![](../media/gs-fix2-leave2-may-g22.png)
 
 1. In the **Test your agent** panel, verify that the agent responds with a confirmation message showing the approved leave dates. 
 
@@ -68,7 +92,7 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    > Click **Open connection manager (1)** to verify your credentials.
 
-      ![](../media/cor-mn-e5-g-86.png)
+      ![](../media/gs-fix2-leave2-may-g23.png)
       
    > On the **Manage your connections** page, the **Leave Management Workflow** may show as **Not Connected (1)**. Click **Connect (2)** to establish the connection.  
 
@@ -82,63 +106,92 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
       ![](../media/cor-mn-e5-g-45.png)
 
-   > After confirming the connection, return to the **Test your agent** tab. Click the **Refresh (1)** button at the top to reload the session, then retry your request to continue testing.
+1. Return to the **Agent testing** tab, and then select **Retry**.
 
-      ![](../media/cor-mn-e5-g-87.png)
+   ![](../media/gs-fix2-leave2-may-g24.png)
 
-1. In the **Test your agent** panel, click the **Refresh** icon to restart the conversation and test the agent with new inputs.
+1. Verify that leave requests for 2 days or less are automatically approved in the agent response.
 
-   ![](../media/leav-man-e4-g-32.png)
+   ![](../media/gs-fix2-leave2-may-g25.png)
 
-1. In the **Test your agent** panel, type a greeting such as **Hello (1)** (or any similar phrase) and click the **Send (2)** button to trigger the greeting intent.
+1. Open a browser and navigate to Outlook using the following URL:
 
-   ![](../media/leav-man-e4-g-1.png)
+   ```
+   https://outlook.com
+   ```
 
-1. In the **Test your agent** panel, type a request such as **I want to apply for leave (1)** and click the **Send (2)** button to test the agent’s ability to process leave-related queries.
+1. Sign in using the lab credentials.
 
-   ![](../media/leav-man-e4-g-26.png)
+   - Username: <inject key="AzureAdUserEmail"></inject>
+   - Temporary Access Key: <inject key="AzureAdUserPassword"></inject>
+
+      ![](../media/gs-fix2-leave2-may-g33.png)
+
+1. In the **Test** pane, select **New test session** to test leave requests for more than 2 days.
+
+   ![](../media/gs-fix2-leave2-may-g26.png)
+
+1. In the message box, enter **Hello (1)**, and then select the **Send (2)** icon.
+
+   ![](../media/gs-fix2-leave2-may-g27.png)
+
+1. In the **Test your agent** panel, enter the below request in the message box **(1)**, and then select the **Send (2)** button to test the agent.
+
+   ```
+   I want to apply for Leave
+   ```
+
+   ![](../media/gs-fix2-leave2-may-g28.png)
 
 1. In the **Test your agent** panel, when prompted to choose a leave type, select from the available options such as **Casual**, **Emergency**, or **Unpaid**.
 
-   ![](../media/leav-man-e4-g-27.png)
+   ![](../media/lev-mgmt-sb-ex4-g6.png)
 
-1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2025-09-20 (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format using the below example value **(1)**, and then select the **Send (2)** button.
 
-   ![](../media/leav-man-e4-g-28.png)
+   ```
+   2026-05-13
+   ```
 
-1. In the **Test your agent** panel, enter the leave end date in the format **yyyy-mm-dd**, ensuring it is more than 2 days from the start date (for example, **2025-09-25 (1)**), and click the **Send (2)** button to submit the request.
+   ![](../media/gs-fix2-leave2-may-g20.png)
 
-   ![](../media/leav-man-e4-g-36.png)
+1. In the **Test your agent** panel, enter the leave end date in the required **yyyy-mm-dd** format using the below example value **(1)**, and then select the **Send (2)** button.
 
-1. In the **Test your agent** panel, enter the reason for applying for leave (for example, *I need a short break for personal reasons* (1)) and click the **Send (2)** button to continue.
+   ```
+   2026-05-17
+   ```
 
-   ![](../media/leav-man-e4-g-37.png)
+   > **Note:** In this test scenario, we are validating a leave request for more than 2 days.
 
-1. Open a browser and navigate to [https://outlook.com](https://outlook.com) to access Outlook.  
+   ![](../media/gs-fix2-leave2-may-g29.png)
 
-1. In the **Inbox**, locate and click the email with the subject **Microsoft Power Automate - Leave Approval** to view the leave request details.
+1. In the **Test your agent** panel, enter the reason for your leave using the below example value **(1)**, and then select the **Send (2)** button.
 
-   ![](../media/leav-man-e4-g-38.png)
+   ```
+   I need to take leave for personal work
+   ```
 
-1. In the **Leave Approval** email, click **Approve** to approve the leave request.  
+   ![](../media/gs-fix2-leave2-may-g30.png)
 
-   ![](../media/leav-man-e4-g-40.png)
+1. Verify that the agent shows the **Processing** status while waiting for the email approval response.
 
-1. In the **Comments (1)** box, type your approval note (e.g., *Approved*) and then click **Submit (2)** to finalize the leave approval. 
+   ![](../media/gs-fix2-leave2-may-g35.png)
 
-   ![](../media/leav-man-e4-g-41.png)
+1. In the **Inbox (1)**, select the **Microsoft Power Automate - Leave Approval (2)** email to view the leave request details.
+
+   ![](../media/gs-fix2-leave2-may-g31.png)
+
+1. Select **Approve (1)**, enter *Approved* in the **Comments (2)** box, and then select **Submit (3)** to finalize the leave approval.
+
+   ![](../media/gs-fix2-leave2-may-g32.png)
 
 1. The agent confirms the leave request, displaying an approval message with the leave duration details. 
 
-   ![](../media/leav-man-e4-g-39.png)
+   ![](../media/gs-fix2-leave2-may-g34.png)
 
 ## Task 2: Validate Data in Dataverse
 
 In this task, you will navigate the Dataverse and validate the data updated by the agent.
-
-1. On the **Copilot Studio** page, click on the **More options (1)** menu from the left navigation panel and select **Power Apps (2)** under the **Power Platform** section to navigate there, **or** open a new browser window and go to [https://make.powerapps.com](https://make.powerapps.com).
-
-   ![](../media/cor-mn-e4-g-10.png)
 
 1. On the **Power Apps** portal, ensure the environment is set to **ODL_User (1)**. From the left navigation menu, select **Tables (2)** and then choose **Leave Request (3)** from the list.
 
