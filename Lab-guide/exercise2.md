@@ -1130,12 +1130,6 @@ In this task, you will create a topic that enables employees to apply for leave 
 
 1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
 
-     ![](../media/leav-man-e3-g-41.png)
-
-1. You have successfully completed the creation of the agent. It is now fully equipped with all intended capabilities and will be ready for testing in the next task.
-
-1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
-
      ![](../media/lev-mgmt-sb-ex2-g70.png)
 
 <validation step="bc8e443a-14ef-4307-8619-3092a324799b" />
