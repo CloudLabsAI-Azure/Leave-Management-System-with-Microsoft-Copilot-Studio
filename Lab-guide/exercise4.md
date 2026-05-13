@@ -49,7 +49,7 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 1. In the **Test your agent** panel, enter the below request in the message box **(1)**, and then select the **Send (2)** button to test the agent.
 
    ```
-   I want to apply for leave
+   I want to apply for Leave
    ```
 
    ![](../media/lev-mgmt-sb-ex4-g5.png)
@@ -58,15 +58,31 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/lev-mgmt-sb-ex4-g6.png)
 
-1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2026-04-06 (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format using the below example value **(1)**, and then select the **Send (2)** button.
 
-   ![](../media/llev-mgmt-sb-ex4-g7.png)
+   ```
+   2026-05-13
+   ```
 
-1. In the **Test your agent** panel, enter the leave end date in the required **yyyy-mm-dd** format (for example, **2026-04-07 (1)**) and click the **Send (2)** button.
+   ![](../media/gs-fix2-leave2-may-g20.png)
 
-1. In the **Test your agent** panel, enter the reason for your leave (for example, **I will be attending a family function (1)**) and click the **Send (2)** button.
+1. In the **Test your agent** panel, enter the leave end date in the required **yyyy-mm-dd** format using the below example value **(1)**, and then select the **Send (2)** button.
 
-   ![](../media/lev-mgmt-sb-ex4-g9.png)
+   ```
+   2026-05-14
+   ```
+
+   > **Note:** In this test scenario, we are validating a leave request for 2 days or less.
+
+   ![](../media/gs-fix2-leave2-may-g21.png)
+
+1. In the **Test your agent** panel, enter the reason for your leave using the below example value **(1)**, and then select the **Send (2)** button.
+
+   ```text
+   I will be attending a family function
+   ```
+
+   ![](../media/gs-fix2-leave2-may-g22.png)
 
 1. In the **Test your agent** panel, verify that the agent responds with a confirmation message showing the approved leave dates. 
 
