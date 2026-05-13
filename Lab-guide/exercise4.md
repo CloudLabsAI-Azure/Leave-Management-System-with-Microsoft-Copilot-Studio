@@ -20,6 +20,10 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
 1. Now that you've configured the agent, it's time to test.
 
+1. In **Copilot Studio**, select **Agents (1)**, and then choose **Leave Management Agent (2)**. 
+
+   ![](../media/lev-mgmt-sb-ex2-g52.png)
+
 1. On the top menu bar, click **Publish** to save and apply your changes to the agent.
 
    ![](../media/lev-mgmt-sb-ex4-g1.png)
@@ -42,7 +46,11 @@ In this task, you will run the agent end-to-end using the provided prompts and v
 
    ![](../media/leav-man-e4-g-33.png)
 
-1. In the **Test your agent** panel, type a request such as **I want to apply for leave (1)** and click the **Send (2)** button to test the agent’s ability to process leave-related queries.
+1. In the **Test your agent** panel, enter the below request in the message box **(1)**, and then select the **Send (2)** button to test the agent.
+
+   ```
+   I want to apply for leave
+   ```
 
    ![](../media/lev-mgmt-sb-ex4-g5.png)
 

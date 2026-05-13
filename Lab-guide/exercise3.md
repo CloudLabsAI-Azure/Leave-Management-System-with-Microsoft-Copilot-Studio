@@ -270,7 +270,6 @@ In this task, you will create a topic that enables employees to apply for leave 
 
      ![](../media/lev-mgmt-sb-ex2-g70.png)
 
-
 <validation step="786e3497-70e3-44d4-997f-45095642a4af" />
  
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
