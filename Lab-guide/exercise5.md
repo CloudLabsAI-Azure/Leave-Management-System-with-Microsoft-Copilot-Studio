@@ -21,35 +21,27 @@ In this task, you will publish the **Leave Management Agent** to Microsoft Teams
 
 1. On the **Leave Management Agent** page, select the **Channels (1)** tab and click **Teams and Microsoft 365 Copilot (2)** under Microsoft channels.
 
-   ![](../media/leav-man-e4-g-2.png)
+   ![](../media/gs-fix2-leave2-may-g36.png)
 
-1. On the **Teams and Microsoft 365 Copilot** page, select **Make agent available in Microsoft 365 Copilot (1)** and then click **Add channel (2)**. 
+1. Clear the **Make agent available in Microsoft 365 Copilot (1)** checkbox, and then select **Add channel (2)**.
 
-   ![](../media/leav-man-e4-g-3.png)
+   ![](../media/gs-fix2-leave2-may-g37.png)
 
-1. On the **Ready to publish?** dialog box, click **Publish** to make the agent available. 
+1. Once the channel is added, on the **Microsoft Teams**, select **See agent in Teams** to open the agent in Microsoft Teams.
 
-   ![](../media/leav-man-e4-g-4.png)
-
-1. Once the channel is added, on the **Teams and Microsoft 365 Copilot** page, click **See agent in Teams** to open the agent in Microsoft Teams. 
-
-   ![](../media/leav-man-e4-g-5.png)
-
-1. If the **Open Microsoft Teams?** pop-up appears, click **Cancel** to stay on the browser. 
-
-   ![](../media/leav-man-e4-g-6.png)
+   ![](../media/gs-fix2-leave2-may-g38.png)
 
 1. On the **Stay better connected with the Teams desktop app** page, click **Use the web app instead** to continue in the browser.
 
-   ![](../media/leav-man-e4-g-7.png)
+   ![](../media/gs-fix2-leave2-may-g39.png)
 
 1. On the **Leave Management Agent** page in Microsoft Teams, click **Add** to install the agent. If you are not able to see the **Add** option, please navigate back to Copilot Studio and use **See agent in Teams** again.
 
-   ![](../media/leav-man-e4-g-12.png)
+   ![](../media/gs-fix2-leave2-may-g40.png)
 
 1. Once the agent is added successfully, click **Open** to launch the **Leave Management Agent** in Teams. 
 
-   ![](../media/leav-man-e4-g-13.png)
+   ![](../media/gs-fix2-leave2-may-g41.png)
 
 1. In the **Leave Management Agent** chat window, type **Hello (1)** in the message box and click the **Send (2)** button to initiate the conversation.
 
