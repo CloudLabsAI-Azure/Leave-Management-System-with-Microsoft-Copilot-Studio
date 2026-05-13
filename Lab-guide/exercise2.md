@@ -44,11 +44,11 @@ In this task, you will create a topic that enables employees to apply for leave 
      This tool can handle queries like these: I want to apply for leave, apply for leave, request leave, requesting leave, I need time off, submit leave request, take a leave, leave application, I want to take leave, apply for casual leave, apply for emergency leave, apply for unpaid leave
      ```
 
-     ![](../media/gs-fix2-leave2-may-g15.png)
+     ![](../media/gs-fix2-leave2-may-g17.png)
 
 1. In the **Topic editor**, from the options displayed, select **Ask a question** to add a question node to the flow.
 
-     ![](../media/gs-fix2-leave2-may-g16.png)
+     ![](../media/gs-fix2-leave2-may-g18.png)
 
 1. In the **Question** node, enter the following in the question text **(1)**, select **Multiple choice options (2)** under **Identify**, and then choose **+ New option (3)**.
 
