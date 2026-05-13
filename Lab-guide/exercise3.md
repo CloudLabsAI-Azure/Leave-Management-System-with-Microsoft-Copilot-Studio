@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will continue building the leave management agent by adding more advanced capabilities. You will implement approval logic based on company policy: if the leave duration is two days or less, it will be automatically approved. Otherwise, it will go through an approval process. Once approved, the leave request will be finalized and recorded.
+In this exercise, you will finalize the leave management workflow by adding an Update a row action to modify the leave request status in Dataverse after approval. You will also publish the flow and rename it. Then, you will complete the leave_request topic in Copilot Studio by connecting the Leave Validation Flow and the Leave Management Workflow, mapping all required variables, and adding a message node to display the response to the user.
 
 ## Objectives
 
@@ -118,7 +118,7 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
 ### Task 2: Complete leave request topic
 
-In this task, you will create a topic that enables employees to apply for leave by configuring the required inputs and connecting it to the validation flow.
+In this task, you will complete the leave_request topic in Copilot Studio by connecting it to the Leave Validation Flow and the Leave Management Workflow. You will map topic and system variables to each flow's input parameters and add a message node to display the approval response to the user.
 
 1. In **Copilot Studio**, select **Agents (1)**, and then choose **Leave Management Agent (2)**. 
 
@@ -279,7 +279,7 @@ In this task, you will create a topic that enables employees to apply for leave 
 
 ## Summary
 
-In this exercise, you continued building the leave management agent by adding advanced capabilities. You implemented approval logic based on company policy: leaves of two days or less were automatically approved, while longer leaves went through an approval process. Once approved, the leave requests were finalized and recorded.
+In this exercise, you finalized the leave management workflow by adding an Update a row action to modify the leave request status in Dataverse and configuring a response message with the approved leave dates. You then completed the leave_request topic in Copilot Studio by connecting it to the Leave Validation Flow and the Leave Management Workflow, mapping all required variables, and adding a message node to display the response to the user.
 
 ### You have successfully completed this exercise. Please continue to the next one >>
 

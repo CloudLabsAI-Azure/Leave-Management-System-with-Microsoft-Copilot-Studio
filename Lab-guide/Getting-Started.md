@@ -12,9 +12,9 @@ By the end of this lab, you will be able to:
 
 - **Set up Prerequisites for Leave Management Agent:** Provision a Power Platform environment, sign into Copilot Studio, and configure a new agent’s basic settings.
 
-- **Design Advanced Topics:** Define the agent’s purpose, connect knowledge sources, and enable AI-powered responses for leave management.
+- **Design Advanced Topics:** Create a leave request topic, build Power Automate flows to validate leave requests and check balances, and set up an approval workflow for leave durations.
 
-- **Power Automate Approval Workflow:** Implement leave approval logic based on company policy and record finalized requests.
+- **Power Automate Approval Workflow:** Update the Dataverse table after approval, publish and rename the flow, and complete the leave request topic by connecting flows and mapping variables.
 
 - **End-to-End Testing:** Execute prompts and scenarios to verify the agent updates leave request data correctly in Dataverse.
 
@@ -147,7 +147,7 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
    ![](../media/uppowadminimg1.png)
 
-   >Note: If you’re unable to see any environments, it may still be getting created in the background. This is expected behavior in Power Platform. Please wait 15–20 minutes and refresh the page to view the environment.
+   >Note: If you're unable to see any environments, it may still be getting created in the background. This is expected behavior in Power Platform. Please wait 15-20 minutes and refresh the page to view the environment.
 
 1. In the environment page, click on **See all** under **S2S apps**.
 

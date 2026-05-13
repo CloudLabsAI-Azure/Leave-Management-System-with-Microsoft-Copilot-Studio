@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will provision a Microsoft Power Platform environment and sign in to Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI–driven leave management solution that streamlines processes and enhances experience.
+In this exercise, you will provision a Microsoft Power Platform environment and sign in to Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI-driven leave management solution that streamlines processes and enhances experience.
 
 ## Objectives
 
@@ -170,7 +170,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 ## Task 4: Configure Agent Basics
 
-In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
+In this task, you will connect the Leave Request table from Dataverse as a knowledge source for your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
 1. In the **Knowledge** section, select **Add knowledge**.
 
@@ -195,7 +195,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 ## Summary
 
-In this exercise, you provisioned a Power Platform environment, signed into Microsoft Copilot Studio, created a new agent, and configured its basic settings. These steps laid the groundwork for building an Agentic AI–driven leave management solution.
+In this exercise, you provisioned a Power Platform environment, signed into Microsoft Copilot Studio, created a new agent, and configured its basic settings. These steps laid the groundwork for building an Agentic AI-driven leave management solution.
 
 ### You have successfully completed this exercise. Please continue to the next one >>
 

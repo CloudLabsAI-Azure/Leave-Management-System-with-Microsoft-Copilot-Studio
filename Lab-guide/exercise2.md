@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will build a Copilot Studio agent to form the foundation of your leave management assistant. You will define its purpose by assigning a clear, descriptive name and a detailed description, and connecting it to critical knowledge sources, such as the leave policy and a database containing user details. These steps will enable your agent to deliver precise, AI-powered responses by leveraging indexed information.
+In this exercise, you will create a leave request topic in Copilot Studio that captures essential details from employees, such as leave type, start date, end date, and reason. You will then build Power Automate flows to validate leave requests by calculating the duration and checking the leave balance in Dataverse. Finally, you will create a flow to record leave requests in Dataverse and set up an approval workflow for longer leave durations.
 
 ## Objectives
 
@@ -18,7 +18,7 @@ You will be able to complete the following tasks:
 
 ## Task 1: Create topic for leave application
 
-In this task, you will create a topic that enables employees to apply for leave by configuring the required inputs and connecting it to the validation flow.
+In this task, you will create a new topic in Copilot Studio that allows employees to apply for leave. You will configure trigger phrases, add question nodes to capture the leave type, start date, end date, and reason, and save each response as a variable for use in subsequent flows.
 
 1. In **Copilot Studio**, select **Agents (1)**, and then choose **Leave Management Agent (2)**. 
 
@@ -589,7 +589,7 @@ In this task, you will create a Power Automate flow that validates leave request
 
 ## Task 3: Create a flow to update leave requests in Dataverse
 
-In this task, you will design a Power Automate flow that collects all the necessary leave request details from the agent. The flow will then update these details in the Dataverse database, ensuring that every leave application is properly recorded and managed.
+In this task, you will create a Power Automate flow that receives all leave request details from the agent and adds a new record to the Leave Request table in Dataverse. The flow also implements an approval workflow where leave durations of two days or less proceed without manual approval, while longer durations trigger an approval process that handles both approved and rejected outcomes.
 
 1. In **Copilot Studio**, select **Agents (1)**, and then choose **Leave Management Agent (2)**. 
 
@@ -883,7 +883,7 @@ In this task, you will design a Power Automate flow that collects all the necess
 
 ## Summary
 
-In this exercise, you created a Copilot Studio agent that served as the foundation for your leave management assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the leave request data, employee information stored in Dataverse and leave policy rules. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
+In this exercise, you created a leave request topic in Copilot Studio to capture employee leave details such as leave type, start date, end date, and reason. You then built a Power Automate flow to validate leave requests by calculating the duration and checking the leave balance in Dataverse. Finally, you created another flow to record leave requests in Dataverse and set up an approval workflow for leave durations exceeding two days.
 
 ### You have successfully completed this exercise, please continue to next one >>
 
