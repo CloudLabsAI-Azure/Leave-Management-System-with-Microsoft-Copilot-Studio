@@ -1,199 +1,197 @@
-# Exercise 1: Setting up Pre-Requisites for Leave Management Agent
+# 演習 1: 休暇管理エージェントの前提条件の設定
 
-### Estimated Duration: 60 Minutes
+### 推定所要時間: 60 分
 
-## Overview
+## 概要
 
-In this exercise, you will provision a Microsoft Power Platform environment and sign in to Microsoft Copilot Studio. You will then create a new agent and configure its basic settings. These steps form the foundation for building an Agentic AI–driven leave management solution that streamlines processes and enhances experience.
+この演習では、Microsoft Power Platform 環境をプロビジョニングし、Microsoft Copilot Studio にサインインします。次に、新しいエージェントを作成し、基本設定を構成します。これらのステップは、プロセスを合理化してエクスペリエンスを向上させるエージェント型 AI 駆動の休暇管理ソリューションを構築するための基盤となります。
 
-## Objectives
+## 目標
 
-You will be able to complete the following tasks:
+次のタスクを完了できるようになります。
 
-- Task 1: Provisioning Power Platform environment
+- タスク 1: Power Platform 環境のプロビジョニング
 
-- Task 2: Sign in to Microsoft Copilot Studio
+- タスク 2: Microsoft Copilot Studio へのサインイン
 
-- Task 3: Create a New Agent
+- タスク 3: 新しいエージェントの作成
 
-- Task 4: Configure Agent Basics
+- タスク 4: エージェントの基本設定
 
-## Task 1: Provisioning Power Platform environment
+## タスク 1: Power Platform 環境のプロビジョニング
 
-In this task, you will ingest the datasets into Dataverse, which will be created in a new Power Platform environment.
+このタスクでは、新しい Power Platform 環境に作成された Dataverse にデータセットを取り込みます。
 
-1. Navigate back to the Power Apps portal, and please switch to the environment that you created earlier.
+1. Power Apps ポータルに戻り、以前に作成した環境に切り替えてください。
 
     ![](../media/papps1.png)
 
-    > **Note:** If the environment is not visible, refresh the page and try again.
+    > **注:** 環境が表示されない場合は、ページを更新して再試行してください。
 
-1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
+1. 完了したら、左側のメニューから **[テーブル] (1)** を選択し、**[Excel または .CSV ファイルで作成] (2)** をクリックします。
 
      ![](../media/leav-man-e1-g-2.png)
 
-     > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
+     > **注:** ここで作成する権限がないというメッセージが表示された場合は、環境の準備に時間がかかっている可能性があるため、数分待ってからページを更新してください。
    
-     >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
+     > **注:** **[Excel または .CSV ファイルのインポート]** ウィンドウに直接移動された場合は、プロセスをキャンセルしてください。
 
      ![](../media/saf-tra-cor-v2-g2.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window, select files.
+1. 次のウィンドウで **[デバイスから選択]** をクリックし、ポップアップ ウィンドウでファイルを選択します。
 
      ![](../media/ex2img11.png)
 
-1. On the **Open** dialog box, navigate to the folder path `C:\datasets\Leave-Management-System-with-Microsoft-Copilot-Studio-datasets-main` **(1)**, select the file **LeaveRequests_Schema.csv (2)**, and then click **Open (3)**.
+1. **[開く]** ダイアログ ボックスで、フォルダー パス `C:\datasets\Leave-Management-System-with-Microsoft-Copilot-Studio-datasets-main` **(1)** に移動し、ファイル **LeaveRequests_Schema.csv (2)** を選択して、**[開く] (3)** をクリックします。
 
      ![](../media/cor-mn-e5-g-11.png)
 
-1. On the **Import an Excel or .CSV file** pane, verify that the file **LeaveRequests_Schema.csv** is listed. Ensure that the table **LeaveRequests** is included by keeping the toggle enabled. Click **Import** to proceed.
+1. **[Excel または .CSV ファイルのインポート]** ウィンドウで、ファイル **LeaveRequests_Schema.csv** が一覧に表示されていることを確認します。トグルを有効にして **LeaveRequests** テーブルが含まれていることを確認し、**[インポート]** をクリックして続行します。
 
      ![](../media/cor-mn-e5-g-12.png)
 
-1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
+1. 選択が完了したら、**[保存して終了]** をクリックし、ポップアップ ウィンドウで **[保存して終了]** をクリックします。
 
      ![](../media/cor-mn-e5-g-13.png)
 
      ![](../media/leav-man-e1-g-9.png)
 
-     > **Note:** Parsing the file and creating columns may take a few minutes; wait until the process completes and the columns are displayed before proceeding. Do not close or navigate away from the page during this time.
+     > **注:** ファイルの解析と列の作成には数分かかる場合があります。続行する前に、プロセスが完了して列が表示されるまで待ってください。この間は、ページを閉じたり別の場所に移動したりしないでください。
 
-     >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
+     > **注:** **[保存して終了]** ボタンが見つからない場合は、**CTRL + -** を使用して画面を縮小してください。
 
-1. Once created, locate the Leave Request table from the list and note down the logical ID of the table as shown in a notepad safely, as you will be using this value further in the lab.
+1. 作成が完了したら、リストから休暇申請テーブルを見つけ、後のラボで使用するため、テーブルの論理 ID をメモ帳に安全に記録します。
 
      ![](../media/upimg1.jpg)
 
-     >**Note:** You may see a different ID than the one shown in the screenshot; this is expected.
+     > **注:** スクリーンショットと異なる ID が表示される場合がありますが、これは想定内の動作です。
 
-## Task 2: Sign into Microsoft Copilot Studio
+## タスク 2: Microsoft Copilot Studio へのサインイン
 
-In this task, you will sign in to Microsoft Copilot Studio and switch the environment to the new developer environment that you created earlier.
+このタスクでは、Microsoft Copilot Studio にサインインし、以前に作成した新しい開発者環境に切り替えます。
 
-1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
+1. 新しい環境を作成し、Dataverse を設定したら、次のリンクを使用して新しいタブで **Copilot Studio** に移動します: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
 
-     >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
+     > **注:** VM 内で作業しているため、上記のリンクをコピーして VM 内のブラウザーで開いてください。
    
-1. In the pop-up window that appears, click on **Get Started**
+1. 表示されるポップアップ ウィンドウで **[開始する]** をクリックします。
 
      ![](../media/cor-mn-e5-g-10.png)
    
-     >**[OPTIONAL]**
+     > **[省略可能]**
 
-     >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If the issue still persists, follow the instructions below. to resolve this:
+     > **注:** Copilot Studio ポータルの読み込みに通常より時間がかかる場合は、数分待ってください。あるいは、ブラウザーを閉じてプライベート/シークレット ウィンドウでポータルを再度開いてみてください。問題が続く場合は、以下の手順に従って解決してください。
 
-     > Navigate back to Power Apps Portal, and copy the environment ID as shown.
+     > Power Apps ポータルに戻り、表示されている環境 ID をコピーします。
 
      ![](../media/cpnew2.png)
 
-     > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID with the ID that you copied.
+     > コピーしたら、Copilot Studio に戻り、URL 内の **Default** 環境 ID をコピーした ID に置き換えます。
 
      ![](../media/cpnew3.png)
 
-1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
+1. **[Copilot Studio へようこそ]** プロンプトが表示された場合は、**[スキップ]** をクリックします。
 
      ![](../media/cor-mn-e5-g-14.png)
 
-1. Once you are inside **Copilot Studio**, you will be on the home page. 
+1. **Copilot Studio** に入ると、ホーム ページが表示されます。
 
      ![](../media/leav-man-e1-g-12.png)
 
-1. In the home page, select the environment option as shown.
+1. ホーム ページで、表示されている環境オプションを選択します。
 
      ![](../media/leav-man-e1-g-14.png)
 
-1. Change the environment to the new environment that you have created earlier on the **Select environment** pane, expand **Supported environments (1)** and select **ODL_User <your-ID> Environment (2)**.
+1. **[環境の選択]** ウィンドウで **[サポートされている環境] (1)** を展開して、以前に作成した新しい環境 **ODL_User <your-ID> Environment (2)** を選択し、環境を変更します。
 
      ![](../media/leav-man-e1-g-15.png)
 
-## Task 3: Create a New Agent
+## タスク 3: 新しいエージェントの作成
 
-In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for enabling intelligent leave management operations.
+このタスクでは、Microsoft Copilot Studio で名前、説明、および基本構成設定を定義して新しいエージェントを作成します。このエージェントは、インテリジェントな休暇管理操作を可能にするための基盤として機能します。
 
-1. Navigate back to the Copilot Studio page from the browser.
+1. ブラウザーから Copilot Studio ページに戻ります。
 
-1. From the home page, select **Agents (1)** from the left menu and click on **+ Create blank agent (2)** to create an agent.
+1. ホーム ページで、左側のメニューから **[エージェント] (1)** を選択し、**[+ 空のエージェントを作成] (2)** をクリックしてエージェントを作成します。
 
      ![](../media/st-store-ex2-g1.png)
 
-     > **Note:** Due to recent Copilot Studio UI updates, you may be prompted to enter the agent name before creating the agent. If prompted, provide the name below:
+     > **注:** Copilot Studio の UI が最近更新されたため、エージェントを作成する前にエージェント名の入力を求められる場合があります。求められた場合は、以下の名前を入力してください。
 
      ```
      Leave Management Agent
      ```
 
-1. Wait until the **Getting things ready ...** screen completes and the Copilot Studio home page loads.
+1. **[準備中...]** 画面が完了し、Copilot Studio ホーム ページが読み込まれるまで待ちます。
 
      ![](../media/st-store-ex2-g2.png)
 
-1. Verify that the agent provisioning is complete by confirming the **Your agent has been provisioned** message is displayed.
+1. **[エージェントがプロビジョニングされました]** というメッセージが表示されていることを確認して、エージェントのプロビジョニングが完了したことを確認します。
 
      ![](../media/st-store-ex2-g3.png)
 
-     > **Note:** Agent provisioning may take a few minutes to complete, and the agent details might not appear immediately. Please wait until the **Your agent has been provisioned** message is displayed before proceeding.
+     > **注:** エージェントのプロビジョニングには数分かかる場合があり、エージェントの詳細がすぐには表示されない場合があります。続行する前に **[エージェントがプロビジョニングされました]** というメッセージが表示されるまで待ってください。
 
-1. In the **Details** section, select **Edit** to modify the **Name** and **Description**.
+1. **[詳細]** セクションで、**[編集]** を選択して**名前**と**説明**を変更します。
 
      ![](../media/st-store-ex2-g4.png)
 
-1. In the next pane, enter the following details in **Name (1)** and **Description (2)** fields, and then select **Save (3)**..
+1. 次のウィンドウで、**[名前] (1)** と **[説明] (2)** フィールドに次の情報を入力し、**[保存] (3)** を選択します。
 
-    | Key                     | Value                               |
-    |-------------------------------|--------------------------------------------|
-    | Name | `Leave Management Agent` |
-    | Description | Handles leave requests, approvals, and balance updates using Dataverse and Power Automate. Helps employees apply for leave, check status, and get real-time updates via Teams. |
+    | キー                     | 値                               |
+    |-------------------------------|--------------------------------------------|    | 名前 | `Leave Management Agent` |
+    | 説明 | Handles leave requests, approvals, and balance updates using Dataverse and Power Automate. Helps employees apply for leave, check status, and get real-time updates via Teams. |
 
     ![](../media/lev-mgmt-sb-ex1-g2.png)
 
-    > **Note:** If you have already provided the agent name during creation, you can update only the **Description** and then select **Save**.
+    > **注:** エージェントの作成時に既にエージェント名を入力している場合は、**[説明]** のみを更新して **[保存]** を選択できます。
 
-1. In the **Select your agent's model** section, keep the default model selected and do not make any changes.
+1. **[エージェントのモデルの選択]** セクションで、デフォルトのモデルを選択したままにして、変更を加えないでください。
 
-     > **Note:** The available models may vary, as Copilot Studio updates models frequently.
+     > **注:** Copilot Studio はモデルを頻繁に更新するため、利用可能なモデルは異なる場合があります。
 
-1. In the **Instructions** section, select **Edit**.
+1. **[手順]** セクションで、**[編集]** を選択します。
 
     ![](../media/lev-mgmt-sb-ex1-g3.png)
 
-1. In the **Instructions** pane, enter the provided details in the **Instruction (1)** field, and then select **Save (2)**.
+1. **[手順]** ウィンドウで、**[手順] (1)** フィールドに指定された詳細を入力し、**[保存] (2)** を選択します。
 
-   | Key                     | Value                               |
-   |-------------------------------|--------------------------------------------|
-   | Instruction | Assist with leave applications, validate balances, and route approvals. Respond clearly and guide users through each step. Always ensure requests meet policy and ask for missing details. |
+   | キー                     | 値                               |
+   |-------------------------------|--------------------------------------------|   | 手順 | Assist with leave applications, validate balances, and route approvals. Respond clearly and guide users through each step. Always ensure requests meet policy and ask for missing details. |
 
     ![](../media/lev-mgmt-sb-ex1-g4.png)
 
-1. You have successfully created the Leave Management Agent. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
+1. 休暇管理エージェントの作成が完了しました。このラボの次のステップでは、ナレッジ ソースと高度な機能を追加してさらに強化します。
 
-## Task 4: Configure Agent Basics
+## タスク 4: エージェントの基本設定
 
-In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
+このタスクでは、製品カタログ、ポリシー ドキュメント、ストア ウェブサイトのコンテンツなどのナレッジ ソースをエージェントに接続し、検索拡張生成 (RAG) を使用して AI 搭載の回答を提供できるようにします。
 
-1. In the **Knowledge** section, select **Add knowledge**.
+1. **[ナレッジ]** セクションで、**[ナレッジを追加]** を選択します。
 
      ![](../media/lev-mgmt-sb-ex1-g5.png)
 
-1. In the next pane, select **Dataverse** as a knowledge source.
+1. 次のウィンドウで、ナレッジ ソースとして **[Dataverse]** を選択します。
 
      ![](../media/lev-mgmt-sb-ex1-g6.png)
 
-1. From the list, search **Leave Request (1)** and select **Leave Request (2)** table. Click on **Add to agent (3)**.
+1. リストから **Leave Request (1)** を検索して **[Leave Request] (2)** テーブルを選択し、**[エージェントに追加] (3)** をクリックします。
 
      ![](../media/cor-mn-e5-g-15.png)
 
-1. With the basic setup and configurations complete, the next exercises will focus on building the core logic for leave management.
+1. 基本的なセットアップと構成が完了したため、次の演習では休暇管理のコア ロジックの構築に焦点を当てます。
 
 <validation step="153f21c8-cb47-43c9-8ecf-ae3a6c889323" />
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **タスクの完了おめでとうございます！** 次は検証の時間です。手順は次のとおりです。
+> - 対応するタスクの検証ボタンをクリックします。成功のメッセージが表示されたら、次のタスクに進むことができます。
+> - 表示されない場合は、エラー メッセージをよく読み、ラボ ガイドの手順に従ってステップを再試行してください。
+> - サポートが必要な場合は、cloudlabs-support@spektrasystems.com までお問い合わせください。24 時間 365 日対応しています。
 
-## Summary
+## まとめ
 
-In this exercise, you provisioned a Power Platform environment, signed into Microsoft Copilot Studio, created a new agent, and configured its basic settings. These steps laid the groundwork for building an Agentic AI–driven leave management solution.
+この演習では、Power Platform 環境をプロビジョニングし、Microsoft Copilot Studio にサインインし、新しいエージェントを作成して基本設定を構成しました。これらのステップにより、エージェント型 AI 駆動の休暇管理ソリューションを構築するための基盤が整いました。
 
-### You have successfully completed this exercise. Please continue to the next one >>
+### この演習を正常に完了しました。次の演習に進んでください >>
 
    ![](../media/a-gs-g2.png)

@@ -1,166 +1,166 @@
-# Leave Management System with Microsoft Copilot Studio
+# Microsoft Copilot Studio を使用した休暇管理システム
 
-### Overall Estimated Duration: 4 Hours
+### 全体の推定所要時間: 4 時間
 
-## Overview
+## 概要
 
-In this hands-on lab, you will configure and explore a Leave Management Agent that automates employee leave applications, approvals, and balance tracking. The agent enforces strict security and business rules to ensure that requests are handled fairly, securely, and consistently. Employees can apply for leave, check their balance, and track past requests all through a controlled Dataverse integration that respects row-level security and manager approval flows.
+このハンズオン ラボでは、従業員の休暇申請、承認、および残日数管理を自動化する休暇管理エージェントを設定して探索します。エージェントは厳格なセキュリティとビジネス ルールを適用し、申請が公正、安全、かつ一貫して処理されるようにします。従業員は、行レベルのセキュリティとマネージャー承認フローを尊重した Dataverse 連携を通じて、休暇の申請、残日数の確認、および過去の申請の追跡を行うことができます。
 
-## Objectives
+## 目標
 
-By the end of this lab, you will be able to:
+このラボを終了すると、次のことができるようになります。
 
-- **Set up Prerequisites for Leave Management Agent:** Provision a Power Platform environment, sign into Copilot Studio, and configure a new agent’s basic settings.
+- **休暇管理エージェントの前提条件の設定:** Power Platform 環境をプロビジョニングし、Copilot Studio にサインインして、新しいエージェントの基本設定を構成します。
 
-- **Design Advanced Topics:** Define the agent’s purpose, connect knowledge sources, and enable AI-powered responses for leave management.
+- **高度なトピックの設計:** エージェントの目的を定義し、ナレッジ ソースに接続して、休暇管理用の AI 搭載応答を有効にします。
 
-- **Power Automate Approval Workflow:** Implement leave approval logic based on company policy and record finalized requests.
+- **Power Automate 承認ワークフロー:** 会社のポリシーに基づいた休暇承認ロジックを実装し、確定した申請を記録します。
 
-- **End-to-End Testing:** Execute prompts and scenarios to verify the agent updates leave request data correctly in Dataverse.
+- **エンド ツー エンド テスト:** プロンプトとシナリオを実行して、エージェントが Dataverse の休暇申請データを正しく更新することを確認します。
 
-- **Publish & Share:** Publish the agent to Microsoft Teams and ensure it is accessible and responsive to basic prompts.
+- **発行と共有:** エージェントを Microsoft Teams に発行し、基本的なプロンプトに対してアクセス可能かつ応答可能であることを確認します。
 
-## Prerequisites
+## 前提条件
 
-Participants should have:
+参加者は次の知識を持っている必要があります。
 
-- Basic Understanding of Agentic AI Concepts
-- Working knowledge on Microsoft Copilot Studio
+- エージェント型 AI の概念に関する基本的な理解
+- Microsoft Copilot Studio に関する実務知識
 
-## Architecture
+## アーキテクチャ
 
-The Leave Management Agent is built on Microsoft Copilot Studio, integrated with Dataverse for storing leave requests and user data. Power Automate connects business logic by enabling automated approval workflows based on company policies. The agent is then published to Microsoft Teams, allowing employees to interact seamlessly within their work environment. This architecture ensures an end-to-end AI-driven solution that streamlines leave management.
+休暇管理エージェントは Microsoft Copilot Studio 上に構築され、休暇申請とユーザー データを保存する Dataverse と統合されています。Power Automate は、会社のポリシーに基づいた自動承認ワークフローを有効にすることでビジネス ロジックを接続します。エージェントは Microsoft Teams に発行され、従業員が作業環境内でシームレスに操作できるようにします。このアーキテクチャにより、休暇管理を合理化するエンド ツー エンドの AI 駆動型ソリューションが実現します。
 
-## Architecture Diagram
+## アーキテクチャ図
 
 ![](../media/arch-v2.png)
 
-## Explanation of Components
+## コンポーネントの説明
 
-- **Microsoft Copilot Studio:** Platform to build, configure, and manage the leave management agent.
+- **Microsoft Copilot Studio:** 休暇管理エージェントを構築、構成、および管理するためのプラットフォームです。
 
-- **Dataverse:** Central data store for leave requests, user details, and policy records.
+- **Dataverse:** 休暇申請、ユーザーの詳細、ポリシー レコードの中央データ ストアです。
 
-- **Power Platform Environment:** Secure workspace hosting the agent, data, and workflows.
+- **Power Platform 環境:** エージェント、データ、およびワークフローをホストするセキュリティで保護されたワークスペースです。
 
-- **Outlook:** Communication channel for sending leave notifications and approvals.
+- **Outlook:** 休暇通知と承認を送信するための通信チャネルです。
 
-- **Microsoft Teams:** Collaboration hub where users interact directly with the agent.
+- **Microsoft Teams:** ユーザーがエージェントと直接やり取りするコラボレーション ハブです。
 
-## Getting Started with the Lab
+## ラボの開始
 
-Welcome to your Leave Management System with Microsoft Copilot Studio lab! We've prepared a seamless environment for you to explore and learn how to build, configure, and test an intelligent leave management agent. This lab will guide you through applying business rules, handling approvals, and integrating with Dataverse to deliver a secure and efficient experience.
+Microsoft Copilot Studio を使用した休暇管理システム ラボへようこそ！ インテリジェントな休暇管理エージェントを構築、設定、およびテストする方法を探索して学べるシームレスな環境を準備しました。このラボでは、ビジネス ルールの適用、承認の処理、および Dataverse との連携を通じて、安全で効率的なエクスペリエンスを提供するプロセスについて説明します。
 
-### Accessing Your Lab Environment
+### ラボ環境へのアクセス
 
-Once you're ready to dive in, your virtual machine and Lab guide will be right at your fingertips within your web browser.
+準備ができたら、仮想マシンとラボ ガイドがウェブ ブラウザー内にすぐに表示されます。
 
 ![](../media/gs-leave-1.png)
 
-### Exploring Your Lab Resources
+### ラボ リソースの探索
 
-To get a better understanding of your Lab resources and credentials, navigate to the Environment tab.
+ラボ リソースと資格情報をより深く理解するには、**[環境]** タブに移動します。
 
 ![](../media/gs-leave-2.png)
 
-### Utilizing the Split Window Feature
+### 分割ウィンドウ機能の活用
 
-For convenience, you can open the Lab guide in a separate window by selecting the Split Window button from the Top right corner
+便宜のため、右上隅の **[分割ウィンドウ]** ボタンを選択すると、ラボ ガイドを別のウィンドウで開くことができます。
 
 ![](../media/gs-leave-3.png)
 
-### Managing Your Virtual Machine
+### 仮想マシンの管理
 
-From the **Resources (1)** tab, you can easily **start, stop, restart, or connect (2)** to your virtual machine. Your experience is in your hands!
+**[リソース] (1)** タブから、仮想マシンの**起動、停止、再起動、または接続 (2)** を簡単に行うことができます。エクスペリエンスはあなたの手の中にあります！
 
 ![](../media/gs-leave-4.png)
 
-## Let's Get Started with Power Apps Portal
+## Power Apps ポータルの使用開始
 
-1. In the JumpVM, click on the **Microsoft Edge** browser shortcut on the desktop.
+1. JumpVM で、デスクトップ上の **Microsoft Edge** ブラウザー ショートカットをクリックします。
 
    ![](../media/zgr-gt.png)
 
-1. Open a new browser tab and navigate to the Power Apps portal by entering the following URL:
+1. 新しいブラウザー タブを開き、次の URL を入力して Power Apps ポータルに移動します。
 
    ```
    https://make.powerapps.com/
    ```
 
-1. On the **Sign into Microsoft** tab, enter the following email **(1)** in the email field, and then click **Next (2)** to proceed.
+1. **[Microsoft にサインイン]** タブで、次のメール アドレス **(1)** をメール フィールドに入力し、**[次へ] (2)** をクリックして続行します。
 
-   - Email: **<inject key="AzureAdUserEmail"></inject>**
+   - メール アドレス: **<inject key="AzureAdUserEmail"></inject>**
 
      ![](../media/gs-lab3-g2.png)
 
-1. On the **Enter Temporary Access Pass** screen, enter the following **Temporary Access Pass**, and then click **Sign in (2)**.
+1. **[一時アクセス パスワードを入力する]** 画面で、次の**一時アクセス パスワード**を入力し、**[サインイン] (2)** をクリックします。
 
-   - Temporary Access Pass: **<inject key="AzureAdUserPassword"></inject>**
+   - 一時アクセス パスワード: **<inject key="AzureAdUserPassword"></inject>**
 
      ![](../media/gs-lab3-g3.png)
      
-1. If you see the pop-up **Stay Signed in?**, click **No**.
+1. **[サインインしたままにする]** というポップアップが表示された場合は、**[いいえ]** をクリックします。
 
    ![](../media/gs-4.png)
 
-1. If the **Welcome to Power Apps** pop-up appears, leave the default country/region selection and click **Get started**.
+1. **[Power Apps へようこそ]** ポップアップが表示された場合は、デフォルトの国/地域の選択のままにして、**[開始する]** をクリックします。
 
    ![](../media/gs-travel-g1.png)
 
-1. You have now successfully logged in to the Power Apps portal. Keep the portal open.
+1. Power Apps ポータルへのサインインが完了しました。ポータルを開いたままにしてください。
 
    ![](../media/gs-5.png)
 
-   > **Note:** We are signing in to the Power Apps portal because it automatically assigns a Developer license, which is required to create and use a Developer environment in the next steps.
+   > **注:** 次のステップで開発者環境を作成して使用するために必要な開発者ライセンスが自動的に割り当てられるため、Power Apps ポータルにサインインしています。
 
-1. Open a new browser tab and navigate to the Power Platform admin center by entering the following URL:
+1. 新しいブラウザー タブを開き、次の URL を入力して Power Platform 管理センターに移動します。
 
    ```
    https://admin.powerplatform.microsoft.com
    ```
 
-1. In the **Power Platform admin center**, select **Manage** from the left navigation pane.
+1. **Power Platform 管理センター**で、左側のナビゲーション ウィンドウから **[管理]** を選択します。
 
    ![](../media/nd-d2-cor-g-1.png)
 
-1. In the Power Platform admin center, select **Environments (1)** from the left navigation pane, and then choose **New (2)** to create a new environment.
+1. Power Platform 管理センターで、左側のナビゲーション ウィンドウから **[環境] (1)** を選択し、**[新規] (2)** をクリックして新しい環境を作成します。
 
    ![](../media/d2-coor-gs-g2.png)
 
-1. In the **New environment** pane, configure the environment with the following settings, and then select **Next (3)**:
+1. **[新しい環境]** ウィンドウで次の設定で環境を構成し、**[次へ] (3)** を選択します。
 
-   - Select **Developer (1)** from the **Type** dropdown.
-   - Enter **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment** in the **Name (2)** field.
+   - **[種類]** ドロップダウンから **[開発者] (1)** を選択します。
+   - **[名前] (2)** フィールドに **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment** と入力します。
 
       ![](../media/lev-mgmt-sb-gs-g1.png)
 
-1. In the **Add Dataverse** pane, leave all settings as default, and then select **Save**.
+1. **[Dataverse の追加]** ウィンドウで、すべての設定をデフォルトのままにして、**[保存]** を選択します。
 
    ![](../media/lev-mgmt-sb-gs-g2.png)
 
-   > **Environment Foundation:** This step creates the foundational environment that will support your agents with company-specific data and knowledge sources.
+   > **環境の基盤:** このステップでは、会社固有のデータとナレッジ ソースでエージェントをサポートする基盤となる環境を作成します。
 
-   > **Note:** Environment provisioning may take 10-15 minutes to complete. Wait until the status shows as ready before proceeding.
+   > **注:** 環境のプロビジョニングには 10 ～ 15 分かかる場合があります。状態が準備完了と表示されるまで待ってから続行してください。
 
-   > **Note:** If you see an error stating that the environment list cannot be displayed, this is expected while the environment is being created in the background. After 10-15 minutes, refresh the browser and the environment should appear.
+   > **注:** 環境リストを表示できないというエラーが表示される場合は、バックグラウンドで環境が作成中であるため、これは想定内の動作です。10 ～ 15 分後にブラウザーを更新すると、環境が表示されます。
 
-1. In the **Power Platform admin center**, select **Manage (1)**, choose **Environments (2)**, and then click **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (3)**.
+1. **Power Platform 管理センター**で、**[管理] (1)** を選択し、**[環境] (2)** を選択して、**[ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment] (3)** をクリックします。
 
    ![](../media/uppowadminimg1.png)
 
-1. In the environment page, click on **See all** under **S2S apps**.
+1. 環境ページで、**[S2S アプリ]** の下にある **[すべて表示]** をクリックします。
 
    ![](../media/pro-activ-gg-g3.png)
 
-1. In the next pane, click on **+ New app user**.
+1. 次のウィンドウで、**[+ 新しいアプリ ユーザー]** をクリックします。
 
    ![](../media/uppowadminimg3.png)
 
-1. In the create a new app user pane, under **App**, click on **+ Add an app**.
+1. 新しいアプリ ユーザーの作成ウィンドウで、**[アプリ]** の下にある **[+ アプリを追加]** をクリックします。
 
    ![](../media/pro-activ-gg-g4.png)
 
-1. In the **Add an app from Microsoft Entra ID** pane, enter the URL provided below in the search box **(1)**, select the app from the results **(2)**, and then click **Add (3)**.
+1. **[Microsoft Entra ID からアプリを追加]** ウィンドウで、検索ボックス **(1)** に以下の URL を入力し、結果からアプリを選択 **(2)** して、**[追加] (3)** をクリックします。
 
    ```
    https://cloudlabssandbox.onmicrosoft.com/cloudlabs.ai/
@@ -168,37 +168,37 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
    ![](../media/pro-activ-gg-g5.png)
 
-1. Under **Business unit**, enter **org (1)** in the search box, and then select the available business unit from the list **(2)**.
+1. **[ビジネス ユニット]** の下で、検索ボックスに **org (1)** と入力し、リストから使用可能なビジネス ユニットを選択 **(2)** します。
 
    ![](../media/pro-activ-gg-g6.png)
 
-1. Beside **Security roles** click on **Edit** icon.
+1. **[セキュリティ ロール]** の横にある **[編集]** アイコンをクリックします。
 
    ![](../media/pro-activ-gg-g7.png)
 
-1. In the **Sync Permissions** pane, select **System Administrator (1)**, and then click **Save (2)**.
+1. **[同期アクセス許可]** ウィンドウで **[システム管理者] (1)** を選択し、**[保存] (2)** をクリックします。
 
    ![](../media/pro-activ-gg-g8.png)
 
-1. In the pop-up window, select **save**.
+1. ポップアップ ウィンドウで **[保存]** を選択します。
 
    ![](../media/pro-activ-gg-g9.png)
 
-1. Review all the details and click on **Create**.
+1. すべての詳細を確認し、**[作成]** をクリックします。
 
    ![](../media/pro-activ-gg-g10.png)
 
-## Support Contact
+## サポート連絡先
 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+CloudLabs サポート チームは、年中無休 24 時間 365 日、メールとライブ チャットでシームレスなサポートをいつでも提供しています。学習者とインストラクターの両方に専用のサポート チャネルを提供し、すべてのニーズに迅速かつ効率的に対応します。
 
-Learner Support Contacts:
+学習者サポート連絡先:
 
-- Email Support: cloudlabs-support@spektrasystems.com
-- Live Chat Support: https://cloudlabs.ai/labs-support
+- メール サポート: cloudlabs-support@spektrasystems.com
+- ライブ チャット サポート: https://cloudlabs.ai/labs-support
 
-Now, click on the **Next** from lower right corner to move on next page.
+右下隅の **[次へ]** をクリックして、次のページに進んでください。
 
    ![](../media/a-gs-g1.png)
 
-## Happy Learning!!
+## ハッピー ラーニング!!
