@@ -1,94 +1,93 @@
-# Exercise 5: Publishing & Sharing
+# 演習 5: 発行と共有
 
-### Estimated Duration: 40 Minutes
+### 推定所要時間: 40 分
 
-## Overview
+## 概要
 
-In this exercise, you will learn how to publish the **Leave Management Agent** to Microsoft Teams and validate its functionality. You will begin by enabling the Teams channel in Copilot Studio and completing the publishing process. After deployment, you will interact with the agent in Microsoft Teams by submitting a leave request, confirming that it responds correctly, and verifying the approval workflow.  
+この演習では、**Leave Management Agent** を Microsoft Teams に発行して展間する方法を学びます。Teams 内でエージェントをテストし、犬察集と休暇申請プロセスが期待どおり機能することを確認します。
 
-## Objectives
+## 目標
 
-You will be able to complete the following tasks:
+次のタスクを完了できるようになります。
 
-- Task 1: Deploy & Publish Your Agent to Microsoft Teams
-- Task 2: Test the Deployed Agent in Microsoft Teams
+- タスク 1: Microsoft Teams への展間と発行
 
-## Task 1: Deploy & Publish Your Agent to Microsoft Teams
+- タスク 2: Microsoft Teams での発行済みエージェントのテスト
 
-In this task, you will publish the **Leave Management Agent** to Microsoft Teams by enabling the Teams channel in Copilot Studio. You will configure the publishing settings, make the agent available, and verify that it is successfully installed and accessible within the Teams environment.
+## タスク 1: Microsoft Teams への展間と発行
 
-1. Now that you've configured the agent, it's time to publish it so it can be used across different platforms.
+このタスクでは、Copilot Studio のチャンネル設定を使用して **Leave Management Agent** を Microsoft Teams に発行します。
 
-1. On the **Leave Management Agent** page, select the **Channels (1)** tab and click **Teams and Microsoft 365 Copilot (2)** under Microsoft channels.
+1. **[Leave Management Agent]** ページで、**[チャンネル] (1)** タブを選択し、**[Teams および Microsoft 365 Copilot] (2)** チャンネルに移動します。
 
    ![](../media/leav-man-e4-g-2.png)
 
-1. On the **Teams and Microsoft 365 Copilot** page, select **Make agent available in Microsoft 365 Copilot (1)** and then click **Add channel (2)**. 
+1. **[Teams および Microsoft 365 Copilot]** ページで、**[エージェントを Microsoft 365 Copilot で使用可能にする]** を有効化して全体の展間区域を増やすか、ページ 下部の **[チャンネルの追加] (1)** ボタンをクリックして続けます。
 
    ![](../media/leav-man-e4-g-3.png)
 
-1. On the **Ready to publish?** dialog box, click **Publish** to make the agent available. 
+1. **[発行の準備ができましたか?]** ダイアログで、**[発行] (1)** をクリックしてエージェントを Teams 向けに公開します。
 
    ![](../media/leav-man-e4-g-4.png)
 
-1. Once the channel is added, on the **Teams and Microsoft 365 Copilot** page, click **See agent in Teams** to open the agent in Microsoft Teams. 
+1. 選択した Teams チャンネル内でエージェントを表示するリンクを確認します。
 
    ![](../media/leav-man-e4-g-5.png)
 
-1. If the **Open Microsoft Teams?** pop-up appears, click **Cancel** to stay on the browser. 
+1. **[Microsoft Teams を開く]** ポップアップが表示された場合は、**[キャンセル] (1)** をクリックしてデスクトップ アプリを開かずに進めます。
 
    ![](../media/leav-man-e4-g-6.png)
 
-1. On the **Stay better connected with the Teams desktop app** page, click **Use the web app instead** to continue in the browser.
+1. **[代わりに Web アプリを使用]** リンクをクリックして、ブラウザー ベースの Teams で続けます。
 
    ![](../media/leav-man-e4-g-7.png)
 
-1. On the **Leave Management Agent** page in Microsoft Teams, click **Add** to install the agent. If you are not able to see the **Add** option, please navigate back to Copilot Studio and use **See agent in Teams** again.
+1. Teams アプリ ストアでエージェントのページを確認し、**[追加] (1)** をクリックして **Leave Management Agent** を追加します。
 
    ![](../media/leav-man-e4-g-12.png)
 
-1. Once the agent is added successfully, click **Open** to launch the **Leave Management Agent** in Teams. 
+1. Teams 内で **[Leave Management Agent] (1)** を開きます。
 
    ![](../media/leav-man-e4-g-13.png)
 
-1. In the **Leave Management Agent** chat window, type **Hello (1)** in the message box and click the **Send (2)** button to initiate the conversation.
+1. チャット ボックスに **Hello (1)** と入力し、**[送信] (2)** ボタンをクリックしてエージェントと会話を開始します。
 
    ![](../media/cor-mn-e4-g-19.png)
 
-## Task 2: Test the Deployed Agent in Microsoft Teams
+## タスク 2: Microsoft Teams での発行済みエージェントのテスト
 
-In this task, you will test the deployed **Leave Management Agent** in Microsoft Teams by submitting a leave request, providing the required details, and reviewing the approval outcome.
+このタスクでは、Microsoft Teams 内で **Leave Management Agent** に休暇申請を展間し、展間済みのエージェントをテストします。
 
-1. In the **Leave Management Agent** chat window, type **I want to apply for leave (1)** in the message box and click the **Send (2)** button to continue the conversation.
+1. **[Leave Management Agent]** チャットで、チャット ボックスに **休暇を申請したい (1)** と入力し、**[送信] (2)** ボタンをクリックして休暇申請フローを開始します。
 
    ![](../media/cor-mn-e4-g-12.png)
 
-1. In the **Leave Management Agent** chat window, when prompted to select a leave type, choose one of the options.
+1. エージェントから休暇の種類を選択するよう求められたら、希望の休暇の種類を選択します。
 
    ![](../media/cor-mn-e4-g-13.png)
 
-1. In the **Leave Management Agent** chat, enter your leave start date in the required format **yyyy-mm-dd**, for example **2025-09-20 (1)**, and click the **Send (2)** button to proceed. 
+1. エージェントから開始日を入力するよう求められたら、**yyyy-mm-dd** 形式で入力します (例: **2025-09-20 (1)**).
 
    ![](../media/cor-mn-e4-g-14.png)
 
-1. In the **Leave Management Agent** chat, enter your leave end date in the required format **yyyy-mm-dd**, for example **2025-09-27 (1)**, and click the **Send (2)** button to submit. This ensures the total leave period is greater than 2 days.
+1. エージェントから終了日を入力するよう求められたら、**yyyy-mm-dd** 形式で入力します (例: **2025-09-27 (1)**).
 
    ![](../media/cor-mn-e4-g-15.png)
 
-1. In the **Leave Management Agent** chat, type the reason for your leave, for example **Need a break to play video games (1)**, and click the **Send (2)** button to continue.
+1. エージェントから申請の理由を入力するよう求められたら、理由を入力します (例: **Need a break to play video games (1)**).
 
    ![](../media/cor-mn-e4-g-16.png)
 
-1. In the **Leave Approval** email from **Microsoft Power Automate (1)**, click **Reject (2)**, type the reason for rejection in the **Comments (3)** field, and click **Submit (4)** to confirm. 
+1. **Microsoft Power Automate** からの Leave Approval メールで、**[拒否] (1)** をクリックし、拒否の理由を入力し (例: *仲間が休暇を取るので遊びに行くのは許可できません* (2))、**[送信] (3)** をクリックします。
 
    ![](../media/cor-mn-e4-g-20.png)
 
-1. In Microsoft Teams, go to the **Activity (1)** section and review the **Leave Approval (2)** notification to see the final status of the request. 
+1. Teams の **[アクティビティ]** セクションを確認して、**Leave Management Agent** から Leave Approval 通知が届いていることを確認します。
 
    ![](../media/cor-mn-e4-g-21.png)
 
-## Summary
+## まとめ
 
-In this exercise, you successfully published the **Leave Management Agent** to Microsoft Teams and confirmed that it could be accessed and used within the Teams environment. You tested the agent by submitting a leave request, providing the required details, and observing the automated approval process through Power Automate. This validated both the deployment and the functional behavior of the agent in a real user scenario.
+この演習では、**Leave Management Agent** を Microsoft Teams に発行し、Teams 内でエージェントをテストしました。休暇申請フローが期待どおり機能すること、および承認プロセスの辺りでエージェントが正しく応答することを確認しました。
 
-### You have successfully completed the Lab!
+### ラボを正常に完了しました！
