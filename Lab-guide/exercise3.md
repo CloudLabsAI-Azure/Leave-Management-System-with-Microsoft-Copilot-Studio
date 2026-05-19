@@ -1,95 +1,95 @@
-# Exercise 3: Power Automate Approval Workflow 
+# 演習 3: Power Automate 承認ワークフロー
 
-### Estimated Duration: 40 Minutes
+### 推定所要時間: 40 分
 
-## Overview
+## 概要
 
-In this exercise, you will continue building the leave management agent by adding more advanced capabilities. You will implement approval logic based on company policy: if the leave duration is two days or less, it will be automatically approved. Otherwise, it will go through an approval process. Once approved, the leave request will be finalized and recorded.
+この演習では、休暇管理エージェントを引き続き構築し、より高度な機能を追加します。会社のポリシーに基づいた承認ロジックを実装します。2 日以内の休暇は自動承認されます。それ以外の場合は承認プロセスを通じます。承認された後は、休暇申請が確定されて記録されます。
 
-## Objectives
+## 目標
 
-You will be able to complete the following tasks:
+次のタスクを完了できるようになります。
 
-- Task 1: Create Approval Flow
+- タスク 1: 承認フローの作成
 
-- Task 2: Update Dataverse
+- タスク 2: Dataverse の更新
 
-- Task 3: Complete leave request topic 
+- タスク 3: 休暇申請トピックの完成
 
-### Task 1: Create Approval Flow
+### タスク 1: 承認フローの作成
 
-In this task, you will enhance the Leave Management Workflow by incorporating approval logic and advanced management features to handle leave requests more efficiently.
+このタスクでは、承認ロジックと高度な管理機能を組み込んで Leave Management Workflow を強化し、休暇申請をより効率的に処理します。
 
-1. On the **Copilot Studio** page, select **Flows (1)** from the left navigation menu, and then click on the **Untitled (2)** flow to open and edit it.
+1. **Copilot Studio** ページで、左側のナビゲーション メニューから **[フロー] (1)** を選択し、**[Untitled] (2)** フローをクリックして開いて編集します。
 
      ![](../media/lev-mgmt-sb-ex3-g1.png)
 
-1. On the **Untitled** flow page, click the **Designer** tab to begin editing the flow.
+1. **[Untitled]** フロー ページで、**[デザイナー]** タブをクリックしてフローの編集を開始します。
 
      ![](../media/cor-mn-e5-g-63.png)
 
-1. On the **Designer** canvas, click the **plus (+) icon (1)** to add a new action.
+1. **デザイナー** キャンバスで、**プラス (+) アイコン (1)** をクリックして新しいアクションを追加します。
 
      ![](../media/lvimg40.png)
 
-1. In the **Add an action** dialog, type **Condition (2)** in the search bar and select **Condition (3)** under the **Control** section
+1. **[アクションの追加]** ダイアログで、検索バーに **条件 (2)** と入力して、**[コントロール]** セクションで **[条件] (3)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g2.png)
 
-1. In the **Condition** pane, type **/** in the field (1) and select **Insert expression (2)** from the dropdown list.
+1. **[条件]** ウィンドウで、フィールド (1) に **/** と入力して、ドロップダウン リストから **[式の挿入] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g3.png)
 
-1. In the **Expression** editor, type **int() (1)** and keep the cursor inside the parentheses, select **Dynamic content (2)**, search for **durationDays (3)**, and then select **durationDays (4)**.
+1. **[式]** エディターで、**int() (1)** と入力して括弧の内側にカーソルを置き、**[動的コンテンツ] (2)** を選択し、**durationDays (3)** を検索して **durationDays (4)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g4.png)
 
-1. In the **Expression** editor, verify that the expression is set **(1)**. Once done, click **Add (2)** to insert it into the condition. 
+1. **[式]** エディターで、式が設定されていることを確認 **(1)** します。完了したら、**[追加] (2)** をクリックして条件に挿入します。
 
      ![](../media/lev-mgmt-sb-ex3-g51.png)
 
-     > **Note:** The expression reference (for example, `triggerBody()?['text_4']`) may vary depending on the order in which inputs are added in the **When an agent calls the flow** step. The number (`text_4`, `text_5`, etc.) is auto-generated
+     > **注:** 式の参照 (例えば `triggerBody()?['text_4']`) は、**[エージェントがフローを呼び出したとき]** ステップで入力が追加された順序によって异なる場合があります。番号 (`text_4`、`text_5` など) は自動生成されます。
 
-1. In the **Condition** action, select **is less or equal to (1)** from the operator dropdown.
+1. **[条件]** アクションで、演算子のドロップダウンから **[以下または等しい] (1)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g52.png)
 
-1. In the **Condition** action, enter **2** in the value field.
+1. **[条件]** アクションの値フィールドに **2** と入力します。
 
      ![](../media/lev-mgmt-sb-ex3-g53.png)
 
-1. In the **Condition** action, under the **False** branch, click the **plus (+) icon**.
+1. **[条件]** アクションの **False** ブランチで、**プラス (+) アイコン**をクリックします。
 
      ![](../media/lev-mgmt-sb-ex3-g8.png)
 
-1. In the **Add an action** dialog, type **Start and wait for an approval (1)** in the search bar and select **Start and wait for an approval (2)** under **Standard approvals**.
+1. **[アクションの追加]** ダイアログで、検索バーに **承認を開始して待機する (1)** と入力して、**[標準承認]** の下で **[承認を開始して待機する] (2)** を選択します。
 
      ![](../media/lvimg44.png)
 
-1. In the next pane, click on **Create new**.
+1. 次のウィンドウで、**[新規作成]** をクリックします。
 
      ![](../media/lvimg45.png)
 
-1. In the **Start and wait for an approval** action, configure the parameters:  
-     - From the **Approval type** drop-down, select **Approve/Reject - Everyone must approve (1)**.  
-     - In the **Title** field, enter **Leave Approval (2)**.  
-     - In the **Assigned to** field, type the email address <inject key="AzureAdUserEmail"></inject> **(3)** and select the matching account from the suggestions **(4)**. 
+1. **[承認を開始して待機する]** アクションでパラメーターを構成します。
+     - **[承認の種類]** ドロップダウンから **[承認/拒否 - 全員が承認する必要がある] (1)** を選択します。
+     - **[タイトル]** フィールドに **Leave Approval (2)** と入力します。
+     - **[担当者]** フィールドにメール アドレス <inject key="AzureAdUserEmail"></inject> **(3)** を入力し、候補 **(4)** から一致するアカウントを選択します。
 
           ![](../media/lev-mgmt-sb-ex3-g9.png)
 
-1. In the **False** branch after the approval node, click the **plus (+) icon**.
+1. **False** ブランチの承認ノードの後で、**プラス (+) アイコン**をクリックします。
 
      ![](../media/lev-mgmt-sb-ex3-g10.png)
 
-1. In the **Add an action** pane, search for **Condition (1)**, and then select **Condition (2)**.
+1. **[アクションの追加]** ウィンドウで、**条件 (1)** を検索し、**[条件] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g11.png)
 
-1. In the **Condition** action, type **/** in the value field **(1)**, and then select **Insert expression (2)**.
+1. **[条件]** アクションで、値フィールド **(1)** に **/** と入力して、**[式の挿入] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g12.png)
 
-1. In the expression editor, paste the expression in the editor box **(1)**, select **Dynamic content (2)** if required, and then choose **Add (3)**.
+1. 式エディターで、エディター ボックス **(1)** に式を貼り付け、必要に応じて **[動的コンテンツ] (2)** を選択して、**[追加] (3)** をクリックします。
 
      ```
      outputs('Start_and_wait_for_an_approval')?['body/outcome']
@@ -97,61 +97,61 @@ In this task, you will enhance the Leave Management Workflow by incorporating ap
 
      ![](../media/lev-mgmt-sb-ex3-g13.png)
 
-1. In the **Condition 1** action, set the operator to **is equal to (1)**, and then enter **Approve (2)**.
+1. **[条件 1]** アクションで、演算子を **[等しい] (1)** に設定し、**Approve (2)** と入力します。
 
      ![](../media/lev-mgmt-sb-ex3-g14.png)
 
-     > This condition evaluates whether the leave request has been approved by retrieving the response from the previous approval step.
+     > この条件は、前の承認ステップから応答を取得することで、休暇申請が承認されたかどうかを評価します。
 
-1. In the **False** branch, select the **+** icon.
+1. **False** ブランチで、**+** アイコンを選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g16.png)
 
-1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**.
+1. **[アクションの追加]** ウィンドウで、**Skills (1)** を検索し、**[エージェントへの応答] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g17.png)
 
-1. In the **Respond to the agent** action, select **Add an output**.
+1. **[エージェントへの応答]** アクションで、**[出力の追加]** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g18.png)
 
-1. In the **Respond to the agent** action, select **Text** as the output type.
+1. **[エージェントへの応答]** アクションで、出力の種類として **[テキスト]** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g19.png)
 
-1. In the **Respond to the agent** action, set the output name to **reply (1)** and enter **The request is rejected (2)** as the response message.
+1. **[エージェントへの応答]** アクションで、出力名を **reply (1)** に設定し、応答メッセージとして **The request is rejected (2)** と入力します。
 
      ![](../media/lev-mgmt-sb-ex3-g20.png)
 
-1. In the **False** branch, after the **Respond to the agent** action, click the **plus (+) icon (1)** to add a new action.  
+1. **False** ブランチで、**[エージェントへの応答]** アクションの後にある**プラス (+) アイコン (1)** をクリックして新しいアクションを追加します。
 
      ![](../media/lev-mgmt-sb-ex3-g21.png)
 
-1. In the **Add an action** pane, search for **Terminate (1)**, and then select **Terminate (2)**.
+1. **[アクションの追加]** ウィンドウで、**終了 (1)** を検索し、**[終了] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g22.png)
 
-1. In the **Terminate** action, set the **Status** field to **Succeeded** to complete the workflow after rejection.
+1. **[終了]** アクションで、拒否後にワークフローを完了するため、**[状態]** フィールドを **[成功]** に設定します。
 
      ![](../media/lev-mgmt-sb-ex3-g23.png)
 
-### Task 2: Update Dataverse
+### タスク 2: Dataverse の更新
 
-In this task, you will update the flow to modify the Dataverse table, changing the leave request status from 'Pending' to 'Approved' based on the defined conditions.
+このタスクでは、定義した条件に基づいて休暇申請のステータスを [保留中] から [承認済み] に変更するようにフローを更新します。
 
-1. Now click the **plus (+) icon (1)** to add a new action for the root node.   
+1. ルート ノードの**プラス (+) アイコン (1)** をクリックして新しいアクションを追加します。
 
      ![](../media/lev-mgmt-sb-ex3-g24.png)
 
-1. In the **Add an action** pane, search for **Update a row (1)**, and then select **Update a row (2)**.  
+1. **[アクションの追加]** ウィンドウで、**行の更新 (1)** を検索し、**[行の更新] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g25.png)
 
-1. In the **Update a row** action, select **Leave Request (1)** for **Table name**, enter **/** in the **Row ID (2)** field, and then select **Insert expression (3)**.
+1. **[行の更新]** アクションで、**[テーブル名]** に **Leave Request (1)** を選択し、**[行 ID] (2)** フィールドに **/** と入力して、**[式の挿入] (3)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g26.png)
 
-1. In the **Expression** editor, enter the following expression in **(1)**, and then select **Update (2)**:
+1. **[式]** エディターで、**(1)** に次の式を入力して、**[更新] (2)** を選択します。
 
      ```
      outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
@@ -159,25 +159,25 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
      ![](../media/lev-mgmt-sb-ex3-g27.png)
 
-     > **Note:** The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+     > **注:** ここでの **Logical_ID** は、演習 1 で Power Apps ポータルからコピーした ID を指します。
 
-1. In the **Update a row** action, select the **+** icon. 
+1. **[行の更新]** アクションで、**+** アイコンを選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g28.png)
 
-1. In the **Add an action** pane, search for **Skills (1)**, and then select **Respond to the agent (2)**. 
+1. **[アクションの追加]** ウィンドウで、**Skills (1)** を検索し、**[エージェントへの応答] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g29.png)
 
-1. In the **Respond to the agent 1** action, select **Add an output**.
+1. **[エージェントへの応答 1]** アクションで、**[出力の追加]** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g30.png)
 
-1. In the **Respond to the agent 1** action, select **Text** as the output type.
+1. **[エージェントへの応答 1]** アクションで、出力の種類として **[テキスト]** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g31.png)
 
-1. In the **Respond to the agent 1** action, enter **reply (1)** as the output name, and then enter the following message in the value field **(2)**.
+1. **[エージェントへの応答 1]** アクションで、出力名として **reply (1)** を入力し、値フィールド **(2)** に次のメッセージを入力します。
 
      ```
      Your leave is approved from [start_date] to [end_date]
@@ -185,23 +185,23 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
      ![](../media/lev-mgmt-sb-ex3-g32.png)
 
-1. In the **Respond to the agent 1** action, select the **start_date (1)** placeholder, and then choose the **fx (2)** option.
+1. **[エージェントへの応答 1]** アクションで、**start_date (1)** プレースホルダーを選択して、**fx (2)** オプションを選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g33.png)
 
-1. In the expression editor, paste the expression in the editor box, and then select **Add**.
+1. 式エディターで、エディター ボックスに式を貼り付けて、**[追加]** を選択します。
 
      ```
      outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
      ``` 
 
-     > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+     > **注**: ここでの **Logical_ID** は、演習 1 で Power Apps ポータルからコピーした ID を指します。
 
-1. In the **Respond to the agent 1** action, select the **end_date (1)** placeholder, and then choose the **fx (2)** option.
+1. **[エージェントへの応答 1]** アクションで、**end_date (1)** プレースホルダーを選択して、**fx (2)** オプションを選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g34.png)
 
-1. In the expression editor, paste the expression in the editor box **(1)**, and then select **Add (2)**.
+1. 式エディターで、エディター ボックス **(1)** に式を貼り付けて、**[追加] (2)** を選択します。
 
      ```
      outputs('Add_a_new_row')?['body/<Logical_ID>_enddate']
@@ -209,88 +209,88 @@ In this task, you will update the flow to modify the Dataverse table, changing t
 
      ![](../media/lev-mgmt-sb-ex3-g35.png)
 
-     > **Note**: The **Logical_ID** here refers to the ID that you have copied in the first exercise from power apps portal.
+     > **注**: ここでの **Logical_ID** は、演習 1 で Power Apps ポータルからコピーした ID を指します。
 
-1. The completed flow should now look like the following:
+1. 完成したフローは次のようになります。
 
-   - The flow starts with **When an agent calls the flow**.  
-   - A new record is created in the **Leave Request** table using **Add a new row**.  
-   - A **Condition** checks the leave duration.  
-   - If **True**, the process continues.  
-   - If **False**, the flow triggers **Start and wait for an approval**.  
-      - Inside this branch, another **Condition** validates the approval outcome.  
-         - If **Approved**, the flow updates the leave record with status **Approved** and sends a response back to the agent.  
-         - If **Rejected**, the flow responds to the agent that the request is rejected and then terminates successfully.  
-   - The final steps include **Update a row** to mark approval in Dataverse, followed by a confirmation response through **Respond to the agent 1**. 
+   - フローは **[エージェントがフローを呼び出したとき]** から開始します。
+   - **[新しい行の追加]** を使用して **Leave Request** テーブルに新しいレコードを作成します。
+   - **[条件]** で休暇期間を確認します。
+   - **True** の場合は処理を続けます。
+   - **False** の場合は **[承認を開始して待機する]** フローがトリガーされます。
+      - このブランチ内で、別の **[条件]** が承認結果を検証します。
+         - **[承認済み]** の場合は、フローが Dataverse の休暇レコードを承認済み状態に更新し、エージェントに確認応答を返します。
+         - **[拒否]** の場合は、フローが申請は拒否されたとエージェントに応答し、正常終了します。
+   - 最終ステップには、**[行の更新]** で Dataverse の承認をマークし、**[エージェントへの応答 1]** で確認応答を返す処理が含まれます。
 
-1. At the top-right corner of the flow designer, click **Publish** to save and activate your flow.
+1. フロー デザイナーの右上隅で **[発行]** をクリックして、フローを保存して有効化します。
 
      ![](../media/lev-mgmt-sb-ex3-g36.png)
 
-1. On the **Overview (1)** page, select **Edit (2)**.
+1. **[概要] (1)** ページで **[編集] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g37.png)
 
-1. In the **Details** pane, enter **Leave Management Workflow (1)** in the **Flow name** field. Then, click **Save (2)** to apply the changes.  
+1. **[詳細]** ウィンドウで、**[フロー名] (1)** フィールドに **Leave Management Workflow** と入力し、**[保存] (2)** をクリックして変更を適用します。
 
      ![](../media/leav-man-e2-g-107.png)
 
 <validation step="786e3497-70e3-44d4-997f-45095642a4af" />
  
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **タスクの完了おめでとうございます！** 次は検証の時間です。手順は次のとおりです。
+> - 対応するタスクの検証ボタンをクリックします。成功のメッセージが表示されたら、次のタスクに進むことができます。
+> - 表示されない場合は、エラー メッセージをよく読み、ラボ ガイドの手順に従ってステップを再試行してください。
+> - サポートが必要な場合は、cloudlabs-support@spektrasystems.com までお問い合わせください。24 時間 365 日対応しています。
 
-### Task 3: Complete leave request topic
+### タスク 3: 休暇申請トピックの完成
 
-In this task, you will complete the leave request topic by implementing the logic to add new leave requests and update existing records in Dataverse with the request details.
+このタスクでは、新しい休暇申請を追加し、Dataverse の既存レコードを申請詳細で更新するロジックを実装して、休暇申請トピックを完成させます。
 
-1. On the **Copilot Studio** page, select **Agents (1)** from the left navigation menu and click **Leave Management Agent (2)**.
+1. **Copilot Studio** ページで、左側のナビゲーション メニューから **[エージェント] (1)** を選択し、**[Leave Management Agent] (2)** をクリックします。
 
      ![](../media/lev-mgmt-sb-ex2-g52.png)
 
-1. Please click on **+** as shown below to expand the menu and then select **Topics** from the list.
+1. 下図のように **+** をクリックしてメニューを展開し、リストから **[トピック]** を選択します。
 
      ![](../media/lvimg55.png)
 
-1. In the **Topics (1)** tab, select **leave_request (2)**.
+1. **[トピック] (1)** タブで、**[leave_request] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g39.png)
 
-1. On the **Outputs (2)** section, click the **plus (+) icon** to add the next step in the flow. **(1)**
+1. **[出力] (2)** セクションで、**プラス (+) アイコン**をクリックしてフローの次のステップを追加します。**(1)**
 
      ![](../media/lev-mgmt-sb-ex3-g40.png)
 
-1. On the **Outputs (2)** section, click **Add a tool (1)** and select **Leave Management Workflow (2)** from the list of tools. 
+1. **[出力] (2)** セクションで、**[ツールの追加] (1)** をクリックし、ツールのリストから **[Leave Management Workflow] (2)** を選択します。
 
      ![](../media/lev-mgmt-sb-ex3-g41.png)
 
-1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (7) (3)** section and select the **reply (4)** variable by checking the box.   
+1. **オーサリング キャンバス**で、上部メニューから **[変数] (1)** をクリックします。**[参照] (2)** タブで、**[トピック (7)] (3)** セクションを展開して、チェックボックスをオンにして **reply (4)** 変数を選択します。
 
      ![](../media/cor-mn-e5-g-79.png)
 
-     > If you are not able to see the variables option, please click on **...** menu and select **Variables**
+     > 変数オプションが表示されない場合は、**[...]** メニューをクリックして **[変数]** を選択してください。
 
       ![](../media/lvimg56.png)
 
-1. On the **Action** card, set the value for **employeeEmail (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **System (2)** tab.  
-    - Search for **User.Email (3)**.  
-    - Select **User.Email (4)** from the results.  
+1. **[アクション]** カードで、**employeeEmail (String)** の値を設定します。
+    - **省略記号 (...) (1)** をクリックします。
+    - **[変数の選択]** パネルで **[システム] (2)** タブに移動します。
+    - **User.Email (3)** を検索します。
+    - 結果から **User.Email (4)** を選択します。
 
         ![](../media/lev-mgmt-sb-ex3-g43.png)
 
-1. On the **Action** card, set the value for **employeeName (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **System (2)** tab.  
-    - Search for **User.FirstName (3)**.  
-    - Select **User.FirstName (4)** from the results. 
+1. **[アクション]** カードで、**employeeName (String)** の値を設定します。
+    - **省略記号 (...) (1)** をクリックします。
+    - **[変数の選択]** パネルで **[システム] (2)** タブに移動します。
+    - **User.FirstName (3)** を検索します。
+    - 結果から **User.FirstName (4)** を選択します。
 
         ![](../media/lev-mgmt-sb-ex3-g44.png)
 
-1. On the **Action** card, set the value for **leaveType (String)** by selecting the **ellipsis (…) (1)**, choosing the **Formula (2)** tab, entering the formula **(3)**, and then selecting **Insert (4)**.
+1. **[アクション]** カードで、**leaveType (String)** の値を設定するには、**省略記号 (...) (1)** を選択し、**[式] (2)** タブを選択し、式 **(3)** を入力して、**[挿入] (4)** を選択します。
 
      ```
      Text(Topic.leave_type)
@@ -298,71 +298,71 @@ In this task, you will complete the leave request topic by implementing the logi
 
      ![](../media/lev-mgmt-sb-ex3-g45.png)
 
-1. On the **Action** card, set the value for **reason (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, choose the **Custom (2)** tab.  
-    - Select **reason (Topic.reason) (3)** from the list.  
+1. **[アクション]** カードで、**reason (String)** の値を設定します。
+    - **省略記号 (...) (1)** をクリックします。
+    - **[変数の選択]** パネルで **[カスタム] (2)** タブを選択します。
+    - リストから **reason (Topic.reason) (3)** を選択します。
 
         ![](../media/lev-mgmt-sb-ex3-g46.png)
 
-1. On the **Action** card, set the value for **durationDays (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **duration (Topic.duration) (3)** from the list.  
+1. **[アクション]** カードで、**durationDays (String)** の値を設定します。
+    - **省略記号 (...) (1)** をクリックします。
+    - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
+    - リストから **duration (Topic.duration) (3)** を選択します。
 
         ![](../media/lev-mgmt-sb-ex3-g47.png)
 
-1. On the **Action** card, set the value for **balance (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **balance (Topic.balance) (3)** from the list.  
+1. **[アクション]** カードで、**balance (String)** の値を設定します。
+    - **省略記号 (...) (1)** をクリックします。
+    - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
+    - リストから **balance (Topic.balance) (3)** を選択します。
 
         ![](../media/lev-mgmt-sb-ex3-g48.png)
 
-1. On the **Action** card, set the value for **startDate (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **startDate (Topic.startDate) (3)** from the list.  
+1. **[アクション]** カードで、**startDate (String)** の値を設定します。
+    - **省略記号 (...) (1)** をクリックします。
+    - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
+    - リストから **startDate (Topic.startDate) (3)** を選択します。
 
         ![](../media/lev-mgmt-sb-ex3-g49.png)
 
-1. On the **Action** card, set the value for **endDate (String)**:  
-    - Click the **ellipsis (…) (1)**.  
-    - In the **Select a variable** panel, go to the **Custom (2)** tab.  
-    - Select **endDate (Topic.endDate) (3)** from the list.  
+1. **[アクション]** カードで、**endDate (String)** の値を設定します。
+    - **省略記号 (...) (1)** をクリックします。
+    - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
+    - リストから **endDate (Topic.endDate) (3)** を選択します。
 
         ![](../media/lev-mgmt-sb-ex3-g50.png)
 
-1. On the **Outputs (1)** section, click the **plus icon (1)** and select **Send a message (2)**. 
+1. **[出力] (1)** セクションで、**プラス アイコン (1)** をクリックし、**[メッセージを送信する] (2)** を選択します。
 
      ![](../media/leav-man-e3-g-36.png)
 
-1. On the **Message** step:  
-    - Click on the **variable icon (1)**.  
-    - In the **Select a variable** pane, choose the **Custom (2)** tab.  
-    - Type **reply (3)** in the search box.  
-    - Select **reply (4)** from the results. 
+1. **[メッセージ]** ステップで、次を行います。
+    - **変数 アイコン (1)** をクリックします。
+    - **[変数の選択]** ウィンドウで **[カスタム] (2)** タブを選択します。
+    - 検索ボックスに **reply (3)** と入力します。
+    - 結果から **reply (4)** を選択します。
 
         ![](../media/leav-man-e3-g-37.png)
 
-1. On the **Message** step, click the **plus (+) icon** to add the next action in the flow. 
+1. **[メッセージ]** ステップで、**プラス (+) アイコン**をクリックしてフローに次のアクションを追加します。
 
      ![](../media/leav-man-e3-g-38.png)
 
-1. On the **Message** step, expand the options and select **Topic management (1)**, then click **End conversation (2)** to close the flow. 
+1. **[メッセージ]** ステップで、オプションを展開して **[トピック管理] (1)** を選択し、**[会話を終了する] (2)** をクリックしてフローを閉じます。
 
      ![](../media/leav-man-e3-g-39.png)
 
-1. At the top-right corner of the page, click **Save** to store the changes made to the topic.  
+1. ページ右上隅の **[保存]** をクリックして、トピックへの変更を保存します。
 
      ![](../media/leav-man-e3-g-41.png)
 
-1. You have successfully completed the creation of the agent. It is now fully equipped with all intended capabilities and will be ready for testing in the next task.
+1. エージェントの作成が正常に完了しました。次のタスクでテストする準備ができました。
 
-## Summary
+## まとめ
 
-In this exercise, you continued building the leave management agent by adding advanced capabilities. You implemented approval logic based on company policy: leaves of two days or less were automatically approved, while longer leaves went through an approval process. Once approved, the leave requests were finalized and recorded.
+この演習では、休暇管理エージェントに高度な機能を追加しました。会社のポリシーに基づいた承認ロジックを実装しました。2 日以内の休暇は自動承認され、長期の休暇は承認プロセスを通じました。承認後は、休暇申請が確定されて記録されました。
 
-### You have successfully completed this exercise. Please continue to the next one >>
+### この演習を正常に完了しました。次の演習に進んでください >>
 
    ![](../media/a-gs-g4.png)
