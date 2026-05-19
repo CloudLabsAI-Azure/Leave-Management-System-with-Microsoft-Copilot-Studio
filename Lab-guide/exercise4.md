@@ -1,166 +1,166 @@
-# Exercise 4: End-to-End Testing
+# 演習 4: エンド ツー エンド テスト
 
-### Estimated Duration: 40 Minutes
+### 推定所要時間: 40 分
 
-## Overview
+## 概要
 
-In this exercise, you will test the agent end-to-end by executing various prompts and scenarios. After completing the tests, you will verify that the leave request data has been correctly updated in the Dataverse table.
+この演習では、さまざまなプロンプトとシナリオを実行してエージェントをエンド ツー エンドでテストします。テスト完了後は、休暇申請データが Dataverse テーブルに正しく更新されていることを確認します。
 
-## Objectives
+## 目標
 
-You will be able to complete the following tasks:
+次のタスクを完了できるようになります。
 
-- Task 1: Test Approval Scenarios
+- タスク 1: 承認シナリオのテスト
 
-- Task 2: Validate Data in Dataverse
+- タスク 2: Dataverse のデータの検証
 
-## Task 1: Test Approval Scenarios
+## タスク 1: 承認シナリオのテスト
 
-In this task, you will run the agent end-to-end using the provided prompts and verify its responses for accuracy.
+このタスクでは、指定のプロンプトを使用してエージェントをエンド ツー エンドで実行し、応答の正確性を検証します。
 
-1. Now that you've configured the agent, it's time to test.
+1. エージェントの設定が完了したので、テストを行います。
 
-1. On the top menu bar, click **Publish** to save and apply your changes to the agent.
+1. 上部のメニュー バーで **[発行]** をクリックして、エージェントへの変更を保存して適用します。
 
    ![](../media/lev-mgmt-sb-ex4-g1.png)
 
-1. On the **Publish this agent** dialog box, review the details and click **Publish** to confirm and complete the publishing process.
+1. **[このエージェントを発行する]** ダイアログ ボックスで、詳細を確認し、**[発行]** をクリックして発行プロセスを確認して完了します。
 
    ![](../media/lev-mgmt-sb-ex4-g2.png)
 
-1. On the **Leave Management Agent** page, click **Test** in the top-right corner to open the testing panel for the agent.
+1. **[Leave Management Agent]** ページで、右上隅の **[テスト]** をクリックしてエージェントのテスト パネルを開きます。
 
    ![](../media/lev-mgmt-sb-ex4-g11.png)
 
-1. In the **Test your agent** panel, you will be testing the **Leave Management Agent**.
+1. **[エージェントのテスト]** パネルで、**Leave Management Agent** のテストを行います。
 
    ![](../media/lvimg57.png)
 
-1. In the **Test your agent** panel, type a greeting such as **Hello (1)** (or any similar message) in the chat box and click the **Send (2)** button to interact with the agent.
+1. **[エージェントのテスト]** パネルで、チャット ボックスに **Hello (1)** (または類似のメッセージ) と入力し、**[送信] (2)** ボタンをクリックしてエージェントと話しかけます。
 
-1. On the **Activity map** page, verify that the **Greeting** topic is triggered, showing phrases such as *Good afternoon*, *Good morning*, *Hello*, *Hey*, and *Hi*.  
+1. **[アクティビティ マップ]** ページで、**[挨拶]** トピックがトリガーされ、*Good afternoon*、*Good morning*、*Hello*、*Hey*、*Hi* などのフレーズが表示されることを確認します。
 
    ![](../media/leav-man-e4-g-33.png)
 
-1. In the **Test your agent** panel, type a request such as **I want to apply for leave (1)** and click the **Send (2)** button to test the agent’s ability to process leave-related queries.
+1. **[エージェントのテスト]** パネルで、**休暇を申請したい (1)** などのリクエストを入力し、**[送信] (2)** ボタンをクリックしてエージェントの休暇関連のクエリを処理する能力をテストします。
 
    ![](../media/lev-mgmt-sb-ex4-g5.png)
 
-1. In the **Test your agent** panel, when prompted to choose a leave type, select from the available options such as **Casual**, **Emergency**, or **Unpaid**.
+1. **[エージェントのテスト]** パネルで、休暇の種類を選択するよう求められたら、**Casual**、**Emergency**、**Unpaid** などのオプションから選択します。
 
    ![](../media/lev-mgmt-sb-ex4-g6.png)
 
-1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2026-04-06 (1)**) and click the **Send (2)** button.
+1. **[エージェントのテスト]** パネルで、必要な **yyyy-mm-dd** 形式で休暇開始日を入力し (例: **2026-04-06 (1)**)、**[送信] (2)** ボタンをクリックします。
 
    ![](../media/llev-mgmt-sb-ex4-g7.png)
 
-1. In the **Test your agent** panel, enter the leave end date in the required **yyyy-mm-dd** format (for example, **2026-04-07 (1)**) and click the **Send (2)** button.
+1. **[エージェントのテスト]** パネルで、必要な **yyyy-mm-dd** 形式で休暇終了日を入力し (例: **2026-04-07 (1)**)、**[送信] (2)** ボタンをクリックします。
 
-1. In the **Test your agent** panel, enter the reason for your leave (for example, **I will be attending a family function (1)**) and click the **Send (2)** button.
+1. **[エージェントのテスト]** パネルで、休暇の理由を入力し (例: **家族の行事に出席する予定です (1)**)、**[送信] (2)** ボタンをクリックします。
 
    ![](../media/lev-mgmt-sb-ex4-g9.png)
 
-1. In the **Test your agent** panel, verify that the agent responds with a confirmation message showing the approved leave dates. 
+1. **[エージェントのテスト]** パネルで、承認された休暇日を示す確認メッセージがエージェントから返ってくることを確認します。
 
    ![](../media/leav-man-e4-g-31.png)
 
-   > **Note:** If you see the prompt asking you to connect, perform the steps below:  
+   > **注:** 接続するよう求めるプロンプトが表示される場合は、以下の手順を実行してください。
 
-   > Click **Open connection manager (1)** to verify your credentials.
+   > **[接続マネージャーを開く] (1)** をクリックして資格情報を確認します。
 
       ![](../media/cor-mn-e5-g-86.png)
       
-   > On the **Manage your connections** page, the **Leave Management Workflow** may show as **Not Connected (1)**. Click **Connect (2)** to establish the connection.  
+   > **[接続の管理]** ページで、**Leave Management Workflow** が **[接続なし] (1)** と表示される場合があります。**[接続] (2)** をクリックして接続を確立します。
 
       ![](../media/cor-mn-e5-g-43.png)
 
-   > On the **Create or pick connections** page, select the available connection **Standard approvals (1)** and click **Submit (2)** to complete the connection setup. 
+   > **[接続またはピック接続の作成]** ページで、使用可能な接続 **[標準承認] (1)** を選択し、**[送信] (2)** をクリックして接続セットアップを完了します。
 
       ![](../media/cor-mn-e5-g-44.png)
 
-   > On the **Manage your connections** page, verify that the **Leave Management Workflow** status shows as **Connected (1)**. Once connected, return to the previous tab where you were testing the agent and continue.  
+   > **[接続の管理]** ページで、**Leave Management Workflow** の状態が **[接続済み] (1)** と表示されていることを確認します。接続されたら、エージェントをテストしていた前のタブに戻って続けてください。
 
       ![](../media/cor-mn-e5-g-45.png)
 
-   > After confirming the connection, return to the **Test your agent** tab. Click the **Refresh (1)** button at the top to reload the session, then retry your request to continue testing.
+   > 接続を確認した後、**[エージェントのテスト]** タブに戻ります。上部の **[更新] (1)** ボタンをクリックしてセッションを再読み込みし、リクエストを再試行してテストを続けてください。
 
       ![](../media/cor-mn-e5-g-87.png)
 
-1. In the **Test your agent** panel, click the **Refresh** icon to restart the conversation and test the agent with new inputs.
+1. **[エージェントのテスト]** パネルで、**[更新]** アイコンをクリックして会話を再開し、新しい入力でエージェントをテストします。
 
    ![](../media/leav-man-e4-g-32.png)
 
-1. In the **Test your agent** panel, type a greeting such as **Hello (1)** (or any similar phrase) and click the **Send (2)** button to trigger the greeting intent.
+1. **[エージェントのテスト]** パネルで、チャット ボックスに **Hello (1)** (または類似のフレーズ) と入力し、**[送信] (2)** ボタンをクリックして挨拶意図をトリガーします。
 
    ![](../media/leav-man-e4-g-1.png)
 
-1. In the **Test your agent** panel, type a request such as **I want to apply for leave (1)** and click the **Send (2)** button to test the agent’s ability to process leave-related queries.
+1. **[エージェントのテスト]** パネルで、チャット ボックスに **休暇を申請したい (1)** と入力し、**[送信] (2)** ボタンをクリックしてエージェントの休暇関連のクエリを処理する能力をテストします。
 
    ![](../media/leav-man-e4-g-26.png)
 
-1. In the **Test your agent** panel, when prompted to choose a leave type, select from the available options such as **Casual**, **Emergency**, or **Unpaid**.
+1. **[エージェントのテスト]** パネルで、休暇の種類を選択するよう求められたら、**Casual**、**Emergency**、**Unpaid** などのオプションから選択します。
 
    ![](../media/leav-man-e4-g-27.png)
 
-1. In the **Test your agent** panel, enter the leave start date in the required **yyyy-mm-dd** format (example, **2025-09-20 (1)**) and click the **Send (2)** button.
+1. **[エージェントのテスト]** パネルで、必要な **yyyy-mm-dd** 形式で休暇開始日を入力し (例: **2025-09-20 (1)**)、**[送信] (2)** ボタンをクリックします。
 
    ![](../media/leav-man-e4-g-28.png)
 
-1. In the **Test your agent** panel, enter the leave end date in the format **yyyy-mm-dd**, ensuring it is more than 2 days from the start date (for example, **2025-09-25 (1)**), and click the **Send (2)** button to submit the request.
+1. **[エージェントのテスト]** パネルで、**yyyy-mm-dd** 形式で休暇終了日を入力し、開始日から 2 日以上後の日付にするようにしてください (例: **2025-09-25 (1)**)。**[送信] (2)** ボタンをクリックして申請を送信します。
 
    ![](../media/leav-man-e4-g-36.png)
 
-1. In the **Test your agent** panel, enter the reason for applying for leave (for example, *I need a short break for personal reasons* (1)) and click the **Send (2)** button to continue.
+1. **[エージェントのテスト]** パネルで、休暇を申請する理由を入力し (例: *個人的な理由で短い休暇が必要です* (1))、**[送信] (2)** ボタンをクリックして続けます。
 
    ![](../media/leav-man-e4-g-37.png)
 
-1. Open a browser and navigate to [https://outlook.com](https://outlook.com) to access Outlook.  
+1. ブラウザーを開いて [https://outlook.com](https://outlook.com) に移動して Outlook にアクセスします。
 
-1. In the **Inbox**, locate and click the email with the subject **Microsoft Power Automate - Leave Approval** to view the leave request details.
+1. **[受信トレイ]** で、件名 **Microsoft Power Automate - Leave Approval** のメールを見つけてクリックし、休暇申請の詳細を確認します。
 
    ![](../media/leav-man-e4-g-38.png)
 
-1. In the **Leave Approval** email, click **Approve** to approve the leave request.  
+1. **[Leave Approval]** メールで **[承認]** をクリックして休暇申請を承認します。
 
    ![](../media/leav-man-e4-g-40.png)
 
-1. In the **Comments (1)** box, type your approval note (e.g., *Approved*) and then click **Submit (2)** to finalize the leave approval. 
+1. **[コメント] (1)** ボックスに承認メモ (例: *Approved*) を入力し、**[送信] (2)** をクリックして休暇承認を確定します。
 
    ![](../media/leav-man-e4-g-41.png)
 
-1. The agent confirms the leave request, displaying an approval message with the leave duration details. 
+1. エージェントが休暇申請を確認し、休暇期間の詳細を表示する承認メッセージを返します。
 
    ![](../media/leav-man-e4-g-39.png)
 
-## Task 2: Validate Data in Dataverse
+## タスク 2: Dataverse のデータの検証
 
-In this task, you will navigate the Dataverse and validate the data updated by the agent.
+このタスクでは、Dataverse に移動してエージェントによって更新されたデータを検証します。
 
-1. On the **Copilot Studio** page, click on the **More options (1)** menu from the left navigation panel and select **Power Apps (2)** under the **Power Platform** section to navigate there, **or** open a new browser window and go to [https://make.powerapps.com](https://make.powerapps.com).
+1. **Copilot Studio** ページで、左側のナビゲーション パネルから **[その他のオプション] (1)** メニューをクリックし、**[Power Platform]** セクションの **[Power Apps] (2)** を選択して移動するか、新しいブラウザー ウィンドウで [https://make.powerapps.com](https://make.powerapps.com) に移動します。
 
    ![](../media/cor-mn-e4-g-10.png)
 
-1. On the **Power Apps** portal, ensure the environment is set to **ODL_User (1)**. From the left navigation menu, select **Tables (2)** and then choose **Leave Request (3)** from the list.
+1. **Power Apps** ポータルで、環境が **ODL_User (1)** に設定されていることを確認します。左側のナビゲーション メニューから **[テーブル] (2)** を選択し、リストから **[Leave Request] (3)** を選択します。
 
    ![](../media/cor-mn-e4-g-7.png)
 
-1. On the **Leave Request columns and data** page, review the newly added records. Verify the following fields:  
-      - **Employee Email** and **Employee Name** are automatically populated with your user details.  
-      - **Leave Type** reflects the type of leave selected.  
-      - **Start Date** and **End Date** match the values entered during testing.  
-      - **Duration** displays the calculated number of leave days.  
-      - **Status** shows the current approval status. 
+1. **[Leave Request 列とデータ]** ページで、新しく追加されたレコードを確認します。次のフィールドを確認してください。
+      - **[従業員のメールアドレス]** と **[従業員名]** は自動的にユーザーの詳細で入力されます。
+      - **[休暇の種類]** は選択した休暇の種類を反映します。
+      - **[開始日]** と **[終了日]** はテスト中に入力した値と一致します。
+      - **[期間]** は計算された休暇日数を表示します。
+      - **[ステータス]** は現在の承認状態を表示します。
 
          ![](../media/cor-mn-e4-g-11.png)  
 
          ![](../media/cor-mn-e4-g-9.png)
 
-         > **Note:** The **Employee Email/User ID** field is automatically fetched by the system from your login context. You do not need to enter it manually.
+         > **注:** **[従業員のメールアドレス/ユーザー ID]** フィールドは、ログイン コンテキストからシステムによって自動的に取得されます。手動で入力する必要はありません。
 
-## Summary
+## まとめ
 
-In this exercise, you tested the agent end-to-end by executing various prompts and scenarios. After completing the tests, the leave request data was verified to ensure it had been correctly updated in the Dataverse table.
+この演習では、さまざまなプロンプトとシナリオを実行してエージェントをエンド ツー エンドでテストしました。テスト完了後は、休暇申請データが Dataverse テーブルに正しく更新されていることを確認しました。
 
-### You have successfully completed this exercise, please continue to next one >>
+### この演習を正常に完了しました。次の演習に進んでください >>
 
    ![](../media/a-gs-g5.png)
