@@ -645,38 +645,6 @@
 
 1. **[Power Automate 入力]** カードで、**startDate** フィールドの横にある**省略記号 (...) (1)** をクリックします。**[変数の選択]** ウィンドウから **startDate (2)** を選択して変数をマッピングします。
 
-## Task 2: Build a Power Automate flow to validate leave requests
-
-1. **[Power Automate 入力]** カードで、**endDate** フィールドの横にある**省略記号 (...) (1)** をクリックします。**[変数の選択]** ウィンドウから **endDate (2)** を選択して変数をマッピングします。
-
-1. Select the **When an agent calls the flow** trigger to expand it.
-
-1. **[Power Automate 入力]** カードで、次を行います。
-    - **employeeEmail** フィールドの横にある**省略記号 (...) (1)** をクリックします。
-    - **[変数の選択]** ウィンドウで **[システム] (2)** タブに切り替えます。
-    - **User.Email (3)** を検索します。
-    - **User.Email (4)** を選択します。
-
-1. Now click **+ Add an input**.  
-
-1. ページ右上隅の **[保存]** をクリックして、トピックへの変更を保存します。
-
-1. In the **Choose the type of user input** section, select **Date** to capture date values in the flow.  
-
-1. **[トピックを保存する]** ダイアログで、次を行います。
-    - トピック名として **leave_request (1)** を入力します。
-    - **[保存] (2)** をクリックして確認し、トピックを保存します。
-
-1. In the **Parameters** tab, enter the below value in the first input field as **startDate (1)**, and then select **+ Add an input (2)** to add another parameter.
-
-1. 詳細を収集して休暇申請を検証する基本的なエージェントの作成が完了しました。今後の演習では、エージェントをより高度で有能にするための承認ロジックと条件付きワークフローを追加して強化します。
-
-<validation step="bc8e443a-14ef-4307-8619-3092a324799b" />
- 
-> **タスクの完了おめでとうございます！** 次は検証の時間です。手順は次のとおりです。
-> - 対応するタスクの検証ボタンをクリックします。成功のメッセージが表示されたら、次のタスクに進むことができます。
-> - 表示されない場合は、エラー メッセージをよく読み、ラボ ガイドの手順に従ってステップを再試行してください。
-> - サポートが必要な場合は、cloudlabs-support@spektrasystems.com までお問い合わせください。24 時間 365 日対応しています。
 
 ## まとめ
 
