@@ -4,90 +4,83 @@
 
 ## 概要
 
-この演習では、**Leave Management Agent** を Microsoft Teams に発行して展間する方法を学びます。Teams 内でエージェントをテストし、犬察集と休暇申請プロセスが期待どおり機能することを確認します。
+この演習では、**Leave Management Agent** を Microsoft Teams に発行してその機能を検証する方法を学習します。まず Copilot Studio で Teams チャネルを有効にして発行プロセスを完了します。デプロイ後、Microsoft Teams でエージェントと対話し、休暇申請を送信して、エージェントが正しく応答し、承認ワークフローが機能することを確認します。
 
 ## 目標
 
 次のタスクを完了できるようになります。
 
-- タスク 1: Microsoft Teams への展間と発行
+- タスク 1: Microsoft Teams へのエージェントのデプロイと発行
+- タスク 2: Microsoft Teams でのデプロイ済みエージェントのテスト
 
-- タスク 2: Microsoft Teams での発行済みエージェントのテスト
+## タスク 1: Microsoft Teams へのエージェントのデプロイと発行
 
-## タスク 1: Microsoft Teams への展間と発行
+このタスクでは、Copilot Studio で Teams チャネルを有効にして **Leave Management Agent** を Microsoft Teams に発行します。発行設定を構成し、エージェントを利用可能にして、Teams 環境内で正常にインストールされてアクセスできることを確認します。
 
-このタスクでは、Copilot Studio のチャンネル設定を使用して **Leave Management Agent** を Microsoft Teams に発行します。
+1. エージェントの設定が完了したので、さまざまなプラットフォームで使用できるように発行します。
 
-1. **[Leave Management Agent]** ページで、**[チャンネル] (1)** タブを選択し、**[Teams および Microsoft 365 Copilot] (2)** チャンネルに移動します。
+1. **[Leave Management Agent]** ページで、**[チャネル] (1)** タブを選択し、[Microsoft チャネル] の下にある **[Teams と Microsoft 365 Copilot] (2)** をクリックします。
 
    ![](../media/gs-fix2-leave2-may-g36.png)
 
-1. **[Teams および Microsoft 365 Copilot]** ページで、**[エージェントを Microsoft 365 Copilot で使用可能にする]** を有効化して全体の展間区域を増やすか、ページ 下部の **[チャンネルの追加] (1)** ボタンをクリックして続けます。
+1. **[エージェントを Microsoft 365 Copilot で利用可能にする] (1)** チェックボックスをオフにして、**[チャネルの追加] (2)** を選択します。
 
    ![](../media/gs-fix2-leave2-may-g37.png)
 
-1. **[発行の準備ができましたか?]** ダイアログで、**[発行] (1)** をクリックしてエージェントを Teams 向けに公開します。
+1. チャネルが追加されたら、**[Microsoft Teams]** で **[Teams でエージェントを表示する]** を選択して Microsoft Teams でエージェントを開きます。
 
-   ![](../media/leav-man-e4-g-4.png)
+   ![](../media/gs-fix2-leave2-may-g38.png)
 
-1. 選択した Teams チャンネル内でエージェントを表示するリンクを確認します。
-
-   ![](../media/leav-man-e4-g-5.png)
-
-1. **[Microsoft Teams を開く]** ポップアップが表示された場合は、**[キャンセル] (1)** をクリックしてデスクトップ アプリを開かずに進めます。
-
-   ![](../media/leav-man-e4-g-6.png)
-
-1. **[代わりに Web アプリを使用]** リンクをクリックして、ブラウザー ベースの Teams で続けます。
+1. **[Teams デスクトップ アプリとのより良い接続を維持]** ページで、**[代わりに Web アプリを使用する]** をクリックしてブラウザーで続行します。
 
    ![](../media/gs-fix2-leave2-may-g39.png)
 
-1. Teams アプリ ストアでエージェントのページを確認し、**[追加] (1)** をクリックして **Leave Management Agent** を追加します。
+1. Microsoft Teams の **[Leave Management Agent]** ページで、**[追加]** をクリックしてエージェントをインストールします。**[追加]** オプションが表示されない場合は、Copilot Studio に戻り、もう一度 **[Teams でエージェントを表示する]** を使用してください。
 
    ![](../media/gs-fix2-leave2-may-g40.png)
 
-1. Teams 内で **[Leave Management Agent] (1)** を開きます。
+1. エージェントが正常に追加されたら、**[開く]** をクリックして Teams で **Leave Management Agent** を起動します。
 
    ![](../media/gs-fix2-leave2-may-g41.png)
 
-1. チャット ボックスに **Hello (1)** と入力し、**[送信] (2)** ボタンをクリックしてエージェントと会話を開始します。
+1. **Leave Management Agent** のチャット ウィンドウで、メッセージ ボックスに **Hello (1)** と入力し、**[送信] (2)** ボタンをクリックして会話を開始します。
 
    ![](../media/cor-mn-e4-g-19.png)
 
-## タスク 2: Microsoft Teams での発行済みエージェントのテスト
+## タスク 2: Microsoft Teams でのデプロイ済みエージェントのテスト
 
-このタスクでは、Microsoft Teams 内で **Leave Management Agent** に休暇申請を展間し、展間済みのエージェントをテストします。
+このタスクでは、Microsoft Teams でデプロイ済みの **Leave Management Agent** を、休暇申請を送信して必要な詳細を提供し、承認結果を確認することでテストします。
 
-1. **[Leave Management Agent]** チャットで、チャット ボックスに **休暇を申請したい (1)** と入力し、**[送信] (2)** ボタンをクリックして休暇申請フローを開始します。
+1. **Leave Management Agent** のチャット ウィンドウで、メッセージ ボックスに **I want to apply for leave (1)** と入力し、**[送信] (2)** ボタンをクリックして会話を続けます。
 
    ![](../media/cor-mn-e4-g-12.png)
 
-1. エージェントから休暇の種類を選択するよう求められたら、希望の休暇の種類を選択します。
+1. **Leave Management Agent** のチャット ウィンドウで、休暇の種類を選択するよう求められたら、オプションの 1 つを選択します。
 
    ![](../media/cor-mn-e4-g-13.png)
 
-1. エージェントから開始日を入力するよう求められたら、**yyyy-mm-dd** 形式で入力します (例: **2025-09-20 (1)**).
+1. **Leave Management Agent** のチャットで、必要な **yyyy-mm-dd** 形式で休暇開始日を入力します (例: **2025-09-20 (1)**)。**[送信] (2)** ボタンをクリックして続行します。
 
    ![](../media/cor-mn-e4-g-14.png)
 
-1. エージェントから終了日を入力するよう求められたら、**yyyy-mm-dd** 形式で入力します (例: **2025-09-27 (1)**).
+1. **Leave Management Agent** のチャットで、必要な **yyyy-mm-dd** 形式で休暇終了日を入力します (例: **2025-09-27 (1)**)。**[送信] (2)** ボタンをクリックして送信します。これにより、合計休暇期間が 2 日を超えることが保証されます。
 
    ![](../media/cor-mn-e4-g-15.png)
 
-1. エージェントから申請の理由を入力するよう求められたら、理由を入力します (例: **Need a break to play video games (1)**).
+1. **Leave Management Agent** のチャットで、休暇の理由を入力します (例: **Need a break to play video games (1)**)。**[送信] (2)** ボタンをクリックして続行します。
 
    ![](../media/cor-mn-e4-g-16.png)
 
-1. **Microsoft Power Automate** からの Leave Approval メールで、**[拒否] (1)** をクリックし、拒否の理由を入力し (例: *仲間が休暇を取るので遊びに行くのは許可できません* (2))、**[送信] (3)** をクリックします。
+1. **Microsoft Power Automate (1)** からの **[休暇承認]** メールで、**[拒否] (2)** をクリックし、**[コメント] (3)** フィールドに拒否の理由を入力して、**[送信] (4)** をクリックして確認します。
 
    ![](../media/cor-mn-e4-g-20.png)
 
-1. Teams の **[アクティビティ]** セクションを確認して、**Leave Management Agent** から Leave Approval 通知が届いていることを確認します。
+1. Microsoft Teams で **[アクティビティ] (1)** セクションに移動し、**[Leave Approval] (2)** 通知を確認して申請の最終ステータスを確認します。
 
    ![](../media/cor-mn-e4-g-21.png)
 
 ## まとめ
 
-この演習では、**Leave Management Agent** を Microsoft Teams に発行し、Teams 内でエージェントをテストしました。休暇申請フローが期待どおり機能すること、および承認プロセスの辺りでエージェントが正しく応答することを確認しました。
+この演習では、**Leave Management Agent** を Microsoft Teams に正常に発行し、Teams 環境内でアクセスして使用できることを確認しました。休暇申請を送信し、必要な詳細を提供して、Power Automate を通じた自動承認プロセスを観察することでエージェントをテストしました。これにより、実際のユーザー シナリオでのエージェントのデプロイと機能的な動作の両方が検証されました。
 
 ### ラボを正常に完了しました！
