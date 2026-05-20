@@ -20,11 +20,11 @@
 
 1. **[Leave Management Agent]** ページで、**[チャンネル] (1)** タブを選択し、**[Teams および Microsoft 365 Copilot] (2)** チャンネルに移動します。
 
-   ![](../media/leav-man-e4-g-2.png)
+   ![](../media/gs-fix2-leave2-may-g36.png)
 
 1. **[Teams および Microsoft 365 Copilot]** ページで、**[エージェントを Microsoft 365 Copilot で使用可能にする]** を有効化して全体の展間区域を増やすか、ページ 下部の **[チャンネルの追加] (1)** ボタンをクリックして続けます。
 
-   ![](../media/leav-man-e4-g-3.png)
+   ![](../media/gs-fix2-leave2-may-g37.png)
 
 1. **[発行の準備ができましたか?]** ダイアログで、**[発行] (1)** をクリックしてエージェントを Teams 向けに公開します。
 
@@ -40,15 +40,15 @@
 
 1. **[代わりに Web アプリを使用]** リンクをクリックして、ブラウザー ベースの Teams で続けます。
 
-   ![](../media/leav-man-e4-g-7.png)
+   ![](../media/gs-fix2-leave2-may-g39.png)
 
 1. Teams アプリ ストアでエージェントのページを確認し、**[追加] (1)** をクリックして **Leave Management Agent** を追加します。
 
-   ![](../media/leav-man-e4-g-12.png)
+   ![](../media/gs-fix2-leave2-may-g40.png)
 
 1. Teams 内で **[Leave Management Agent] (1)** を開きます。
 
-   ![](../media/leav-man-e4-g-13.png)
+   ![](../media/gs-fix2-leave2-may-g41.png)
 
 1. チャット ボックスに **Hello (1)** と入力し、**[送信] (2)** ボタンをクリックしてエージェントと会話を開始します。
 

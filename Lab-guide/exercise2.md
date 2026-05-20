@@ -481,21 +481,27 @@
 
 1. **[トピック] (1)** タブで、**[トピックの追加] (2)** を選択し、**[空白から] (3)** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex2-g53.png)
+     ![](../media/gs-fix-leave-may-g11.png)
+
+   > **Note:** If the **Topics** tab is directly visible on the screen, you can select it without clicking **+7**.
+
+1. In the **Topics** page, select **Add a topic (1)**, and then choose **From blank (2)**.
+
+     ![](../media/gs-fix-leave-may-g12.png)
 
 1. **[エージェントのテスト]** ウィンドウで、**[閉じる (X)]** ボタンをクリックしてテスト ウィンドウを閉じ、ワークフロー設計のためにキャンバスを広くします。
 
 1. **[トリガー]** ノードで、**[トピックの動作の説明] (1)** に次の説明を入力し、**[プラス (+) アイコン] (2)** を選択します。
 
      ```
-     This topic is used by employees to apply leaves
+     This tool can handle queries like these: I want to apply for leave, apply for leave, request leave, requesting leave, I need time off, submit leave request, take a leave, leave application, I want to take leave, apply for casual leave, apply for emergency leave, apply for unpaid leave
      ```
 
-     ![](../media/lev-mgmt-sb-ex2-g54.png)
+     ![](../media/gs-fix2-leave2-may-g17.png)
 
 1. **トピック エディター**で、表示されたオプションから **[質問する]** を選択して、フローに質問ノードを追加します。
 
-     ![](../media/lev-mgmt-sb-ex2-g55.png)
+     ![](../media/gs-fix2-leave2-may-g18.png)
 
 1. **[質問]** ノードで、質問テキスト **(1)** に次を入力し、**[識別]** の下で **[複数選択肢オプション] (2)** を選択して、**[+ 新しいオプション] (3)** を選択します。
 
@@ -511,7 +517,7 @@
 
 1. 前のステップと同様に **[+ 新しいオプション]** を再度クリックして、休暇タイプ **Emergency** と **Unpaid** を追加します。
 
-     ![](../media/leav-man-e2-g-18.png)
+     ![](../media/gs-fix-leave-may-g14.png)
 
 1. **[ユーザーの応答を次として保存]** フィールドで **Var1** を選択します。
 
@@ -631,19 +637,19 @@
 
 1. reason を取得した後の **[質問]** ノードで、**[ツールの追加] (1)** をクリックします。使用可能なツールのリストから **[Leave Validation Flow] (2)** を選択して、フローを検証プロセスに接続します。
 
-     ![](../media/cor-mn-e5-g-77.png)
+     ![](../media/gs-fix-leave-may-g15.png)
 
 1. **オーサリング キャンバス**で、上部メニューから **[変数] (1)** をクリックします。**[参照] (2)** タブで、**[トピック] (3)** セクションを展開し、チェックボックス **(4)** をオンにしてリストされているすべての変数を選択します。
 
-     ![](../media/cor-mn-e5-g-78.png)
+     ![](../media/gs-fix-leave-may-g18.png)
 
 1. **[Power Automate 入力]** カードで、**startDate** フィールドの横にある**省略記号 (...) (1)** をクリックします。**[変数の選択]** ウィンドウから **startDate (2)** を選択して変数をマッピングします。
 
-     ![](../media/lev-mgmt-sb-ex2-g67.png)
+## Task 2: Build a Power Automate flow to validate leave requests
 
 1. **[Power Automate 入力]** カードで、**endDate** フィールドの横にある**省略記号 (...) (1)** をクリックします。**[変数の選択]** ウィンドウから **endDate (2)** を選択して変数をマッピングします。
 
-     ![](../media/lev-mgmt-sb-ex2-g68.png)
+1. Select the **When an agent calls the flow** trigger to expand it.
 
 1. **[Power Automate 入力]** カードで、次を行います。
     - **employeeEmail** フィールドの横にある**省略記号 (...) (1)** をクリックします。
@@ -651,17 +657,17 @@
     - **User.Email (3)** を検索します。
     - **User.Email (4)** を選択します。
 
-        ![](../media/lev-mgmt-sb-ex2-g69.png)
+1. Now click **+ Add an input**.  
 
 1. ページ右上隅の **[保存]** をクリックして、トピックへの変更を保存します。
 
-     ![](../media/lev-mgmt-sb-ex2-g70.png)
+1. In the **Choose the type of user input** section, select **Date** to capture date values in the flow.  
 
 1. **[トピックを保存する]** ダイアログで、次を行います。
     - トピック名として **leave_request (1)** を入力します。
     - **[保存] (2)** をクリックして確認し、トピックを保存します。
 
-        ![](../media/leav-man-e3-g-42.png)
+1. In the **Parameters** tab, enter the below value in the first input field as **startDate (1)**, and then select **+ Add an input (2)** to add another parameter.
 
 1. 詳細を収集して休暇申請を検証する基本的なエージェントの作成が完了しました。今後の演習では、エージェントをより高度で有能にするための承認ロジックと条件付きワークフローを追加して強化します。
 

@@ -163,7 +163,7 @@
 
 1. **[行の更新]** アクションで、**+** アイコンを選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g28.png)
+     ![](../media/gs-fix2-leave2-may-g5.png)
 
 1. **[アクションの追加]** ウィンドウで、**Skills (1)** を検索し、**[エージェントへの応答] (2)** を選択します。
 
@@ -193,7 +193,9 @@
 
      ```
      outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
-     ``` 
+     ```
+
+     ![](../media/gs-fix2-leave2-may-g6.png)
 
      > **注**: ここでの **Logical_ID** は、演習 1 で Power Apps ポータルからコピーした ID を指します。
 
@@ -225,7 +227,11 @@
 
 1. フロー デザイナーの右上隅で **[発行]** をクリックして、フローを保存して有効化します。
 
-     ![](../media/lev-mgmt-sb-ex3-g36.png)
+     ![](../media/gs-fix-leave-may-g47.png)
+
+1. On the top menu bar, click **Overview** to navigate to the flow details page.
+
+     ![](../media/leav-man-e2-g-66.png)
 
 1. **[概要] (1)** ページで **[編集] (2)** を選択します。
 
@@ -252,11 +258,42 @@
 
 1. 下図のように **+** をクリックしてメニューを展開し、リストから **[トピック]** を選択します。
 
-     ![](../media/lvimg55.png)
+     ![](../media/gs-fix-leave-may-g11.png)
 
 1. **[トピック] (1)** タブで、**[leave_request] (2)** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g39.png)
+1. On the **Topics** page, select the **leave_request** topic.
+
+     ![](../media/gs-fix2-leave2-may-g1.png)
+
+1. Scroll to the bottom of the topic, and below the **reason** question node, select the **plus (+)** icon to add the next step in the flow. 
+
+     ![](../media/leav-man-e3-g-20.png)
+
+1. In the **Question** node after capturing the reason, click **Add a tool (1)**. From the list of available tools, select **Leave Validation Flow (2)** to connect the flow with the validation process. 
+
+     ![.](../media/cor-mn-e5-g-77.png)
+
+1. On the **Authoring canvas**, click **Variables (1)** from the top menu. Under the **Browse (2)** tab, expand the **Topic (3)** section and select all the listed variables by checking the boxes **(4)**.   
+
+     ![](../media/cor-mn-e5-g-78.png)
+
+1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **startDate** field. From the **Select a variable** pane, choose **startDate (2)** to map the variable.
+
+     ![](../media/lev-mgmt-sb-ex2-g67.png)
+
+1. On the **Power Automate inputs** card, click the **ellipsis (…) (1)** next to the **endDate** field. From the **Select a variable** pane, choose **endDate (2)** to map the variable. 
+
+     ![](../media/lev-mgmt-sb-ex2-g68.png)
+
+1. On the **Power Automate inputs** card:  
+
+     - Click the **ellipsis (…) (1)** next to the **employeeEmail** field.  
+     - In the **Select a variable** pane, switch to the **System (2)** tab.  
+     - Search for **User.Email (3)**.  
+     - Select **User.Email (4)**.  
+
+          ![](../media/lev-mgmt-sb-ex2-g69.png)
 
 1. **[出力] (2)** セクションで、**プラス (+) アイコン**をクリックしてフローの次のステップを追加します。**(1)**
 
@@ -280,7 +317,10 @@
     - **User.Email (3)** を検索します。
     - 結果から **User.Email (4)** を選択します。
 
-        ![](../media/lev-mgmt-sb-ex3-g43.png)
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **System (2)** tab.  
+     - Search for **User.Email (3)**.  
+     - Select **User.Email (4)** from the results.  
 
 1. **[アクション]** カードで、**employeeName (String)** の値を設定します。
     - **省略記号 (...) (1)** をクリックします。
@@ -288,7 +328,14 @@
     - **User.FirstName (3)** を検索します。
     - 結果から **User.FirstName (4)** を選択します。
 
-        ![](../media/lev-mgmt-sb-ex3-g44.png)
+1. On the **Action** card, set the value for **employeeName (String)**: 
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **System (2)** tab.  
+     - Search for **User.FirstName (3)**.  
+     - Select **User.FirstName (4)** from the results. 
+
+          ![](../media/gs-fix2-leave2-may-g11.png)
 
 1. **[アクション]** カードで、**leaveType (String)** の値を設定するには、**省略記号 (...) (1)** を選択し、**[式] (2)** タブを選択し、式 **(3)** を入力して、**[挿入] (4)** を選択します。
 
@@ -303,35 +350,53 @@
     - **[変数の選択]** パネルで **[カスタム] (2)** タブを選択します。
     - リストから **reason (Topic.reason) (3)** を選択します。
 
-        ![](../media/lev-mgmt-sb-ex3-g46.png)
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, choose the **Custom (2)** tab.  
+     - Select **reason (Topic.reason) (3)** from the list.  
 
 1. **[アクション]** カードで、**durationDays (String)** の値を設定します。
     - **省略記号 (...) (1)** をクリックします。
     - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
     - リストから **duration (Topic.duration) (3)** を選択します。
 
-        ![](../media/lev-mgmt-sb-ex3-g47.png)
+1. On the **Action** card, set the value for **durationDays (String)**: 
 
 1. **[アクション]** カードで、**balance (String)** の値を設定します。
     - **省略記号 (...) (1)** をクリックします。
     - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
     - リストから **balance (Topic.balance) (3)** を選択します。
 
-        ![](../media/lev-mgmt-sb-ex3-g48.png)
+          ![](../media/lev-mgmt-sb-ex3-g47.png)
 
 1. **[アクション]** カードで、**startDate (String)** の値を設定します。
     - **省略記号 (...) (1)** をクリックします。
     - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
     - リストから **startDate (Topic.startDate) (3)** を選択します。
 
-        ![](../media/lev-mgmt-sb-ex3-g49.png)
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **balance (Topic.balance) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g48.png)
+
+1. On the **Action** card, set the value for **startDate (String)**:
+
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **startDate (Topic.startDate) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g49.png)
 
 1. **[アクション]** カードで、**endDate (String)** の値を設定します。
     - **省略記号 (...) (1)** をクリックします。
     - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
     - リストから **endDate (Topic.endDate) (3)** を選択します。
 
-        ![](../media/lev-mgmt-sb-ex3-g50.png)
+     - Click the **ellipsis (…) (1)**.  
+     - In the **Select a variable** panel, go to the **Custom (2)** tab.  
+     - Select **endDate (Topic.endDate) (3)** from the list.  
+
+          ![](../media/lev-mgmt-sb-ex3-g50.png)
 
 1. **[出力] (1)** セクションで、**プラス アイコン (1)** をクリックし、**[メッセージを送信する] (2)** を選択します。
 
@@ -343,7 +408,12 @@
     - 検索ボックスに **reply (3)** と入力します。
     - 結果から **reply (4)** を選択します。
 
-        ![](../media/leav-man-e3-g-37.png)
+     - Click on the **variable icon (1)**.  
+     - In the **Select a variable** pane, choose the **Custom (2)** tab.  
+     - Type **reply (3)** in the search box.  
+     - Select **reply (4)** from the results. 
+
+          ![](../media/leav-man-e3-g-37.png)
 
 1. **[メッセージ]** ステップで、**プラス (+) アイコン**をクリックしてフローに次のアクションを追加します。
 
@@ -355,7 +425,7 @@
 
 1. ページ右上隅の **[保存]** をクリックして、トピックへの変更を保存します。
 
-     ![](../media/leav-man-e3-g-41.png)
+     ![](../media/lev-mgmt-sb-ex2-g70.png)
 
 1. エージェントの作成が正常に完了しました。次のタスクでテストする準備ができました。
 
