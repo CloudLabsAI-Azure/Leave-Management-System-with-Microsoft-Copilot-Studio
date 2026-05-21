@@ -22,29 +22,29 @@
 
 1. **Copilot Studio** で **[エージェント] (1)** を選択し、**[Leave Management Agent] (2)** を選択します。
 
-   ![](../media/lev-mgmt-sb-ex2-g52.png)
+   ![](../NewMedia/e4t1s1.png)
 
 1. 上部のメニュー バーで **[発行]** をクリックして、変更内容をエージェントに保存および適用します。
 
-   ![](../media/lev-mgmt-sb-ex4-g1.png)
+   ![](../NewMedia/e4t1s2.png)
 
 1. **[このエージェントを発行する]** ダイアログ ボックスで、詳細を確認して **[発行]** をクリックして発行プロセスを完了します。
 
-   ![](../media/lev-mgmt-sb-ex4-g2.png)
+   ![](../NewMedia/e4t1s3.png)
 
 1. **[Leave Management Agent]** ページで、右上隅の **[テスト]** をクリックしてエージェントのテスト パネルを開きます。
 
-   ![](../media/lev-mgmt-sb-ex4-g11.png)
+   ![](../NewMedia/e4t1s4.png)
 
 1. **[エージェントのテスト]** パネルで、**Leave Management Agent** のテストを行います。
 
-   ![](../media/lvimg57.png)
+   ![](../NewMedia/e4t1s5.png)
 
 1. **[エージェントのテスト]** パネルで、チャット ボックスに **Hello (1)** (または類似のメッセージ) と入力し、**[送信] (2)** ボタンをクリックしてエージェントと話しかけます。
 
 1. **[アクティビティ マップ]** ページで、**[グリーティング]** トピックがトリガーされ、*Good afternoon*、*Good morning*、*Hello*、*Hey*、*Hi* などのフレーズが表示されていることを確認します。
 
-   ![](../media/leav-man-e4-g-33.png)
+   ![](../NewMedia/e4t1s6.png)
 
 1. **[エージェントのテスト]** パネルで、メッセージ ボックス **(1)** に以下のリクエストを入力し、**[送信] (2)** ボタンを選択してエージェントをテストします。
 
@@ -52,11 +52,11 @@
    I want to apply for Leave
    ```
 
-   ![](../media/gs-fix2-leave2-may-g28.png)
+   ![](../NewMedia/e4t1s7.png)
 
 1. **[エージェントのテスト]** パネルで、休暇の種類を選択するよう求められたら、**[Casual]**、**[Emergency]**、**[Unpaid]** などの利用可能なオプションから選択します。
 
-   ![](../media/lev-mgmt-sb-ex4-g6.png)
+   ![](../NewMedia/e4t1s8.png)
 
 1. **[エージェントのテスト]** パネルで、以下の例の値 **(1)** を使用して必要な **yyyy-mm-dd** 形式で休暇開始日を入力し、**[送信] (2)** ボタンを選択します。
 
@@ -64,7 +64,7 @@
    2026-05-13
    ```
 
-   ![](../media/gs-fix2-leave2-may-g20.png)
+   ![](../NewMedia/e4t1s9.png)
 
 1. **[エージェントのテスト]** パネルで、以下の例の値 **(1)** を使用して必要な **yyyy-mm-dd** 形式で休暇終了日を入力し、**[送信] (2)** ボタンを選択します。
 
@@ -74,7 +74,7 @@
 
    > **注:** このテスト シナリオでは、2 日以内の休暇申請を検証します。
 
-   ![](../media/gs-fix2-leave2-may-g21.png)
+   ![](../NewMedia/e4t1s10.png)
 
 1. **[エージェントのテスト]** パネルで、以下の例の値 **(1)** を使用して休暇の理由を入力し、**[送信] (2)** ボタンを選択します。
 
@@ -82,11 +82,11 @@
    I will be attending a family function
    ```
 
-   ![](../media/gs-fix2-leave2-may-g22.png)
+   ![](../NewMedia/e4t1s11.png)
 
 1. **[エージェントのテスト]** パネルで、エージェントが承認された休暇日程を示す確認メッセージで応答することを確認します。
 
-   ![](../media/leav-man-e4-g-31.png)
+   ![](../NewMedia/e4t1s12.png)
 
    > **注:** 接続を求めるプロンプトが表示された場合は、以下の手順を実行してください。
 
@@ -112,7 +112,7 @@
 
 1. 2 日以内の休暇申請がエージェントの応答で自動的に承認されることを確認します。
 
-   ![](../media/gs-fix2-leave2-may-g25.png)
+   ![](../NewMedia/e4t1s12.png)
 
 1. ブラウザーを開き、以下の URL を使用して Outlook に移動します。
 
@@ -125,15 +125,15 @@
    - Username: <inject key="AzureAdUserEmail"></inject>
    - Temporary Access Key: <inject key="AzureAdUserPassword"></inject>
 
-      ![](../media/gs-fix2-leave2-may-g33.png)
+      ![](../NewMedia/e4t1s18.png)
 
 1. **[テスト]** ウィンドウで、**[新しいテスト セッション]** を選択して 2 日を超える休暇申請をテストします。
 
-   ![](../media/gs-fix2-leave2-may-g26.png)
+   ![](../NewMedia/e4t1s19.png)
 
 1. メッセージ ボックスに **Hello (1)** と入力し、**[送信] (2)** アイコンを選択します。
 
-   ![](../media/gs-fix2-leave2-may-g27.png)
+   ![](../NewMedia/e4t1s20.png)
 
 1. **[エージェントのテスト]** パネルで、メッセージ ボックス **(1)** に以下のリクエストを入力し、**[送信] (2)** ボタンを選択してエージェントをテストします。
 
@@ -141,11 +141,11 @@
    I want to apply for Leave
    ```
 
-   ![](../media/gs-fix2-leave2-may-g28.png)
+   ![](../NewMedia/e4t1s21.png)
 
 1. **[エージェントのテスト]** パネルで、休暇の種類を選択するよう求められたら、**[Casual]**、**[Emergency]**、**[Unpaid]** などの利用可能なオプションから選択します。
 
-   ![](../media/lev-mgmt-sb-ex4-g6.png)
+   ![](../NewMedia/e4t1s22.png)
 
 1. **[エージェントのテスト]** パネルで、以下の例の値 **(1)** を使用して必要な **yyyy-mm-dd** 形式で休暇開始日を入力し、**[送信] (2)** ボタンを選択します。
 
@@ -153,7 +153,7 @@
    2026-05-13
    ```
 
-   ![](../media/gs-fix2-leave2-may-g20.png)
+   ![](../NewMedia/e4t1s23.png)
 
 1. **[エージェントのテスト]** パネルで、以下の例の値 **(1)** を使用して必要な **yyyy-mm-dd** 形式で休暇終了日を入力し、**[送信] (2)** ボタンを選択します。
 
@@ -163,7 +163,7 @@
 
    > **注:** このテスト シナリオでは、2 日を超える休暇申請を検証します。
 
-   ![](../media/gs-fix2-leave2-may-g29.png)
+   ![](../NewMedia/e4t1s24.png)
 
 1. **[エージェントのテスト]** パネルで、以下の例の値 **(1)** を使用して休暇の理由を入力し、**[送信] (2)** ボタンを選択します。
 
@@ -171,23 +171,23 @@
    I need to take leave for personal work
    ```
 
-   ![](../media/gs-fix2-leave2-may-g30.png)
+   ![](../NewMedia/e4t1s25.png)
 
 1. メール承認応答を待つ間、エージェントが **[処理中]** ステータスを表示することを確認します。
 
-   ![](../media/gs-fix2-leave2-may-g35.png)
+   ![](../NewMedia/e4t1s26.png)
 
 1. **[受信トレイ] (1)** で、**[Microsoft Power Automate - Leave Approval] (2)** メールを選択して休暇申請の詳細を確認します。
 
-   ![](../media/gs-fix2-leave2-may-g31.png)
+   ![](../NewMedia/e4t1s27.png)
 
 1. **[承認] (1)** を選択し、**[コメント] (2)** ボックスに「*Approved*」と入力して、**[送信] (3)** を選択して休暇の承認を完了します。
 
-   ![](../media/gs-fix2-leave2-may-g32.png)
+   ![](../NewMedia/e4t1s28.png)
 
 1. エージェントが休暇申請を確認し、休暇期間の詳細を含む承認メッセージを表示します。
 
-   ![](../media/gs-fix2-leave2-may-g34.png)
+   ![](../NewMedia/e4t1s29.png)
 
 ## タスク 2: Dataverse でのデータの検証
 
@@ -195,7 +195,7 @@
 
 1. **Power Apps** ポータルで、環境が **ODL_User (1)** に設定されていることを確認します。左のナビゲーション メニューから **[テーブル] (2)** を選択し、リストから **[Leave Request] (3)** を選択します。
 
-   ![](../media/cor-mn-e4-g-7.png)
+   ![](../NewMedia/e4t1s30.png)
 
 1. **[Leave Request の列とデータ]** ページで、新しく追加されたレコードを確認します。以下のフィールドを検証します。
 
@@ -205,9 +205,9 @@
       - **Duration** が計算された休暇日数を表示している。
       - **Status** が現在の承認ステータスを示している。
 
-         ![](../media/cor-mn-e4-g-11.png)
+         ![](../NewMedia/e4t1s31.png)
 
-         ![](../media/cor-mn-e4-g-9.png)
+         ![](../NewMedia/e4t1s32.png)
 
          > **注:** **Employee Email/User ID** フィールドはログイン コンテキストからシステムが自動的に取得します。手動で入力する必要はありません。
 
