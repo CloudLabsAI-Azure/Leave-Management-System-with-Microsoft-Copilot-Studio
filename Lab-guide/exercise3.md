@@ -20,15 +20,13 @@
 
 1. ルート ノードに新しいアクションを追加するには、**[プラス (+) アイコン] (1)** をクリックします。
 
-     ![](../media/lev-mgmt-sb-ex3-g24.png)
+     ![](../NewMedia/e3t1s1.png)
 
 1. **[アクションの追加]** ウィンドウで **[行の更新] (1)** を検索し、**[行の更新] (2)** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g25.png)
-
 1. **[行の更新]** アクションで、**[テーブル名]** に **Leave Request (1)** を選択し、**[行 ID] (2)** フィールドに **/** と入力して、**[式の挿入] (3)** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g26.png)
+     ![](../NewMedia/e3t1s2.png)
 
 1. **[式]** エディターで、以下の式 **(1)** を入力し、**[更新] (2)** を選択します。
 
@@ -36,25 +34,25 @@
      outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
      ```
 
-     ![](../media/lev-mgmt-sb-ex3-g27.png)
+     ![](../NewMedia/e3t1s3.png)
 
      > **注:** ここでの **Logical_ID** は、最初の演習で Power Apps ポータルからコピーした ID です。
 
 1. **[行の更新]** アクションで、**[+] アイコン**を選択します。
 
-     ![](../media/gs-fix2-leave2-may-g5.png)
+     ![](../NewMedia/e3t1s4.png)
 
 1. **[アクションの追加]** ウィンドウで **[スキル] (1)** を検索し、**[エージェントへの応答] (2)** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g29.png)
+     ![](../NewMedia/e3t1s5.png)
 
 1. **[エージェントへの応答 1]** アクションで、**[出力の追加]** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g30.png)
+     ![](../NewMedia/e3t1s6.png)
 
 1. **[エージェントへの応答 1]** アクションで、出力の種類として **[テキスト]** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g31.png)
+     ![](../NewMedia/e3t1s7.png)
 
 1. **[エージェントへの応答 1]** アクションで、出力名として **reply (1)** を入力し、値フィールドに以下のメッセージ **(2)** を入力します。
 
@@ -62,11 +60,11 @@
      Your leave is approved from [start_date] to [end_date]
      ```
 
-     ![](../media/lev-mgmt-sb-ex3-g32.png)
+     ![](../NewMedia/e3t1s8.png)
 
 1. **[エージェントへの応答 1]** アクションで、**start_date (1)** プレースホルダーを選択し、**[fx] (2)** オプションを選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g33.png)
+     ![](../NewMedia/e3t1s9.png)
 
 1. 式エディターで、エディター ボックスに式を貼り付け、**[追加]** を選択します。
 
@@ -74,13 +72,13 @@
      outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
      ```
 
-     ![](../media/gs-fix2-leave2-may-g6.png)
+     ![](../NewMedia/e3t1s10.png)
 
      > **注**: ここでの **Logical_ID** は、最初の演習で Power Apps ポータルからコピーした ID です。
 
 1. **[エージェントへの応答 1]** アクションで、**end_date (1)** プレースホルダーを選択し、**[fx] (2)** オプションを選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g34.png)
+     ![](../NewMedia/e3t1s11.png)
 
 1. 式エディターで、エディター ボックス **(1)** に式を貼り付け、**[追加] (2)** を選択します。
 
@@ -88,25 +86,23 @@
      outputs('Add_a_new_row')?['body/<Logical_ID>_enddate']
      ```
 
-     ![](../media/lev-mgmt-sb-ex3-g35.png)
+     ![](../NewMedia/e3t1s12.png)
 
      > **注**: ここでの **Logical_ID** は、最初の演習で Power Apps ポータルからコピーした ID です。
 
 1. **[デザイナー]** ページでフローを確認し、**[発行]** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex2-g29.png)
+     ![](../NewMedia/e3t1s13.png)
 
 1. **[エージェント フローが正常に発行されました!]** ポップアップで、**[フローに留まる]** を選択します。
 
-     ![](../media/gs-fix-leave-may-g47.png)
-
 1. 上部のメニュー バーで **[概要]** をクリックして、フローの詳細ページに移動します。
 
-     ![](../media/leav-man-e2-g-66.png)
+     ![](../NewMedia/e3t1s17.png)
 
 1. **[概要] (1)** ページで **[編集] (2)** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g37.png)
+     ![](../NewMedia/e3t1s14.png)
 
 1. **[詳細]** ウィンドウで、**[フロー名] (1)** フィールドに以下の値を入力し、**[保存] (2)** をクリックして変更を適用します。
 
@@ -114,7 +110,7 @@
      Leave Management Workflow
      ```
 
-     ![](../media/leav-man-e2-g-107.png)
+     ![](../NewMedia/e3t1s15.png)
 
 ### タスク 2: 休暇申請トピックの完成
 
@@ -122,37 +118,37 @@
 
 1. **Copilot Studio** で **[エージェント] (1)** を選択し、**[Leave Management Agent] (2)** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex2-g52.png)
+     ![](../NewMedia/e3t2s1.png)
 
 1. **[+7] (1)** を選択し、**[トピック] (2)** を選択します。
 
-     ![](../media/gs-fix-leave-may-g11.png)
+     ![](../NewMedia/e3t2s2.png)
 
    > **注:** **[トピック]** タブが画面に直接表示されている場合は、**[+7]** をクリックせずに選択できます。
 
 1. **[トピック]** ページで、**leave_request** トピックを選択します。
 
-     ![](../media/gs-fix2-leave2-may-g1.png)
+     ![](../NewMedia/e3t2s3.png)
 
 1. トピックの一番下までスクロールし、**reason** 質問ノードの下にある **[プラス (+) アイコン]** を選択してフローの次のステップを追加します。
 
-     ![](../media/leav-man-e3-g-20.png)
+     ![](../NewMedia/e3t2s4.png)
 
 1. **reason** をキャプチャした後の **[質問]** ノードで、**[ツールの追加] (1)** をクリックします。利用可能なツールのリストから **[Leave Validation Flow] (2)** を選択して、フローを検証プロセスに接続します。
 
-     ![.](../media/cor-mn-e5-g-77.png)
+     ![.](../NewMedia/e3t2s5.png)
 
 1. **オーサリング キャンバス**で、上部メニューから **[変数] (1)** をクリックします。**[参照] (2)** タブで、**[トピック] (3)** セクションを展開し、チェックボックス **(4)** をオンにしてリストされているすべての変数を選択します。
 
-     ![](../media/cor-mn-e5-g-78.png)
+     ![](../NewMedia/e3t2s6.png)
 
 1. **[Power Automate 入力]** カードで、**startDate** フィールドの横にある **[省略記号 (...) (1)]** をクリックします。**[変数の選択]** ウィンドウから **startDate (2)** を選択して変数をマッピングします。
 
-     ![](../media/lev-mgmt-sb-ex2-g67.png)
+     ![](../NewMedia/e3t2s7.png)
 
 1. **[Power Automate 入力]** カードで、**endDate** フィールドの横にある **[省略記号 (...) (1)]** をクリックします。**[変数の選択]** ウィンドウから **endDate (2)** を選択して変数をマッピングします。
 
-     ![](../media/lev-mgmt-sb-ex2-g68.png)
+     ![](../NewMedia/e3t2s8.png)
 
 1. **[Power Automate 入力]** カードで、次を行います。
 
@@ -161,23 +157,23 @@
      - **User.Email (3)** を検索します。
      - **User.Email (4)** を選択します。
 
-          ![](../media/lev-mgmt-sb-ex2-g69.png)
+          ![](../NewMedia/e3t2s9.png)
 
 1. **[出力] (2)** セクションで、**[プラス (+) アイコン]** をクリックしてフローの次のステップを追加します。**(1)**
 
-     ![](../media/lev-mgmt-sb-ex3-g40.png)
+     ![](../NewMedia/e3t2s10.png)
 
 1. **[出力] (2)** セクションで、**[ツールの追加] (1)** をクリックし、ツールのリストから **[Leave Management Workflow] (2)** を選択します。
 
-     ![](../media/lev-mgmt-sb-ex3-g41.png)
+     ![](../NewMedia/e3t2s11.png)
 
 1. **オーサリング キャンバス**で、上部メニューから **[変数] (1)** をクリックします。**[参照] (2)** タブで、**[トピック (7)] (3)** セクションを展開して、チェックボックスをオンにして **reply (4)** 変数を選択します。
 
-     ![](../media/cor-mn-e5-g-79.png)
+     ![](../NewMedia/e3t2s12.png)
 
      > 変数オプションが表示されない場合は、**[...]** メニューをクリックして **[変数]** を選択してください。
 
-      ![](../media/lvimg56.png)
+     ![](../NewMedia/e3t2s13.png)
 
 1. **[アクション]** カードで、**employeeEmail (String)** の値を設定します。
 
@@ -186,7 +182,7 @@
      - **User.Email (3)** を検索します。
      - 結果から **User.Email (4)** を選択します。
 
-          ![](../media/lev-mgmt-sb-ex3-g43.png)
+          ![](../NewMedia/e3t2s14.png)
 
 1. **[アクション]** カードで、**employeeName (String)** の値を設定します。
 
@@ -195,7 +191,7 @@
      - **User.FirstName (3)** を検索します。
      - 結果から **User.FirstName (4)** を選択します。
 
-          ![](../media/gs-fix2-leave2-may-g11.png)
+          ![](../NewMedia/e3t2s15.png)
 
 1. **[アクション]** カードで、**leaveType (String)** の値を設定するには、**[省略記号 (...) (1)]** を選択し、**[数式] (2)** タブを選択し、数式 **(3)** を入力して、**[挿入] (4)** を選択します。
 
@@ -203,7 +199,7 @@
      Text(Topic.leave_type)
      ```
 
-     ![](../media/lev-mgmt-sb-ex3-g45.png)
+     ![](../NewMedia/e3t2s16.png)
 
 1. **[アクション]** カードで、**reason (String)** の値を設定します。
 
@@ -211,7 +207,7 @@
      - **[変数の選択]** パネルで **[カスタム] (2)** タブを選択します。
      - リストから **reason (Topic.reason) (3)** を選択します。
 
-          ![](../media/lev-mgmt-sb-ex3-g46.png)
+          ![](../NewMedia/e3t2s17.png)
 
 1. **[アクション]** カードで、**durationDays (String)** の値を設定します。
 
@@ -219,7 +215,7 @@
      - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
      - リストから **duration (Topic.duration) (3)** を選択します。
 
-          ![](../media/lev-mgmt-sb-ex3-g47.png)
+          ![](../NewMedia/e3t2s18.png)
 
 1. **[アクション]** カードで、**balance (String)** の値を設定します。
 
@@ -227,7 +223,7 @@
      - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
      - リストから **balance (Topic.balance) (3)** を選択します。
 
-          ![](../media/lev-mgmt-sb-ex3-g48.png)
+          ![](../NewMedia/e3t2s19.png)
 
 1. **[アクション]** カードで、**startDate (String)** の値を設定します。
 
@@ -235,7 +231,7 @@
      - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
      - リストから **startDate (Topic.startDate) (3)** を選択します。
 
-          ![](../media/lev-mgmt-sb-ex3-g49.png)
+          ![](../NewMedia/e3t2s20.png)
 
 1. **[アクション]** カードで、**endDate (String)** の値を設定します。
 
@@ -243,11 +239,11 @@
      - **[変数の選択]** パネルで **[カスタム] (2)** タブに移動します。
      - リストから **endDate (Topic.endDate) (3)** を選択します。
 
-          ![](../media/lev-mgmt-sb-ex3-g50.png)
+          ![](../NewMedia/e3t2s21.png)
 
 1. **[出力] (1)** セクションで、**[プラス アイコン (1)]** をクリックし、**[メッセージを送信する] (2)** を選択します。
 
-     ![](../media/leav-man-e3-g-36.png)
+     ![](../NewMedia/e3t2s22.png)
 
 1. **[メッセージ]** ステップで、次を行います。
 
@@ -256,19 +252,19 @@
      - 検索ボックスに **reply (3)** と入力します。
      - 結果から **reply (4)** を選択します。
 
-          ![](../media/leav-man-e3-g-37.png)
+          ![](../NewMedia/e3t2s23.png)
 
 1. **[メッセージ]** ステップで、**[プラス (+) アイコン]** をクリックしてフローに次のアクションを追加します。
 
-     ![](../media/leav-man-e3-g-38.png)
+     ![](../NewMedia/e3t2s24.png)
 
 1. **[メッセージ]** ステップで、オプションを展開して **[トピック管理] (1)** を選択し、**[会話を終了する] (2)** をクリックしてフローを閉じます。
 
-     ![](../media/leav-man-e3-g-39.png)
+     ![](../NewMedia/e3t2s25.png)
 
 1. ページ右上隅の **[保存]** をクリックして、トピックへの変更を保存します。
 
-     ![](../media/lev-mgmt-sb-ex2-g70.png)
+     ![](../NewMedia/e3t2s26.png)
 
 <validation step="786e3497-70e3-44d4-997f-45095642a4af" />
  
