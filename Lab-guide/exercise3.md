@@ -31,16 +31,16 @@
 1. **[式]** エディターで、以下の式 **(1)** を入力し、**[更新] (2)** を選択します。
 
      ```
-     outputs('Add_a_new_row')?['body/<logical_ID>_leaverequestid']
+     last(split(first(split(outputs('新しい行を追加する')?['body/@odata.id'],')')), '('))
      ```
 
-     ![](../NewMedia/e3t1s3.png)
+     ![](../NewMedia/n5.png)
 
      > **注:** ここでの **Logical_ID** は、最初の演習で Power Apps ポータルからコピーした ID です。
 
 1. **[行の更新]** アクションで、**[+] アイコン**を選択します。
 
-     ![](../NewMedia/e3t1s4.png)
+     ![](../NewMedia/n6.png)
 
 1. **[アクションの追加]** ウィンドウで **[スキル] (1)** を検索し、**[エージェントへの応答] (2)** を選択します。
 
@@ -69,7 +69,7 @@
 1. 式エディターで、エディター ボックスに式を貼り付け、**[追加]** を選択します。
 
      ```
-     outputs('Add_a_new_row')?['body/<Logical_ID>_startdate']
+     outputs('行の更新')?['body/Logical_ID_start_date']
      ```
 
      ![](../NewMedia/e3t1s10.png)
@@ -83,7 +83,7 @@
 1. 式エディターで、エディター ボックス **(1)** に式を貼り付け、**[追加] (2)** を選択します。
 
      ```
-     outputs('Add_a_new_row')?['body/<Logical_ID>_enddate']
+     outputs('行の更新')?['body/Logical_id_end_date']
      ```
 
      ![](../NewMedia/e3t1s12.png)
