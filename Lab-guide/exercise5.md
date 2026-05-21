@@ -25,27 +25,27 @@
 
 1. **[エージェントを Microsoft 365 Copilot で利用可能にする] (1)** チェックボックスをオフにして、**[チャネルの追加] (2)** を選択します。
 
-   ![](../media/gs-fix2-leave2-may-g37.png)
+   ![](../NewMedia/e5t1s2.png)
 
 1. チャネルが追加されたら、**[Microsoft Teams]** で **[Teams でエージェントを表示する]** を選択して Microsoft Teams でエージェントを開きます。
 
-   ![](../media/gs-fix2-leave2-may-g38.png)
+   ![](../NewMedia/e5t1s3.png)
 
 1. **[Teams デスクトップ アプリとのより良い接続を維持]** ページで、**[代わりに Web アプリを使用する]** をクリックしてブラウザーで続行します。
 
-   ![](../media/gs-fix2-leave2-may-g39.png)
+   ![](../NewMedia/e5t1s4.png)
 
 1. Microsoft Teams の **[Leave Management Agent]** ページで、**[追加]** をクリックしてエージェントをインストールします。**[追加]** オプションが表示されない場合は、Copilot Studio に戻り、もう一度 **[Teams でエージェントを表示する]** を使用してください。
 
-   ![](../media/gs-fix2-leave2-may-g40.png)
+   ![](../NewMedia/e5t1s5.png)
 
 1. エージェントが正常に追加されたら、**[開く]** をクリックして Teams で **Leave Management Agent** を起動します。
 
-   ![](../media/gs-fix2-leave2-may-g41.png)
+   ![](../NewMedia/e5t1s6.png)
 
 1. **Leave Management Agent** のチャット ウィンドウで、メッセージ ボックスに **Hello (1)** と入力し、**[送信] (2)** ボタンをクリックして会話を開始します。
 
-   ![](../media/cor-mn-e4-g-19.png)
+   ![](../NewMedia/e5t1s7.png)
 
 ## タスク 2: Microsoft Teams でのデプロイ済みエージェントのテスト
 
@@ -53,31 +53,31 @@
 
 1. **Leave Management Agent** のチャット ウィンドウで、メッセージ ボックスに **I want to apply for leave (1)** と入力し、**[送信] (2)** ボタンをクリックして会話を続けます。
 
-   ![](../media/cor-mn-e4-g-12.png)
+   ![](../NewMedia/e5t1s8.png)
 
 1. **Leave Management Agent** のチャット ウィンドウで、休暇の種類を選択するよう求められたら、オプションの 1 つを選択します。
 
-   ![](../media/cor-mn-e4-g-13.png)
+   ![](../NewMedia/e5t1s9.png)
 
 1. **Leave Management Agent** のチャットで、必要な **yyyy-mm-dd** 形式で休暇開始日を入力します (例: **2025-09-20 (1)**)。**[送信] (2)** ボタンをクリックして続行します。
 
-   ![](../media/cor-mn-e4-g-14.png)
+   ![](../NewMedia/e5t1s10.png)
 
 1. **Leave Management Agent** のチャットで、必要な **yyyy-mm-dd** 形式で休暇終了日を入力します (例: **2025-09-27 (1)**)。**[送信] (2)** ボタンをクリックして送信します。これにより、合計休暇期間が 2 日を超えることが保証されます。
 
-   ![](../media/cor-mn-e4-g-15.png)
+   ![](../NewMedia/e5t1s11.png)
 
 1. **Leave Management Agent** のチャットで、休暇の理由を入力します (例: **Need a break to play video games (1)**)。**[送信] (2)** ボタンをクリックして続行します。
 
-   ![](../media/cor-mn-e4-g-16.png)
+   ![](../NewMedia/e5t1s12.png)
 
 1. **Microsoft Power Automate (1)** からの **[休暇承認]** メールで、**[拒否] (2)** をクリックし、**[コメント] (3)** フィールドに拒否の理由を入力して、**[送信] (4)** をクリックして確認します。
 
-   ![](../media/cor-mn-e4-g-20.png)
+   ![](../NewMedia/e5t1s13.png)
 
 1. Microsoft Teams で **[アクティビティ] (1)** セクションに移動し、**[Leave Approval] (2)** 通知を確認して申請の最終ステータスを確認します。
 
-   ![](../media/cor-mn-e4-g-21.png)
+   ![](../NewMedia/e5t1s16.png)
 
 ## まとめ
 
