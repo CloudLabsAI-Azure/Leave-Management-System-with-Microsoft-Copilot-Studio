@@ -91,17 +91,17 @@
 
    - Email: **<inject key="AzureAdUserEmail"></inject>**
 
-     ![](../media/gs-lab3-g2.png)
+     ![](../NewMedia/signin1.png)
 
 1. **[一時アクセス パスの入力]** 画面で、以下の**一時アクセス パス**を入力し、**[サインイン] (2)** をクリックします。
 
    - Temporary Access Pass: **<inject key="AzureAdUserPassword"></inject>**
 
-     ![](../media/gs-lab3-g3.png)
+     ![](../NewMedia/signin2.png)
      
 1. **[サインインの状態を維持しますか?]** ポップアップが表示された場合は、**[いいえ]** をクリックします。
 
-   ![](../media/gs-4.png)
+   ![](../NewMedia/signin3.png)
 
 1. **[Power Apps へようこそ]** ポップアップが表示された場合は、デフォルトの国/地域の選択のままにして **[開始する]** をクリックします。
 
