@@ -69,7 +69,7 @@
 1. 式エディターで、エディター ボックスに式を貼り付け、**[追加]** を選択します。
 
      ```
-     outputs('行の更新')?['body/Logical_ID_start_date']
+     outputs('新しい行を追加する')? ['body/Logical_Id_start_date']
      ```
 
      ![](../NewMedia/e3t1s10.png)
