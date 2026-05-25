@@ -1,4 +1,4 @@
-<img width="929" height="92" alt="image" src="https://github.com/user-attachments/assets/489b809a-869a-4628-b6b2-0ce70bd1c25d" /># 演習 2: 高度なトピックの設計
+# 演習 2: 高度なトピックの設計
 
 ### 推定所要時間: 60 分
 
