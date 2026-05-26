@@ -375,7 +375,7 @@
 
           ![](../NewMedia/e2t2s21.png)
 
-          ![](../NewMedia/new1.png)
+          ![](../NewMedia/new1-jp.png)
 
           ![](../NewMedia/e2t2s23.png)
 
