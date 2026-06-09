@@ -4,28 +4,32 @@
     "Language": "japanese",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/Getting-Started.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/setup-guide-japanese.md",
         "Order": 1
       },
-            {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise1.md",
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/Getting-Started.md",
         "Order": 2
       },
             {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise1.md",
         "Order": 3
       },
             {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise3.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise2.md",
         "Order": 4
       },
             {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise4.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise3.md",
         "Order": 5
       },
             {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise5.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise4.md",
         "Order": 6
+      },
+            {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Leave-Management-System-with-Microsoft-Copilot-Studio/refs/heads/japanese/Lab-guide/exercise5.md",
+        "Order": 7
       }
     ]
   }
