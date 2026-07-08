@@ -22,7 +22,13 @@ You will be able to complete the following tasks:
 
 In this task, you will ingest the datasets into Dataverse, which will be created in a new Power Platform environment.
 
-1. Navigate back to the Power Apps portal, and please switch to the environment that you created earlier.
+1. Open a new browser tab and navigate to the Power Apps portal by entering the following URL:
+
+   ```
+   https://make.powerapps.com/
+   ```
+
+1. In the Power Apps portal, and please switch to the environment that you created earlier.
 
     ![](../media/st-store-ex1-g1.png)
 
