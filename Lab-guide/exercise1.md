@@ -102,8 +102,6 @@ In this task, you will sign in to Microsoft Copilot Studio and switch the enviro
 
      ![](../media/ex1-travel-g6.png)
 
-   >**Note:** If you are unable to select an environment due to a portal issue where the environment selection pane is unstable, please sign out and sign back in to Copilot Studio in a new browser window, then try again.
-   
 1. Once you are in **Copilot Studio**, you will be on the home page.
 
      ![.](../media/st-store-ex1-g10.png)
