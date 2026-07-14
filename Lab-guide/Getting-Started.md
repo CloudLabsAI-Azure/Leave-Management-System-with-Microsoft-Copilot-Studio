@@ -81,10 +81,6 @@ From the **Resources (1)** tab, you can easily **start, stop, restart, or connec
 
    ![](../media/zgr-gt.png)
 
-1. In the JumpVM, click on the **Microsoft Edge** browser shortcut on the desktop.
-
-   ![](../media/zgr-gt.png)
-
 1. Open a new browser tab and navigate to the Power Apps portal by entering the following URL:
 
    ```
